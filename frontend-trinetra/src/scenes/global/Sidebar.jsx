@@ -1,8 +1,20 @@
 import { useState } from "react";
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Link } from "react-router-dom" // for redirect
 import { tokens } from "../../theme";
-import { Box, IconButton, useTheme, Divider } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
+
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
+import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
@@ -24,14 +36,63 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import TimelineIcon from '@mui/icons-material/Timeline';
 
 
-const CustomSidebar = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-    const [isCollapsed, setIsSelected] = useState(false);
-    const [selected, setSelected] = useState("Dashboard")
-    return (
-        <Box>Sidebar
 
-        </Box>)
-}
+const CustomSidebar = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const [isCollapsed, setIsCollapsed] = useState(false); // Add this line
+  const [selected, setSelected] = useState("Dashboard")
+  return (
+    <Box sx={{
+      "*& .pro-sidebar-inner": {
+        background: `${colors.primary[400]}!important`,
+      },
+      "*& .pro-icon-wrapper": {
+        background: "transparent!important",
+      },
+      "*& .pro-inner-item-": {
+        padding: "5px 35px 5px 20px !important",
+      }
+      ,
+      "*& .pro-inner-item:hover": {
+        color: "#868dfb!important",
+      }
+      ,
+      "& .pro-inner-item:ative": {
+        color: "#6870fa!important",
+      },
+
+
+    }}>
+      <Sidebar collapsed={isCollapsed} >
+        <Menu iconShape="square">
+          <MenuItem
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            icon={isCollapsed ? < MenuOutlinedIcon /> : undefined}
+            style={{
+              margin: "10px 0 20px 0",
+              colors: colors.blueAccent[100],
+            }}
+          >
+            {!isCollapsed && (
+              <Box>
+                <Typography>
+                  Admin Dashboard
+                </Typography>
+                <IconButton>
+                  <MenuOutlinedIcon />
+                </IconButton>
+
+
+              </Box>
+            )
+            }
+          </MenuItem>
+        </Menu>
+      </Sidebar>
+
+    </Box>
+  );
+};
+
 export default CustomSidebar;
