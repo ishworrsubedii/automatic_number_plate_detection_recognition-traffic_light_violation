@@ -36,30 +36,46 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import TimelineIcon from '@mui/icons-material/Timeline';
 
 
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <MenuItem
+      active={selected === title}
+      style={{
+        color: colors.grey[100],
+      }}
+      onClick={() => setSelected(title)}
+      icon={icon}
+    >
+      <Typography>{title}</Typography>
+      <Link to={to} />
+    </MenuItem>
+  );
+};
 
 const CustomSidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false); // Add this line
   const [selected, setSelected] = useState("Dashboard")
+  
   return (
     <Box sx={{
-      "*& .pro-sidebar-inner": {
-        background: `${colors.primary[400]}!important`,
+      "&.pro-sidebar-inner": {
+        background: `${colors.primary[400]} !important`,
       },
-      "*& .pro-icon-wrapper": {
-        background: "transparent!important",
+      "&.pro-icon-wrapper": {
+        backgroundColor: "transparent !important",
       },
-      "*& .pro-inner-item-": {
-        padding: "5px 35px 5px 20px !important",
-      }
-      ,
-      "*& .pro-inner-item:hover": {
-        color: "#868dfb!important",
-      }
-      ,
-      "& .pro-inner-item:ative": {
-        color: "#6870fa!important",
+      "&.pro-inner-item": {
+        padding: "5px 35px 5px 2000px !important",
+      },
+      "&.pro-inner-item:hover": {
+        color: "#868dfb !important",
+      },
+      "&.pro-menu-item.active": {
+        color: "#6870fa !important",
       },
 
 
@@ -71,7 +87,7 @@ const CustomSidebar = () => {
             icon={isCollapsed ? < MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
-              colors: colors.blueAccent[100],
+              colors: "#11111",
             }}
           >
             {!isCollapsed && (
