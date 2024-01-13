@@ -4,6 +4,7 @@ import { Link } from "react-router-dom" // for redirect
 import { tokens } from "../../theme";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 
+
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -22,7 +23,6 @@ import ServerDnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import SpeedIcon from '@mui/icons-material/Speed';
 import TrafficIcon from '@mui/icons-material/Traffic';
-
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -61,33 +61,32 @@ const CustomSidebar = () => {
   const [selected, setSelected] = useState("Dashboard")
   
   return (
-    <Box sx={{
-      "&.pro-sidebar-inner": {
-        background: `${colors.primary[400]} !important`,
-      },
-      "&.pro-icon-wrapper": {
-        backgroundColor: "transparent !important",
-      },
-      "&.pro-inner-item": {
-        padding: "5px 35px 5px 2000px !important",
-      },
-      "&.pro-inner-item:hover": {
-        color: "#868dfb !important",
-      },
-      "&.pro-menu-item.active": {
-        color: "#6870fa !important",
-      },
+    <Box
+    style={{
+      
+      background:
+        theme.palette.mode === "dark" ? (
+          colors.primary[400]
+        ) :
+          (
+            colors.whiteAccent[420]
 
+          )}
+  
+    }
 
-    }}>
-      <Sidebar collapsed={isCollapsed} >
+    
+    >
+      <Sidebar collapsed={isCollapsed}
+     
+      >
         <Menu iconShape="square">
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? < MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
-              colors: "#11111",
+              colors: "#000000",
             }}
           >
             {!isCollapsed && (
