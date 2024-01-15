@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { ProSidebar as Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Link } from "react-router-dom" // for redirect
 import { tokens } from "../../theme";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-
 
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -24,6 +23,7 @@ import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import SpeedIcon from '@mui/icons-material/Speed';
 import TrafficIcon from '@mui/icons-material/Traffic';
 
+
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PeopleIcon from '@mui/icons-material/People';
@@ -43,7 +43,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     <MenuItem
       active={selected === title}
       style={{
-        color: colors.grey[100],
+        color:"#ffffff",
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -62,20 +62,23 @@ const CustomSidebar = () => {
   
   return (
     <Box
-    style={{
-      
-      background:
-        theme.palette.mode === "dark" ? (
-          colors.primary[400]
-        ) :
-          (
-            colors.whiteAccent[420]
-
-          )}
-  
-    }
-
-    
+    sx={{
+      "&.pro-sidebar-inner": {
+        background: `${colors.primary[400]} !important`,
+      },
+      "&.pro-icon-wrapper": {
+        backgroundColor: "transparent !important",
+      },
+      "&.pro-inner-item": {
+        padding: "5px 35px 5px 20px !important",
+      },
+      "&.pro-inner-item:hover": {
+        color: "#fffff !important",
+      },
+      "&.pro-menu-item.active": {
+        color: "#6870fa !important",
+      },
+    }}
     >
       <Sidebar collapsed={isCollapsed}
      
