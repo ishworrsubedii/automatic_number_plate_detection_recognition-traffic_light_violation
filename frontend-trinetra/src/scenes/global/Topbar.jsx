@@ -17,7 +17,14 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box
+    
+    sx={{
+      borderBottom: "0.01mm dashed gray", // added borderBottom
+
+      
+    }}
+    display="flex" justifyContent="space-between" p={2}>
       <Box>
       <IconButton type="button" sx={{ ml: "0px", flex: 0 }}>
             <Calendar />
@@ -28,7 +35,12 @@ const Topbar = () => {
       </Box>
       
 
-      <Box display="flex">
+      <Box 
+      sx={{
+        display: "flex",
+      }}
+          >
+
         <Box display="flex"
           backgroundColor={
             theme.palette.mode === "dark" ? (
