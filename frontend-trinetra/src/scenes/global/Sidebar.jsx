@@ -2,7 +2,11 @@ import { useState } from "react";
 import { ProSidebar as Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Link } from "react-router-dom" // for redirect
 import { tokens } from "../../theme";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import "react-pro-sidebar/dist/css/styles.css";
+import Button from '@mui/material/Button';
+
+
 
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -43,7 +47,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     <MenuItem
       active={selected === title}
       style={{
-        color:"#ffffff",
+        color: colors.primary[100],
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -59,31 +63,31 @@ const CustomSidebar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false); // Add this line
   const [selected, setSelected] = useState("Dashboard")
-  
+
   return (
     <Box
-    sx={{
-      "&.pro-sidebar-inner": {
-        background: `${colors.primary[400]} !important`,
-      },
-      "&.pro-icon-wrapper": {
-        backgroundColor: "transparent !important",
-      },
-      "&.pro-inner-item": {
-        padding: "5px 35px 5px 20px !important",
-      },
-      "&.pro-inner-item:hover": {
-        color: "#fffff !important",
-      },
-      "&.pro-menu-item.active": {
-        color: "#6870fa !important",
-      },
-    }}
+      sx={{
+        "&.pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "&.pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "&.pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+        },
+        "&.pro-inner-item:hover": {
+          color: `${colors.whiteAccent} !important`,
+        },
+        "&.pro-menu-item.active": {
+          color: "#6870fa !important",
+        },
+      }}
     >
       <Sidebar collapsed={isCollapsed}
-     
+
       >
-        <Menu iconShape="square">
+        <Menu iconShape="circle">
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? < MenuOutlinedIcon /> : undefined}
@@ -94,18 +98,172 @@ const CustomSidebar = () => {
           >
             {!isCollapsed && (
               <Box>
-                <Typography>
-                  Admin Dashboard
-                </Typography>
-                <IconButton>
-                  <MenuOutlinedIcon />
-                </IconButton>
+                <Box display="flex" justifyContent="start" alignItems="center">
+                  <img
+                    alt="profile-user"
+                    width="30px"
+                    height="30px"
+                    color="#000000"
+                    src={"/logo/profile.png"} // path relative to the public directory
+                    style={{ cursor: "pointer", borderRadius: "50%", marginRight: "10px" }} // added marginRight
+                  />
+                  <Divider>
+
+                  </Divider>
+                  <Typography>
+                    Ishwor Subedi
+                  </Typography>
+
+                  <IconButton style={{ marginLeft: "70px" }}>
+                    <MenuOutlinedIcon />
+                  </IconButton>
+                </Box>
+
 
 
               </Box>
+
             )
             }
           </MenuItem>
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Item
+              title="Favorites"
+              to="/"
+              selected={selected}
+              setSelected={setSelected}
+              style={{ fontWeight: "bold" }}
+            />
+
+            <Item
+              title={ "Overview"}
+              to="/overview"
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+            <Item
+              title={"Projects"}
+              to="/projects"
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+
+
+
+            <Item
+              title="Dashboards"
+              to="/"
+              selected={selected}
+              setSelected={setSelected}
+
+            />
+
+            <Item
+              title="Default"
+              to="/default"
+              icon={<GridViewRoundedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Server"
+              to="/server"
+              icon={<ServerDnsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="ALPR"
+              to="/alpr"
+              icon={<ConfirmationNumberIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Speed"
+              to="/speedtest"
+              icon={<SpeedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Violation"
+              to="/violation"
+              icon={<TrafficIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+
+            <Item
+              title="Others"
+              to="/"
+              selected={selected}
+              setSelected={setSelected}
+
+            />
+
+            <Item
+              title="User Profile"
+              to="/userprofile"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Account"
+              to="/account"
+              icon={<ContactsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Corporate"
+              to="/corporate"
+              icon={<PeopleIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Blog"
+              to="/blog"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Camera List"
+              to="/cameralist"
+              icon={<MapOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+            <Button
+              style={{
+                backgroundColor: colors.greenAccent[500],
+                borderRadius: "10px",
+                height: "40px",
+                width: "100px",
+                padding: "10px",
+                position: "absolute",
+                top: "89%",
+                left: "40%",
+                transform: "translateX(-50%)",
+                fontWeight: "bold" // added fontWeight
+              }}
+            >
+              Log Out
+            </Button>
+          </Box>
+
+
+
+
+
+
         </Menu>
       </Sidebar>
 
