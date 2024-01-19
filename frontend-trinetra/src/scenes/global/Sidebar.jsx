@@ -83,6 +83,14 @@ const CustomSidebar = () => {
           color: "#6870fa !important",
         },
       }}
+      backgroundColor={
+        theme.palette.mode === "dark" ? (
+          colors.primary[400]
+        ) :
+          (
+            colors.whiteAccent[420]
+
+          )}
     >
       <Sidebar collapsed={isCollapsed}
 
@@ -148,9 +156,6 @@ const CustomSidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
-
-
 
             <Item
               title="Dashboards"
