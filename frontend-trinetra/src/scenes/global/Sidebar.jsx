@@ -98,13 +98,19 @@ const CustomSidebar = () => {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? < MenuOutlinedIcon /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
-              colors: "#000000",
+              margin: "10px 0 30px 0",
+              colors: colors.primary[200],
             }}
           >
             {!isCollapsed && (
               <Box>
-                <Box display="flex" justifyContent="start" alignItems="center">
+                <Box 
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                ml="15px"
+                
+                >
                   <img
                     alt="profile-user"
                     width="30px"
@@ -142,7 +148,7 @@ const CustomSidebar = () => {
             />
 
             <Item
-              title={ "Overview"}
+              title={"Overview"}
               to="/overview"
               selected={selected}
               setSelected={setSelected}
@@ -156,7 +162,7 @@ const CustomSidebar = () => {
             />
 
             <Item
-              title="Dashboards"
+              title="Services"
               to="/"
               selected={selected}
               setSelected={setSelected}
