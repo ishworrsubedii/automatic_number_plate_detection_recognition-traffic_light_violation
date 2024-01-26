@@ -45,7 +45,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     <MenuItem
       active={selected === title}
       style={{
-        color: colors.primary[100],
+        color: colors.whiteAccent[100],
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -75,20 +75,12 @@ const CustomSidebar = () => {
           padding: "5px 35px 5px 20px !important",
         },
         "&.pro-inner-item:hover": {
-          color: `${colors.whiteAccent} !important`,
+          color: `${colors.greenAccent[500]} !important`,
         },
         "&.pro-menu-item.active": {
           color: "#6870fa !important",
         },
       }}
-      backgroundColor={
-        theme.palette.mode === "dark" ? (
-          colors.primary[400]
-        ) :
-          (
-            colors.whiteAccent[420]
-
-          )}
     >
       <Sidebar collapsed={isCollapsed}
 
@@ -116,7 +108,7 @@ const CustomSidebar = () => {
                     width="30px"
                     height="30px"
                     color="#000000"
-                    src={"/logo/profile.png"} // path relative to the public directory
+                    src={"../../logo/profile.png"} // path relative to the public directory
                     style={{ cursor: "pointer", borderRadius: "50%", marginRight: "10px" }} // added marginRight
                   />
                   <Divider>
@@ -267,12 +259,6 @@ const CustomSidebar = () => {
               Log Out
             </Button>
           </Box>
-
-
-
-
-
-
         </Menu>
       </Sidebar>
 
