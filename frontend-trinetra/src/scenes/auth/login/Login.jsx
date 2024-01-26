@@ -1,26 +1,9 @@
 import React from 'react';
-import {
-    Box,
-    Paper,
-    Divider,
-    Typography,
-    TextField,
-    Button,
-    useTheme,
-    Checkbox,
-    InputLabel,
-    IconButton,
-    CardContent,
-    FormControl,
-    OutlinedInput,
-    MuiCard,
-    InputAdornment,
-    MuiFormControlLabel
-} from '@mui/material';
+import { Box, Paper, Typography, TextField, Button, useTheme } from '@mui/material';
 import { createTheme } from '@mui/system';
 import { tokens } from "../../../theme"
 
-const LoginPage = () => {
+const LoginPage = ({ onLogin }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -54,13 +37,18 @@ const LoginPage = () => {
         borderRadius: 12,
     };
 
+    const handleLogin = (event) => {
+        event.preventDefault();
+        onLogin();
+    };
+
     return (
         <Box style={containerStyle}>
             <Paper style={paperStyle} elevation={3}>
                 <Typography variant="h5" align="center" gutterBottom>
                     Login
                 </Typography>
-                <form style={formStyle}>
+                <form style={formStyle} onSubmit={handleLogin}>
                     <TextField
                         label="Username"
                         variant="outlined"
@@ -74,16 +62,23 @@ const LoginPage = () => {
                         fullWidth
                         style={inputFieldStyle}
                     />
+                    <TextField
+                        label="Email"
+                        type="email"
+                        variant="outlined"
+                        fullWidth
+                        style={inputFieldStyle}
+                    />
                     <Button
                         variant="contained"
                         color="primary"
                         fullWidth
                         style={loginButtonStyle}
+                        type="submit"
                     >
                         Login
                     </Button>
                 </form>
-
             </Paper>
         </Box>
     );
