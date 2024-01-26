@@ -6,6 +6,11 @@ import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import "react-pro-sidebar/dist/css/styles.css";
 import Button from '@mui/material/Button';
 
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import { GrOverview } from "react-icons/gr";
+import { BsCollection } from "react-icons/bs";
+
+
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -45,7 +50,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     <MenuItem
       active={selected === title}
       style={{
-        color: colors.whiteAccent[100],
+        color: colors.primary[100],
       }}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -65,20 +70,20 @@ const CustomSidebar = () => {
   return (
     <Box
       sx={{
-        "&.pro-sidebar-inner": {
-          background: `${colors.primary[400]} !important`,
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[600]} !important`,
         },
-        "&.pro-icon-wrapper": {
+        "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
         },
-        "&.pro-inner-item": {
+        "& .pro-inner-item": {
           padding: "5px 35px 5px 20px !important",
         },
-        "&.pro-inner-item:hover": {
-          color: `${colors.greenAccent[500]} !important`,
+        "& .pro-inner-item:hover": {
+          color: `${colors.primary[200]} !important`,
         },
-        "&.pro-menu-item.active": {
-          color: "#6870fa !important",
+        "& .pro-menu-item.active": {
+          color: `${colors.greenAccent[600]} !important`,
         },
       }}
     >
@@ -96,25 +101,24 @@ const CustomSidebar = () => {
           >
             {!isCollapsed && (
               <Box>
-                <Box 
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                ml="15px"
-                
+                <Box
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  ml="15px"
+
                 >
                   <img
                     alt="profile-user"
                     width="30px"
                     height="30px"
-                    color="#000000"
                     src={"../../logo/profile.png"} // path relative to the public directory
                     style={{ cursor: "pointer", borderRadius: "50%", marginRight: "10px" }} // added marginRight
                   />
                   <Divider>
 
                   </Divider>
-                  <Typography>
+                  <Typography variant="h5" color={colors.greenAccent[500]}>
                     Ishwor Subedi
                   </Typography>
 
@@ -133,6 +137,8 @@ const CustomSidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Favorites"
+              icon={<GridViewRoundedIcon />}
+
               to="/"
               selected={selected}
               setSelected={setSelected}
@@ -141,6 +147,9 @@ const CustomSidebar = () => {
 
             <Item
               title={"Overview"}
+              icon={<GrOverview />}
+
+              variant="h6"
               to="/overview"
               selected={selected}
               setSelected={setSelected}
@@ -148,26 +157,22 @@ const CustomSidebar = () => {
 
             <Item
               title={"Projects"}
+              icon={<BsCollection />}
+
               to="/projects"
               selected={selected}
               setSelected={setSelected}
             />
 
-            <Item
-              title="Services"
-              to="/"
-              selected={selected}
-              setSelected={setSelected}
+            <Typography
+              variant="h6"
+              color={colors.primary[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Services
+            </Typography>
 
-            />
-
-            <Item
-              title="Default"
-              to="/default"
-              icon={<GridViewRoundedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+           
             <Item
               title="Server"
               to="/server"
@@ -190,6 +195,7 @@ const CustomSidebar = () => {
               setSelected={setSelected}
             />
             <Item
+
               title="Violation"
               to="/violation"
               icon={<TrafficIcon />}
@@ -198,13 +204,13 @@ const CustomSidebar = () => {
             />
 
 
-            <Item
-              title="Others"
-              to="/"
-              selected={selected}
-              setSelected={setSelected}
-
-            />
+            <Typography
+              variant="h6"
+              color={colors.primary[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Others
+            </Typography>
 
             <Item
               title="User Profile"
@@ -245,15 +251,16 @@ const CustomSidebar = () => {
             <Button
               style={{
                 backgroundColor: colors.greenAccent[500],
+                textDecorationColor: colors.greenAccent[500],
                 borderRadius: "10px",
-                height: "40px",
-                width: "100px",
+                height: "30px",
+                width: "68px",
                 padding: "10px",
                 position: "absolute",
                 top: "89%",
                 left: "40%",
                 transform: "translateX(-50%)",
-                fontWeight: "bold" // added fontWeight
+                fontWeight: "bold", 
               }}
             >
               Log Out
