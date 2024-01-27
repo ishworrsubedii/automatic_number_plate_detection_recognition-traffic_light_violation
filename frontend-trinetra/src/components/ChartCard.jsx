@@ -17,7 +17,6 @@ const ChartCard = ({ title, children,subtitle, size }) => {
 
 
             <Box 
-                margin={'5px'} 
                 width={size.width} 
                 height={size.height} 
                 display="flex" 

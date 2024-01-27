@@ -16,7 +16,8 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import DashboardCard from "../../components/Cards.jsx";
 import BarChart from "../visualization/bar/Barchart.jsx";
 import PieChart from "../visualization/pie/PieCharts.jsx";
-
+import Linechart from "../visualization/line/Linecharts.jsx";
+import BarchartTrafficRuleViolation from "../visualization/bar/BarchartViolation.jsx";
 
 import ChartCard from "../../components/ChartCard.jsx";
 import CustomFooter from "../global/Footer.jsx";
@@ -72,35 +73,52 @@ const Dashboard = () => {
           />
         </Box>
       </Box>
+      <Box sx={{ p: theme.spacing(3) }}>
+      </Box>
+      <Box display={'flex'} flexDirection={'row'}>
+        <ChartCard title="Speed History" subtitle="Speed info" size={{ width: '900px', height: '400px' }}>
+          <Linechart />
+
+        </ChartCard>
+        <ChartCard title="Traffic by Location" subtitle="Location info" size={{ width: '600px', height: '400px' }}>
+        <BarchartTrafficRuleViolation />
+
+
+        </ChartCard>
+      </Box>
+
+
+      <Box sx={{ p: theme.spacing(3) }}>
+      </Box>
 
       <ChartCard title="Traffic by Location" subtitle="Location info" size={{ width: '100%', height: '400px' }}>
-        <PieChart/>
+        <PieChart />
       </ChartCard>
 
 
-     
+
       <Box sx={{ p: theme.spacing(3) }}>
-      <ChartCard title="Violation" subtitle="Violation Reports" size={{ width: '100%', height: '400px' }}>
-        <BarChart />
-      </ChartCard>
+        <ChartCard title="Violation" subtitle="Violation Reports" size={{ width: '100%', height: '400px' }}>
+          <BarChart />
+        </ChartCard>
 
       </Box>
 
-     
+
 
 
 
 
       <div
-      style={{
-        bottom: 0,
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-            }}>
-      <CustomFooter />
+        style={{
+          bottom: 0,
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+        <CustomFooter />
 
       </div>
 

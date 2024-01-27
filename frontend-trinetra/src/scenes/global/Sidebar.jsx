@@ -86,7 +86,7 @@ const CustomSidebar = () => {
           color: `${colors.greenAccent[600]} !important`,
         },
       }}
-      height='200vh'
+      height='213vh'
     >
       <Sidebar collapsed={isCollapsed}
 

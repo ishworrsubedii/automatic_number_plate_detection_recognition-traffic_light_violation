@@ -1,4 +1,4 @@
-import{React,  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as echarts from 'echarts';
 import { useTheme } from '@mui/material/styles';
 import { tokens } from '../../../theme';
@@ -28,7 +28,7 @@ const BarChart = () => {
                 stack: '4 Wheeler',
                 name: '4 Wheeler',
                 itemStyle: {
-                    color: '#BAEDBD', 
+                    color: colors.yellowAccent[500], 
                     borderRadius: [20, 20, 0, 0]
                   }
             },
@@ -56,6 +56,15 @@ const BarChart = () => {
             yAxis: {
                 type: 'value'
             },
+            legend: {
+                data: ['2 Wheeler', '4 Wheeler', 'Heavy Vehicle'],
+                orient: 'horizontal',
+                bottom: 0, 
+                textStyle: {
+                    
+                    color: colors.primary[100]
+                }
+            },
             series: series
         };
 
@@ -63,7 +72,7 @@ const BarChart = () => {
     }, []);
 
     return (
-        <div id="main" style={{  margin: '50px', display:'flex', flexDirection:'column', alignItems:'center', width: '100%', height: '400px' }} />
+        <div id="main" style={{  margin: '50px', display:'flex', flexDirection:'column', alignItems:'center', width: '100%', height: '375px' }} />
     );
 };
 
