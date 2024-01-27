@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider} from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
@@ -21,6 +21,7 @@ import CameraList from "./scenes/cameralist/CameraStatus";
 import Notification from "./scenes/notification/Notification";
 
 import LoginPage from "./scenes/auth/login/Login";
+
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -28,7 +29,6 @@ function App() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-
     setLoggedIn(true);
     navigate("/");
   };
@@ -44,9 +44,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          {isLoggedIn && <Sidebar isSidebar={isSidebar} />}
+          {isLoggedIn && <Sidebar  isSidebar={isSidebar} />}
           <main className="content">
             {isLoggedIn && <Topbar setIsSidebar={setIsSidebar} />}
+
             <Routes>
               <Route
                 path="/"
@@ -73,6 +74,7 @@ function App() {
               <Route path="/camera-list" element={<CameraList />} />
               <Route path="/notification" element={<Notification />} />
             </Routes>
+            
           </main>
         </div>
       </ThemeProvider>

@@ -25,3 +25,15 @@ React Pro side bar documentation
 https://blog.openreplay.com/simple-sidebars-with-react-pro-sidebar-and-material-ui/
 
 ## Day 4
+sidebar work
+## Day5
+finalize themes and made tyo black and white theme ma suitable for sidebar and topbar
+
+## Day 6
+added all the pages and made function
+
+## Day 7
+added routes and refactored codes
+
+## Day 8
+Navbar
