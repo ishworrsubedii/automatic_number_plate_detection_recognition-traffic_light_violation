@@ -96,7 +96,13 @@ const AlprService = () => {
     };
 
     const Library = () => {
-        return <Typography variant="body1">Library Content</Typography>;
+        return (
+            <Box>
+                <Typography variant="h6">Library</Typography>
+            </Box>
+            
+        )
+        
     };
 
     const handleTabClick = (tab) => {

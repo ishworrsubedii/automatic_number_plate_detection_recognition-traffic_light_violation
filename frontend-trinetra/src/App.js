@@ -63,9 +63,9 @@ function App() {
               <Route path="/projects" element={<Project />} />
               <Route path="/server" element={<Server />} />
               <Route path="/alpr" element={<Alpr />} />
-              <Route path="/speed" element={<Speed />} />
+              <Route path="/speedtest" element={<Speed />} />
               <Route
-                path="/traffic-light-violation"
+                path="/violation"
                 element={<TrafficLightViolation />}
               />
               <Route path="/user-profile" element={<UserProfile />} />

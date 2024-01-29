@@ -17,6 +17,8 @@ import ChartCard from '../../components/ChartCard';
 import Header from '../../components/Header';
 import { ColorModeContext, tokens } from '../../theme';
 
+
+
 const Thread = ({ title, Icon }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -79,6 +81,8 @@ const Thread = ({ title, Icon }) => {
     );
 };
 
+
+
 const ServerStatus = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -90,7 +94,9 @@ const ServerStatus = () => {
             </Box>
 
             <Box marginTop={3} />
-            <ChartCard size={{ width: '100%', height: '300px' }} />
+            <ChartCard size={{ width: '100%', height: '300px' }} >
+
+            </ChartCard>
 
             <Button
                 variant="contained"

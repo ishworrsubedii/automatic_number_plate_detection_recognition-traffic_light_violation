@@ -1,0 +1,8002 @@
+[
+  {
+    "violation_id": "VIOL1",
+    "speed": 56,
+    "recognized_info": "Plate-7393",
+    "accuracy": 0.99,
+    "date": "Jan 29, 2024 22:24:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL2",
+    "speed": 79,
+    "recognized_info": "Plate-6354",
+    "accuracy": 0.78,
+    "date": "Jan 28, 2024 22:09:28",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL3",
+    "speed": 80,
+    "recognized_info": "Plate-9377",
+    "accuracy": 0.73,
+    "date": "Jan 27, 2024 22:37:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL4",
+    "speed": 82,
+    "recognized_info": "Plate-1193",
+    "accuracy": 0.95,
+    "date": "Jan 26, 2024 22:14:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL5",
+    "speed": 74,
+    "recognized_info": "Plate-1684",
+    "accuracy": 0.76,
+    "date": "Jan 25, 2024 22:21:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL6",
+    "speed": 67,
+    "recognized_info": "Plate-9099",
+    "accuracy": 0.95,
+    "date": "Jan 24, 2024 22:39:16",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL7",
+    "speed": 70,
+    "recognized_info": "Plate-9601",
+    "accuracy": 0.98,
+    "date": "Jan 23, 2024 22:28:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL8",
+    "speed": 97,
+    "recognized_info": "Plate-1653",
+    "accuracy": 0.75,
+    "date": "Jan 22, 2024 22:54:40",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL9",
+    "speed": 69,
+    "recognized_info": "Plate-1600",
+    "accuracy": 0.86,
+    "date": "Jan 21, 2024 22:20:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL10",
+    "speed": 86,
+    "recognized_info": "Plate-3357",
+    "accuracy": 0.88,
+    "date": "Jan 20, 2024 22:31:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL11",
+    "speed": 77,
+    "recognized_info": "Plate-8458",
+    "accuracy": 0.72,
+    "date": "Jan 19, 2024 22:08:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL12",
+    "speed": 84,
+    "recognized_info": "Plate-8108",
+    "accuracy": 0.81,
+    "date": "Jan 18, 2024 22:22:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL13",
+    "speed": 58,
+    "recognized_info": "Plate-7049",
+    "accuracy": 0.87,
+    "date": "Jan 17, 2024 22:50:58",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL14",
+    "speed": 89,
+    "recognized_info": "Plate-7819",
+    "accuracy": 0.74,
+    "date": "Jan 16, 2024 22:43:28",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL15",
+    "speed": 57,
+    "recognized_info": "Plate-2567",
+    "accuracy": 0.91,
+    "date": "Jan 15, 2024 22:47:53",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL16",
+    "speed": 59,
+    "recognized_info": "Plate-7088",
+    "accuracy": 0.87,
+    "date": "Jan 14, 2024 22:25:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL17",
+    "speed": 55,
+    "recognized_info": "Plate-5684",
+    "accuracy": 0.81,
+    "date": "Jan 13, 2024 22:12:43",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL18",
+    "speed": 52,
+    "recognized_info": "Plate-7609",
+    "accuracy": 0.9,
+    "date": "Jan 12, 2024 22:30:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL19",
+    "speed": 58,
+    "recognized_info": "Plate-1886",
+    "accuracy": 0.82,
+    "date": "Jan 11, 2024 22:18:04",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL20",
+    "speed": 85,
+    "recognized_info": "Plate-9826",
+    "accuracy": 0.98,
+    "date": "Jan 10, 2024 22:09:57",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL21",
+    "speed": 80,
+    "recognized_info": "Plate-6590",
+    "accuracy": 0.98,
+    "date": "Jan 09, 2024 22:53:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL22",
+    "speed": 97,
+    "recognized_info": "Plate-6617",
+    "accuracy": 0.96,
+    "date": "Jan 08, 2024 22:48:13",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL23",
+    "speed": 84,
+    "recognized_info": "Plate-2041",
+    "accuracy": 0.84,
+    "date": "Jan 07, 2024 22:21:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL24",
+    "speed": 84,
+    "recognized_info": "Plate-7746",
+    "accuracy": 0.77,
+    "date": "Jan 06, 2024 22:22:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL25",
+    "speed": 66,
+    "recognized_info": "Plate-6373",
+    "accuracy": 0.8,
+    "date": "Jan 05, 2024 22:21:28",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL26",
+    "speed": 55,
+    "recognized_info": "Plate-6282",
+    "accuracy": 0.84,
+    "date": "Jan 04, 2024 22:07:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL27",
+    "speed": 55,
+    "recognized_info": "Plate-5691",
+    "accuracy": 0.95,
+    "date": "Jan 03, 2024 22:14:59",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL28",
+    "speed": 70,
+    "recognized_info": "Plate-7206",
+    "accuracy": 0.89,
+    "date": "Jan 02, 2024 22:47:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL29",
+    "speed": 95,
+    "recognized_info": "Plate-5857",
+    "accuracy": 0.76,
+    "date": "Jan 01, 2024 22:38:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL30",
+    "speed": 85,
+    "recognized_info": "Plate-8756",
+    "accuracy": 0.83,
+    "date": "Dec 31, 2023 22:29:03",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL31",
+    "speed": 76,
+    "recognized_info": "Plate-6478",
+    "accuracy": 0.8,
+    "date": "Dec 30, 2023 22:08:52",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL32",
+    "speed": 84,
+    "recognized_info": "Plate-3249",
+    "accuracy": 0.77,
+    "date": "Dec 29, 2023 22:28:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL33",
+    "speed": 50,
+    "recognized_info": "Plate-4685",
+    "accuracy": 0.76,
+    "date": "Dec 28, 2023 22:59:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL34",
+    "speed": 81,
+    "recognized_info": "Plate-1646",
+    "accuracy": 0.72,
+    "date": "Dec 27, 2023 22:46:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL35",
+    "speed": 60,
+    "recognized_info": "Plate-2875",
+    "accuracy": 0.91,
+    "date": "Dec 26, 2023 22:10:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL36",
+    "speed": 85,
+    "recognized_info": "Plate-4841",
+    "accuracy": 0.89,
+    "date": "Dec 25, 2023 23:00:22",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL37",
+    "speed": 90,
+    "recognized_info": "Plate-2344",
+    "accuracy": 0.96,
+    "date": "Dec 24, 2023 22:12:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL38",
+    "speed": 70,
+    "recognized_info": "Plate-8396",
+    "accuracy": 0.82,
+    "date": "Dec 23, 2023 22:48:31",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL39",
+    "speed": 97,
+    "recognized_info": "Plate-3646",
+    "accuracy": 0.74,
+    "date": "Dec 22, 2023 22:50:10",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL40",
+    "speed": 77,
+    "recognized_info": "Plate-4194",
+    "accuracy": 0.77,
+    "date": "Dec 21, 2023 22:49:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL41",
+    "speed": 79,
+    "recognized_info": "Plate-3816",
+    "accuracy": 0.88,
+    "date": "Dec 20, 2023 22:41:49",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL42",
+    "speed": 85,
+    "recognized_info": "Plate-3295",
+    "accuracy": 0.75,
+    "date": "Dec 19, 2023 22:34:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL43",
+    "speed": 74,
+    "recognized_info": "Plate-6010",
+    "accuracy": 0.87,
+    "date": "Dec 18, 2023 23:07:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL44",
+    "speed": 74,
+    "recognized_info": "Plate-2615",
+    "accuracy": 0.9,
+    "date": "Dec 17, 2023 22:35:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL45",
+    "speed": 83,
+    "recognized_info": "Plate-3091",
+    "accuracy": 0.76,
+    "date": "Dec 16, 2023 23:01:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL46",
+    "speed": 64,
+    "recognized_info": "Plate-5230",
+    "accuracy": 0.75,
+    "date": "Dec 15, 2023 22:18:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL47",
+    "speed": 63,
+    "recognized_info": "Plate-7331",
+    "accuracy": 0.86,
+    "date": "Dec 14, 2023 22:27:28",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL48",
+    "speed": 59,
+    "recognized_info": "Plate-9557",
+    "accuracy": 0.87,
+    "date": "Dec 13, 2023 22:40:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL49",
+    "speed": 62,
+    "recognized_info": "Plate-2570",
+    "accuracy": 0.85,
+    "date": "Dec 12, 2023 22:59:32",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL50",
+    "speed": 96,
+    "recognized_info": "Plate-6887",
+    "accuracy": 0.73,
+    "date": "Dec 11, 2023 22:36:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL51",
+    "speed": 96,
+    "recognized_info": "Plate-3493",
+    "accuracy": 0.99,
+    "date": "Dec 10, 2023 22:16:58",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL52",
+    "speed": 69,
+    "recognized_info": "Plate-4499",
+    "accuracy": 0.82,
+    "date": "Dec 09, 2023 22:18:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL53",
+    "speed": 74,
+    "recognized_info": "Plate-8356",
+    "accuracy": 0.87,
+    "date": "Dec 08, 2023 22:49:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL54",
+    "speed": 90,
+    "recognized_info": "Plate-2284",
+    "accuracy": 0.84,
+    "date": "Dec 07, 2023 22:40:52",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL55",
+    "speed": 63,
+    "recognized_info": "Plate-4999",
+    "accuracy": 0.99,
+    "date": "Dec 06, 2023 22:34:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL56",
+    "speed": 58,
+    "recognized_info": "Plate-9457",
+    "accuracy": 0.72,
+    "date": "Dec 05, 2023 22:20:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL57",
+    "speed": 60,
+    "recognized_info": "Plate-9139",
+    "accuracy": 0.83,
+    "date": "Dec 04, 2023 22:20:32",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL58",
+    "speed": 77,
+    "recognized_info": "Plate-2560",
+    "accuracy": 0.77,
+    "date": "Dec 03, 2023 23:01:35",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL59",
+    "speed": 85,
+    "recognized_info": "Plate-2938",
+    "accuracy": 0.92,
+    "date": "Dec 02, 2023 22:55:14",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL60",
+    "speed": 74,
+    "recognized_info": "Plate-8210",
+    "accuracy": 0.89,
+    "date": "Dec 01, 2023 22:08:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL61",
+    "speed": 84,
+    "recognized_info": "Plate-7260",
+    "accuracy": 0.96,
+    "date": "Nov 30, 2023 22:53:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL62",
+    "speed": 80,
+    "recognized_info": "Plate-4714",
+    "accuracy": 0.98,
+    "date": "Nov 29, 2023 22:51:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL63",
+    "speed": 72,
+    "recognized_info": "Plate-4565",
+    "accuracy": 0.97,
+    "date": "Nov 28, 2023 22:52:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL64",
+    "speed": 66,
+    "recognized_info": "Plate-9463",
+    "accuracy": 0.76,
+    "date": "Nov 27, 2023 22:50:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL65",
+    "speed": 96,
+    "recognized_info": "Plate-2162",
+    "accuracy": 0.92,
+    "date": "Nov 26, 2023 22:54:45",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL66",
+    "speed": 87,
+    "recognized_info": "Plate-4564",
+    "accuracy": 0.75,
+    "date": "Nov 25, 2023 22:43:15",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL67",
+    "speed": 69,
+    "recognized_info": "Plate-6777",
+    "accuracy": 0.75,
+    "date": "Nov 24, 2023 22:23:26",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL68",
+    "speed": 68,
+    "recognized_info": "Plate-3579",
+    "accuracy": 0.75,
+    "date": "Nov 23, 2023 22:54:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL69",
+    "speed": 76,
+    "recognized_info": "Plate-9670",
+    "accuracy": 0.81,
+    "date": "Nov 22, 2023 22:38:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL70",
+    "speed": 94,
+    "recognized_info": "Plate-5865",
+    "accuracy": 0.89,
+    "date": "Nov 21, 2023 22:09:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL71",
+    "speed": 95,
+    "recognized_info": "Plate-3046",
+    "accuracy": 0.72,
+    "date": "Nov 20, 2023 23:02:55",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL72",
+    "speed": 73,
+    "recognized_info": "Plate-3836",
+    "accuracy": 0.86,
+    "date": "Nov 19, 2023 22:14:49",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL73",
+    "speed": 83,
+    "recognized_info": "Plate-1203",
+    "accuracy": 0.82,
+    "date": "Nov 18, 2023 22:22:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL74",
+    "speed": 85,
+    "recognized_info": "Plate-5262",
+    "accuracy": 0.85,
+    "date": "Nov 17, 2023 22:24:14",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL75",
+    "speed": 52,
+    "recognized_info": "Plate-5579",
+    "accuracy": 0.8,
+    "date": "Nov 16, 2023 22:55:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL76",
+    "speed": 61,
+    "recognized_info": "Plate-5245",
+    "accuracy": 0.83,
+    "date": "Nov 15, 2023 22:19:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL77",
+    "speed": 83,
+    "recognized_info": "Plate-9247",
+    "accuracy": 0.73,
+    "date": "Nov 14, 2023 22:10:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL78",
+    "speed": 59,
+    "recognized_info": "Plate-3333",
+    "accuracy": 0.93,
+    "date": "Nov 13, 2023 22:08:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL79",
+    "speed": 99,
+    "recognized_info": "Plate-9350",
+    "accuracy": 0.7,
+    "date": "Nov 12, 2023 22:51:26",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL80",
+    "speed": 64,
+    "recognized_info": "Plate-3595",
+    "accuracy": 0.97,
+    "date": "Nov 11, 2023 22:48:22",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL81",
+    "speed": 89,
+    "recognized_info": "Plate-3491",
+    "accuracy": 0.93,
+    "date": "Nov 10, 2023 22:37:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL82",
+    "speed": 58,
+    "recognized_info": "Plate-4828",
+    "accuracy": 0.79,
+    "date": "Nov 09, 2023 22:29:51",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL83",
+    "speed": 78,
+    "recognized_info": "Plate-8762",
+    "accuracy": 0.9,
+    "date": "Nov 08, 2023 22:52:02",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL84",
+    "speed": 97,
+    "recognized_info": "Plate-2975",
+    "accuracy": 0.87,
+    "date": "Nov 07, 2023 22:28:29",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL85",
+    "speed": 62,
+    "recognized_info": "Plate-8563",
+    "accuracy": 0.81,
+    "date": "Nov 06, 2023 22:35:20",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL86",
+    "speed": 71,
+    "recognized_info": "Plate-1171",
+    "accuracy": 0.77,
+    "date": "Nov 05, 2023 22:35:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL87",
+    "speed": 58,
+    "recognized_info": "Plate-3177",
+    "accuracy": 0.95,
+    "date": "Nov 04, 2023 23:04:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL88",
+    "speed": 59,
+    "recognized_info": "Plate-8807",
+    "accuracy": 0.77,
+    "date": "Nov 03, 2023 23:01:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL89",
+    "speed": 63,
+    "recognized_info": "Plate-5952",
+    "accuracy": 0.95,
+    "date": "Nov 02, 2023 23:03:26",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL90",
+    "speed": 64,
+    "recognized_info": "Plate-5327",
+    "accuracy": 0.72,
+    "date": "Nov 01, 2023 23:06:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL91",
+    "speed": 65,
+    "recognized_info": "Plate-3650",
+    "accuracy": 0.71,
+    "date": "Oct 31, 2023 22:29:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL92",
+    "speed": 79,
+    "recognized_info": "Plate-8039",
+    "accuracy": 0.79,
+    "date": "Oct 30, 2023 22:39:55",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL93",
+    "speed": 53,
+    "recognized_info": "Plate-8452",
+    "accuracy": 0.88,
+    "date": "Oct 29, 2023 22:15:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL94",
+    "speed": 64,
+    "recognized_info": "Plate-8585",
+    "accuracy": 0.93,
+    "date": "Oct 28, 2023 23:00:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL95",
+    "speed": 97,
+    "recognized_info": "Plate-5423",
+    "accuracy": 0.78,
+    "date": "Oct 27, 2023 23:04:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL96",
+    "speed": 90,
+    "recognized_info": "Plate-1881",
+    "accuracy": 0.94,
+    "date": "Oct 26, 2023 22:24:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL97",
+    "speed": 96,
+    "recognized_info": "Plate-4290",
+    "accuracy": 0.7,
+    "date": "Oct 25, 2023 23:03:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL98",
+    "speed": 75,
+    "recognized_info": "Plate-7924",
+    "accuracy": 0.87,
+    "date": "Oct 24, 2023 22:59:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL99",
+    "speed": 65,
+    "recognized_info": "Plate-6232",
+    "accuracy": 0.75,
+    "date": "Oct 23, 2023 22:07:04",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL100",
+    "speed": 86,
+    "recognized_info": "Plate-4742",
+    "accuracy": 0.73,
+    "date": "Oct 22, 2023 22:08:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL101",
+    "speed": 83,
+    "recognized_info": "Plate-3985",
+    "accuracy": 0.94,
+    "date": "Oct 21, 2023 22:26:40",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL102",
+    "speed": 53,
+    "recognized_info": "Plate-5142",
+    "accuracy": 0.85,
+    "date": "Oct 20, 2023 22:24:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL103",
+    "speed": 83,
+    "recognized_info": "Plate-1106",
+    "accuracy": 1.0,
+    "date": "Oct 19, 2023 22:55:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL104",
+    "speed": 52,
+    "recognized_info": "Plate-7820",
+    "accuracy": 0.84,
+    "date": "Oct 18, 2023 22:19:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL105",
+    "speed": 80,
+    "recognized_info": "Plate-2095",
+    "accuracy": 0.97,
+    "date": "Oct 17, 2023 23:06:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL106",
+    "speed": 57,
+    "recognized_info": "Plate-4135",
+    "accuracy": 0.74,
+    "date": "Oct 16, 2023 22:17:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL107",
+    "speed": 78,
+    "recognized_info": "Plate-2141",
+    "accuracy": 0.73,
+    "date": "Oct 15, 2023 22:36:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL108",
+    "speed": 52,
+    "recognized_info": "Plate-8121",
+    "accuracy": 0.73,
+    "date": "Oct 14, 2023 22:36:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL109",
+    "speed": 90,
+    "recognized_info": "Plate-4965",
+    "accuracy": 0.75,
+    "date": "Oct 13, 2023 22:46:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL110",
+    "speed": 61,
+    "recognized_info": "Plate-7309",
+    "accuracy": 0.75,
+    "date": "Oct 12, 2023 22:10:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL111",
+    "speed": 53,
+    "recognized_info": "Plate-1720",
+    "accuracy": 0.99,
+    "date": "Oct 11, 2023 22:31:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL112",
+    "speed": 77,
+    "recognized_info": "Plate-9213",
+    "accuracy": 0.76,
+    "date": "Oct 10, 2023 22:06:56",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL113",
+    "speed": 86,
+    "recognized_info": "Plate-3916",
+    "accuracy": 0.93,
+    "date": "Oct 09, 2023 22:32:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL114",
+    "speed": 63,
+    "recognized_info": "Plate-2005",
+    "accuracy": 0.95,
+    "date": "Oct 08, 2023 22:12:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL115",
+    "speed": 50,
+    "recognized_info": "Plate-3464",
+    "accuracy": 0.97,
+    "date": "Oct 07, 2023 22:53:24",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL116",
+    "speed": 51,
+    "recognized_info": "Plate-9663",
+    "accuracy": 0.8,
+    "date": "Oct 06, 2023 22:38:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL117",
+    "speed": 96,
+    "recognized_info": "Plate-7618",
+    "accuracy": 0.81,
+    "date": "Oct 05, 2023 22:57:14",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL118",
+    "speed": 92,
+    "recognized_info": "Plate-6599",
+    "accuracy": 0.85,
+    "date": "Oct 04, 2023 22:15:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL119",
+    "speed": 84,
+    "recognized_info": "Plate-1496",
+    "accuracy": 0.89,
+    "date": "Oct 03, 2023 22:22:09",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL120",
+    "speed": 60,
+    "recognized_info": "Plate-4851",
+    "accuracy": 0.8,
+    "date": "Oct 02, 2023 23:01:02",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL121",
+    "speed": 74,
+    "recognized_info": "Plate-1963",
+    "accuracy": 0.84,
+    "date": "Oct 01, 2023 22:24:45",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL122",
+    "speed": 62,
+    "recognized_info": "Plate-3237",
+    "accuracy": 0.93,
+    "date": "Sep 30, 2023 22:31:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL123",
+    "speed": 98,
+    "recognized_info": "Plate-5395",
+    "accuracy": 0.93,
+    "date": "Sep 29, 2023 22:35:15",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL124",
+    "speed": 52,
+    "recognized_info": "Plate-3671",
+    "accuracy": 0.78,
+    "date": "Sep 28, 2023 22:58:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL125",
+    "speed": 71,
+    "recognized_info": "Plate-3730",
+    "accuracy": 0.72,
+    "date": "Sep 27, 2023 22:14:41",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL126",
+    "speed": 67,
+    "recognized_info": "Plate-9766",
+    "accuracy": 0.72,
+    "date": "Sep 26, 2023 22:21:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL127",
+    "speed": 69,
+    "recognized_info": "Plate-9937",
+    "accuracy": 0.73,
+    "date": "Sep 25, 2023 22:36:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL128",
+    "speed": 83,
+    "recognized_info": "Plate-1903",
+    "accuracy": 0.99,
+    "date": "Sep 24, 2023 22:50:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL129",
+    "speed": 79,
+    "recognized_info": "Plate-2289",
+    "accuracy": 0.8,
+    "date": "Sep 23, 2023 22:42:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL130",
+    "speed": 57,
+    "recognized_info": "Plate-8588",
+    "accuracy": 0.96,
+    "date": "Sep 22, 2023 22:10:38",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL131",
+    "speed": 59,
+    "recognized_info": "Plate-7811",
+    "accuracy": 0.79,
+    "date": "Sep 21, 2023 22:25:46",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL132",
+    "speed": 87,
+    "recognized_info": "Plate-5803",
+    "accuracy": 0.72,
+    "date": "Sep 20, 2023 22:44:40",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL133",
+    "speed": 78,
+    "recognized_info": "Plate-2059",
+    "accuracy": 0.92,
+    "date": "Sep 19, 2023 22:51:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL134",
+    "speed": 56,
+    "recognized_info": "Plate-3129",
+    "accuracy": 0.81,
+    "date": "Sep 18, 2023 22:44:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL135",
+    "speed": 60,
+    "recognized_info": "Plate-2460",
+    "accuracy": 0.97,
+    "date": "Sep 17, 2023 22:55:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL136",
+    "speed": 98,
+    "recognized_info": "Plate-5448",
+    "accuracy": 0.82,
+    "date": "Sep 16, 2023 22:33:26",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL137",
+    "speed": 81,
+    "recognized_info": "Plate-5675",
+    "accuracy": 0.72,
+    "date": "Sep 15, 2023 22:42:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL138",
+    "speed": 83,
+    "recognized_info": "Plate-2475",
+    "accuracy": 0.83,
+    "date": "Sep 14, 2023 22:23:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL139",
+    "speed": 57,
+    "recognized_info": "Plate-1669",
+    "accuracy": 0.7,
+    "date": "Sep 13, 2023 22:51:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL140",
+    "speed": 74,
+    "recognized_info": "Plate-4865",
+    "accuracy": 0.71,
+    "date": "Sep 12, 2023 23:03:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL141",
+    "speed": 96,
+    "recognized_info": "Plate-5259",
+    "accuracy": 0.85,
+    "date": "Sep 11, 2023 22:41:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL142",
+    "speed": 87,
+    "recognized_info": "Plate-5828",
+    "accuracy": 0.88,
+    "date": "Sep 10, 2023 22:48:40",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL143",
+    "speed": 89,
+    "recognized_info": "Plate-7740",
+    "accuracy": 0.96,
+    "date": "Sep 09, 2023 22:57:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL144",
+    "speed": 88,
+    "recognized_info": "Plate-5274",
+    "accuracy": 0.88,
+    "date": "Sep 08, 2023 22:54:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL145",
+    "speed": 69,
+    "recognized_info": "Plate-9725",
+    "accuracy": 0.82,
+    "date": "Sep 07, 2023 22:23:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL146",
+    "speed": 68,
+    "recognized_info": "Plate-7177",
+    "accuracy": 0.88,
+    "date": "Sep 06, 2023 22:47:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL147",
+    "speed": 78,
+    "recognized_info": "Plate-7724",
+    "accuracy": 0.72,
+    "date": "Sep 05, 2023 22:56:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL148",
+    "speed": 79,
+    "recognized_info": "Plate-8749",
+    "accuracy": 0.87,
+    "date": "Sep 04, 2023 22:08:32",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL149",
+    "speed": 61,
+    "recognized_info": "Plate-2736",
+    "accuracy": 0.8,
+    "date": "Sep 03, 2023 23:06:00",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL150",
+    "speed": 87,
+    "recognized_info": "Plate-9029",
+    "accuracy": 0.71,
+    "date": "Sep 02, 2023 22:34:21",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL151",
+    "speed": 72,
+    "recognized_info": "Plate-7499",
+    "accuracy": 0.96,
+    "date": "Sep 01, 2023 22:15:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL152",
+    "speed": 84,
+    "recognized_info": "Plate-1657",
+    "accuracy": 0.93,
+    "date": "Aug 31, 2023 23:03:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL153",
+    "speed": 74,
+    "recognized_info": "Plate-6385",
+    "accuracy": 0.9,
+    "date": "Aug 30, 2023 22:28:49",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL154",
+    "speed": 87,
+    "recognized_info": "Plate-6074",
+    "accuracy": 0.87,
+    "date": "Aug 29, 2023 22:19:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL155",
+    "speed": 85,
+    "recognized_info": "Plate-4308",
+    "accuracy": 0.99,
+    "date": "Aug 28, 2023 22:16:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL156",
+    "speed": 51,
+    "recognized_info": "Plate-4113",
+    "accuracy": 0.87,
+    "date": "Aug 27, 2023 22:49:00",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL157",
+    "speed": 93,
+    "recognized_info": "Plate-5814",
+    "accuracy": 0.95,
+    "date": "Aug 26, 2023 22:15:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL158",
+    "speed": 68,
+    "recognized_info": "Plate-4132",
+    "accuracy": 0.76,
+    "date": "Aug 25, 2023 22:39:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL159",
+    "speed": 57,
+    "recognized_info": "Plate-2158",
+    "accuracy": 0.73,
+    "date": "Aug 24, 2023 22:16:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL160",
+    "speed": 66,
+    "recognized_info": "Plate-1112",
+    "accuracy": 0.74,
+    "date": "Aug 23, 2023 22:45:03",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL161",
+    "speed": 89,
+    "recognized_info": "Plate-5257",
+    "accuracy": 0.96,
+    "date": "Aug 22, 2023 22:28:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL162",
+    "speed": 77,
+    "recognized_info": "Plate-1837",
+    "accuracy": 0.77,
+    "date": "Aug 21, 2023 22:41:45",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL163",
+    "speed": 88,
+    "recognized_info": "Plate-2324",
+    "accuracy": 1.0,
+    "date": "Aug 20, 2023 22:47:42",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL164",
+    "speed": 62,
+    "recognized_info": "Plate-4999",
+    "accuracy": 0.79,
+    "date": "Aug 19, 2023 23:02:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL165",
+    "speed": 84,
+    "recognized_info": "Plate-3800",
+    "accuracy": 1.0,
+    "date": "Aug 18, 2023 22:49:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL166",
+    "speed": 60,
+    "recognized_info": "Plate-8476",
+    "accuracy": 0.85,
+    "date": "Aug 17, 2023 22:39:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL167",
+    "speed": 78,
+    "recognized_info": "Plate-5231",
+    "accuracy": 0.95,
+    "date": "Aug 16, 2023 22:43:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL168",
+    "speed": 56,
+    "recognized_info": "Plate-7980",
+    "accuracy": 0.89,
+    "date": "Aug 15, 2023 22:21:20",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL169",
+    "speed": 79,
+    "recognized_info": "Plate-4477",
+    "accuracy": 0.83,
+    "date": "Aug 14, 2023 22:49:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL170",
+    "speed": 50,
+    "recognized_info": "Plate-9763",
+    "accuracy": 0.75,
+    "date": "Aug 13, 2023 22:45:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL171",
+    "speed": 80,
+    "recognized_info": "Plate-5216",
+    "accuracy": 0.87,
+    "date": "Aug 12, 2023 22:52:51",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL172",
+    "speed": 76,
+    "recognized_info": "Plate-2447",
+    "accuracy": 0.96,
+    "date": "Aug 11, 2023 22:27:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL173",
+    "speed": 72,
+    "recognized_info": "Plate-9695",
+    "accuracy": 0.79,
+    "date": "Aug 10, 2023 22:23:26",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL174",
+    "speed": 60,
+    "recognized_info": "Plate-7973",
+    "accuracy": 0.75,
+    "date": "Aug 09, 2023 22:56:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL175",
+    "speed": 92,
+    "recognized_info": "Plate-1489",
+    "accuracy": 0.96,
+    "date": "Aug 08, 2023 22:31:49",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL176",
+    "speed": 51,
+    "recognized_info": "Plate-2417",
+    "accuracy": 0.77,
+    "date": "Aug 07, 2023 22:08:14",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL177",
+    "speed": 87,
+    "recognized_info": "Plate-1600",
+    "accuracy": 0.81,
+    "date": "Aug 06, 2023 22:39:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL178",
+    "speed": 53,
+    "recognized_info": "Plate-5349",
+    "accuracy": 0.71,
+    "date": "Aug 05, 2023 22:12:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL179",
+    "speed": 65,
+    "recognized_info": "Plate-2853",
+    "accuracy": 0.7,
+    "date": "Aug 04, 2023 22:20:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL180",
+    "speed": 85,
+    "recognized_info": "Plate-9473",
+    "accuracy": 0.94,
+    "date": "Aug 03, 2023 22:50:10",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL181",
+    "speed": 53,
+    "recognized_info": "Plate-5259",
+    "accuracy": 0.77,
+    "date": "Aug 02, 2023 22:17:26",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL182",
+    "speed": 95,
+    "recognized_info": "Plate-1766",
+    "accuracy": 0.94,
+    "date": "Aug 01, 2023 22:57:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL183",
+    "speed": 72,
+    "recognized_info": "Plate-6200",
+    "accuracy": 0.79,
+    "date": "Jul 31, 2023 22:52:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL184",
+    "speed": 73,
+    "recognized_info": "Plate-4377",
+    "accuracy": 0.78,
+    "date": "Jul 30, 2023 22:19:23",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL185",
+    "speed": 67,
+    "recognized_info": "Plate-3577",
+    "accuracy": 0.94,
+    "date": "Jul 29, 2023 22:58:41",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL186",
+    "speed": 50,
+    "recognized_info": "Plate-6761",
+    "accuracy": 0.86,
+    "date": "Jul 28, 2023 22:48:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL187",
+    "speed": 92,
+    "recognized_info": "Plate-8604",
+    "accuracy": 0.89,
+    "date": "Jul 27, 2023 22:13:51",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL188",
+    "speed": 71,
+    "recognized_info": "Plate-6653",
+    "accuracy": 0.72,
+    "date": "Jul 26, 2023 22:29:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL189",
+    "speed": 95,
+    "recognized_info": "Plate-5369",
+    "accuracy": 0.74,
+    "date": "Jul 25, 2023 22:37:31",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL190",
+    "speed": 89,
+    "recognized_info": "Plate-9284",
+    "accuracy": 0.78,
+    "date": "Jul 24, 2023 22:30:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL191",
+    "speed": 70,
+    "recognized_info": "Plate-8754",
+    "accuracy": 0.91,
+    "date": "Jul 23, 2023 22:49:55",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL192",
+    "speed": 93,
+    "recognized_info": "Plate-9073",
+    "accuracy": 0.72,
+    "date": "Jul 22, 2023 23:00:08",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL193",
+    "speed": 52,
+    "recognized_info": "Plate-9355",
+    "accuracy": 0.8,
+    "date": "Jul 21, 2023 22:45:59",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL194",
+    "speed": 52,
+    "recognized_info": "Plate-9781",
+    "accuracy": 0.72,
+    "date": "Jul 20, 2023 22:28:45",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL195",
+    "speed": 57,
+    "recognized_info": "Plate-8212",
+    "accuracy": 0.83,
+    "date": "Jul 19, 2023 22:08:32",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL196",
+    "speed": 50,
+    "recognized_info": "Plate-1525",
+    "accuracy": 0.93,
+    "date": "Jul 18, 2023 22:14:01",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL197",
+    "speed": 75,
+    "recognized_info": "Plate-8054",
+    "accuracy": 0.85,
+    "date": "Jul 17, 2023 23:03:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL198",
+    "speed": 84,
+    "recognized_info": "Plate-8361",
+    "accuracy": 0.91,
+    "date": "Jul 16, 2023 22:49:15",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL199",
+    "speed": 90,
+    "recognized_info": "Plate-1593",
+    "accuracy": 0.75,
+    "date": "Jul 15, 2023 22:48:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL200",
+    "speed": 95,
+    "recognized_info": "Plate-1424",
+    "accuracy": 0.71,
+    "date": "Jul 14, 2023 22:13:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL201",
+    "speed": 87,
+    "recognized_info": "Plate-1697",
+    "accuracy": 0.77,
+    "date": "Jul 13, 2023 22:31:53",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL202",
+    "speed": 72,
+    "recognized_info": "Plate-3678",
+    "accuracy": 0.92,
+    "date": "Jul 12, 2023 22:17:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL203",
+    "speed": 98,
+    "recognized_info": "Plate-8471",
+    "accuracy": 0.73,
+    "date": "Jul 11, 2023 22:32:33",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL204",
+    "speed": 75,
+    "recognized_info": "Plate-2074",
+    "accuracy": 0.9,
+    "date": "Jul 10, 2023 22:33:45",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL205",
+    "speed": 60,
+    "recognized_info": "Plate-9051",
+    "accuracy": 0.8,
+    "date": "Jul 09, 2023 22:29:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL206",
+    "speed": 67,
+    "recognized_info": "Plate-1212",
+    "accuracy": 0.76,
+    "date": "Jul 08, 2023 22:54:47",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL207",
+    "speed": 51,
+    "recognized_info": "Plate-6138",
+    "accuracy": 0.86,
+    "date": "Jul 07, 2023 22:12:49",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL208",
+    "speed": 50,
+    "recognized_info": "Plate-7904",
+    "accuracy": 0.94,
+    "date": "Jul 06, 2023 23:01:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL209",
+    "speed": 57,
+    "recognized_info": "Plate-7300",
+    "accuracy": 0.88,
+    "date": "Jul 05, 2023 22:09:46",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL210",
+    "speed": 51,
+    "recognized_info": "Plate-2928",
+    "accuracy": 0.92,
+    "date": "Jul 04, 2023 22:48:32",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL211",
+    "speed": 75,
+    "recognized_info": "Plate-5822",
+    "accuracy": 0.75,
+    "date": "Jul 03, 2023 22:15:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL212",
+    "speed": 73,
+    "recognized_info": "Plate-8572",
+    "accuracy": 0.76,
+    "date": "Jul 02, 2023 22:43:15",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL213",
+    "speed": 81,
+    "recognized_info": "Plate-3765",
+    "accuracy": 0.91,
+    "date": "Jul 01, 2023 22:45:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL214",
+    "speed": 73,
+    "recognized_info": "Plate-4200",
+    "accuracy": 0.92,
+    "date": "Jun 30, 2023 22:08:40",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL215",
+    "speed": 70,
+    "recognized_info": "Plate-6135",
+    "accuracy": 0.96,
+    "date": "Jun 29, 2023 23:00:26",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL216",
+    "speed": 50,
+    "recognized_info": "Plate-7910",
+    "accuracy": 0.72,
+    "date": "Jun 28, 2023 22:19:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL217",
+    "speed": 83,
+    "recognized_info": "Plate-5116",
+    "accuracy": 0.99,
+    "date": "Jun 27, 2023 22:45:16",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL218",
+    "speed": 93,
+    "recognized_info": "Plate-5731",
+    "accuracy": 0.99,
+    "date": "Jun 26, 2023 23:06:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL219",
+    "speed": 95,
+    "recognized_info": "Plate-3205",
+    "accuracy": 0.81,
+    "date": "Jun 25, 2023 23:02:22",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL220",
+    "speed": 68,
+    "recognized_info": "Plate-1573",
+    "accuracy": 0.95,
+    "date": "Jun 24, 2023 22:31:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL221",
+    "speed": 53,
+    "recognized_info": "Plate-1040",
+    "accuracy": 0.84,
+    "date": "Jun 23, 2023 22:48:52",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL222",
+    "speed": 86,
+    "recognized_info": "Plate-8531",
+    "accuracy": 0.86,
+    "date": "Jun 22, 2023 22:45:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL223",
+    "speed": 62,
+    "recognized_info": "Plate-2220",
+    "accuracy": 0.81,
+    "date": "Jun 21, 2023 22:18:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL224",
+    "speed": 72,
+    "recognized_info": "Plate-5534",
+    "accuracy": 0.89,
+    "date": "Jun 20, 2023 23:02:01",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL225",
+    "speed": 58,
+    "recognized_info": "Plate-7627",
+    "accuracy": 0.99,
+    "date": "Jun 19, 2023 22:18:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL226",
+    "speed": 97,
+    "recognized_info": "Plate-6623",
+    "accuracy": 0.8,
+    "date": "Jun 18, 2023 22:45:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL227",
+    "speed": 81,
+    "recognized_info": "Plate-2886",
+    "accuracy": 0.83,
+    "date": "Jun 17, 2023 22:09:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL228",
+    "speed": 79,
+    "recognized_info": "Plate-9079",
+    "accuracy": 0.73,
+    "date": "Jun 16, 2023 22:26:47",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL229",
+    "speed": 98,
+    "recognized_info": "Plate-9679",
+    "accuracy": 0.77,
+    "date": "Jun 15, 2023 22:50:00",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL230",
+    "speed": 56,
+    "recognized_info": "Plate-5225",
+    "accuracy": 0.89,
+    "date": "Jun 14, 2023 22:50:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL231",
+    "speed": 54,
+    "recognized_info": "Plate-2236",
+    "accuracy": 0.96,
+    "date": "Jun 13, 2023 22:40:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL232",
+    "speed": 82,
+    "recognized_info": "Plate-7741",
+    "accuracy": 0.9,
+    "date": "Jun 12, 2023 22:34:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL233",
+    "speed": 72,
+    "recognized_info": "Plate-3572",
+    "accuracy": 0.72,
+    "date": "Jun 11, 2023 22:37:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL234",
+    "speed": 65,
+    "recognized_info": "Plate-4169",
+    "accuracy": 0.91,
+    "date": "Jun 10, 2023 22:12:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL235",
+    "speed": 67,
+    "recognized_info": "Plate-7256",
+    "accuracy": 0.96,
+    "date": "Jun 09, 2023 23:00:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL236",
+    "speed": 81,
+    "recognized_info": "Plate-8878",
+    "accuracy": 0.76,
+    "date": "Jun 08, 2023 23:00:04",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL237",
+    "speed": 79,
+    "recognized_info": "Plate-3997",
+    "accuracy": 0.99,
+    "date": "Jun 07, 2023 22:47:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL238",
+    "speed": 74,
+    "recognized_info": "Plate-2956",
+    "accuracy": 0.99,
+    "date": "Jun 06, 2023 23:02:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL239",
+    "speed": 77,
+    "recognized_info": "Plate-6237",
+    "accuracy": 0.71,
+    "date": "Jun 05, 2023 22:37:58",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL240",
+    "speed": 100,
+    "recognized_info": "Plate-8975",
+    "accuracy": 0.89,
+    "date": "Jun 04, 2023 22:18:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL241",
+    "speed": 97,
+    "recognized_info": "Plate-9865",
+    "accuracy": 0.93,
+    "date": "Jun 03, 2023 23:02:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL242",
+    "speed": 65,
+    "recognized_info": "Plate-9093",
+    "accuracy": 0.92,
+    "date": "Jun 02, 2023 22:46:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL243",
+    "speed": 52,
+    "recognized_info": "Plate-7673",
+    "accuracy": 0.76,
+    "date": "Jun 01, 2023 22:58:28",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL244",
+    "speed": 52,
+    "recognized_info": "Plate-1771",
+    "accuracy": 0.88,
+    "date": "May 31, 2023 22:37:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL245",
+    "speed": 81,
+    "recognized_info": "Plate-4800",
+    "accuracy": 0.87,
+    "date": "May 30, 2023 22:52:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL246",
+    "speed": 88,
+    "recognized_info": "Plate-7123",
+    "accuracy": 0.73,
+    "date": "May 29, 2023 22:36:12",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL247",
+    "speed": 68,
+    "recognized_info": "Plate-8457",
+    "accuracy": 0.73,
+    "date": "May 28, 2023 22:23:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL248",
+    "speed": 78,
+    "recognized_info": "Plate-7919",
+    "accuracy": 0.92,
+    "date": "May 27, 2023 22:41:55",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL249",
+    "speed": 51,
+    "recognized_info": "Plate-7568",
+    "accuracy": 0.9,
+    "date": "May 26, 2023 22:32:04",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL250",
+    "speed": 53,
+    "recognized_info": "Plate-1847",
+    "accuracy": 0.94,
+    "date": "May 25, 2023 22:25:45",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL251",
+    "speed": 89,
+    "recognized_info": "Plate-2114",
+    "accuracy": 0.89,
+    "date": "May 24, 2023 22:59:25",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL252",
+    "speed": 51,
+    "recognized_info": "Plate-7736",
+    "accuracy": 0.93,
+    "date": "May 23, 2023 22:31:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL253",
+    "speed": 80,
+    "recognized_info": "Plate-9190",
+    "accuracy": 0.91,
+    "date": "May 22, 2023 22:54:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL254",
+    "speed": 93,
+    "recognized_info": "Plate-9754",
+    "accuracy": 0.89,
+    "date": "May 21, 2023 22:35:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL255",
+    "speed": 74,
+    "recognized_info": "Plate-7259",
+    "accuracy": 0.81,
+    "date": "May 20, 2023 22:09:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL256",
+    "speed": 52,
+    "recognized_info": "Plate-7093",
+    "accuracy": 0.76,
+    "date": "May 19, 2023 22:44:02",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL257",
+    "speed": 84,
+    "recognized_info": "Plate-3065",
+    "accuracy": 0.87,
+    "date": "May 18, 2023 22:57:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL258",
+    "speed": 87,
+    "recognized_info": "Plate-3518",
+    "accuracy": 0.82,
+    "date": "May 17, 2023 22:34:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL259",
+    "speed": 66,
+    "recognized_info": "Plate-2741",
+    "accuracy": 0.8,
+    "date": "May 16, 2023 22:17:15",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL260",
+    "speed": 85,
+    "recognized_info": "Plate-3153",
+    "accuracy": 0.78,
+    "date": "May 15, 2023 22:25:46",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL261",
+    "speed": 75,
+    "recognized_info": "Plate-4967",
+    "accuracy": 0.96,
+    "date": "May 14, 2023 22:15:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL262",
+    "speed": 79,
+    "recognized_info": "Plate-6993",
+    "accuracy": 0.82,
+    "date": "May 13, 2023 22:40:37",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL263",
+    "speed": 57,
+    "recognized_info": "Plate-7613",
+    "accuracy": 0.95,
+    "date": "May 12, 2023 22:13:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL264",
+    "speed": 78,
+    "recognized_info": "Plate-6521",
+    "accuracy": 0.7,
+    "date": "May 11, 2023 22:20:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL265",
+    "speed": 65,
+    "recognized_info": "Plate-4248",
+    "accuracy": 0.96,
+    "date": "May 10, 2023 22:11:07",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL266",
+    "speed": 69,
+    "recognized_info": "Plate-3606",
+    "accuracy": 0.9,
+    "date": "May 09, 2023 22:43:32",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL267",
+    "speed": 54,
+    "recognized_info": "Plate-1748",
+    "accuracy": 0.87,
+    "date": "May 08, 2023 22:54:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL268",
+    "speed": 80,
+    "recognized_info": "Plate-6828",
+    "accuracy": 0.76,
+    "date": "May 07, 2023 22:15:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL269",
+    "speed": 71,
+    "recognized_info": "Plate-7502",
+    "accuracy": 0.92,
+    "date": "May 06, 2023 22:47:59",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL270",
+    "speed": 54,
+    "recognized_info": "Plate-7809",
+    "accuracy": 0.99,
+    "date": "May 05, 2023 23:05:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL271",
+    "speed": 99,
+    "recognized_info": "Plate-7057",
+    "accuracy": 0.71,
+    "date": "May 04, 2023 22:07:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL272",
+    "speed": 56,
+    "recognized_info": "Plate-7079",
+    "accuracy": 0.94,
+    "date": "May 03, 2023 23:00:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL273",
+    "speed": 67,
+    "recognized_info": "Plate-7662",
+    "accuracy": 0.78,
+    "date": "May 02, 2023 23:07:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL274",
+    "speed": 52,
+    "recognized_info": "Plate-8689",
+    "accuracy": 0.78,
+    "date": "May 01, 2023 23:01:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL275",
+    "speed": 68,
+    "recognized_info": "Plate-6359",
+    "accuracy": 0.71,
+    "date": "Apr 30, 2023 22:40:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL276",
+    "speed": 54,
+    "recognized_info": "Plate-4623",
+    "accuracy": 0.95,
+    "date": "Apr 29, 2023 22:53:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL277",
+    "speed": 55,
+    "recognized_info": "Plate-8982",
+    "accuracy": 0.93,
+    "date": "Apr 28, 2023 22:44:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL278",
+    "speed": 62,
+    "recognized_info": "Plate-9335",
+    "accuracy": 0.85,
+    "date": "Apr 27, 2023 22:33:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL279",
+    "speed": 51,
+    "recognized_info": "Plate-7787",
+    "accuracy": 1.0,
+    "date": "Apr 26, 2023 22:46:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL280",
+    "speed": 55,
+    "recognized_info": "Plate-1857",
+    "accuracy": 0.82,
+    "date": "Apr 25, 2023 22:47:01",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL281",
+    "speed": 70,
+    "recognized_info": "Plate-7686",
+    "accuracy": 0.92,
+    "date": "Apr 24, 2023 22:56:03",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL282",
+    "speed": 86,
+    "recognized_info": "Plate-4347",
+    "accuracy": 0.77,
+    "date": "Apr 23, 2023 22:43:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL283",
+    "speed": 69,
+    "recognized_info": "Plate-8404",
+    "accuracy": 0.86,
+    "date": "Apr 22, 2023 22:50:36",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL284",
+    "speed": 93,
+    "recognized_info": "Plate-6781",
+    "accuracy": 0.86,
+    "date": "Apr 21, 2023 22:38:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL285",
+    "speed": 84,
+    "recognized_info": "Plate-2681",
+    "accuracy": 0.85,
+    "date": "Apr 20, 2023 23:04:43",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL286",
+    "speed": 57,
+    "recognized_info": "Plate-4713",
+    "accuracy": 0.88,
+    "date": "Apr 19, 2023 22:28:30",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL287",
+    "speed": 64,
+    "recognized_info": "Plate-1371",
+    "accuracy": 0.72,
+    "date": "Apr 18, 2023 22:15:28",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL288",
+    "speed": 86,
+    "recognized_info": "Plate-8435",
+    "accuracy": 0.71,
+    "date": "Apr 17, 2023 22:48:38",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL289",
+    "speed": 81,
+    "recognized_info": "Plate-8585",
+    "accuracy": 0.92,
+    "date": "Apr 16, 2023 23:00:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL290",
+    "speed": 96,
+    "recognized_info": "Plate-1456",
+    "accuracy": 0.71,
+    "date": "Apr 15, 2023 22:30:16",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL291",
+    "speed": 52,
+    "recognized_info": "Plate-9753",
+    "accuracy": 0.81,
+    "date": "Apr 14, 2023 22:19:41",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL292",
+    "speed": 66,
+    "recognized_info": "Plate-5636",
+    "accuracy": 0.8,
+    "date": "Apr 13, 2023 22:45:57",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL293",
+    "speed": 50,
+    "recognized_info": "Plate-5558",
+    "accuracy": 0.86,
+    "date": "Apr 12, 2023 23:05:00",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL294",
+    "speed": 96,
+    "recognized_info": "Plate-4745",
+    "accuracy": 0.83,
+    "date": "Apr 11, 2023 22:59:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL295",
+    "speed": 52,
+    "recognized_info": "Plate-6888",
+    "accuracy": 0.72,
+    "date": "Apr 10, 2023 22:17:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL296",
+    "speed": 78,
+    "recognized_info": "Plate-3304",
+    "accuracy": 0.7,
+    "date": "Apr 09, 2023 22:15:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL297",
+    "speed": 94,
+    "recognized_info": "Plate-2026",
+    "accuracy": 0.9,
+    "date": "Apr 08, 2023 22:28:08",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL298",
+    "speed": 61,
+    "recognized_info": "Plate-6178",
+    "accuracy": 0.84,
+    "date": "Apr 07, 2023 22:48:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL299",
+    "speed": 92,
+    "recognized_info": "Plate-3074",
+    "accuracy": 0.92,
+    "date": "Apr 06, 2023 22:32:59",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL300",
+    "speed": 50,
+    "recognized_info": "Plate-6845",
+    "accuracy": 0.95,
+    "date": "Apr 05, 2023 22:39:27",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL301",
+    "speed": 68,
+    "recognized_info": "Plate-1265",
+    "accuracy": 0.7,
+    "date": "Apr 04, 2023 22:34:35",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL302",
+    "speed": 68,
+    "recognized_info": "Plate-7582",
+    "accuracy": 0.71,
+    "date": "Apr 03, 2023 22:33:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL303",
+    "speed": 68,
+    "recognized_info": "Plate-6150",
+    "accuracy": 0.85,
+    "date": "Apr 02, 2023 22:44:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL304",
+    "speed": 80,
+    "recognized_info": "Plate-9201",
+    "accuracy": 0.75,
+    "date": "Apr 01, 2023 22:17:51",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL305",
+    "speed": 92,
+    "recognized_info": "Plate-1773",
+    "accuracy": 0.98,
+    "date": "Mar 31, 2023 22:36:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL306",
+    "speed": 82,
+    "recognized_info": "Plate-2546",
+    "accuracy": 0.74,
+    "date": "Mar 30, 2023 22:10:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL307",
+    "speed": 57,
+    "recognized_info": "Plate-4651",
+    "accuracy": 0.9,
+    "date": "Mar 29, 2023 22:59:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL308",
+    "speed": 60,
+    "recognized_info": "Plate-2577",
+    "accuracy": 0.8,
+    "date": "Mar 28, 2023 22:59:53",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL309",
+    "speed": 99,
+    "recognized_info": "Plate-3435",
+    "accuracy": 0.81,
+    "date": "Mar 27, 2023 22:48:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL310",
+    "speed": 77,
+    "recognized_info": "Plate-1461",
+    "accuracy": 0.72,
+    "date": "Mar 26, 2023 22:39:16",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL311",
+    "speed": 60,
+    "recognized_info": "Plate-4573",
+    "accuracy": 0.95,
+    "date": "Mar 25, 2023 22:44:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL312",
+    "speed": 60,
+    "recognized_info": "Plate-6203",
+    "accuracy": 0.85,
+    "date": "Mar 24, 2023 22:31:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL313",
+    "speed": 93,
+    "recognized_info": "Plate-1591",
+    "accuracy": 0.9,
+    "date": "Mar 23, 2023 22:59:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL314",
+    "speed": 56,
+    "recognized_info": "Plate-3742",
+    "accuracy": 0.92,
+    "date": "Mar 22, 2023 22:13:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL315",
+    "speed": 55,
+    "recognized_info": "Plate-5781",
+    "accuracy": 0.95,
+    "date": "Mar 21, 2023 22:35:09",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL316",
+    "speed": 78,
+    "recognized_info": "Plate-3999",
+    "accuracy": 0.93,
+    "date": "Mar 20, 2023 22:39:40",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL317",
+    "speed": 87,
+    "recognized_info": "Plate-5993",
+    "accuracy": 0.91,
+    "date": "Mar 19, 2023 22:27:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL318",
+    "speed": 55,
+    "recognized_info": "Plate-8918",
+    "accuracy": 0.82,
+    "date": "Mar 18, 2023 22:46:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL319",
+    "speed": 73,
+    "recognized_info": "Plate-4479",
+    "accuracy": 0.92,
+    "date": "Mar 17, 2023 22:38:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL320",
+    "speed": 73,
+    "recognized_info": "Plate-9212",
+    "accuracy": 0.84,
+    "date": "Mar 16, 2023 22:19:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL321",
+    "speed": 91,
+    "recognized_info": "Plate-8875",
+    "accuracy": 0.85,
+    "date": "Mar 15, 2023 23:00:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL322",
+    "speed": 59,
+    "recognized_info": "Plate-5222",
+    "accuracy": 0.74,
+    "date": "Mar 14, 2023 22:50:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL323",
+    "speed": 57,
+    "recognized_info": "Plate-9683",
+    "accuracy": 0.84,
+    "date": "Mar 13, 2023 23:07:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL324",
+    "speed": 86,
+    "recognized_info": "Plate-9189",
+    "accuracy": 0.91,
+    "date": "Mar 12, 2023 22:42:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL325",
+    "speed": 63,
+    "recognized_info": "Plate-2735",
+    "accuracy": 0.74,
+    "date": "Mar 11, 2023 23:07:23",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL326",
+    "speed": 80,
+    "recognized_info": "Plate-5219",
+    "accuracy": 0.93,
+    "date": "Mar 10, 2023 22:11:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL327",
+    "speed": 79,
+    "recognized_info": "Plate-7377",
+    "accuracy": 0.84,
+    "date": "Mar 09, 2023 22:53:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL328",
+    "speed": 77,
+    "recognized_info": "Plate-1767",
+    "accuracy": 0.72,
+    "date": "Mar 08, 2023 22:07:45",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL329",
+    "speed": 86,
+    "recognized_info": "Plate-8157",
+    "accuracy": 0.75,
+    "date": "Mar 07, 2023 22:59:02",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL330",
+    "speed": 61,
+    "recognized_info": "Plate-1406",
+    "accuracy": 0.89,
+    "date": "Mar 06, 2023 22:54:22",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL331",
+    "speed": 65,
+    "recognized_info": "Plate-1448",
+    "accuracy": 0.84,
+    "date": "Mar 05, 2023 22:40:57",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL332",
+    "speed": 62,
+    "recognized_info": "Plate-9440",
+    "accuracy": 0.71,
+    "date": "Mar 04, 2023 22:15:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL333",
+    "speed": 63,
+    "recognized_info": "Plate-3060",
+    "accuracy": 0.88,
+    "date": "Mar 03, 2023 23:03:01",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL334",
+    "speed": 89,
+    "recognized_info": "Plate-2767",
+    "accuracy": 0.88,
+    "date": "Mar 02, 2023 22:16:00",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL335",
+    "speed": 88,
+    "recognized_info": "Plate-7105",
+    "accuracy": 0.73,
+    "date": "Mar 01, 2023 22:43:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL336",
+    "speed": 62,
+    "recognized_info": "Plate-1752",
+    "accuracy": 0.94,
+    "date": "Feb 28, 2023 22:36:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL337",
+    "speed": 54,
+    "recognized_info": "Plate-4612",
+    "accuracy": 0.71,
+    "date": "Feb 27, 2023 22:26:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL338",
+    "speed": 55,
+    "recognized_info": "Plate-6128",
+    "accuracy": 0.91,
+    "date": "Feb 26, 2023 22:52:00",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL339",
+    "speed": 100,
+    "recognized_info": "Plate-9113",
+    "accuracy": 0.77,
+    "date": "Feb 25, 2023 23:01:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL340",
+    "speed": 63,
+    "recognized_info": "Plate-2304",
+    "accuracy": 0.93,
+    "date": "Feb 24, 2023 22:21:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL341",
+    "speed": 65,
+    "recognized_info": "Plate-8568",
+    "accuracy": 0.89,
+    "date": "Feb 23, 2023 22:58:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL342",
+    "speed": 51,
+    "recognized_info": "Plate-2643",
+    "accuracy": 0.83,
+    "date": "Feb 22, 2023 22:30:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL343",
+    "speed": 71,
+    "recognized_info": "Plate-2265",
+    "accuracy": 0.71,
+    "date": "Feb 21, 2023 22:07:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL344",
+    "speed": 65,
+    "recognized_info": "Plate-2426",
+    "accuracy": 0.75,
+    "date": "Feb 20, 2023 22:09:13",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL345",
+    "speed": 93,
+    "recognized_info": "Plate-6830",
+    "accuracy": 0.71,
+    "date": "Feb 19, 2023 23:06:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL346",
+    "speed": 51,
+    "recognized_info": "Plate-4723",
+    "accuracy": 0.77,
+    "date": "Feb 18, 2023 22:41:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL347",
+    "speed": 63,
+    "recognized_info": "Plate-9398",
+    "accuracy": 0.96,
+    "date": "Feb 17, 2023 22:33:19",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL348",
+    "speed": 62,
+    "recognized_info": "Plate-5757",
+    "accuracy": 0.72,
+    "date": "Feb 16, 2023 22:26:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL349",
+    "speed": 79,
+    "recognized_info": "Plate-6738",
+    "accuracy": 0.97,
+    "date": "Feb 15, 2023 22:42:30",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL350",
+    "speed": 60,
+    "recognized_info": "Plate-1578",
+    "accuracy": 0.94,
+    "date": "Feb 14, 2023 22:19:33",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL351",
+    "speed": 61,
+    "recognized_info": "Plate-7456",
+    "accuracy": 0.84,
+    "date": "Feb 13, 2023 22:14:01",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL352",
+    "speed": 77,
+    "recognized_info": "Plate-4558",
+    "accuracy": 0.86,
+    "date": "Feb 12, 2023 22:16:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL353",
+    "speed": 54,
+    "recognized_info": "Plate-7086",
+    "accuracy": 0.86,
+    "date": "Feb 11, 2023 22:40:23",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL354",
+    "speed": 70,
+    "recognized_info": "Plate-8829",
+    "accuracy": 0.85,
+    "date": "Feb 10, 2023 22:59:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL355",
+    "speed": 74,
+    "recognized_info": "Plate-5107",
+    "accuracy": 0.92,
+    "date": "Feb 09, 2023 22:26:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL356",
+    "speed": 99,
+    "recognized_info": "Plate-9068",
+    "accuracy": 0.77,
+    "date": "Feb 08, 2023 22:45:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL357",
+    "speed": 69,
+    "recognized_info": "Plate-9279",
+    "accuracy": 0.72,
+    "date": "Feb 07, 2023 23:05:24",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL358",
+    "speed": 92,
+    "recognized_info": "Plate-2200",
+    "accuracy": 0.96,
+    "date": "Feb 06, 2023 22:43:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL359",
+    "speed": 72,
+    "recognized_info": "Plate-7313",
+    "accuracy": 0.91,
+    "date": "Feb 05, 2023 22:12:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL360",
+    "speed": 60,
+    "recognized_info": "Plate-5234",
+    "accuracy": 0.84,
+    "date": "Feb 04, 2023 22:32:23",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL361",
+    "speed": 77,
+    "recognized_info": "Plate-3052",
+    "accuracy": 0.88,
+    "date": "Feb 03, 2023 22:44:44",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL362",
+    "speed": 93,
+    "recognized_info": "Plate-6377",
+    "accuracy": 0.88,
+    "date": "Feb 02, 2023 23:07:12",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL363",
+    "speed": 76,
+    "recognized_info": "Plate-4131",
+    "accuracy": 0.81,
+    "date": "Feb 01, 2023 22:28:25",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL364",
+    "speed": 92,
+    "recognized_info": "Plate-5881",
+    "accuracy": 0.92,
+    "date": "Jan 31, 2023 22:26:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL365",
+    "speed": 95,
+    "recognized_info": "Plate-8190",
+    "accuracy": 0.8,
+    "date": "Jan 30, 2023 22:16:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL366",
+    "speed": 55,
+    "recognized_info": "Plate-3725",
+    "accuracy": 0.91,
+    "date": "Jan 29, 2023 22:34:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL367",
+    "speed": 70,
+    "recognized_info": "Plate-3037",
+    "accuracy": 0.95,
+    "date": "Jan 28, 2023 22:52:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL368",
+    "speed": 73,
+    "recognized_info": "Plate-1898",
+    "accuracy": 0.92,
+    "date": "Jan 27, 2023 22:49:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL369",
+    "speed": 53,
+    "recognized_info": "Plate-7945",
+    "accuracy": 0.79,
+    "date": "Jan 26, 2023 22:28:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL370",
+    "speed": 90,
+    "recognized_info": "Plate-3270",
+    "accuracy": 0.84,
+    "date": "Jan 25, 2023 22:10:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL371",
+    "speed": 88,
+    "recognized_info": "Plate-8925",
+    "accuracy": 0.77,
+    "date": "Jan 24, 2023 22:53:07",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL372",
+    "speed": 73,
+    "recognized_info": "Plate-9043",
+    "accuracy": 0.77,
+    "date": "Jan 23, 2023 22:47:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL373",
+    "speed": 57,
+    "recognized_info": "Plate-2182",
+    "accuracy": 0.97,
+    "date": "Jan 22, 2023 22:34:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL374",
+    "speed": 51,
+    "recognized_info": "Plate-9597",
+    "accuracy": 0.82,
+    "date": "Jan 21, 2023 22:44:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL375",
+    "speed": 98,
+    "recognized_info": "Plate-1623",
+    "accuracy": 0.84,
+    "date": "Jan 20, 2023 23:01:57",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL376",
+    "speed": 71,
+    "recognized_info": "Plate-3674",
+    "accuracy": 0.93,
+    "date": "Jan 19, 2023 22:46:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL377",
+    "speed": 96,
+    "recognized_info": "Plate-4810",
+    "accuracy": 0.93,
+    "date": "Jan 18, 2023 22:38:14",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL378",
+    "speed": 52,
+    "recognized_info": "Plate-7581",
+    "accuracy": 0.71,
+    "date": "Jan 17, 2023 22:51:36",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL379",
+    "speed": 98,
+    "recognized_info": "Plate-7087",
+    "accuracy": 0.72,
+    "date": "Jan 16, 2023 22:19:28",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL380",
+    "speed": 70,
+    "recognized_info": "Plate-7145",
+    "accuracy": 0.91,
+    "date": "Jan 15, 2023 22:48:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL381",
+    "speed": 97,
+    "recognized_info": "Plate-1860",
+    "accuracy": 0.75,
+    "date": "Jan 14, 2023 22:22:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL382",
+    "speed": 84,
+    "recognized_info": "Plate-7900",
+    "accuracy": 0.95,
+    "date": "Jan 13, 2023 22:41:15",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL383",
+    "speed": 76,
+    "recognized_info": "Plate-6329",
+    "accuracy": 0.89,
+    "date": "Jan 12, 2023 22:24:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL384",
+    "speed": 84,
+    "recognized_info": "Plate-6450",
+    "accuracy": 1.0,
+    "date": "Jan 11, 2023 22:18:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL385",
+    "speed": 85,
+    "recognized_info": "Plate-3074",
+    "accuracy": 0.71,
+    "date": "Jan 10, 2023 22:13:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL386",
+    "speed": 83,
+    "recognized_info": "Plate-6801",
+    "accuracy": 0.71,
+    "date": "Jan 09, 2023 22:49:01",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL387",
+    "speed": 100,
+    "recognized_info": "Plate-9955",
+    "accuracy": 0.88,
+    "date": "Jan 08, 2023 22:11:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL388",
+    "speed": 80,
+    "recognized_info": "Plate-4499",
+    "accuracy": 0.89,
+    "date": "Jan 07, 2023 22:38:47",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL389",
+    "speed": 84,
+    "recognized_info": "Plate-3669",
+    "accuracy": 0.85,
+    "date": "Jan 06, 2023 22:10:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL390",
+    "speed": 100,
+    "recognized_info": "Plate-7312",
+    "accuracy": 0.86,
+    "date": "Jan 05, 2023 22:22:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL391",
+    "speed": 60,
+    "recognized_info": "Plate-9371",
+    "accuracy": 0.79,
+    "date": "Jan 04, 2023 22:45:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL392",
+    "speed": 56,
+    "recognized_info": "Plate-3462",
+    "accuracy": 0.79,
+    "date": "Jan 03, 2023 22:36:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL393",
+    "speed": 51,
+    "recognized_info": "Plate-9314",
+    "accuracy": 0.91,
+    "date": "Jan 02, 2023 22:14:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL394",
+    "speed": 66,
+    "recognized_info": "Plate-5613",
+    "accuracy": 0.93,
+    "date": "Jan 01, 2023 23:04:40",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL395",
+    "speed": 73,
+    "recognized_info": "Plate-9875",
+    "accuracy": 0.78,
+    "date": "Dec 31, 2022 22:40:39",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL396",
+    "speed": 85,
+    "recognized_info": "Plate-3925",
+    "accuracy": 0.93,
+    "date": "Dec 30, 2022 22:35:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL397",
+    "speed": 93,
+    "recognized_info": "Plate-1768",
+    "accuracy": 0.94,
+    "date": "Dec 29, 2022 22:15:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL398",
+    "speed": 55,
+    "recognized_info": "Plate-1535",
+    "accuracy": 0.91,
+    "date": "Dec 28, 2022 22:54:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL399",
+    "speed": 88,
+    "recognized_info": "Plate-3282",
+    "accuracy": 0.95,
+    "date": "Dec 27, 2022 22:26:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL400",
+    "speed": 50,
+    "recognized_info": "Plate-3108",
+    "accuracy": 0.86,
+    "date": "Dec 26, 2022 22:59:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL401",
+    "speed": 71,
+    "recognized_info": "Plate-9118",
+    "accuracy": 0.74,
+    "date": "Dec 25, 2022 22:25:32",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL402",
+    "speed": 92,
+    "recognized_info": "Plate-2023",
+    "accuracy": 0.98,
+    "date": "Dec 24, 2022 22:48:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL403",
+    "speed": 79,
+    "recognized_info": "Plate-7645",
+    "accuracy": 0.83,
+    "date": "Dec 23, 2022 22:23:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL404",
+    "speed": 64,
+    "recognized_info": "Plate-2170",
+    "accuracy": 0.92,
+    "date": "Dec 22, 2022 22:48:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL405",
+    "speed": 59,
+    "recognized_info": "Plate-7594",
+    "accuracy": 0.8,
+    "date": "Dec 21, 2022 22:59:43",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL406",
+    "speed": 51,
+    "recognized_info": "Plate-1506",
+    "accuracy": 0.89,
+    "date": "Dec 20, 2022 22:38:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL407",
+    "speed": 79,
+    "recognized_info": "Plate-9824",
+    "accuracy": 0.96,
+    "date": "Dec 19, 2022 22:28:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL408",
+    "speed": 88,
+    "recognized_info": "Plate-1999",
+    "accuracy": 0.93,
+    "date": "Dec 18, 2022 22:57:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL409",
+    "speed": 94,
+    "recognized_info": "Plate-2971",
+    "accuracy": 0.74,
+    "date": "Dec 17, 2022 22:57:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL410",
+    "speed": 76,
+    "recognized_info": "Plate-2228",
+    "accuracy": 0.9,
+    "date": "Dec 16, 2022 22:21:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL411",
+    "speed": 56,
+    "recognized_info": "Plate-6228",
+    "accuracy": 0.85,
+    "date": "Dec 15, 2022 22:47:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL412",
+    "speed": 86,
+    "recognized_info": "Plate-2460",
+    "accuracy": 0.95,
+    "date": "Dec 14, 2022 22:33:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL413",
+    "speed": 73,
+    "recognized_info": "Plate-3950",
+    "accuracy": 0.94,
+    "date": "Dec 13, 2022 23:06:41",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL414",
+    "speed": 64,
+    "recognized_info": "Plate-7403",
+    "accuracy": 0.85,
+    "date": "Dec 12, 2022 22:54:03",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL415",
+    "speed": 64,
+    "recognized_info": "Plate-7089",
+    "accuracy": 0.82,
+    "date": "Dec 11, 2022 22:41:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL416",
+    "speed": 84,
+    "recognized_info": "Plate-7386",
+    "accuracy": 0.7,
+    "date": "Dec 10, 2022 22:53:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL417",
+    "speed": 54,
+    "recognized_info": "Plate-1040",
+    "accuracy": 0.71,
+    "date": "Dec 09, 2022 22:39:01",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL418",
+    "speed": 67,
+    "recognized_info": "Plate-4252",
+    "accuracy": 0.86,
+    "date": "Dec 08, 2022 22:41:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL419",
+    "speed": 64,
+    "recognized_info": "Plate-8666",
+    "accuracy": 0.83,
+    "date": "Dec 07, 2022 22:40:09",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL420",
+    "speed": 63,
+    "recognized_info": "Plate-7418",
+    "accuracy": 0.79,
+    "date": "Dec 06, 2022 22:48:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL421",
+    "speed": 100,
+    "recognized_info": "Plate-2661",
+    "accuracy": 0.87,
+    "date": "Dec 05, 2022 22:12:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL422",
+    "speed": 96,
+    "recognized_info": "Plate-5714",
+    "accuracy": 0.91,
+    "date": "Dec 04, 2022 22:19:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL423",
+    "speed": 74,
+    "recognized_info": "Plate-3228",
+    "accuracy": 0.73,
+    "date": "Dec 03, 2022 22:48:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL424",
+    "speed": 71,
+    "recognized_info": "Plate-3700",
+    "accuracy": 0.76,
+    "date": "Dec 02, 2022 22:56:16",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL425",
+    "speed": 72,
+    "recognized_info": "Plate-1814",
+    "accuracy": 0.92,
+    "date": "Dec 01, 2022 22:32:35",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL426",
+    "speed": 81,
+    "recognized_info": "Plate-6855",
+    "accuracy": 0.89,
+    "date": "Nov 30, 2022 22:21:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL427",
+    "speed": 78,
+    "recognized_info": "Plate-1842",
+    "accuracy": 0.77,
+    "date": "Nov 29, 2022 22:20:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL428",
+    "speed": 94,
+    "recognized_info": "Plate-5491",
+    "accuracy": 0.97,
+    "date": "Nov 28, 2022 22:46:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL429",
+    "speed": 52,
+    "recognized_info": "Plate-7772",
+    "accuracy": 0.84,
+    "date": "Nov 27, 2022 22:46:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL430",
+    "speed": 71,
+    "recognized_info": "Plate-3428",
+    "accuracy": 0.8,
+    "date": "Nov 26, 2022 22:12:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL431",
+    "speed": 56,
+    "recognized_info": "Plate-2720",
+    "accuracy": 0.79,
+    "date": "Nov 25, 2022 22:47:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL432",
+    "speed": 59,
+    "recognized_info": "Plate-4013",
+    "accuracy": 0.73,
+    "date": "Nov 24, 2022 23:00:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL433",
+    "speed": 69,
+    "recognized_info": "Plate-8714",
+    "accuracy": 0.87,
+    "date": "Nov 23, 2022 23:02:34",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL434",
+    "speed": 82,
+    "recognized_info": "Plate-1884",
+    "accuracy": 0.91,
+    "date": "Nov 22, 2022 22:39:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL435",
+    "speed": 80,
+    "recognized_info": "Plate-8087",
+    "accuracy": 0.84,
+    "date": "Nov 21, 2022 22:21:58",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL436",
+    "speed": 53,
+    "recognized_info": "Plate-8121",
+    "accuracy": 0.93,
+    "date": "Nov 20, 2022 22:08:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL437",
+    "speed": 59,
+    "recognized_info": "Plate-7264",
+    "accuracy": 0.84,
+    "date": "Nov 19, 2022 22:22:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL438",
+    "speed": 54,
+    "recognized_info": "Plate-6025",
+    "accuracy": 0.98,
+    "date": "Nov 18, 2022 22:33:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL439",
+    "speed": 100,
+    "recognized_info": "Plate-9234",
+    "accuracy": 0.83,
+    "date": "Nov 17, 2022 22:51:45",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL440",
+    "speed": 93,
+    "recognized_info": "Plate-9729",
+    "accuracy": 0.75,
+    "date": "Nov 16, 2022 22:12:02",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL441",
+    "speed": 50,
+    "recognized_info": "Plate-2129",
+    "accuracy": 0.94,
+    "date": "Nov 15, 2022 22:46:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL442",
+    "speed": 100,
+    "recognized_info": "Plate-4698",
+    "accuracy": 0.7,
+    "date": "Nov 14, 2022 22:10:14",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL443",
+    "speed": 92,
+    "recognized_info": "Plate-6322",
+    "accuracy": 0.89,
+    "date": "Nov 13, 2022 22:55:38",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL444",
+    "speed": 65,
+    "recognized_info": "Plate-9942",
+    "accuracy": 0.78,
+    "date": "Nov 12, 2022 22:42:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL445",
+    "speed": 93,
+    "recognized_info": "Plate-2899",
+    "accuracy": 0.9,
+    "date": "Nov 11, 2022 23:00:51",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL446",
+    "speed": 68,
+    "recognized_info": "Plate-2837",
+    "accuracy": 0.74,
+    "date": "Nov 10, 2022 22:34:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL447",
+    "speed": 83,
+    "recognized_info": "Plate-4043",
+    "accuracy": 0.79,
+    "date": "Nov 09, 2022 23:03:38",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL448",
+    "speed": 86,
+    "recognized_info": "Plate-3154",
+    "accuracy": 0.87,
+    "date": "Nov 08, 2022 22:48:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL449",
+    "speed": 82,
+    "recognized_info": "Plate-8738",
+    "accuracy": 0.72,
+    "date": "Nov 07, 2022 22:37:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL450",
+    "speed": 55,
+    "recognized_info": "Plate-3781",
+    "accuracy": 0.75,
+    "date": "Nov 06, 2022 22:11:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL451",
+    "speed": 90,
+    "recognized_info": "Plate-7794",
+    "accuracy": 0.89,
+    "date": "Nov 05, 2022 22:09:40",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL452",
+    "speed": 72,
+    "recognized_info": "Plate-7864",
+    "accuracy": 0.84,
+    "date": "Nov 04, 2022 22:26:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL453",
+    "speed": 82,
+    "recognized_info": "Plate-9280",
+    "accuracy": 0.73,
+    "date": "Nov 03, 2022 22:31:22",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL454",
+    "speed": 80,
+    "recognized_info": "Plate-6209",
+    "accuracy": 0.73,
+    "date": "Nov 02, 2022 22:57:14",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL455",
+    "speed": 55,
+    "recognized_info": "Plate-5906",
+    "accuracy": 0.83,
+    "date": "Nov 01, 2022 22:43:49",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL456",
+    "speed": 63,
+    "recognized_info": "Plate-8422",
+    "accuracy": 0.79,
+    "date": "Oct 31, 2022 22:36:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL457",
+    "speed": 89,
+    "recognized_info": "Plate-7076",
+    "accuracy": 0.82,
+    "date": "Oct 30, 2022 22:45:51",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL458",
+    "speed": 100,
+    "recognized_info": "Plate-7546",
+    "accuracy": 0.82,
+    "date": "Oct 29, 2022 22:15:34",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL459",
+    "speed": 86,
+    "recognized_info": "Plate-3893",
+    "accuracy": 0.8,
+    "date": "Oct 28, 2022 22:18:16",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL460",
+    "speed": 98,
+    "recognized_info": "Plate-6455",
+    "accuracy": 0.89,
+    "date": "Oct 27, 2022 22:55:21",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL461",
+    "speed": 65,
+    "recognized_info": "Plate-7975",
+    "accuracy": 0.76,
+    "date": "Oct 26, 2022 22:22:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL462",
+    "speed": 74,
+    "recognized_info": "Plate-3479",
+    "accuracy": 0.76,
+    "date": "Oct 25, 2022 22:32:12",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL463",
+    "speed": 85,
+    "recognized_info": "Plate-2723",
+    "accuracy": 0.72,
+    "date": "Oct 24, 2022 22:19:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL464",
+    "speed": 56,
+    "recognized_info": "Plate-9309",
+    "accuracy": 0.86,
+    "date": "Oct 23, 2022 22:15:00",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL465",
+    "speed": 89,
+    "recognized_info": "Plate-5835",
+    "accuracy": 0.95,
+    "date": "Oct 22, 2022 22:23:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL466",
+    "speed": 87,
+    "recognized_info": "Plate-2373",
+    "accuracy": 0.81,
+    "date": "Oct 21, 2022 22:53:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL467",
+    "speed": 76,
+    "recognized_info": "Plate-6627",
+    "accuracy": 0.89,
+    "date": "Oct 20, 2022 22:25:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL468",
+    "speed": 54,
+    "recognized_info": "Plate-4739",
+    "accuracy": 1.0,
+    "date": "Oct 19, 2022 22:47:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL469",
+    "speed": 82,
+    "recognized_info": "Plate-2619",
+    "accuracy": 0.74,
+    "date": "Oct 18, 2022 22:48:55",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL470",
+    "speed": 100,
+    "recognized_info": "Plate-2707",
+    "accuracy": 0.72,
+    "date": "Oct 17, 2022 22:42:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL471",
+    "speed": 71,
+    "recognized_info": "Plate-1738",
+    "accuracy": 0.93,
+    "date": "Oct 16, 2022 22:34:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL472",
+    "speed": 65,
+    "recognized_info": "Plate-3497",
+    "accuracy": 0.71,
+    "date": "Oct 15, 2022 22:57:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL473",
+    "speed": 55,
+    "recognized_info": "Plate-5404",
+    "accuracy": 0.91,
+    "date": "Oct 14, 2022 22:43:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL474",
+    "speed": 85,
+    "recognized_info": "Plate-2883",
+    "accuracy": 0.91,
+    "date": "Oct 13, 2022 23:07:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL475",
+    "speed": 83,
+    "recognized_info": "Plate-3899",
+    "accuracy": 0.95,
+    "date": "Oct 12, 2022 22:14:09",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL476",
+    "speed": 81,
+    "recognized_info": "Plate-4223",
+    "accuracy": 0.73,
+    "date": "Oct 11, 2022 22:40:22",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL477",
+    "speed": 69,
+    "recognized_info": "Plate-3959",
+    "accuracy": 0.93,
+    "date": "Oct 10, 2022 22:12:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL478",
+    "speed": 99,
+    "recognized_info": "Plate-5647",
+    "accuracy": 0.83,
+    "date": "Oct 09, 2022 22:08:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL479",
+    "speed": 94,
+    "recognized_info": "Plate-5537",
+    "accuracy": 0.87,
+    "date": "Oct 08, 2022 22:33:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL480",
+    "speed": 100,
+    "recognized_info": "Plate-7973",
+    "accuracy": 0.99,
+    "date": "Oct 07, 2022 22:13:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL481",
+    "speed": 78,
+    "recognized_info": "Plate-1995",
+    "accuracy": 0.86,
+    "date": "Oct 06, 2022 22:40:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL482",
+    "speed": 58,
+    "recognized_info": "Plate-1574",
+    "accuracy": 0.92,
+    "date": "Oct 05, 2022 22:56:58",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL483",
+    "speed": 90,
+    "recognized_info": "Plate-5622",
+    "accuracy": 0.76,
+    "date": "Oct 04, 2022 22:51:26",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL484",
+    "speed": 85,
+    "recognized_info": "Plate-2111",
+    "accuracy": 0.76,
+    "date": "Oct 03, 2022 22:38:28",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL485",
+    "speed": 96,
+    "recognized_info": "Plate-1884",
+    "accuracy": 0.96,
+    "date": "Oct 02, 2022 22:53:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL486",
+    "speed": 97,
+    "recognized_info": "Plate-4473",
+    "accuracy": 0.71,
+    "date": "Oct 01, 2022 22:49:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL487",
+    "speed": 52,
+    "recognized_info": "Plate-7091",
+    "accuracy": 0.88,
+    "date": "Sep 30, 2022 22:49:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL488",
+    "speed": 71,
+    "recognized_info": "Plate-6646",
+    "accuracy": 0.89,
+    "date": "Sep 29, 2022 22:15:56",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL489",
+    "speed": 54,
+    "recognized_info": "Plate-1342",
+    "accuracy": 0.82,
+    "date": "Sep 28, 2022 23:03:22",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL490",
+    "speed": 99,
+    "recognized_info": "Plate-5388",
+    "accuracy": 0.87,
+    "date": "Sep 27, 2022 22:11:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL491",
+    "speed": 89,
+    "recognized_info": "Plate-8094",
+    "accuracy": 0.76,
+    "date": "Sep 26, 2022 22:22:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL492",
+    "speed": 65,
+    "recognized_info": "Plate-5541",
+    "accuracy": 0.75,
+    "date": "Sep 25, 2022 22:18:00",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL493",
+    "speed": 74,
+    "recognized_info": "Plate-3505",
+    "accuracy": 0.87,
+    "date": "Sep 24, 2022 22:55:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL494",
+    "speed": 78,
+    "recognized_info": "Plate-7603",
+    "accuracy": 0.93,
+    "date": "Sep 23, 2022 22:14:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL495",
+    "speed": 54,
+    "recognized_info": "Plate-6298",
+    "accuracy": 0.88,
+    "date": "Sep 22, 2022 22:54:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL496",
+    "speed": 85,
+    "recognized_info": "Plate-6193",
+    "accuracy": 0.84,
+    "date": "Sep 21, 2022 22:43:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL497",
+    "speed": 67,
+    "recognized_info": "Plate-4444",
+    "accuracy": 0.75,
+    "date": "Sep 20, 2022 22:11:30",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL498",
+    "speed": 74,
+    "recognized_info": "Plate-2342",
+    "accuracy": 0.73,
+    "date": "Sep 19, 2022 22:52:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL499",
+    "speed": 94,
+    "recognized_info": "Plate-7127",
+    "accuracy": 0.91,
+    "date": "Sep 18, 2022 22:55:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL500",
+    "speed": 58,
+    "recognized_info": "Plate-1957",
+    "accuracy": 0.71,
+    "date": "Sep 17, 2022 22:46:40",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL501",
+    "speed": 97,
+    "recognized_info": "Plate-4459",
+    "accuracy": 0.84,
+    "date": "Sep 16, 2022 22:38:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL502",
+    "speed": 60,
+    "recognized_info": "Plate-5360",
+    "accuracy": 0.84,
+    "date": "Sep 15, 2022 22:42:24",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL503",
+    "speed": 94,
+    "recognized_info": "Plate-8433",
+    "accuracy": 0.73,
+    "date": "Sep 14, 2022 22:21:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL504",
+    "speed": 90,
+    "recognized_info": "Plate-1544",
+    "accuracy": 0.88,
+    "date": "Sep 13, 2022 23:05:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL505",
+    "speed": 93,
+    "recognized_info": "Plate-3187",
+    "accuracy": 0.79,
+    "date": "Sep 12, 2022 22:32:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL506",
+    "speed": 90,
+    "recognized_info": "Plate-2895",
+    "accuracy": 0.75,
+    "date": "Sep 11, 2022 22:49:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL507",
+    "speed": 69,
+    "recognized_info": "Plate-6255",
+    "accuracy": 0.79,
+    "date": "Sep 10, 2022 22:37:37",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL508",
+    "speed": 65,
+    "recognized_info": "Plate-3030",
+    "accuracy": 0.9,
+    "date": "Sep 09, 2022 22:45:47",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL509",
+    "speed": 70,
+    "recognized_info": "Plate-6390",
+    "accuracy": 0.93,
+    "date": "Sep 08, 2022 22:43:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL510",
+    "speed": 82,
+    "recognized_info": "Plate-9620",
+    "accuracy": 0.83,
+    "date": "Sep 07, 2022 22:41:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL511",
+    "speed": 65,
+    "recognized_info": "Plate-5030",
+    "accuracy": 0.73,
+    "date": "Sep 06, 2022 22:21:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL512",
+    "speed": 75,
+    "recognized_info": "Plate-4487",
+    "accuracy": 0.75,
+    "date": "Sep 05, 2022 22:33:06",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL513",
+    "speed": 90,
+    "recognized_info": "Plate-5774",
+    "accuracy": 0.91,
+    "date": "Sep 04, 2022 22:38:02",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL514",
+    "speed": 70,
+    "recognized_info": "Plate-7611",
+    "accuracy": 0.96,
+    "date": "Sep 03, 2022 22:14:45",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL515",
+    "speed": 89,
+    "recognized_info": "Plate-4801",
+    "accuracy": 0.93,
+    "date": "Sep 02, 2022 22:16:22",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL516",
+    "speed": 71,
+    "recognized_info": "Plate-7308",
+    "accuracy": 0.83,
+    "date": "Sep 01, 2022 23:01:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL517",
+    "speed": 55,
+    "recognized_info": "Plate-9019",
+    "accuracy": 0.78,
+    "date": "Aug 31, 2022 22:46:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL518",
+    "speed": 86,
+    "recognized_info": "Plate-1759",
+    "accuracy": 0.88,
+    "date": "Aug 30, 2022 22:54:19",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL519",
+    "speed": 53,
+    "recognized_info": "Plate-8839",
+    "accuracy": 1.0,
+    "date": "Aug 29, 2022 22:52:11",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL520",
+    "speed": 98,
+    "recognized_info": "Plate-9167",
+    "accuracy": 0.79,
+    "date": "Aug 28, 2022 22:33:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL521",
+    "speed": 52,
+    "recognized_info": "Plate-5206",
+    "accuracy": 0.87,
+    "date": "Aug 27, 2022 22:10:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL522",
+    "speed": 72,
+    "recognized_info": "Plate-4140",
+    "accuracy": 0.76,
+    "date": "Aug 26, 2022 22:11:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL523",
+    "speed": 67,
+    "recognized_info": "Plate-1767",
+    "accuracy": 0.87,
+    "date": "Aug 25, 2022 22:30:25",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL524",
+    "speed": 67,
+    "recognized_info": "Plate-1069",
+    "accuracy": 0.77,
+    "date": "Aug 24, 2022 22:31:37",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL525",
+    "speed": 98,
+    "recognized_info": "Plate-2144",
+    "accuracy": 0.93,
+    "date": "Aug 23, 2022 22:10:14",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL526",
+    "speed": 71,
+    "recognized_info": "Plate-6674",
+    "accuracy": 0.86,
+    "date": "Aug 22, 2022 22:38:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL527",
+    "speed": 67,
+    "recognized_info": "Plate-8990",
+    "accuracy": 0.87,
+    "date": "Aug 21, 2022 22:56:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL528",
+    "speed": 79,
+    "recognized_info": "Plate-2696",
+    "accuracy": 0.94,
+    "date": "Aug 20, 2022 22:52:33",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL529",
+    "speed": 84,
+    "recognized_info": "Plate-3454",
+    "accuracy": 0.77,
+    "date": "Aug 19, 2022 22:13:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL530",
+    "speed": 62,
+    "recognized_info": "Plate-9192",
+    "accuracy": 0.97,
+    "date": "Aug 18, 2022 22:38:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL531",
+    "speed": 55,
+    "recognized_info": "Plate-1870",
+    "accuracy": 0.94,
+    "date": "Aug 17, 2022 22:19:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL532",
+    "speed": 88,
+    "recognized_info": "Plate-7506",
+    "accuracy": 0.81,
+    "date": "Aug 16, 2022 22:22:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL533",
+    "speed": 51,
+    "recognized_info": "Plate-7572",
+    "accuracy": 0.79,
+    "date": "Aug 15, 2022 22:53:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL534",
+    "speed": 77,
+    "recognized_info": "Plate-1166",
+    "accuracy": 0.89,
+    "date": "Aug 14, 2022 22:57:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL535",
+    "speed": 81,
+    "recognized_info": "Plate-8220",
+    "accuracy": 0.98,
+    "date": "Aug 13, 2022 22:57:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL536",
+    "speed": 92,
+    "recognized_info": "Plate-1251",
+    "accuracy": 0.71,
+    "date": "Aug 12, 2022 23:06:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL537",
+    "speed": 97,
+    "recognized_info": "Plate-2034",
+    "accuracy": 0.79,
+    "date": "Aug 11, 2022 22:49:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL538",
+    "speed": 64,
+    "recognized_info": "Plate-4482",
+    "accuracy": 0.89,
+    "date": "Aug 10, 2022 23:03:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL539",
+    "speed": 99,
+    "recognized_info": "Plate-2848",
+    "accuracy": 0.88,
+    "date": "Aug 09, 2022 22:20:39",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL540",
+    "speed": 69,
+    "recognized_info": "Plate-4221",
+    "accuracy": 0.81,
+    "date": "Aug 08, 2022 22:10:24",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL541",
+    "speed": 100,
+    "recognized_info": "Plate-2754",
+    "accuracy": 0.86,
+    "date": "Aug 07, 2022 22:46:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL542",
+    "speed": 62,
+    "recognized_info": "Plate-1654",
+    "accuracy": 0.91,
+    "date": "Aug 06, 2022 23:04:10",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL543",
+    "speed": 50,
+    "recognized_info": "Plate-7863",
+    "accuracy": 0.91,
+    "date": "Aug 05, 2022 22:16:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL544",
+    "speed": 59,
+    "recognized_info": "Plate-9389",
+    "accuracy": 0.96,
+    "date": "Aug 04, 2022 22:58:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL545",
+    "speed": 56,
+    "recognized_info": "Plate-8431",
+    "accuracy": 0.82,
+    "date": "Aug 03, 2022 22:37:37",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL546",
+    "speed": 63,
+    "recognized_info": "Plate-4134",
+    "accuracy": 0.77,
+    "date": "Aug 02, 2022 22:52:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL547",
+    "speed": 79,
+    "recognized_info": "Plate-2075",
+    "accuracy": 0.95,
+    "date": "Aug 01, 2022 22:39:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL548",
+    "speed": 64,
+    "recognized_info": "Plate-5860",
+    "accuracy": 0.79,
+    "date": "Jul 31, 2022 23:04:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL549",
+    "speed": 87,
+    "recognized_info": "Plate-6970",
+    "accuracy": 0.95,
+    "date": "Jul 30, 2022 22:32:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL550",
+    "speed": 79,
+    "recognized_info": "Plate-3376",
+    "accuracy": 0.71,
+    "date": "Jul 29, 2022 22:43:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL551",
+    "speed": 83,
+    "recognized_info": "Plate-5942",
+    "accuracy": 0.76,
+    "date": "Jul 28, 2022 22:24:12",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL552",
+    "speed": 88,
+    "recognized_info": "Plate-4110",
+    "accuracy": 0.83,
+    "date": "Jul 27, 2022 22:34:02",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL553",
+    "speed": 63,
+    "recognized_info": "Plate-5370",
+    "accuracy": 0.94,
+    "date": "Jul 26, 2022 22:32:31",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL554",
+    "speed": 99,
+    "recognized_info": "Plate-8416",
+    "accuracy": 0.78,
+    "date": "Jul 25, 2022 22:07:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL555",
+    "speed": 65,
+    "recognized_info": "Plate-8880",
+    "accuracy": 0.84,
+    "date": "Jul 24, 2022 22:41:47",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL556",
+    "speed": 64,
+    "recognized_info": "Plate-4844",
+    "accuracy": 0.77,
+    "date": "Jul 23, 2022 22:37:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL557",
+    "speed": 58,
+    "recognized_info": "Plate-9540",
+    "accuracy": 0.91,
+    "date": "Jul 22, 2022 23:06:32",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL558",
+    "speed": 52,
+    "recognized_info": "Plate-8622",
+    "accuracy": 0.96,
+    "date": "Jul 21, 2022 22:41:43",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL559",
+    "speed": 87,
+    "recognized_info": "Plate-1257",
+    "accuracy": 0.92,
+    "date": "Jul 20, 2022 22:18:41",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL560",
+    "speed": 53,
+    "recognized_info": "Plate-6970",
+    "accuracy": 0.81,
+    "date": "Jul 19, 2022 22:22:27",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL561",
+    "speed": 74,
+    "recognized_info": "Plate-5175",
+    "accuracy": 0.89,
+    "date": "Jul 18, 2022 23:06:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL562",
+    "speed": 64,
+    "recognized_info": "Plate-3332",
+    "accuracy": 0.82,
+    "date": "Jul 17, 2022 22:31:24",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL563",
+    "speed": 87,
+    "recognized_info": "Plate-6377",
+    "accuracy": 0.95,
+    "date": "Jul 16, 2022 22:57:40",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL564",
+    "speed": 85,
+    "recognized_info": "Plate-4944",
+    "accuracy": 0.85,
+    "date": "Jul 15, 2022 22:41:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL565",
+    "speed": 96,
+    "recognized_info": "Plate-7705",
+    "accuracy": 0.78,
+    "date": "Jul 14, 2022 22:12:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL566",
+    "speed": 75,
+    "recognized_info": "Plate-9568",
+    "accuracy": 0.93,
+    "date": "Jul 13, 2022 22:22:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL567",
+    "speed": 75,
+    "recognized_info": "Plate-9559",
+    "accuracy": 0.81,
+    "date": "Jul 12, 2022 22:14:39",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL568",
+    "speed": 70,
+    "recognized_info": "Plate-8662",
+    "accuracy": 0.91,
+    "date": "Jul 11, 2022 22:40:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL569",
+    "speed": 63,
+    "recognized_info": "Plate-4587",
+    "accuracy": 0.87,
+    "date": "Jul 10, 2022 22:18:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL570",
+    "speed": 99,
+    "recognized_info": "Plate-2902",
+    "accuracy": 0.9,
+    "date": "Jul 09, 2022 22:53:56",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL571",
+    "speed": 57,
+    "recognized_info": "Plate-5916",
+    "accuracy": 0.95,
+    "date": "Jul 08, 2022 22:52:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL572",
+    "speed": 63,
+    "recognized_info": "Plate-3686",
+    "accuracy": 0.99,
+    "date": "Jul 07, 2022 22:15:15",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL573",
+    "speed": 90,
+    "recognized_info": "Plate-7979",
+    "accuracy": 0.82,
+    "date": "Jul 06, 2022 22:13:53",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL574",
+    "speed": 61,
+    "recognized_info": "Plate-2486",
+    "accuracy": 0.97,
+    "date": "Jul 05, 2022 22:54:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL575",
+    "speed": 77,
+    "recognized_info": "Plate-6322",
+    "accuracy": 0.99,
+    "date": "Jul 04, 2022 22:58:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL576",
+    "speed": 100,
+    "recognized_info": "Plate-1633",
+    "accuracy": 0.74,
+    "date": "Jul 03, 2022 22:13:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL577",
+    "speed": 50,
+    "recognized_info": "Plate-9862",
+    "accuracy": 0.87,
+    "date": "Jul 02, 2022 22:45:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL578",
+    "speed": 68,
+    "recognized_info": "Plate-9308",
+    "accuracy": 0.92,
+    "date": "Jul 01, 2022 23:05:51",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL579",
+    "speed": 96,
+    "recognized_info": "Plate-3444",
+    "accuracy": 0.79,
+    "date": "Jun 30, 2022 22:15:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL580",
+    "speed": 84,
+    "recognized_info": "Plate-7206",
+    "accuracy": 0.94,
+    "date": "Jun 29, 2022 22:37:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL581",
+    "speed": 91,
+    "recognized_info": "Plate-4085",
+    "accuracy": 0.9,
+    "date": "Jun 28, 2022 23:07:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL582",
+    "speed": 90,
+    "recognized_info": "Plate-7630",
+    "accuracy": 0.83,
+    "date": "Jun 27, 2022 22:16:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL583",
+    "speed": 74,
+    "recognized_info": "Plate-7856",
+    "accuracy": 0.89,
+    "date": "Jun 26, 2022 22:40:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL584",
+    "speed": 55,
+    "recognized_info": "Plate-9504",
+    "accuracy": 0.81,
+    "date": "Jun 25, 2022 22:48:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL585",
+    "speed": 87,
+    "recognized_info": "Plate-1999",
+    "accuracy": 0.72,
+    "date": "Jun 24, 2022 23:07:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL586",
+    "speed": 81,
+    "recognized_info": "Plate-1144",
+    "accuracy": 0.86,
+    "date": "Jun 23, 2022 22:26:09",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL587",
+    "speed": 94,
+    "recognized_info": "Plate-9231",
+    "accuracy": 0.71,
+    "date": "Jun 22, 2022 22:56:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL588",
+    "speed": 86,
+    "recognized_info": "Plate-1279",
+    "accuracy": 0.74,
+    "date": "Jun 21, 2022 22:29:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL589",
+    "speed": 88,
+    "recognized_info": "Plate-9724",
+    "accuracy": 0.84,
+    "date": "Jun 20, 2022 22:51:23",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL590",
+    "speed": 66,
+    "recognized_info": "Plate-9677",
+    "accuracy": 1.0,
+    "date": "Jun 19, 2022 22:35:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL591",
+    "speed": 75,
+    "recognized_info": "Plate-3024",
+    "accuracy": 0.87,
+    "date": "Jun 18, 2022 23:06:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL592",
+    "speed": 83,
+    "recognized_info": "Plate-8492",
+    "accuracy": 1.0,
+    "date": "Jun 17, 2022 23:05:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL593",
+    "speed": 53,
+    "recognized_info": "Plate-1790",
+    "accuracy": 0.77,
+    "date": "Jun 16, 2022 22:24:11",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL594",
+    "speed": 62,
+    "recognized_info": "Plate-5296",
+    "accuracy": 0.96,
+    "date": "Jun 15, 2022 23:04:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL595",
+    "speed": 60,
+    "recognized_info": "Plate-6994",
+    "accuracy": 0.88,
+    "date": "Jun 14, 2022 22:26:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL596",
+    "speed": 52,
+    "recognized_info": "Plate-4620",
+    "accuracy": 0.89,
+    "date": "Jun 13, 2022 22:07:35",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL597",
+    "speed": 80,
+    "recognized_info": "Plate-6841",
+    "accuracy": 0.95,
+    "date": "Jun 12, 2022 22:19:06",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL598",
+    "speed": 80,
+    "recognized_info": "Plate-8197",
+    "accuracy": 0.84,
+    "date": "Jun 11, 2022 22:10:34",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL599",
+    "speed": 55,
+    "recognized_info": "Plate-4679",
+    "accuracy": 0.72,
+    "date": "Jun 10, 2022 23:01:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL600",
+    "speed": 85,
+    "recognized_info": "Plate-4016",
+    "accuracy": 0.94,
+    "date": "Jun 09, 2022 22:23:04",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL601",
+    "speed": 60,
+    "recognized_info": "Plate-9141",
+    "accuracy": 0.81,
+    "date": "Jun 08, 2022 22:24:47",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL602",
+    "speed": 67,
+    "recognized_info": "Plate-1803",
+    "accuracy": 0.76,
+    "date": "Jun 07, 2022 22:29:39",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL603",
+    "speed": 90,
+    "recognized_info": "Plate-4318",
+    "accuracy": 0.75,
+    "date": "Jun 06, 2022 22:51:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL604",
+    "speed": 68,
+    "recognized_info": "Plate-2724",
+    "accuracy": 0.86,
+    "date": "Jun 05, 2022 22:20:53",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL605",
+    "speed": 100,
+    "recognized_info": "Plate-2785",
+    "accuracy": 0.99,
+    "date": "Jun 04, 2022 23:01:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL606",
+    "speed": 98,
+    "recognized_info": "Plate-8449",
+    "accuracy": 0.88,
+    "date": "Jun 03, 2022 23:04:25",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL607",
+    "speed": 61,
+    "recognized_info": "Plate-5010",
+    "accuracy": 0.89,
+    "date": "Jun 02, 2022 22:36:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL608",
+    "speed": 61,
+    "recognized_info": "Plate-7383",
+    "accuracy": 0.72,
+    "date": "Jun 01, 2022 23:02:47",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL609",
+    "speed": 99,
+    "recognized_info": "Plate-6054",
+    "accuracy": 0.97,
+    "date": "May 31, 2022 23:05:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL610",
+    "speed": 74,
+    "recognized_info": "Plate-6029",
+    "accuracy": 0.79,
+    "date": "May 30, 2022 22:29:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL611",
+    "speed": 94,
+    "recognized_info": "Plate-7750",
+    "accuracy": 0.74,
+    "date": "May 29, 2022 22:36:43",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL612",
+    "speed": 69,
+    "recognized_info": "Plate-8955",
+    "accuracy": 0.73,
+    "date": "May 28, 2022 22:21:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL613",
+    "speed": 97,
+    "recognized_info": "Plate-9099",
+    "accuracy": 0.71,
+    "date": "May 27, 2022 22:33:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL614",
+    "speed": 99,
+    "recognized_info": "Plate-4802",
+    "accuracy": 0.94,
+    "date": "May 26, 2022 22:18:51",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL615",
+    "speed": 89,
+    "recognized_info": "Plate-2489",
+    "accuracy": 0.84,
+    "date": "May 25, 2022 22:24:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL616",
+    "speed": 56,
+    "recognized_info": "Plate-6342",
+    "accuracy": 0.88,
+    "date": "May 24, 2022 22:18:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL617",
+    "speed": 95,
+    "recognized_info": "Plate-6650",
+    "accuracy": 0.96,
+    "date": "May 23, 2022 22:53:17",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL618",
+    "speed": 82,
+    "recognized_info": "Plate-6084",
+    "accuracy": 0.78,
+    "date": "May 22, 2022 22:22:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL619",
+    "speed": 95,
+    "recognized_info": "Plate-2625",
+    "accuracy": 0.76,
+    "date": "May 21, 2022 23:05:19",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL620",
+    "speed": 81,
+    "recognized_info": "Plate-9495",
+    "accuracy": 0.74,
+    "date": "May 20, 2022 22:08:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL621",
+    "speed": 73,
+    "recognized_info": "Plate-5738",
+    "accuracy": 0.97,
+    "date": "May 19, 2022 22:45:37",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL622",
+    "speed": 61,
+    "recognized_info": "Plate-6542",
+    "accuracy": 1.0,
+    "date": "May 18, 2022 22:50:02",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL623",
+    "speed": 51,
+    "recognized_info": "Plate-4053",
+    "accuracy": 0.7,
+    "date": "May 17, 2022 22:11:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL624",
+    "speed": 63,
+    "recognized_info": "Plate-5687",
+    "accuracy": 0.75,
+    "date": "May 16, 2022 22:16:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL625",
+    "speed": 70,
+    "recognized_info": "Plate-5000",
+    "accuracy": 0.73,
+    "date": "May 15, 2022 22:32:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL626",
+    "speed": 88,
+    "recognized_info": "Plate-1768",
+    "accuracy": 0.82,
+    "date": "May 14, 2022 23:06:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL627",
+    "speed": 60,
+    "recognized_info": "Plate-7684",
+    "accuracy": 0.74,
+    "date": "May 13, 2022 22:22:44",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL628",
+    "speed": 68,
+    "recognized_info": "Plate-6422",
+    "accuracy": 0.94,
+    "date": "May 12, 2022 23:03:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL629",
+    "speed": 86,
+    "recognized_info": "Plate-7223",
+    "accuracy": 0.83,
+    "date": "May 11, 2022 23:01:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL630",
+    "speed": 75,
+    "recognized_info": "Plate-6912",
+    "accuracy": 0.78,
+    "date": "May 10, 2022 22:21:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL631",
+    "speed": 82,
+    "recognized_info": "Plate-2608",
+    "accuracy": 0.97,
+    "date": "May 09, 2022 22:42:56",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL632",
+    "speed": 98,
+    "recognized_info": "Plate-1410",
+    "accuracy": 0.91,
+    "date": "May 08, 2022 22:25:42",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL633",
+    "speed": 71,
+    "recognized_info": "Plate-2414",
+    "accuracy": 0.88,
+    "date": "May 07, 2022 22:09:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL634",
+    "speed": 75,
+    "recognized_info": "Plate-2978",
+    "accuracy": 0.89,
+    "date": "May 06, 2022 22:26:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL635",
+    "speed": 79,
+    "recognized_info": "Plate-5864",
+    "accuracy": 0.76,
+    "date": "May 05, 2022 22:25:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL636",
+    "speed": 94,
+    "recognized_info": "Plate-7311",
+    "accuracy": 0.79,
+    "date": "May 04, 2022 22:43:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL637",
+    "speed": 97,
+    "recognized_info": "Plate-4774",
+    "accuracy": 0.88,
+    "date": "May 03, 2022 22:54:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL638",
+    "speed": 50,
+    "recognized_info": "Plate-3672",
+    "accuracy": 0.98,
+    "date": "May 02, 2022 23:00:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL639",
+    "speed": 60,
+    "recognized_info": "Plate-5385",
+    "accuracy": 0.72,
+    "date": "May 01, 2022 22:35:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL640",
+    "speed": 100,
+    "recognized_info": "Plate-3346",
+    "accuracy": 0.94,
+    "date": "Apr 30, 2022 22:44:27",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL641",
+    "speed": 76,
+    "recognized_info": "Plate-4300",
+    "accuracy": 0.8,
+    "date": "Apr 29, 2022 22:50:24",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL642",
+    "speed": 53,
+    "recognized_info": "Plate-9980",
+    "accuracy": 0.72,
+    "date": "Apr 28, 2022 22:33:14",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL643",
+    "speed": 61,
+    "recognized_info": "Plate-1233",
+    "accuracy": 0.98,
+    "date": "Apr 27, 2022 22:19:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL644",
+    "speed": 89,
+    "recognized_info": "Plate-7967",
+    "accuracy": 0.81,
+    "date": "Apr 26, 2022 22:37:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL645",
+    "speed": 54,
+    "recognized_info": "Plate-8961",
+    "accuracy": 0.99,
+    "date": "Apr 25, 2022 23:04:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL646",
+    "speed": 81,
+    "recognized_info": "Plate-8264",
+    "accuracy": 0.97,
+    "date": "Apr 24, 2022 23:00:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL647",
+    "speed": 63,
+    "recognized_info": "Plate-7435",
+    "accuracy": 0.81,
+    "date": "Apr 23, 2022 22:57:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL648",
+    "speed": 59,
+    "recognized_info": "Plate-8923",
+    "accuracy": 0.76,
+    "date": "Apr 22, 2022 22:28:49",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL649",
+    "speed": 63,
+    "recognized_info": "Plate-1250",
+    "accuracy": 0.85,
+    "date": "Apr 21, 2022 22:12:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL650",
+    "speed": 82,
+    "recognized_info": "Plate-9974",
+    "accuracy": 0.73,
+    "date": "Apr 20, 2022 22:32:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL651",
+    "speed": 62,
+    "recognized_info": "Plate-9890",
+    "accuracy": 0.88,
+    "date": "Apr 19, 2022 22:26:20",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL652",
+    "speed": 77,
+    "recognized_info": "Plate-8220",
+    "accuracy": 0.72,
+    "date": "Apr 18, 2022 22:12:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL653",
+    "speed": 67,
+    "recognized_info": "Plate-2812",
+    "accuracy": 0.96,
+    "date": "Apr 17, 2022 23:01:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL654",
+    "speed": 55,
+    "recognized_info": "Plate-5002",
+    "accuracy": 0.95,
+    "date": "Apr 16, 2022 22:30:43",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL655",
+    "speed": 62,
+    "recognized_info": "Plate-9804",
+    "accuracy": 0.71,
+    "date": "Apr 15, 2022 22:22:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL656",
+    "speed": 65,
+    "recognized_info": "Plate-8670",
+    "accuracy": 0.96,
+    "date": "Apr 14, 2022 23:05:30",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL657",
+    "speed": 73,
+    "recognized_info": "Plate-7790",
+    "accuracy": 0.82,
+    "date": "Apr 13, 2022 22:17:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL658",
+    "speed": 98,
+    "recognized_info": "Plate-4846",
+    "accuracy": 0.99,
+    "date": "Apr 12, 2022 22:19:39",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL659",
+    "speed": 92,
+    "recognized_info": "Plate-6637",
+    "accuracy": 0.83,
+    "date": "Apr 11, 2022 22:16:37",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL660",
+    "speed": 93,
+    "recognized_info": "Plate-1235",
+    "accuracy": 0.87,
+    "date": "Apr 10, 2022 22:22:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL661",
+    "speed": 55,
+    "recognized_info": "Plate-2488",
+    "accuracy": 0.7,
+    "date": "Apr 09, 2022 23:03:37",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL662",
+    "speed": 79,
+    "recognized_info": "Plate-6554",
+    "accuracy": 0.87,
+    "date": "Apr 08, 2022 22:51:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL663",
+    "speed": 53,
+    "recognized_info": "Plate-9408",
+    "accuracy": 0.71,
+    "date": "Apr 07, 2022 22:07:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL664",
+    "speed": 87,
+    "recognized_info": "Plate-9625",
+    "accuracy": 0.74,
+    "date": "Apr 06, 2022 22:15:37",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL665",
+    "speed": 91,
+    "recognized_info": "Plate-6280",
+    "accuracy": 0.93,
+    "date": "Apr 05, 2022 22:28:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL666",
+    "speed": 72,
+    "recognized_info": "Plate-6476",
+    "accuracy": 0.73,
+    "date": "Apr 04, 2022 22:49:17",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL667",
+    "speed": 75,
+    "recognized_info": "Plate-5378",
+    "accuracy": 0.89,
+    "date": "Apr 03, 2022 23:04:07",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL668",
+    "speed": 78,
+    "recognized_info": "Plate-4095",
+    "accuracy": 0.84,
+    "date": "Apr 02, 2022 22:22:26",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL669",
+    "speed": 92,
+    "recognized_info": "Plate-1027",
+    "accuracy": 0.93,
+    "date": "Apr 01, 2022 22:08:19",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL670",
+    "speed": 90,
+    "recognized_info": "Plate-7847",
+    "accuracy": 0.74,
+    "date": "Mar 31, 2022 22:33:09",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL671",
+    "speed": 80,
+    "recognized_info": "Plate-9989",
+    "accuracy": 0.77,
+    "date": "Mar 30, 2022 22:22:36",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL672",
+    "speed": 92,
+    "recognized_info": "Plate-1869",
+    "accuracy": 0.89,
+    "date": "Mar 29, 2022 22:10:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL673",
+    "speed": 70,
+    "recognized_info": "Plate-7133",
+    "accuracy": 0.95,
+    "date": "Mar 28, 2022 22:21:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL674",
+    "speed": 68,
+    "recognized_info": "Plate-8821",
+    "accuracy": 0.97,
+    "date": "Mar 27, 2022 22:57:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL675",
+    "speed": 82,
+    "recognized_info": "Plate-1921",
+    "accuracy": 0.92,
+    "date": "Mar 26, 2022 23:04:35",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL676",
+    "speed": 53,
+    "recognized_info": "Plate-7061",
+    "accuracy": 0.9,
+    "date": "Mar 25, 2022 22:47:06",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL677",
+    "speed": 94,
+    "recognized_info": "Plate-8283",
+    "accuracy": 0.87,
+    "date": "Mar 24, 2022 22:23:01",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL678",
+    "speed": 55,
+    "recognized_info": "Plate-9674",
+    "accuracy": 0.94,
+    "date": "Mar 23, 2022 22:14:09",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL679",
+    "speed": 93,
+    "recognized_info": "Plate-9899",
+    "accuracy": 0.74,
+    "date": "Mar 22, 2022 22:47:40",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL680",
+    "speed": 69,
+    "recognized_info": "Plate-2271",
+    "accuracy": 0.83,
+    "date": "Mar 21, 2022 22:53:59",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL681",
+    "speed": 81,
+    "recognized_info": "Plate-9275",
+    "accuracy": 0.94,
+    "date": "Mar 20, 2022 22:59:52",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL682",
+    "speed": 96,
+    "recognized_info": "Plate-6431",
+    "accuracy": 0.76,
+    "date": "Mar 19, 2022 23:01:55",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL683",
+    "speed": 57,
+    "recognized_info": "Plate-3847",
+    "accuracy": 1.0,
+    "date": "Mar 18, 2022 22:38:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL684",
+    "speed": 82,
+    "recognized_info": "Plate-9894",
+    "accuracy": 0.76,
+    "date": "Mar 17, 2022 22:10:35",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL685",
+    "speed": 86,
+    "recognized_info": "Plate-1255",
+    "accuracy": 0.95,
+    "date": "Mar 16, 2022 22:56:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL686",
+    "speed": 72,
+    "recognized_info": "Plate-8079",
+    "accuracy": 0.97,
+    "date": "Mar 15, 2022 22:36:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL687",
+    "speed": 85,
+    "recognized_info": "Plate-1418",
+    "accuracy": 0.94,
+    "date": "Mar 14, 2022 22:50:55",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL688",
+    "speed": 63,
+    "recognized_info": "Plate-2425",
+    "accuracy": 0.88,
+    "date": "Mar 13, 2022 22:14:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL689",
+    "speed": 85,
+    "recognized_info": "Plate-2448",
+    "accuracy": 0.98,
+    "date": "Mar 12, 2022 22:48:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL690",
+    "speed": 85,
+    "recognized_info": "Plate-4234",
+    "accuracy": 0.9,
+    "date": "Mar 11, 2022 22:54:20",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL691",
+    "speed": 76,
+    "recognized_info": "Plate-8846",
+    "accuracy": 0.7,
+    "date": "Mar 10, 2022 22:33:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL692",
+    "speed": 89,
+    "recognized_info": "Plate-1465",
+    "accuracy": 0.77,
+    "date": "Mar 09, 2022 22:58:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL693",
+    "speed": 72,
+    "recognized_info": "Plate-4677",
+    "accuracy": 0.96,
+    "date": "Mar 08, 2022 23:06:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL694",
+    "speed": 97,
+    "recognized_info": "Plate-7633",
+    "accuracy": 0.94,
+    "date": "Mar 07, 2022 22:21:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL695",
+    "speed": 64,
+    "recognized_info": "Plate-1712",
+    "accuracy": 0.83,
+    "date": "Mar 06, 2022 22:07:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL696",
+    "speed": 82,
+    "recognized_info": "Plate-6051",
+    "accuracy": 0.86,
+    "date": "Mar 05, 2022 22:59:36",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL697",
+    "speed": 79,
+    "recognized_info": "Plate-1379",
+    "accuracy": 0.97,
+    "date": "Mar 04, 2022 22:31:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL698",
+    "speed": 50,
+    "recognized_info": "Plate-3845",
+    "accuracy": 0.81,
+    "date": "Mar 03, 2022 22:50:35",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL699",
+    "speed": 62,
+    "recognized_info": "Plate-2330",
+    "accuracy": 0.98,
+    "date": "Mar 02, 2022 22:36:52",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL700",
+    "speed": 89,
+    "recognized_info": "Plate-8215",
+    "accuracy": 0.79,
+    "date": "Mar 01, 2022 22:47:32",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL701",
+    "speed": 69,
+    "recognized_info": "Plate-1822",
+    "accuracy": 0.76,
+    "date": "Feb 28, 2022 22:44:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL702",
+    "speed": 96,
+    "recognized_info": "Plate-6622",
+    "accuracy": 0.95,
+    "date": "Feb 27, 2022 22:48:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL703",
+    "speed": 65,
+    "recognized_info": "Plate-1240",
+    "accuracy": 0.81,
+    "date": "Feb 26, 2022 22:46:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL704",
+    "speed": 70,
+    "recognized_info": "Plate-7317",
+    "accuracy": 0.93,
+    "date": "Feb 25, 2022 22:08:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL705",
+    "speed": 66,
+    "recognized_info": "Plate-3060",
+    "accuracy": 0.84,
+    "date": "Feb 24, 2022 22:22:49",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL706",
+    "speed": 79,
+    "recognized_info": "Plate-5590",
+    "accuracy": 0.81,
+    "date": "Feb 23, 2022 22:08:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL707",
+    "speed": 69,
+    "recognized_info": "Plate-7135",
+    "accuracy": 0.91,
+    "date": "Feb 22, 2022 23:03:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL708",
+    "speed": 61,
+    "recognized_info": "Plate-6631",
+    "accuracy": 0.9,
+    "date": "Feb 21, 2022 23:01:10",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL709",
+    "speed": 96,
+    "recognized_info": "Plate-6751",
+    "accuracy": 0.98,
+    "date": "Feb 20, 2022 22:12:07",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL710",
+    "speed": 74,
+    "recognized_info": "Plate-6660",
+    "accuracy": 0.74,
+    "date": "Feb 19, 2022 22:39:03",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL711",
+    "speed": 79,
+    "recognized_info": "Plate-6894",
+    "accuracy": 0.9,
+    "date": "Feb 18, 2022 22:13:11",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL712",
+    "speed": 81,
+    "recognized_info": "Plate-5645",
+    "accuracy": 0.99,
+    "date": "Feb 17, 2022 22:35:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL713",
+    "speed": 57,
+    "recognized_info": "Plate-4132",
+    "accuracy": 0.98,
+    "date": "Feb 16, 2022 22:29:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL714",
+    "speed": 57,
+    "recognized_info": "Plate-9822",
+    "accuracy": 0.95,
+    "date": "Feb 15, 2022 22:32:31",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL715",
+    "speed": 51,
+    "recognized_info": "Plate-4361",
+    "accuracy": 0.84,
+    "date": "Feb 14, 2022 22:56:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL716",
+    "speed": 75,
+    "recognized_info": "Plate-6226",
+    "accuracy": 0.77,
+    "date": "Feb 13, 2022 22:44:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL717",
+    "speed": 95,
+    "recognized_info": "Plate-9125",
+    "accuracy": 0.75,
+    "date": "Feb 12, 2022 22:59:31",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL718",
+    "speed": 66,
+    "recognized_info": "Plate-1962",
+    "accuracy": 0.93,
+    "date": "Feb 11, 2022 23:07:32",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL719",
+    "speed": 81,
+    "recognized_info": "Plate-7022",
+    "accuracy": 0.99,
+    "date": "Feb 10, 2022 22:08:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL720",
+    "speed": 64,
+    "recognized_info": "Plate-7880",
+    "accuracy": 1.0,
+    "date": "Feb 09, 2022 22:47:45",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL721",
+    "speed": 82,
+    "recognized_info": "Plate-4740",
+    "accuracy": 0.77,
+    "date": "Feb 08, 2022 22:59:41",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL722",
+    "speed": 84,
+    "recognized_info": "Plate-4277",
+    "accuracy": 0.8,
+    "date": "Feb 07, 2022 22:53:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL723",
+    "speed": 51,
+    "recognized_info": "Plate-1197",
+    "accuracy": 0.94,
+    "date": "Feb 06, 2022 23:01:13",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL724",
+    "speed": 64,
+    "recognized_info": "Plate-6541",
+    "accuracy": 0.96,
+    "date": "Feb 05, 2022 23:03:28",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL725",
+    "speed": 77,
+    "recognized_info": "Plate-2014",
+    "accuracy": 0.87,
+    "date": "Feb 04, 2022 22:48:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL726",
+    "speed": 91,
+    "recognized_info": "Plate-7055",
+    "accuracy": 0.86,
+    "date": "Feb 03, 2022 22:24:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL727",
+    "speed": 84,
+    "recognized_info": "Plate-3083",
+    "accuracy": 0.98,
+    "date": "Feb 02, 2022 22:34:12",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL728",
+    "speed": 75,
+    "recognized_info": "Plate-9981",
+    "accuracy": 0.7,
+    "date": "Feb 01, 2022 22:12:01",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL729",
+    "speed": 87,
+    "recognized_info": "Plate-4341",
+    "accuracy": 0.77,
+    "date": "Jan 31, 2022 22:26:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL730",
+    "speed": 63,
+    "recognized_info": "Plate-7387",
+    "accuracy": 0.86,
+    "date": "Jan 30, 2022 22:54:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL731",
+    "speed": 54,
+    "recognized_info": "Plate-5605",
+    "accuracy": 0.78,
+    "date": "Jan 29, 2022 22:46:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL732",
+    "speed": 94,
+    "recognized_info": "Plate-5220",
+    "accuracy": 0.89,
+    "date": "Jan 28, 2022 22:59:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL733",
+    "speed": 96,
+    "recognized_info": "Plate-9569",
+    "accuracy": 0.76,
+    "date": "Jan 27, 2022 22:21:32",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL734",
+    "speed": 80,
+    "recognized_info": "Plate-6524",
+    "accuracy": 0.81,
+    "date": "Jan 26, 2022 22:47:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL735",
+    "speed": 75,
+    "recognized_info": "Plate-3914",
+    "accuracy": 0.95,
+    "date": "Jan 25, 2022 22:43:19",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL736",
+    "speed": 75,
+    "recognized_info": "Plate-7245",
+    "accuracy": 0.88,
+    "date": "Jan 24, 2022 22:31:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL737",
+    "speed": 59,
+    "recognized_info": "Plate-5196",
+    "accuracy": 0.7,
+    "date": "Jan 23, 2022 23:02:38",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL738",
+    "speed": 68,
+    "recognized_info": "Plate-1178",
+    "accuracy": 0.92,
+    "date": "Jan 22, 2022 22:51:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL739",
+    "speed": 51,
+    "recognized_info": "Plate-7172",
+    "accuracy": 0.88,
+    "date": "Jan 21, 2022 22:27:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL740",
+    "speed": 92,
+    "recognized_info": "Plate-8543",
+    "accuracy": 0.72,
+    "date": "Jan 20, 2022 22:11:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL741",
+    "speed": 58,
+    "recognized_info": "Plate-3269",
+    "accuracy": 0.88,
+    "date": "Jan 19, 2022 22:36:28",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL742",
+    "speed": 75,
+    "recognized_info": "Plate-5671",
+    "accuracy": 0.71,
+    "date": "Jan 18, 2022 22:23:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL743",
+    "speed": 79,
+    "recognized_info": "Plate-6540",
+    "accuracy": 0.94,
+    "date": "Jan 17, 2022 22:42:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL744",
+    "speed": 98,
+    "recognized_info": "Plate-6007",
+    "accuracy": 0.92,
+    "date": "Jan 16, 2022 22:19:13",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL745",
+    "speed": 86,
+    "recognized_info": "Plate-5395",
+    "accuracy": 0.88,
+    "date": "Jan 15, 2022 23:00:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL746",
+    "speed": 74,
+    "recognized_info": "Plate-8394",
+    "accuracy": 0.92,
+    "date": "Jan 14, 2022 22:56:52",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL747",
+    "speed": 75,
+    "recognized_info": "Plate-6756",
+    "accuracy": 0.96,
+    "date": "Jan 13, 2022 22:42:37",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL748",
+    "speed": 80,
+    "recognized_info": "Plate-7814",
+    "accuracy": 0.8,
+    "date": "Jan 12, 2022 22:38:16",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL749",
+    "speed": 62,
+    "recognized_info": "Plate-5144",
+    "accuracy": 0.84,
+    "date": "Jan 11, 2022 22:25:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL750",
+    "speed": 83,
+    "recognized_info": "Plate-6577",
+    "accuracy": 0.7,
+    "date": "Jan 10, 2022 22:52:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL751",
+    "speed": 83,
+    "recognized_info": "Plate-5583",
+    "accuracy": 0.87,
+    "date": "Jan 09, 2022 22:57:55",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL752",
+    "speed": 73,
+    "recognized_info": "Plate-2582",
+    "accuracy": 0.88,
+    "date": "Jan 08, 2022 22:56:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL753",
+    "speed": 82,
+    "recognized_info": "Plate-3944",
+    "accuracy": 0.81,
+    "date": "Jan 07, 2022 22:55:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL754",
+    "speed": 62,
+    "recognized_info": "Plate-9908",
+    "accuracy": 0.8,
+    "date": "Jan 06, 2022 22:33:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL755",
+    "speed": 71,
+    "recognized_info": "Plate-2160",
+    "accuracy": 0.94,
+    "date": "Jan 05, 2022 22:41:21",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL756",
+    "speed": 95,
+    "recognized_info": "Plate-5251",
+    "accuracy": 0.89,
+    "date": "Jan 04, 2022 22:36:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL757",
+    "speed": 65,
+    "recognized_info": "Plate-4922",
+    "accuracy": 0.85,
+    "date": "Jan 03, 2022 22:22:37",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL758",
+    "speed": 87,
+    "recognized_info": "Plate-4705",
+    "accuracy": 0.9,
+    "date": "Jan 02, 2022 23:07:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL759",
+    "speed": 83,
+    "recognized_info": "Plate-1010",
+    "accuracy": 0.85,
+    "date": "Jan 01, 2022 22:18:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL760",
+    "speed": 60,
+    "recognized_info": "Plate-7227",
+    "accuracy": 0.76,
+    "date": "Dec 31, 2021 22:40:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL761",
+    "speed": 100,
+    "recognized_info": "Plate-9252",
+    "accuracy": 0.87,
+    "date": "Dec 30, 2021 22:17:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL762",
+    "speed": 79,
+    "recognized_info": "Plate-9468",
+    "accuracy": 0.91,
+    "date": "Dec 29, 2021 22:21:22",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL763",
+    "speed": 71,
+    "recognized_info": "Plate-3115",
+    "accuracy": 0.81,
+    "date": "Dec 28, 2021 22:24:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL764",
+    "speed": 73,
+    "recognized_info": "Plate-7268",
+    "accuracy": 0.84,
+    "date": "Dec 27, 2021 22:50:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL765",
+    "speed": 98,
+    "recognized_info": "Plate-3073",
+    "accuracy": 0.87,
+    "date": "Dec 26, 2021 23:00:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL766",
+    "speed": 50,
+    "recognized_info": "Plate-6935",
+    "accuracy": 0.75,
+    "date": "Dec 25, 2021 22:29:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL767",
+    "speed": 92,
+    "recognized_info": "Plate-5236",
+    "accuracy": 0.92,
+    "date": "Dec 24, 2021 22:43:39",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL768",
+    "speed": 65,
+    "recognized_info": "Plate-5716",
+    "accuracy": 0.93,
+    "date": "Dec 23, 2021 22:16:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL769",
+    "speed": 83,
+    "recognized_info": "Plate-2906",
+    "accuracy": 0.85,
+    "date": "Dec 22, 2021 22:33:01",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL770",
+    "speed": 75,
+    "recognized_info": "Plate-9679",
+    "accuracy": 0.84,
+    "date": "Dec 21, 2021 22:11:45",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL771",
+    "speed": 67,
+    "recognized_info": "Plate-9162",
+    "accuracy": 0.96,
+    "date": "Dec 20, 2021 22:16:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL772",
+    "speed": 75,
+    "recognized_info": "Plate-7240",
+    "accuracy": 0.78,
+    "date": "Dec 19, 2021 22:08:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL773",
+    "speed": 94,
+    "recognized_info": "Plate-1659",
+    "accuracy": 0.72,
+    "date": "Dec 18, 2021 23:02:45",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL774",
+    "speed": 98,
+    "recognized_info": "Plate-2874",
+    "accuracy": 0.99,
+    "date": "Dec 17, 2021 22:56:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL775",
+    "speed": 51,
+    "recognized_info": "Plate-8087",
+    "accuracy": 0.84,
+    "date": "Dec 16, 2021 23:04:16",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL776",
+    "speed": 92,
+    "recognized_info": "Plate-7906",
+    "accuracy": 0.92,
+    "date": "Dec 15, 2021 23:01:59",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL777",
+    "speed": 65,
+    "recognized_info": "Plate-5747",
+    "accuracy": 0.78,
+    "date": "Dec 14, 2021 22:07:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL778",
+    "speed": 76,
+    "recognized_info": "Plate-8990",
+    "accuracy": 0.78,
+    "date": "Dec 13, 2021 23:01:40",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL779",
+    "speed": 93,
+    "recognized_info": "Plate-6288",
+    "accuracy": 0.91,
+    "date": "Dec 12, 2021 22:47:03",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL780",
+    "speed": 51,
+    "recognized_info": "Plate-2508",
+    "accuracy": 0.72,
+    "date": "Dec 11, 2021 22:38:58",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL781",
+    "speed": 67,
+    "recognized_info": "Plate-7769",
+    "accuracy": 0.93,
+    "date": "Dec 10, 2021 22:42:29",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL782",
+    "speed": 96,
+    "recognized_info": "Plate-9846",
+    "accuracy": 0.89,
+    "date": "Dec 09, 2021 22:18:37",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL783",
+    "speed": 58,
+    "recognized_info": "Plate-1712",
+    "accuracy": 0.92,
+    "date": "Dec 08, 2021 23:05:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL784",
+    "speed": 87,
+    "recognized_info": "Plate-7092",
+    "accuracy": 0.85,
+    "date": "Dec 07, 2021 22:19:36",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL785",
+    "speed": 72,
+    "recognized_info": "Plate-9493",
+    "accuracy": 0.89,
+    "date": "Dec 06, 2021 23:03:57",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL786",
+    "speed": 95,
+    "recognized_info": "Plate-5121",
+    "accuracy": 0.71,
+    "date": "Dec 05, 2021 23:04:16",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL787",
+    "speed": 99,
+    "recognized_info": "Plate-6875",
+    "accuracy": 0.75,
+    "date": "Dec 04, 2021 22:17:29",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL788",
+    "speed": 51,
+    "recognized_info": "Plate-3063",
+    "accuracy": 0.94,
+    "date": "Dec 03, 2021 22:42:12",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL789",
+    "speed": 51,
+    "recognized_info": "Plate-2770",
+    "accuracy": 0.81,
+    "date": "Dec 02, 2021 22:37:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL790",
+    "speed": 56,
+    "recognized_info": "Plate-1829",
+    "accuracy": 0.86,
+    "date": "Dec 01, 2021 22:52:30",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL791",
+    "speed": 84,
+    "recognized_info": "Plate-8145",
+    "accuracy": 0.87,
+    "date": "Nov 30, 2021 22:39:57",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL792",
+    "speed": 87,
+    "recognized_info": "Plate-8581",
+    "accuracy": 0.84,
+    "date": "Nov 29, 2021 22:07:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL793",
+    "speed": 62,
+    "recognized_info": "Plate-4137",
+    "accuracy": 0.9,
+    "date": "Nov 28, 2021 22:19:08",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL794",
+    "speed": 96,
+    "recognized_info": "Plate-2767",
+    "accuracy": 0.76,
+    "date": "Nov 27, 2021 22:27:38",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL795",
+    "speed": 74,
+    "recognized_info": "Plate-4666",
+    "accuracy": 0.84,
+    "date": "Nov 26, 2021 22:17:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL796",
+    "speed": 69,
+    "recognized_info": "Plate-6843",
+    "accuracy": 0.78,
+    "date": "Nov 25, 2021 23:01:15",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL797",
+    "speed": 65,
+    "recognized_info": "Plate-2818",
+    "accuracy": 0.76,
+    "date": "Nov 24, 2021 22:25:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL798",
+    "speed": 56,
+    "recognized_info": "Plate-2458",
+    "accuracy": 0.85,
+    "date": "Nov 23, 2021 22:54:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL799",
+    "speed": 54,
+    "recognized_info": "Plate-8041",
+    "accuracy": 0.72,
+    "date": "Nov 22, 2021 22:34:05",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL800",
+    "speed": 85,
+    "recognized_info": "Plate-2411",
+    "accuracy": 0.86,
+    "date": "Nov 21, 2021 22:31:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL801",
+    "speed": 56,
+    "recognized_info": "Plate-8472",
+    "accuracy": 0.91,
+    "date": "Nov 20, 2021 22:59:49",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL802",
+    "speed": 73,
+    "recognized_info": "Plate-8975",
+    "accuracy": 0.91,
+    "date": "Nov 19, 2021 22:40:09",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL803",
+    "speed": 52,
+    "recognized_info": "Plate-7578",
+    "accuracy": 0.73,
+    "date": "Nov 18, 2021 22:49:56",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL804",
+    "speed": 87,
+    "recognized_info": "Plate-7632",
+    "accuracy": 0.78,
+    "date": "Nov 17, 2021 22:08:08",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL805",
+    "speed": 52,
+    "recognized_info": "Plate-2240",
+    "accuracy": 0.92,
+    "date": "Nov 16, 2021 22:20:12",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL806",
+    "speed": 77,
+    "recognized_info": "Plate-2447",
+    "accuracy": 0.75,
+    "date": "Nov 15, 2021 22:45:22",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL807",
+    "speed": 73,
+    "recognized_info": "Plate-1854",
+    "accuracy": 0.71,
+    "date": "Nov 14, 2021 22:43:04",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL808",
+    "speed": 69,
+    "recognized_info": "Plate-9394",
+    "accuracy": 0.92,
+    "date": "Nov 13, 2021 22:49:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL809",
+    "speed": 99,
+    "recognized_info": "Plate-5072",
+    "accuracy": 0.98,
+    "date": "Nov 12, 2021 22:59:58",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL810",
+    "speed": 77,
+    "recognized_info": "Plate-7509",
+    "accuracy": 0.79,
+    "date": "Nov 11, 2021 22:59:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL811",
+    "speed": 72,
+    "recognized_info": "Plate-4093",
+    "accuracy": 0.96,
+    "date": "Nov 10, 2021 22:31:35",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL812",
+    "speed": 68,
+    "recognized_info": "Plate-3597",
+    "accuracy": 0.96,
+    "date": "Nov 09, 2021 22:48:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL813",
+    "speed": 71,
+    "recognized_info": "Plate-6630",
+    "accuracy": 0.82,
+    "date": "Nov 08, 2021 22:48:36",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL814",
+    "speed": 91,
+    "recognized_info": "Plate-9504",
+    "accuracy": 0.88,
+    "date": "Nov 07, 2021 23:00:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL815",
+    "speed": 99,
+    "recognized_info": "Plate-6482",
+    "accuracy": 0.91,
+    "date": "Nov 06, 2021 22:47:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL816",
+    "speed": 83,
+    "recognized_info": "Plate-4451",
+    "accuracy": 0.98,
+    "date": "Nov 05, 2021 22:40:31",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL817",
+    "speed": 70,
+    "recognized_info": "Plate-6526",
+    "accuracy": 0.72,
+    "date": "Nov 04, 2021 22:55:22",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL818",
+    "speed": 61,
+    "recognized_info": "Plate-5605",
+    "accuracy": 0.97,
+    "date": "Nov 03, 2021 23:03:42",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL819",
+    "speed": 91,
+    "recognized_info": "Plate-3084",
+    "accuracy": 0.96,
+    "date": "Nov 02, 2021 22:53:40",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL820",
+    "speed": 54,
+    "recognized_info": "Plate-5128",
+    "accuracy": 0.7,
+    "date": "Nov 01, 2021 22:29:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL821",
+    "speed": 60,
+    "recognized_info": "Plate-7244",
+    "accuracy": 0.97,
+    "date": "Oct 31, 2021 22:09:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL822",
+    "speed": 55,
+    "recognized_info": "Plate-3552",
+    "accuracy": 0.7,
+    "date": "Oct 30, 2021 22:38:42",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL823",
+    "speed": 83,
+    "recognized_info": "Plate-6516",
+    "accuracy": 0.9,
+    "date": "Oct 29, 2021 22:45:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL824",
+    "speed": 54,
+    "recognized_info": "Plate-5433",
+    "accuracy": 0.74,
+    "date": "Oct 28, 2021 22:44:11",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL825",
+    "speed": 66,
+    "recognized_info": "Plate-4718",
+    "accuracy": 0.72,
+    "date": "Oct 27, 2021 22:58:31",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL826",
+    "speed": 88,
+    "recognized_info": "Plate-8301",
+    "accuracy": 0.76,
+    "date": "Oct 26, 2021 22:45:52",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL827",
+    "speed": 98,
+    "recognized_info": "Plate-6113",
+    "accuracy": 0.8,
+    "date": "Oct 25, 2021 22:56:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL828",
+    "speed": 98,
+    "recognized_info": "Plate-8059",
+    "accuracy": 0.95,
+    "date": "Oct 24, 2021 23:02:14",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL829",
+    "speed": 100,
+    "recognized_info": "Plate-7504",
+    "accuracy": 0.71,
+    "date": "Oct 23, 2021 22:08:34",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL830",
+    "speed": 58,
+    "recognized_info": "Plate-4695",
+    "accuracy": 0.72,
+    "date": "Oct 22, 2021 22:30:12",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL831",
+    "speed": 100,
+    "recognized_info": "Plate-8754",
+    "accuracy": 0.92,
+    "date": "Oct 21, 2021 22:44:59",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL832",
+    "speed": 79,
+    "recognized_info": "Plate-8573",
+    "accuracy": 0.74,
+    "date": "Oct 20, 2021 22:08:22",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL833",
+    "speed": 72,
+    "recognized_info": "Plate-3176",
+    "accuracy": 0.92,
+    "date": "Oct 19, 2021 22:59:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL834",
+    "speed": 55,
+    "recognized_info": "Plate-7055",
+    "accuracy": 0.77,
+    "date": "Oct 18, 2021 22:43:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL835",
+    "speed": 59,
+    "recognized_info": "Plate-3178",
+    "accuracy": 0.86,
+    "date": "Oct 17, 2021 22:16:46",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL836",
+    "speed": 91,
+    "recognized_info": "Plate-5698",
+    "accuracy": 0.88,
+    "date": "Oct 16, 2021 22:58:27",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL837",
+    "speed": 63,
+    "recognized_info": "Plate-9060",
+    "accuracy": 0.74,
+    "date": "Oct 15, 2021 23:05:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL838",
+    "speed": 70,
+    "recognized_info": "Plate-9463",
+    "accuracy": 0.74,
+    "date": "Oct 14, 2021 22:58:21",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL839",
+    "speed": 76,
+    "recognized_info": "Plate-8846",
+    "accuracy": 0.88,
+    "date": "Oct 13, 2021 22:14:51",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL840",
+    "speed": 68,
+    "recognized_info": "Plate-7886",
+    "accuracy": 0.81,
+    "date": "Oct 12, 2021 22:50:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL841",
+    "speed": 70,
+    "recognized_info": "Plate-6752",
+    "accuracy": 0.99,
+    "date": "Oct 11, 2021 22:08:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL842",
+    "speed": 52,
+    "recognized_info": "Plate-8058",
+    "accuracy": 0.99,
+    "date": "Oct 10, 2021 22:57:53",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL843",
+    "speed": 96,
+    "recognized_info": "Plate-8937",
+    "accuracy": 0.7,
+    "date": "Oct 09, 2021 22:33:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL844",
+    "speed": 71,
+    "recognized_info": "Plate-1295",
+    "accuracy": 0.99,
+    "date": "Oct 08, 2021 22:32:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL845",
+    "speed": 53,
+    "recognized_info": "Plate-9347",
+    "accuracy": 0.9,
+    "date": "Oct 07, 2021 22:54:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL846",
+    "speed": 94,
+    "recognized_info": "Plate-8658",
+    "accuracy": 0.79,
+    "date": "Oct 06, 2021 22:22:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL847",
+    "speed": 58,
+    "recognized_info": "Plate-5026",
+    "accuracy": 0.95,
+    "date": "Oct 05, 2021 22:07:02",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL848",
+    "speed": 62,
+    "recognized_info": "Plate-8540",
+    "accuracy": 0.76,
+    "date": "Oct 04, 2021 22:09:30",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL849",
+    "speed": 60,
+    "recognized_info": "Plate-8718",
+    "accuracy": 0.94,
+    "date": "Oct 03, 2021 23:02:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL850",
+    "speed": 87,
+    "recognized_info": "Plate-7288",
+    "accuracy": 0.87,
+    "date": "Oct 02, 2021 22:51:04",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL851",
+    "speed": 63,
+    "recognized_info": "Plate-5025",
+    "accuracy": 0.72,
+    "date": "Oct 01, 2021 22:32:37",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL852",
+    "speed": 97,
+    "recognized_info": "Plate-1980",
+    "accuracy": 0.99,
+    "date": "Sep 30, 2021 22:55:17",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL853",
+    "speed": 87,
+    "recognized_info": "Plate-1983",
+    "accuracy": 0.89,
+    "date": "Sep 29, 2021 22:14:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL854",
+    "speed": 67,
+    "recognized_info": "Plate-2264",
+    "accuracy": 0.96,
+    "date": "Sep 28, 2021 22:58:03",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL855",
+    "speed": 66,
+    "recognized_info": "Plate-7426",
+    "accuracy": 0.86,
+    "date": "Sep 27, 2021 22:56:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL856",
+    "speed": 61,
+    "recognized_info": "Plate-3328",
+    "accuracy": 0.94,
+    "date": "Sep 26, 2021 22:40:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL857",
+    "speed": 92,
+    "recognized_info": "Plate-2691",
+    "accuracy": 0.7,
+    "date": "Sep 25, 2021 22:25:29",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL858",
+    "speed": 60,
+    "recognized_info": "Plate-8730",
+    "accuracy": 0.89,
+    "date": "Sep 24, 2021 22:49:53",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL859",
+    "speed": 89,
+    "recognized_info": "Plate-3327",
+    "accuracy": 0.95,
+    "date": "Sep 23, 2021 22:52:40",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL860",
+    "speed": 83,
+    "recognized_info": "Plate-8793",
+    "accuracy": 0.96,
+    "date": "Sep 22, 2021 22:28:15",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL861",
+    "speed": 76,
+    "recognized_info": "Plate-6633",
+    "accuracy": 1.0,
+    "date": "Sep 21, 2021 22:48:21",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL862",
+    "speed": 87,
+    "recognized_info": "Plate-2731",
+    "accuracy": 0.96,
+    "date": "Sep 20, 2021 22:34:50",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL863",
+    "speed": 58,
+    "recognized_info": "Plate-7515",
+    "accuracy": 0.8,
+    "date": "Sep 19, 2021 22:22:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL864",
+    "speed": 57,
+    "recognized_info": "Plate-8118",
+    "accuracy": 0.99,
+    "date": "Sep 18, 2021 23:02:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL865",
+    "speed": 89,
+    "recognized_info": "Plate-1033",
+    "accuracy": 0.74,
+    "date": "Sep 17, 2021 22:59:06",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL866",
+    "speed": 56,
+    "recognized_info": "Plate-8555",
+    "accuracy": 0.79,
+    "date": "Sep 16, 2021 22:44:23",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL867",
+    "speed": 91,
+    "recognized_info": "Plate-2547",
+    "accuracy": 0.81,
+    "date": "Sep 15, 2021 22:18:51",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL868",
+    "speed": 75,
+    "recognized_info": "Plate-3897",
+    "accuracy": 1.0,
+    "date": "Sep 14, 2021 22:56:44",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL869",
+    "speed": 58,
+    "recognized_info": "Plate-9037",
+    "accuracy": 0.77,
+    "date": "Sep 13, 2021 22:45:13",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL870",
+    "speed": 86,
+    "recognized_info": "Plate-3886",
+    "accuracy": 1.0,
+    "date": "Sep 12, 2021 22:38:36",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL871",
+    "speed": 100,
+    "recognized_info": "Plate-1482",
+    "accuracy": 0.73,
+    "date": "Sep 11, 2021 23:06:28",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL872",
+    "speed": 94,
+    "recognized_info": "Plate-9644",
+    "accuracy": 0.71,
+    "date": "Sep 10, 2021 22:34:43",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL873",
+    "speed": 68,
+    "recognized_info": "Plate-6872",
+    "accuracy": 0.89,
+    "date": "Sep 09, 2021 22:24:24",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL874",
+    "speed": 98,
+    "recognized_info": "Plate-1829",
+    "accuracy": 0.85,
+    "date": "Sep 08, 2021 22:47:18",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL875",
+    "speed": 71,
+    "recognized_info": "Plate-7446",
+    "accuracy": 0.92,
+    "date": "Sep 07, 2021 22:24:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL876",
+    "speed": 84,
+    "recognized_info": "Plate-7573",
+    "accuracy": 0.86,
+    "date": "Sep 06, 2021 22:44:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL877",
+    "speed": 54,
+    "recognized_info": "Plate-3509",
+    "accuracy": 0.78,
+    "date": "Sep 05, 2021 22:27:06",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL878",
+    "speed": 86,
+    "recognized_info": "Plate-4760",
+    "accuracy": 0.78,
+    "date": "Sep 04, 2021 22:22:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL879",
+    "speed": 88,
+    "recognized_info": "Plate-2330",
+    "accuracy": 0.73,
+    "date": "Sep 03, 2021 22:21:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL880",
+    "speed": 51,
+    "recognized_info": "Plate-1023",
+    "accuracy": 0.86,
+    "date": "Sep 02, 2021 22:09:54",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL881",
+    "speed": 52,
+    "recognized_info": "Plate-2194",
+    "accuracy": 0.98,
+    "date": "Sep 01, 2021 22:52:16",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL882",
+    "speed": 56,
+    "recognized_info": "Plate-7859",
+    "accuracy": 0.76,
+    "date": "Aug 31, 2021 22:19:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL883",
+    "speed": 82,
+    "recognized_info": "Plate-3791",
+    "accuracy": 0.77,
+    "date": "Aug 30, 2021 22:58:03",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL884",
+    "speed": 70,
+    "recognized_info": "Plate-8858",
+    "accuracy": 0.74,
+    "date": "Aug 29, 2021 22:52:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL885",
+    "speed": 83,
+    "recognized_info": "Plate-6723",
+    "accuracy": 0.79,
+    "date": "Aug 28, 2021 23:02:11",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL886",
+    "speed": 70,
+    "recognized_info": "Plate-6064",
+    "accuracy": 0.96,
+    "date": "Aug 27, 2021 22:53:16",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL887",
+    "speed": 55,
+    "recognized_info": "Plate-1889",
+    "accuracy": 0.77,
+    "date": "Aug 26, 2021 22:18:50",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL888",
+    "speed": 51,
+    "recognized_info": "Plate-4285",
+    "accuracy": 0.89,
+    "date": "Aug 25, 2021 22:41:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL889",
+    "speed": 54,
+    "recognized_info": "Plate-8122",
+    "accuracy": 0.86,
+    "date": "Aug 24, 2021 22:13:52",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL890",
+    "speed": 93,
+    "recognized_info": "Plate-3379",
+    "accuracy": 0.9,
+    "date": "Aug 23, 2021 22:38:05",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL891",
+    "speed": 91,
+    "recognized_info": "Plate-5763",
+    "accuracy": 0.82,
+    "date": "Aug 22, 2021 23:03:35",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL892",
+    "speed": 85,
+    "recognized_info": "Plate-5668",
+    "accuracy": 0.8,
+    "date": "Aug 21, 2021 22:50:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL893",
+    "speed": 62,
+    "recognized_info": "Plate-2939",
+    "accuracy": 0.85,
+    "date": "Aug 20, 2021 22:32:37",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL894",
+    "speed": 58,
+    "recognized_info": "Plate-2807",
+    "accuracy": 0.9,
+    "date": "Aug 19, 2021 22:46:06",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL895",
+    "speed": 54,
+    "recognized_info": "Plate-5252",
+    "accuracy": 0.83,
+    "date": "Aug 18, 2021 22:44:59",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL896",
+    "speed": 80,
+    "recognized_info": "Plate-2135",
+    "accuracy": 0.98,
+    "date": "Aug 17, 2021 22:20:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL897",
+    "speed": 73,
+    "recognized_info": "Plate-8028",
+    "accuracy": 0.79,
+    "date": "Aug 16, 2021 22:56:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL898",
+    "speed": 73,
+    "recognized_info": "Plate-4249",
+    "accuracy": 1.0,
+    "date": "Aug 15, 2021 22:46:25",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL899",
+    "speed": 52,
+    "recognized_info": "Plate-5611",
+    "accuracy": 0.89,
+    "date": "Aug 14, 2021 22:14:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL900",
+    "speed": 94,
+    "recognized_info": "Plate-3443",
+    "accuracy": 0.91,
+    "date": "Aug 13, 2021 22:44:21",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL901",
+    "speed": 66,
+    "recognized_info": "Plate-9445",
+    "accuracy": 0.96,
+    "date": "Aug 12, 2021 22:53:33",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL902",
+    "speed": 57,
+    "recognized_info": "Plate-3364",
+    "accuracy": 0.88,
+    "date": "Aug 11, 2021 22:36:08",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL903",
+    "speed": 98,
+    "recognized_info": "Plate-6098",
+    "accuracy": 0.89,
+    "date": "Aug 10, 2021 22:28:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL904",
+    "speed": 70,
+    "recognized_info": "Plate-1376",
+    "accuracy": 0.83,
+    "date": "Aug 09, 2021 22:21:45",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL905",
+    "speed": 90,
+    "recognized_info": "Plate-4079",
+    "accuracy": 0.97,
+    "date": "Aug 08, 2021 22:44:27",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL906",
+    "speed": 53,
+    "recognized_info": "Plate-5480",
+    "accuracy": 0.75,
+    "date": "Aug 07, 2021 22:35:49",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL907",
+    "speed": 98,
+    "recognized_info": "Plate-4210",
+    "accuracy": 0.75,
+    "date": "Aug 06, 2021 22:58:59",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL908",
+    "speed": 94,
+    "recognized_info": "Plate-4277",
+    "accuracy": 0.85,
+    "date": "Aug 05, 2021 22:32:39",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL909",
+    "speed": 64,
+    "recognized_info": "Plate-3094",
+    "accuracy": 0.85,
+    "date": "Aug 04, 2021 22:42:26",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL910",
+    "speed": 55,
+    "recognized_info": "Plate-8799",
+    "accuracy": 0.82,
+    "date": "Aug 03, 2021 22:18:08",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL911",
+    "speed": 82,
+    "recognized_info": "Plate-3731",
+    "accuracy": 0.97,
+    "date": "Aug 02, 2021 22:16:23",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL912",
+    "speed": 53,
+    "recognized_info": "Plate-8213",
+    "accuracy": 0.71,
+    "date": "Aug 01, 2021 22:54:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL913",
+    "speed": 83,
+    "recognized_info": "Plate-5168",
+    "accuracy": 0.72,
+    "date": "Jul 31, 2021 22:14:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL914",
+    "speed": 93,
+    "recognized_info": "Plate-3879",
+    "accuracy": 0.73,
+    "date": "Jul 30, 2021 23:06:05",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL915",
+    "speed": 53,
+    "recognized_info": "Plate-6908",
+    "accuracy": 0.83,
+    "date": "Jul 29, 2021 22:39:41",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL916",
+    "speed": 66,
+    "recognized_info": "Plate-4628",
+    "accuracy": 0.89,
+    "date": "Jul 28, 2021 22:20:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL917",
+    "speed": 67,
+    "recognized_info": "Plate-5378",
+    "accuracy": 0.85,
+    "date": "Jul 27, 2021 22:20:43",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL918",
+    "speed": 81,
+    "recognized_info": "Plate-5974",
+    "accuracy": 0.8,
+    "date": "Jul 26, 2021 23:02:48",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL919",
+    "speed": 88,
+    "recognized_info": "Plate-3221",
+    "accuracy": 0.87,
+    "date": "Jul 25, 2021 22:25:58",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL920",
+    "speed": 73,
+    "recognized_info": "Plate-1134",
+    "accuracy": 0.81,
+    "date": "Jul 24, 2021 22:43:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL921",
+    "speed": 99,
+    "recognized_info": "Plate-1542",
+    "accuracy": 0.91,
+    "date": "Jul 23, 2021 22:51:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL922",
+    "speed": 62,
+    "recognized_info": "Plate-9662",
+    "accuracy": 0.75,
+    "date": "Jul 22, 2021 22:48:55",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL923",
+    "speed": 91,
+    "recognized_info": "Plate-1943",
+    "accuracy": 0.86,
+    "date": "Jul 21, 2021 22:25:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL924",
+    "speed": 88,
+    "recognized_info": "Plate-5619",
+    "accuracy": 0.83,
+    "date": "Jul 20, 2021 22:19:19",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL925",
+    "speed": 79,
+    "recognized_info": "Plate-9859",
+    "accuracy": 0.73,
+    "date": "Jul 19, 2021 22:31:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL926",
+    "speed": 88,
+    "recognized_info": "Plate-1194",
+    "accuracy": 0.87,
+    "date": "Jul 18, 2021 22:47:26",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL927",
+    "speed": 80,
+    "recognized_info": "Plate-5044",
+    "accuracy": 0.84,
+    "date": "Jul 17, 2021 22:42:59",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL928",
+    "speed": 90,
+    "recognized_info": "Plate-8871",
+    "accuracy": 0.71,
+    "date": "Jul 16, 2021 22:39:17",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL929",
+    "speed": 69,
+    "recognized_info": "Plate-1729",
+    "accuracy": 0.95,
+    "date": "Jul 15, 2021 22:42:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL930",
+    "speed": 79,
+    "recognized_info": "Plate-6274",
+    "accuracy": 0.77,
+    "date": "Jul 14, 2021 23:05:27",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL931",
+    "speed": 80,
+    "recognized_info": "Plate-2146",
+    "accuracy": 0.76,
+    "date": "Jul 13, 2021 22:41:00",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL932",
+    "speed": 99,
+    "recognized_info": "Plate-5255",
+    "accuracy": 0.94,
+    "date": "Jul 12, 2021 22:40:31",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL933",
+    "speed": 76,
+    "recognized_info": "Plate-8045",
+    "accuracy": 0.77,
+    "date": "Jul 11, 2021 22:50:46",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL934",
+    "speed": 50,
+    "recognized_info": "Plate-3193",
+    "accuracy": 0.95,
+    "date": "Jul 10, 2021 22:44:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL935",
+    "speed": 80,
+    "recognized_info": "Plate-1925",
+    "accuracy": 0.98,
+    "date": "Jul 09, 2021 22:47:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL936",
+    "speed": 97,
+    "recognized_info": "Plate-4978",
+    "accuracy": 0.89,
+    "date": "Jul 08, 2021 22:07:48",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL937",
+    "speed": 70,
+    "recognized_info": "Plate-3338",
+    "accuracy": 0.8,
+    "date": "Jul 07, 2021 22:31:25",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL938",
+    "speed": 80,
+    "recognized_info": "Plate-5559",
+    "accuracy": 0.91,
+    "date": "Jul 06, 2021 23:05:07",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL939",
+    "speed": 80,
+    "recognized_info": "Plate-2819",
+    "accuracy": 0.78,
+    "date": "Jul 05, 2021 22:58:32",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL940",
+    "speed": 71,
+    "recognized_info": "Plate-6198",
+    "accuracy": 0.82,
+    "date": "Jul 04, 2021 22:11:15",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL941",
+    "speed": 89,
+    "recognized_info": "Plate-7712",
+    "accuracy": 0.84,
+    "date": "Jul 03, 2021 22:44:44",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL942",
+    "speed": 79,
+    "recognized_info": "Plate-3194",
+    "accuracy": 0.73,
+    "date": "Jul 02, 2021 22:43:04",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL943",
+    "speed": 51,
+    "recognized_info": "Plate-3824",
+    "accuracy": 0.82,
+    "date": "Jul 01, 2021 22:36:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL944",
+    "speed": 66,
+    "recognized_info": "Plate-4487",
+    "accuracy": 0.99,
+    "date": "Jun 30, 2021 22:21:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL945",
+    "speed": 96,
+    "recognized_info": "Plate-1943",
+    "accuracy": 0.94,
+    "date": "Jun 29, 2021 23:05:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL946",
+    "speed": 71,
+    "recognized_info": "Plate-8949",
+    "accuracy": 0.77,
+    "date": "Jun 28, 2021 22:19:41",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL947",
+    "speed": 84,
+    "recognized_info": "Plate-8472",
+    "accuracy": 0.9,
+    "date": "Jun 27, 2021 22:33:00",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL948",
+    "speed": 89,
+    "recognized_info": "Plate-1487",
+    "accuracy": 0.7,
+    "date": "Jun 26, 2021 22:39:03",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL949",
+    "speed": 54,
+    "recognized_info": "Plate-5032",
+    "accuracy": 0.73,
+    "date": "Jun 25, 2021 22:41:47",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL950",
+    "speed": 90,
+    "recognized_info": "Plate-6330",
+    "accuracy": 0.83,
+    "date": "Jun 24, 2021 22:53:38",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL951",
+    "speed": 58,
+    "recognized_info": "Plate-9526",
+    "accuracy": 0.75,
+    "date": "Jun 23, 2021 22:22:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL952",
+    "speed": 97,
+    "recognized_info": "Plate-6673",
+    "accuracy": 0.93,
+    "date": "Jun 22, 2021 22:55:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL953",
+    "speed": 51,
+    "recognized_info": "Plate-9953",
+    "accuracy": 0.77,
+    "date": "Jun 21, 2021 22:39:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL954",
+    "speed": 58,
+    "recognized_info": "Plate-3958",
+    "accuracy": 0.79,
+    "date": "Jun 20, 2021 22:54:18",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL955",
+    "speed": 64,
+    "recognized_info": "Plate-5353",
+    "accuracy": 0.77,
+    "date": "Jun 19, 2021 22:30:52",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL956",
+    "speed": 63,
+    "recognized_info": "Plate-8981",
+    "accuracy": 0.78,
+    "date": "Jun 18, 2021 22:45:56",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL957",
+    "speed": 81,
+    "recognized_info": "Plate-1945",
+    "accuracy": 0.99,
+    "date": "Jun 17, 2021 22:11:29",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL958",
+    "speed": 72,
+    "recognized_info": "Plate-9596",
+    "accuracy": 0.95,
+    "date": "Jun 16, 2021 22:56:54",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL959",
+    "speed": 84,
+    "recognized_info": "Plate-9162",
+    "accuracy": 0.8,
+    "date": "Jun 15, 2021 22:54:21",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL960",
+    "speed": 76,
+    "recognized_info": "Plate-5932",
+    "accuracy": 0.97,
+    "date": "Jun 14, 2021 22:56:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL961",
+    "speed": 79,
+    "recognized_info": "Plate-5252",
+    "accuracy": 0.9,
+    "date": "Jun 13, 2021 22:45:02",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL962",
+    "speed": 78,
+    "recognized_info": "Plate-1944",
+    "accuracy": 0.71,
+    "date": "Jun 12, 2021 22:09:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL963",
+    "speed": 64,
+    "recognized_info": "Plate-2760",
+    "accuracy": 0.81,
+    "date": "Jun 11, 2021 23:00:20",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL964",
+    "speed": 73,
+    "recognized_info": "Plate-6278",
+    "accuracy": 0.8,
+    "date": "Jun 10, 2021 22:24:42",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL965",
+    "speed": 84,
+    "recognized_info": "Plate-3858",
+    "accuracy": 0.76,
+    "date": "Jun 09, 2021 22:26:12",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL966",
+    "speed": 56,
+    "recognized_info": "Plate-6281",
+    "accuracy": 0.74,
+    "date": "Jun 08, 2021 22:59:51",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL967",
+    "speed": 67,
+    "recognized_info": "Plate-1868",
+    "accuracy": 0.83,
+    "date": "Jun 07, 2021 22:39:50",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL968",
+    "speed": 68,
+    "recognized_info": "Plate-5929",
+    "accuracy": 0.78,
+    "date": "Jun 06, 2021 22:24:01",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL969",
+    "speed": 88,
+    "recognized_info": "Plate-4674",
+    "accuracy": 0.93,
+    "date": "Jun 05, 2021 22:15:19",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL970",
+    "speed": 67,
+    "recognized_info": "Plate-6399",
+    "accuracy": 0.9,
+    "date": "Jun 04, 2021 22:14:18",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL971",
+    "speed": 86,
+    "recognized_info": "Plate-9748",
+    "accuracy": 0.94,
+    "date": "Jun 03, 2021 22:42:30",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL972",
+    "speed": 67,
+    "recognized_info": "Plate-1892",
+    "accuracy": 0.84,
+    "date": "Jun 02, 2021 22:53:33",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL973",
+    "speed": 61,
+    "recognized_info": "Plate-8534",
+    "accuracy": 0.89,
+    "date": "Jun 01, 2021 22:36:17",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL974",
+    "speed": 92,
+    "recognized_info": "Plate-7358",
+    "accuracy": 0.97,
+    "date": "May 31, 2021 22:06:57",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL975",
+    "speed": 59,
+    "recognized_info": "Plate-4372",
+    "accuracy": 0.89,
+    "date": "May 30, 2021 22:33:54",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL976",
+    "speed": 64,
+    "recognized_info": "Plate-4472",
+    "accuracy": 0.84,
+    "date": "May 29, 2021 22:17:06",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL977",
+    "speed": 58,
+    "recognized_info": "Plate-8135",
+    "accuracy": 0.75,
+    "date": "May 28, 2021 22:55:44",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL978",
+    "speed": 84,
+    "recognized_info": "Plate-7111",
+    "accuracy": 0.77,
+    "date": "May 27, 2021 23:01:27",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL979",
+    "speed": 60,
+    "recognized_info": "Plate-2735",
+    "accuracy": 0.74,
+    "date": "May 26, 2021 22:31:16",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL980",
+    "speed": 56,
+    "recognized_info": "Plate-1902",
+    "accuracy": 0.81,
+    "date": "May 25, 2021 22:50:08",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL981",
+    "speed": 61,
+    "recognized_info": "Plate-5711",
+    "accuracy": 0.99,
+    "date": "May 24, 2021 22:37:20",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL982",
+    "speed": 61,
+    "recognized_info": "Plate-7597",
+    "accuracy": 0.91,
+    "date": "May 23, 2021 22:31:13",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL983",
+    "speed": 57,
+    "recognized_info": "Plate-1201",
+    "accuracy": 0.86,
+    "date": "May 22, 2021 22:55:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL984",
+    "speed": 76,
+    "recognized_info": "Plate-6109",
+    "accuracy": 0.93,
+    "date": "May 21, 2021 22:56:03",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL985",
+    "speed": 94,
+    "recognized_info": "Plate-7227",
+    "accuracy": 0.74,
+    "date": "May 20, 2021 22:44:13",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL986",
+    "speed": 86,
+    "recognized_info": "Plate-7533",
+    "accuracy": 0.8,
+    "date": "May 19, 2021 22:13:10",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL987",
+    "speed": 64,
+    "recognized_info": "Plate-1905",
+    "accuracy": 0.95,
+    "date": "May 18, 2021 22:43:43",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL988",
+    "speed": 53,
+    "recognized_info": "Plate-4335",
+    "accuracy": 0.76,
+    "date": "May 17, 2021 22:58:44",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL989",
+    "speed": 59,
+    "recognized_info": "Plate-4567",
+    "accuracy": 0.78,
+    "date": "May 16, 2021 22:27:09",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL990",
+    "speed": 91,
+    "recognized_info": "Plate-9088",
+    "accuracy": 0.93,
+    "date": "May 15, 2021 22:35:35",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL991",
+    "speed": 97,
+    "recognized_info": "Plate-1463",
+    "accuracy": 0.7,
+    "date": "May 14, 2021 22:17:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL992",
+    "speed": 53,
+    "recognized_info": "Plate-7509",
+    "accuracy": 0.89,
+    "date": "May 13, 2021 22:34:34",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL993",
+    "speed": 81,
+    "recognized_info": "Plate-7922",
+    "accuracy": 0.93,
+    "date": "May 12, 2021 22:43:48",
+    "status": "Completed"
+  },
+  {
+    "violation_id": "VIOL994",
+    "speed": 70,
+    "recognized_info": "Plate-9915",
+    "accuracy": 0.91,
+    "date": "May 11, 2021 22:18:09",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL995",
+    "speed": 75,
+    "recognized_info": "Plate-3998",
+    "accuracy": 0.75,
+    "date": "May 10, 2021 22:41:57",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL996",
+    "speed": 98,
+    "recognized_info": "Plate-4510",
+    "accuracy": 0.97,
+    "date": "May 09, 2021 22:27:14",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL997",
+    "speed": 62,
+    "recognized_info": "Plate-5223",
+    "accuracy": 0.77,
+    "date": "May 08, 2021 22:16:24",
+    "status": "Pending"
+  },
+  {
+    "violation_id": "VIOL998",
+    "speed": 86,
+    "recognized_info": "Plate-2510",
+    "accuracy": 0.8,
+    "date": "May 07, 2021 22:55:56",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL999",
+    "speed": 84,
+    "recognized_info": "Plate-8214",
+    "accuracy": 0.79,
+    "date": "May 06, 2021 22:33:37",
+    "status": "In Progress"
+  },
+  {
+    "violation_id": "VIOL1000",
+    "speed": 82,
+    "recognized_info": "Plate-4846",
+    "accuracy": 0.96,
+    "date": "May 05, 2021 22:42:01",
+    "status": "Completed"
+  }
+]
