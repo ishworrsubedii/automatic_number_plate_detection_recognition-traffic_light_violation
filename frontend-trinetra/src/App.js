@@ -51,7 +51,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" /> }
+                element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
               />
               <Route
                 path="/login"
@@ -64,10 +64,7 @@ function App() {
               <Route path="/server" element={<Server />} />
               <Route path="/alpr" element={<Alpr />} />
               <Route path="/speedtest" element={<Speed />} />
-              <Route
-                path="/violation"
-                element={<TrafficLightViolation />}
-              />
+              <Route path="/violation" element={<TrafficLightViolation />} />
               <Route path="/user-profile" element={<UserProfile />} />
               <Route path="/account" element={<Account />} />
               <Route path="/corporate" element={<Corporate />} />
