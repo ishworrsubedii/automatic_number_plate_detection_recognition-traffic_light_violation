@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState} from "react";
 import {
   Box,
   Paper,
@@ -8,10 +8,9 @@ import {
   useTheme,
   Grid,
   Checkbox,
-  Link,
-} from "@mui/material";
+
+  } from "@mui/material";
 import { tokens } from "../../../theme";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
 import FormControlLabel from "@mui/material/FormControlLabel";
 
@@ -20,17 +19,37 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { BsGoogle } from "react-icons/bs";
 import AppleIcon from "@mui/icons-material/Apple";
-import SignUpPage from "../signup/Signup";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-const LoginPage = ({ onLogin }) => {
+
+import {Link,Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
+import axios from 'axios';
+
+const LoginPage = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-    onLogin();
-  };
+  const [formData,setFormData] = useState({
+    email:'',
+    password:''
+  });
+
+  const {email,password} = formData;
+
+  const onChange = e => setFormData({...formData,[e.target.name]:e.target.value});
+
+  const onSubmit = e=>{
+    e.preventDefault();
+    // onLogin(email,password);
+  }
+
+  // is the user authenticated
+  //redicect to dashboard
+
+
+
+
 
   return (
     <Box
@@ -76,16 +95,18 @@ const LoginPage = ({ onLogin }) => {
             fontStyle={"inherit"}
             color={colors.primary[100]}
           >
-            Log in to trinetra to see the magic.
+           Sign into Trinetra and uncover the magic that awaits.
           </Typography>
         </Typography>
 
-        <form onSubmit={handleLogin}>
-          <form onSubmit={handleLogin}>
+        <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit}>
             <TextField
-              label="Username"
+              label="Email"
+              placeholder="Email"
               type="text"
               variant="outlined"
+              
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -95,15 +116,23 @@ const LoginPage = ({ onLogin }) => {
                   </InputAdornment>
                 ),
               }}
+
               style={{
                 borderRadius: 50,
                 width: "80%",
                 marginTop: "20px",
                 marginLeft: "60px",
               }}
+              value={email}
+
+              onChange={e=>onChange(e)}
+              required
+
             />
             <TextField
               label="Password"
+              placeholder="Password"
+
               type="password"
               variant="outlined"
               InputProps={{
@@ -121,6 +150,10 @@ const LoginPage = ({ onLogin }) => {
                 marginTop: "20px",
                 marginLeft: "60px",
               }}
+              value={password}
+
+              onChange={e=>onChange(e)}
+              
             />
           </form>
           <Grid
@@ -140,6 +173,7 @@ const LoginPage = ({ onLogin }) => {
                 marginLeft: "40%",
                 marginTop: "1%",
               }}
+              component={Link} to="/reset-password"
             >
               Forgot Password?
             </Typography>
@@ -218,4 +252,6 @@ const LoginPage = ({ onLogin }) => {
   );
 };
 
-export default LoginPage;
+
+
+export default connect(null,{ }) (LoginPage);

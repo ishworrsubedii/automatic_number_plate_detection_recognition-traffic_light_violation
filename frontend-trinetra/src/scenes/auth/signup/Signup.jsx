@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Box,
-  IconButton,
   Paper,
   Typography,
   TextField,
@@ -9,10 +8,6 @@ import {
   useTheme,
   Checkbox,
   FormControlLabel,
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-  InputAdornment,
   Grid,
 } from "@mui/material";
 import { tokens } from "../../../theme";
@@ -24,8 +19,9 @@ const SignupPage = () => {
 
   const containerStyle = {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "left",
+    height: "100vh",
+    width: "1000px",
   };
 
   return (
@@ -41,7 +37,7 @@ const SignupPage = () => {
             width: "80px",
             height: "80px",
           }}
-        />{" "}
+        />
         <Typography
           variant="h1"
           style={{ fontWeight: "bold" }}
@@ -52,18 +48,30 @@ const SignupPage = () => {
           Sign up to become the part of{" "}
           <span style={{ color: colors.greenAccent[500] }}>third eye!</span>
         </Typography>
-        <form>
-          <Grid
-            container
-            spacing={2}
-            style={{ marginTop: "20px", marginLeft: "60px" }}
+
+        <Typography
+            variant="h5"
+            margin="30px"
+            marginLeft={"10%"}
+            fontStyle={"inherit"}
+            color={colors.primary[100]}
           >
+           Join Trinetra and experience the magic firsthand.
+          </Typography>
+        <form style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          width: "90%",
+        
+        }}>
+          <Grid container spacing={2} sx={{ marginTop: "20px", marginLeft: "60px" }}>
             <Grid item xs={6}>
               <TextField
                 label="First Name"
                 type="text"
                 variant="outlined"
-                style={{ borderRadius: 50, width: "100%" }}
+                fullWidth
               />
             </Grid>
             <Grid item xs={6}>
@@ -71,32 +79,23 @@ const SignupPage = () => {
                 label="Last Name"
                 type="text"
                 variant="outlined"
-                style={{ borderRadius: 50, width: "100%" }}
+                fullWidth
               />
             </Grid>
-          </Grid>
-          <TextField
-            label="Email"
-            type="email"
-            variant="outlined"
-            style={{
-              borderRadius: 50,
-              width: "80%",
-              marginTop: "20px",
-              marginLeft: "60px",
-            }}
-          />
-          <Grid
-            container
-            spacing={2}
-            style={{ marginTop: "20px", marginLeft: "60px" }}
-          >
+            <Grid item xs={12}>
+              <TextField
+                label="Email"
+                type="email"
+                variant="outlined"
+                fullWidth
+              />
+            </Grid>
             <Grid item xs={6}>
               <TextField
                 label="Password"
                 type="password"
                 variant="outlined"
-                style={{ borderRadius: 50, width: "100%" }}
+                fullWidth
               />
             </Grid>
             <Grid item xs={6}>
@@ -104,20 +103,20 @@ const SignupPage = () => {
                 label="Retype Password"
                 type="password"
                 variant="outlined"
-                style={{ borderRadius: 50, width: "100%" }}
+                fullWidth
               />
             </Grid>
           </Grid>
           <FormControlLabel
             control={<Checkbox style={{ color: colors.greenAccent[500] }} />}
             label="I agree with terms and conditions"
-            style={{ marginTop: "20px", marginLeft: "60px" }}
+            sx={{ marginTop: "20px", marginLeft: "60px" }}
           />
           <Button
             type="submit"
             variant="contained"
             color="primary"
-            style={{
+            sx={{
               backgroundColor: colors.greenAccent[500],
               color: colors.primary[500],
               marginTop: "5%",

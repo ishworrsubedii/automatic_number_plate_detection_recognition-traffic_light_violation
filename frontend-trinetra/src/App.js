@@ -21,61 +21,54 @@ import CameraList from "./scenes/cameralist/CameraStatus";
 import Notification from "./scenes/notification/Notification";
 
 import LoginPage from "./scenes/auth/login/Login";
+import SignupPage from "./scenes/auth/signup/Signup";
+import Forgotpassword from "./scenes/auth/forgotpassword/Forgotpassword";
+import Forgotpasswordconfirm from "./scenes/auth/resetpassword/Forgotpasswordconfirm";
+import Accountactivation from "./scenes/auth/accountactivation/Accountactivation";
+
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   const [theme, colorMode] = useMode();
-  const [isSidebar, setIsSidebar] = useState(true);
-  const [isLoggedIn, setLoggedIn] = useState(false);
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    setLoggedIn(true);
-    navigate("/");
-  };
-
-  useEffect(() => {
-    if (!isLoggedIn) {
-      navigate("/login");
-    }
-  }, [isLoggedIn, navigate]);
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className="app">
-          {isLoggedIn && <Sidebar isSidebar={isSidebar} />}
-          <main className="content">
-            {isLoggedIn && <Topbar setIsSidebar={setIsSidebar} />}
+    <Provider store={store}>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
 
-            <Routes>
-              <Route
-                path="/"
-                element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />}
-              />
-              <Route
-                path="/login"
-                element={<LoginPage onLogin={handleLogin} />}
-              />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/reset-password" element={<Forgotpassword />} />
+            <Route
+              path="/password/reset/confirm/:uid/:token"
+              element={<Forgotpasswordconfirm />}
+            />
+            <Route
+              path="/activation/:uid/:token"
+              element={<Accountactivation />}
+            />
 
-              <Route path="/server-status" element={<ServerStatus />} />
-              <Route path="/overview" element={<Overview />} />
-              <Route path="/projects" element={<Project />} />
-              <Route path="/server" element={<Server />} />
-              <Route path="/alpr" element={<Alpr />} />
-              <Route path="/speedtest" element={<Speed />} />
-              <Route path="/violation" element={<TrafficLightViolation />} />
-              <Route path="/user-profile" element={<UserProfile />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/corporate" element={<Corporate />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/camera-list" element={<CameraList />} />
-              <Route path="/notification" element={<Notification />} />
-            </Routes>
-          </main>
-        </div>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+            <Route path="/server-status" element={<ServerStatus />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/server" element={<Server />} />
+            <Route path="/alpr" element={<Alpr />} />
+            <Route path="/speedtest" element={<Speed />} />
+            <Route path="/violation" element={<TrafficLightViolation />} />
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/corporate" element={<Corporate />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/camera-list" element={<CameraList />} />
+            <Route path="/notification" element={<Notification />} />
+          </Routes>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </Provider>
   );
 }
 
