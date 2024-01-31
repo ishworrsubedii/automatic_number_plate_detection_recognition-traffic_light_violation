@@ -1,4 +1,4 @@
-import {React,useState} from "react";
+import { React, useState } from "react";
 import {
   Box,
   Paper,
@@ -8,8 +8,7 @@ import {
   useTheme,
   Grid,
   Checkbox,
-
-  } from "@mui/material";
+} from "@mui/material";
 import { tokens } from "../../../theme";
 
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -21,35 +20,32 @@ import { BsGoogle } from "react-icons/bs";
 import AppleIcon from "@mui/icons-material/Apple";
 import trinetralogo from "../../../assets/trinetra.svg";
 
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { login } from "../../../actions/auth";
+import axios from "axios";
 
-import {Link,Redirect} from 'react-router-dom';
-import {connect} from 'react-redux';
-import axios from 'axios';
-
-const LoginPage = () => {
+const LoginPage = ({ login }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  const [formData,setFormData] = useState({
-    email:'',
-    password:''
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
   });
 
-  const {email,password} = formData;
+  const { email, password } = formData;
 
-  const onChange = e => setFormData({...formData,[e.target.name]:e.target.value});
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e=>{
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // onLogin(email,password);
-  }
+    await login(email, password);
+  };
 
   // is the user authenticated
   //redicect to dashboard
-
-
-
-
 
   return (
     <Box
@@ -95,67 +91,60 @@ const LoginPage = () => {
             fontStyle={"inherit"}
             color={colors.primary[100]}
           >
-           Sign into Trinetra and uncover the magic that awaits.
+            Sign into Trinetra and uncover the magic that awaits.
           </Typography>
         </Typography>
 
         <form onSubmit={onSubmit}>
-          <form onSubmit={onSubmit}>
-            <TextField
-              label="Email"
-              placeholder="Email"
-              type="text"
-              variant="outlined"
-              
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle
-                      style={{ fontSize: 20, color: colors.primary[100] }}
-                    />
-                  </InputAdornment>
-                ),
-              }}
-
-              style={{
-                borderRadius: 50,
-                width: "80%",
-                marginTop: "20px",
-                marginLeft: "60px",
-              }}
-              value={email}
-
-              onChange={e=>onChange(e)}
-              required
-
-            />
-            <TextField
-              label="Password"
-              placeholder="Password"
-
-              type="password"
-              variant="outlined"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <VpnKeyIcon
-                      style={{ fontSize: 20, color: colors.primary[100] }}
-                    />
-                  </InputAdornment>
-                ),
-              }}
-              style={{
-                borderRadius: 50,
-                width: "80%",
-                marginTop: "20px",
-                marginLeft: "60px",
-              }}
-              value={password}
-
-              onChange={e=>onChange(e)}
-              
-            />
-          </form>
+          <TextField
+            name="email"
+            label="Email"
+            placeholder="Email"
+            type="text"
+            variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AccountCircle
+                    style={{ fontSize: 20, color: colors.primary[100] }}
+                  />
+                </InputAdornment>
+              ),
+            }}
+            style={{
+              borderRadius: 50,
+              width: "80%",
+              marginTop: "20px",
+              marginLeft: "60px",
+            }}
+            value={email}
+            onChange={(e) => onChange(e)}
+            required
+          />
+          <TextField
+            name="password"
+            label="Password"
+            placeholder="Password"
+            type="password"
+            variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <VpnKeyIcon
+                    style={{ fontSize: 20, color: colors.primary[100] }}
+                  />
+                </InputAdornment>
+              ),
+            }}
+            style={{
+              borderRadius: 50,
+              width: "80%",
+              marginTop: "20px",
+              marginLeft: "60px",
+            }}
+            value={password}
+            onChange={(e) => onChange(e)}
+          />
           <Grid
             container
             justifyContent="left"
@@ -173,7 +162,8 @@ const LoginPage = () => {
                 marginLeft: "40%",
                 marginTop: "1%",
               }}
-              component={Link} to="/reset-password"
+              component={Link}
+              to="/reset-password"
             >
               Forgot Password?
             </Typography>
@@ -252,6 +242,4 @@ const LoginPage = () => {
   );
 };
 
-
-
-export default connect(null,{ }) (LoginPage);
+export default connect(null, { login })(LoginPage);
