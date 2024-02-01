@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { ProSidebar as Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import {  Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Link } from "react-router-dom"; // for redirect
 import { tokens } from "../../theme";
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
-import "react-pro-sidebar/dist/css/styles.css";
 import Button from "@mui/material/Button";
 
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -67,27 +66,23 @@ const CustomSidebar = () => {
 
   return (
     <Box
-      sx={{
-        "& .pro-sidebar-inner": {
-          background: `${colors.primary[600]} !important`,
-        },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
-        },
-        "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px !important",
-        },
-        "& .pro-inner-item:hover": {
-          color: `${colors.primary[200]} !important`,
-        },
-        "& .pro-menu-item.active": {
-          color: `${colors.greenAccent[600]} !important`,
-        },
-      }}
-      height="213vh"
+    backgroundColor={colors.primary[500]}
+      
+      height="100%"
     >
       <Sidebar collapsed={isCollapsed}>
-        <Menu iconShape="circle">
+        <Menu 
+        menuItemStyles={{
+          button:{
+            [`&.active`]: {
+              backgroundColor: '#13395e',
+              color: '#b6c8d9',
+            },
+          }
+        }
+        }
+        
+        iconShape="circle">
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}

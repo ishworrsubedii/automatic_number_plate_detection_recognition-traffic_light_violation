@@ -33,11 +33,11 @@ function App() {
   const [theme, colorMode] = useMode();
 
   return (
-    <Provider store={store}>
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
 
+        <Provider store={store}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<LoginPage />} />
@@ -66,9 +66,9 @@ function App() {
             <Route path="/camera-list" element={<CameraList />} />
             <Route path="/notification" element={<Notification />} />
           </Routes>
-        </ThemeProvider>
-      </ColorModeContext.Provider>
-    </Provider>
+        </Provider>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 

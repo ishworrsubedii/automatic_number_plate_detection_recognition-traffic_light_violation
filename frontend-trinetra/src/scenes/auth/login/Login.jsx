@@ -20,13 +20,14 @@ import { BsGoogle } from "react-icons/bs";
 import AppleIcon from "@mui/icons-material/Apple";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-import { Link, Redirect } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../../actions/auth";
 import axios from "axios";
 
 const LoginPage = ({ login }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
 
   const [formData, setFormData] = useState({
@@ -39,13 +40,10 @@ const LoginPage = ({ login }) => {
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    await login(email, password);
+    login(email, password);
   };
-
-  // is the user authenticated
-  //redicect to dashboard
 
   return (
     <Box
@@ -242,4 +240,5 @@ const LoginPage = ({ login }) => {
   );
 };
 
-export default connect(null, { login })(LoginPage);
+
+export default connect(null, {login})(LoginPage);
