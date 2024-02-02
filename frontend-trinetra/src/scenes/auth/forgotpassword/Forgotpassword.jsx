@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Paper,
@@ -15,14 +15,36 @@ import EmailIcon from "@mui/icons-material/Email";
 
 import trinetralogo from "../../../assets/trinetra.svg";
 
+import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { reset_password } from "../../../actions/auth";
+
 const ForgotPassword = ({ forgotPassword }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
 
-  const handleReset = (event) => {
-    event.preventDefault();
-    forgotPassword();
+
+  const [requestSent, setRequestSent] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+
+  const { email } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    reset_password(email);
+    setRequestSent(true);
   };
+
+  if (requestSent) {
+    navigate("/login");
+  }
 
   return (
     <Box
@@ -66,16 +88,19 @@ const ForgotPassword = ({ forgotPassword }) => {
             margin={"20px"}
             fontStyle={"inherit"}
             color={colors.primary[100]}
+            value={email}
           >
             Enter your email to reset your password.
           </Typography>
         </Typography>
 
-        <form onSubmit={handleReset}>
+        <form onSubmit={(e) => onSubmit(e)}>
           <TextField
             label="Email"
             type="email"
             variant="outlined"
+            value={email}
+            name="email"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -91,6 +116,8 @@ const ForgotPassword = ({ forgotPassword }) => {
               marginTop: "20px",
               marginLeft: "60px",
             }}
+            onChange={(e) => onChange(e)}
+            required
           />
           <Button
             type="submit"
@@ -112,4 +139,4 @@ const ForgotPassword = ({ forgotPassword }) => {
   );
 };
 
-export default ForgotPassword;
+export default connect(null, { reset_password })(ForgotPassword);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Paper,
@@ -7,16 +7,43 @@ import {
   Button,
   useTheme,
 } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { reset_password_confirm } from "../../../actions/auth";
 import { tokens } from "../../../theme";
 
 import InputAdornment from "@mui/material/InputAdornment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-const ResetPasswordConfirm = () => {
+const ResetPasswordConfirm = (match,reset_password_confirm) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const[requestSent, setRequestSent] = useState(false);
+  const [formData, setFormData] = useState({
+    new_password: "",
+    re_new_password: "",
+  });
+
+  const { new_password, re_new_password } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const uid = match.params.uid;
+    const token = match.params.token;
+
+    reset_password_confirm(uid, token, new_password, re_new_password);
+    setRequestSent(true);
+  };
+
+  if (requestSent) {
+    navigator("/");
+  }
+
   return (
     <Box
       sx={{
@@ -66,7 +93,6 @@ const ResetPasswordConfirm = () => {
         </Typography>
 
         <form>
-          <form>
             <TextField
               label="New Password"
               type="password"
@@ -86,12 +112,18 @@ const ResetPasswordConfirm = () => {
                 marginTop: "20px",
                 marginLeft: "60px",
               }}
+              value={new_password}
+              onChange={(e) => onChange(e)}
+              name="new_password"
+              minLength="8"
+              required
             />
 
             <TextField
               label="ReType New Password"
               type="password"
               variant="outlined"
+              
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -107,8 +139,13 @@ const ResetPasswordConfirm = () => {
                 marginTop: "20px",
                 marginLeft: "60px",
               }}
+              value={re_new_password}
+              onChange={(e) => onChange(e)}
+              name="re_new_password"
+              minLength="8"
+              required
+
             />
-          </form>
 
           <Button
             type="submit"
@@ -147,4 +184,4 @@ const ResetPasswordConfirm = () => {
   );
 };
 
-export default ResetPasswordConfirm;
+export default connect(null,{reset_password_confirm}) (ResetPasswordConfirm);

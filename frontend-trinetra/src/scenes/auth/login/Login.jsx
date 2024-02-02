@@ -24,8 +24,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../../actions/auth";
 import axios from "axios";
+import { RememberMe } from "@mui/icons-material";
+import Cookies from "js-cookie";
 
-const LoginPage = ({ login }) => {
+const LoginPage = ({ login, isAuthenticated }) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
@@ -44,6 +46,10 @@ const LoginPage = ({ login }) => {
     e.preventDefault();
     login(email, password);
   };
+
+  if (isAuthenticated) {
+    navigate("/dashboard");
+  }
 
   return (
     <Box
@@ -149,7 +155,14 @@ const LoginPage = ({ login }) => {
             style={{ marginTop: "1%", marginLeft: "70px" }}
           >
             <FormControlLabel
-              control={<Checkbox style={{ color: colors.greenAccent[500] }} />}
+              control={
+                <Checkbox
+                  control={
+                    <Checkbox style={{ color: colors.greenAccent[500] }} />
+                  }
+                  label="Remember Password"
+                />
+              }
               label="Remember Password"
             />
             <Typography
@@ -229,10 +242,28 @@ const LoginPage = ({ login }) => {
             </Button>
           </Box>
           <Box mt={"10%"} mb={2}>
-            <Typography variant="body1">Don't have an account?</Typography>
-            <Button component={Link} to="/signup" style={{ color: "#39FF14" }}>
-              Sign up now
-            </Button>
+            <Typography
+              variant="h5"
+              margin="30px"
+              marginLeft={"10%"}
+              fontStyle={"inherit"}
+              color={colors.primary[100]}
+            >
+              Don't have an account?
+              <Typography
+                variant="h6"
+                style={{
+                  cursor: "pointer",
+                  color: colors.greenAccent[500],
+                  marginLeft: "1%",
+                  marginTop: "1%",
+                }}
+                component={Link}
+                to="/signup"
+              >
+                Sign Up
+              </Typography>
+            </Typography>
           </Box>
         </form>
       </Paper>
@@ -240,5 +271,8 @@ const LoginPage = ({ login }) => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
 
-export default connect(null, {login})(LoginPage);
+export default connect(mapStateToProps, { login })(LoginPage);

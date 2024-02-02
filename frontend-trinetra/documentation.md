@@ -60,3 +60,6 @@
 
 - Added more pages like forgot password and password confirmation.
 - Set up different routes using djoser.
+
+## Day 13
+Auth code refactored and completely done login forgotpassword and all the auth things

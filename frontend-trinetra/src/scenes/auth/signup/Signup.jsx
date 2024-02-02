@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Paper,
@@ -13,9 +13,15 @@ import {
 import { tokens } from "../../../theme";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-const SignupPage = () => {
+import { connect } from "react-redux";
+import { signup } from "../../../actions/auth";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+
+const SignupPage = ({ signup, isAuthenticated }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
 
   const containerStyle = {
     display: "flex",
@@ -23,6 +29,37 @@ const SignupPage = () => {
     height: "100vh",
     width: "1000px",
   };
+
+  const [accountCreated, setAccountCreated] = useState(false);
+  const [formData, setFormData] = useState({
+
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    re_password: "",
+  });
+
+  const { first_name, last_name, email, password, re_password } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (password === re_password) {
+      signup(first_name, last_name, email, password, re_password);
+      setAccountCreated(true);
+    }
+  };
+
+  if (isAuthenticated) {
+    navigate("/");
+  }
+  if (accountCreated) {
+    navigate("/login");
+  }
 
   return (
     <Box sx={containerStyle}>
@@ -50,28 +87,38 @@ const SignupPage = () => {
         </Typography>
 
         <Typography
-            variant="h5"
-            margin="30px"
-            marginLeft={"10%"}
-            fontStyle={"inherit"}
-            color={colors.primary[100]}
+          variant="h5"
+          margin="30px"
+          marginLeft={"10%"}
+          fontStyle={"inherit"}
+          color={colors.primary[100]}
+        >
+          Join Trinetra and experience the magic firsthand.
+        </Typography>
+        <form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            width: "90%",
+          }}
+          onSubmit= {onSubmit}
+        >
+          <Grid
+            container
+            spacing={2}
+            sx={{ marginTop: "20px", marginLeft: "60px" }}
           >
-           Join Trinetra and experience the magic firsthand.
-          </Typography>
-        <form style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          width: "90%",
-        
-        }}>
-          <Grid container spacing={2} sx={{ marginTop: "20px", marginLeft: "60px" }}>
             <Grid item xs={6}>
               <TextField
                 label="First Name"
                 type="text"
                 variant="outlined"
                 fullWidth
+                value={first_name}
+                name="first_name"
+                onChange={(e) => onChange(e)}
+                required
               />
             </Grid>
             <Grid item xs={6}>
@@ -80,6 +127,10 @@ const SignupPage = () => {
                 type="text"
                 variant="outlined"
                 fullWidth
+                value={last_name}
+                name="last_name"
+                onChange={(e) => onChange(e)}
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -88,6 +139,10 @@ const SignupPage = () => {
                 type="email"
                 variant="outlined"
                 fullWidth
+                value={email}
+                name="email"
+                onChange={(e) => onChange(e)}
+                required
               />
             </Grid>
             <Grid item xs={6}>
@@ -96,6 +151,11 @@ const SignupPage = () => {
                 type="password"
                 variant="outlined"
                 fullWidth
+                value={password}
+                name="password"
+                onChange={(e) => onChange(e)}
+                minLength="8"
+                required
               />
             </Grid>
             <Grid item xs={6}>
@@ -104,14 +164,38 @@ const SignupPage = () => {
                 type="password"
                 variant="outlined"
                 fullWidth
+                value={re_password}
+                name="re_password"
+                onChange={(e) => onChange(e)}
+                minLength="8"
+                required
               />
             </Grid>
           </Grid>
-          <FormControlLabel
-            control={<Checkbox style={{ color: colors.greenAccent[500] }} />}
-            label="I agree with terms and conditions"
-            sx={{ marginTop: "20px", marginLeft: "60px" }}
-          />
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="flex-start"
+            sx={{ marginTop: "30px", marginLeft: "90px" }}
+          >
+            <Grid item>
+              <FormControlLabel
+                control={
+                  <Checkbox style={{ color: colors.whiteAccent[500] }} />
+                }
+                label="I agree with"
+                required
+              />
+            </Grid>
+            <Grid item>
+              <Link to="/termsandconditions" style={{ textDecoration: "none" }}>
+                <Typography variant="h6" color={colors.greenAccent[500]}>
+                  Terms and conditions
+                </Typography>
+              </Link>
+            </Grid>
+          </Grid>
+
           <Button
             type="submit"
             variant="contained"
@@ -120,20 +204,44 @@ const SignupPage = () => {
               backgroundColor: colors.greenAccent[500],
               color: colors.primary[500],
               marginTop: "5%",
-              marginLeft: "20%",
+              marginLeft: "30%",
               height: "5%",
               width: "50%",
               fontSize: "18px",
             }}
           >
-            <Typography style={{ fontWeight: "bold" }}>
-              Create Free Account
-            </Typography>
+            <Typography style={{ fontWeight: "bold" }}>SIGN UP</Typography>
           </Button>
         </form>
+        <Typography
+          variant="h5"
+          margin="30px"
+          marginLeft={"10%"}
+          fontStyle={"inherit"}
+          color={colors.primary[100]}
+        >
+          Already have an account?
+          <Typography
+            variant="h6"
+            style={{
+              cursor: "pointer",
+              color: colors.greenAccent[500],
+              marginLeft: "1%",
+              marginTop: "1%",
+            }}
+            component={Link}
+            to="/login"
+          >
+            Login
+          </Typography>
+        </Typography>
       </Paper>
     </Box>
   );
 };
 
-export default SignupPage;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps, { signup })(SignupPage);
