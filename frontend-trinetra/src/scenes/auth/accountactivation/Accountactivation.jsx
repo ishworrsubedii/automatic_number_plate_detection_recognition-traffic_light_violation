@@ -1,27 +1,56 @@
 import React, { useState } from "react";
 import { Box, Paper, Typography, Button, useTheme } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { verify } from "../../../actions/auth";
 import { tokens } from "../../../theme";
 import trinetralogo from "../../../assets/trinetra.svg";
-import { useParams } from 'react-router-dom';
 
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
-const Accountactivation = ({ verify, match }) => {
+const AccountActivation = ({ verify }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const [loading, setLoading] = useState(false);
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const handleSnackbarOpen = (severity, message) => {
+    setSnackbarSeverity(severity);
+    setSnackbarMessage(message);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
 
   const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
   const { uid, token } = useParams();
 
-  const verify_account = (e) => {
-    verify(uid, token);
-    setVerified(true);
-   
-
-
+  const verifyAccount = () => {
+    verify(uid, token)
+      .then((result) => {
+        if (result === "success") {
+          handleSnackbarOpen("success", "Account verified successfully.");
+          setVerified(true);
+        } else {
+          handleSnackbarOpen(
+            "error",
+            "Account verification failed. Please try again."
+          );
+        }
+      })
+      .catch(() => {
+        handleSnackbarOpen("error", "An error occurred during verification.");
+      });
   };
 
   if (verified) {
@@ -63,7 +92,7 @@ const Accountactivation = ({ verify, match }) => {
           marginTop={"30%"}
           marginLeft={"60px"}
         >
-          Verify your Account to further proceed!
+          Verify your Account to proceed further!
         </Typography>
 
         <Button
@@ -77,15 +106,29 @@ const Accountactivation = ({ verify, match }) => {
             backgroundColor: colors.greenAccent[500],
             color: "black",
           }}
-          onClick={verify_account}
+          disabled={loading}
+          onClick={verifyAccount}
         >
           Verify Account
         </Button>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          severity={snackbarSeverity}
+          onClose={handleSnackbarClose}
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
-
-
 };
 
-export default connect(null, { verify })(Accountactivation);
+export default connect(null, { verify })(AccountActivation);

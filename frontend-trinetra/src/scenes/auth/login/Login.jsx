@@ -1,5 +1,4 @@
-import {  useState } from "react";
-import * as React from 'react'
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Paper,
@@ -10,10 +9,9 @@ import {
   Grid,
   Checkbox,
 } from "@mui/material";
+
 import { tokens } from "../../../theme";
-
 import FormControlLabel from "@mui/material/FormControlLabel";
-
 import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
@@ -24,49 +22,30 @@ import trinetralogo from "../../../assets/trinetra.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../../actions/auth";
-import axios from "axios";
-import { RememberMe } from "@mui/icons-material";
-import Cookies from "js-cookie";
-
-
-// login failed or sucess alert
-import Snackbar from '@mui/joy/Snackbar';
-import PlaylistAddCheckCircleRoundedIcon from '@mui/icons-material/PlaylistAddCheckCircleRounded';
-
-const SnackbarWithDecorators = ({ message }) => {
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <React.Fragment>
-    
-      <Snackbar
-        variant="soft"
-        color="success"
-        open={open}
-        onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        startDecorator={<PlaylistAddCheckCircleRoundedIcon />}
-        endDecorator={
-          <Button
-            onClick={() => setOpen(false)}
-            size="sm"
-            variant="soft"
-            color="success"
-          >
-            Dismiss
-          </Button>
-        }
-      >
-        message
-      </Snackbar>
-    </React.Fragment>
-  );
-}
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const LoginPage = ({ login, isAuthenticated }) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
+  const [loading, setLoading] = useState(false);
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const handleSnackbarOpen = (severity, message) => {
+    setSnackbarSeverity(severity);
+    setSnackbarMessage(message);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
 
   const [formData, setFormData] = useState({
     email: "",
@@ -78,20 +57,31 @@ const LoginPage = ({ login, isAuthenticated }) => {
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    login(email, password);
+    try {
+      const loginResult = await login(email, password);
+
+      if (loginResult === "success") {
+        handleSnackbarOpen("success", "Login successful");
+        navigate("/");
+      } else {
+        handleSnackbarOpen("error", "Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      handleSnackbarOpen(
+        "error",
+        "An error occurred during login. Please try again."
+      );
+    }
   };
 
-  if (isAuthenticated) {
-    navigate("/");
-    <SnackbarWithDecorators message={"Login Sucessfully"} />
-  }
-  else {
-    <SnackbarWithDecorators message={"Invalid email or password"} />
-
-
-  }
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated, navigate]);
 
   return (
     <Box
@@ -114,20 +104,13 @@ const LoginPage = ({ login, isAuthenticated }) => {
         }}
       />
 
-      <Paper
-        elevation={3}
-        sx={{
-          padding: "40px",
-          width: "800px",
-        }}
-      >
+      <Paper elevation={3} sx={{ padding: "40px", width: "800px" }}>
         <Typography
           variant="h1"
           style={{ fontWeight: "bold" }}
           textAlign={"left"}
           marginTop={"100px"}
           marginLeft={"60px"}
-        // margin={'100px'}
         >
           Let us be protected by the
           <div style={{ color: colors.greenAccent[500] }}>third eye!</div>
@@ -234,7 +217,7 @@ const LoginPage = ({ login, isAuthenticated }) => {
               width: "50%",
               fontSize: "18px",
             }}
-           
+            disabled={loading}
           >
             <Typography style={{ fontWeight: "bold" }}>Login</Typography>
           </Button>
@@ -310,6 +293,24 @@ const LoginPage = ({ login, isAuthenticated }) => {
           </Box>
         </form>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={2000}
+        onClose={handleSnackbarClose}
+        style={{ minWidth: "50px" }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          severity={snackbarSeverity}
+          onClose={handleSnackbarClose}
+          style={{
+            fontSize: "15px",
+          }}
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
 };

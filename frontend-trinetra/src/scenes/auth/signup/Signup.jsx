@@ -15,13 +15,29 @@ import trinetralogo from "../../../assets/trinetra.svg";
 
 import { connect } from "react-redux";
 import { signup } from "../../../actions/auth";
-import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const SignupPage = ({ signup, isAuthenticated }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+
+  const handleSnackbarOpen = (severity, message) => {
+    setSnackbarSeverity(severity);
+    setSnackbarMessage(message);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  };
 
   const containerStyle = {
     display: "flex",
@@ -30,9 +46,9 @@ const SignupPage = ({ signup, isAuthenticated }) => {
     width: "1000px",
   };
 
-  const [accountCreated, setAccountCreated] = useState(false);
-  const [formData, setFormData] = useState({
+  const [loading, setLoading] = useState(false);
 
+  const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
@@ -42,23 +58,30 @@ const SignupPage = ({ signup, isAuthenticated }) => {
 
   const { first_name, last_name, email, password, re_password } = formData;
 
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if (password === re_password) {
-      signup(first_name, last_name, email, password, re_password);
-      setAccountCreated(true);
+      setLoading(true);
+
+      try {
+        await signup(first_name, last_name, email, password, re_password);
+        handleSnackbarOpen("success", "Account created successfully. Please login.");
+        navigate("/login");
+      } catch (error) {
+        handleSnackbarOpen("error", "Signup failed. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      handleSnackbarOpen("error", "Passwords do not match.");
     }
   };
 
   if (isAuthenticated) {
     navigate("/");
-  }
-  if (accountCreated) {
-    navigate("/login");
   }
 
   return (
@@ -209,6 +232,7 @@ const SignupPage = ({ signup, isAuthenticated }) => {
               width: "50%",
               fontSize: "18px",
             }}
+            disabled={loading}
           >
             <Typography style={{ fontWeight: "bold" }}>SIGN UP</Typography>
           </Button>
@@ -236,6 +260,24 @@ const SignupPage = ({ signup, isAuthenticated }) => {
           </Typography>
         </Typography>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        style={{ minWidth: "50px" }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          severity={snackbarSeverity}
+          onClose={handleSnackbarClose}
+          style={{
+            fontSize: "15px",
+          }}
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
 };

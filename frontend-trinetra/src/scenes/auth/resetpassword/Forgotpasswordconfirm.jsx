@@ -7,7 +7,7 @@ import {
   Button,
   useTheme,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { reset_password_confirm } from "../../../actions/auth";
 import { tokens } from "../../../theme";
@@ -16,11 +16,34 @@ import InputAdornment from "@mui/material/InputAdornment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-import { useParams } from "react-router-dom";
-const ResetPasswordConfirm = (match, reset_password_confirm) => {
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const ResetPasswordConfirm = ({ reset_password_confirm }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [loading, setLoading] = useState(false);
+
   const [requestSent, setRequestSent] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const navigate = useNavigate();
+  const { uid, token } = useParams();
+
+  const handleSnackbarOpen = (severity, message) => {
+    setSnackbarSeverity(severity);
+    setSnackbarMessage(message);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
+
   const [formData, setFormData] = useState({
     new_password: "",
     re_new_password: "",
@@ -28,19 +51,39 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
 
   const { new_password, re_new_password } = formData;
 
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-  const { uid, token } = useParams();
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
+    try {
+      const result = await reset_password_confirm(
+        uid,
+        token,
+        new_password,
+        re_new_password
+      );
 
-    reset_password_confirm(uid, token, new_password, re_new_password);
-    setRequestSent(true);
+      if (result === "success") {
+        handleSnackbarOpen("success", "Password changed successfully.");
+        setRequestSent(true);
+      } else {
+        handleSnackbarOpen(
+          "error",
+          "Password change failed. Please try again."
+        );
+      }
+    } catch (error) {
+      handleSnackbarOpen(
+        "error",
+        "An error occurred during password change."
+      );
+    }
   };
 
   if (requestSent) {
-    navigator("/login");
+    navigate("/login");
   }
 
   return (
@@ -77,7 +120,6 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
           textAlign={"left"}
           marginTop={"100px"}
           marginLeft={"60px"}
-        // margin={'100px'}
         >
           Let us be protected by the
           <div style={{ color: colors.greenAccent[500] }}>third eye!</div>
@@ -91,7 +133,7 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
           </Typography>
         </Typography>
 
-        <form onSubmit={e => onSubmit(e)}>
+        <form onSubmit={(e) => onSubmit(e)}>
           <TextField
             label="New Password"
             type="password"
@@ -113,7 +155,7 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
             }}
             name="new_password"
             value={new_password}
-            onChange={e => onChange(e)}
+            onChange={(e) => onChange(e)}
             minLength="8"
             required
           />
@@ -122,7 +164,6 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
             label="ReType New Password"
             type="password"
             variant="outlined"
-
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -139,12 +180,10 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
               marginLeft: "60px",
             }}
             name="re_new_password"
-
             value={re_new_password}
-            onChange={e => onChange(e)}
+            onChange={(e) => onChange(e)}
             minLength="8"
             required
-
           />
 
           <Button
@@ -160,15 +199,29 @@ const ResetPasswordConfirm = (match, reset_password_confirm) => {
               width: "50%",
               fontSize: "18px",
             }}
+            disabled={requestSent}
           >
             <Typography style={{ fontWeight: "bold" }}>
               Change Password
             </Typography>
           </Button>
-
-
         </form>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          severity={snackbarSeverity}
+          onClose={handleSnackbarClose}
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
 };

@@ -7,23 +7,40 @@ import {
   Button,
   useTheme,
 } from "@mui/material";
-import { tokens } from "../../../theme";
-
-import InputAdornment from "@mui/material/InputAdornment";
-
-import EmailIcon from "@mui/icons-material/Email";
-
-import trinetralogo from "../../../assets/trinetra.svg";
-
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { reset_password } from "../../../actions/auth";
+import { tokens } from "../../../theme";
+
+import InputAdornment from "@mui/material/InputAdornment";
+import EmailIcon from "@mui/icons-material/Email";
+import trinetralogo from "../../../assets/trinetra.svg";
+
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const ForgotPassword = ({ reset_password }) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
+  const [loading, setLoading] = useState(false);
 
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const handleSnackbarOpen = (severity, message) => {
+    setSnackbarSeverity(severity);
+    setSnackbarMessage(message);
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
 
   const [requestSent, setRequestSent] = useState(false);
   const [formData, setFormData] = useState({
@@ -32,16 +49,24 @@ const ForgotPassword = ({ reset_password }) => {
 
   const { email } = formData;
 
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
-    reset_password(email);
-    setRequestSent(true);
-  };
+    try {
+      const resetResult = await reset_password(email);
 
+      if (resetResult === "success") {
+        handleSnackbarOpen("success", "Password reset email sent successfully.");
+        setRequestSent(true);
+      } else {
+        handleSnackbarOpen("error", "Password reset failed. Please try again.");
+      }
+    } catch (error) {
+      handleSnackbarOpen("error", "An error occurred during password reset.");
+    }
+  };
 
   if (requestSent) {
     navigate("/login");
@@ -95,7 +120,7 @@ const ForgotPassword = ({ reset_password }) => {
           </Typography>
         </Typography>
 
-        <form onSubmit={e => onSubmit(e)}>
+        <form onSubmit={(e) => onSubmit(e)}>
           <TextField
             label="Email"
             type="email"
@@ -131,11 +156,27 @@ const ForgotPassword = ({ reset_password }) => {
               backgroundColor: colors.greenAccent[500],
               color: "black",
             }}
+            disabled={loading}
           >
             Reset Password
           </Button>
         </form>
       </Paper>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          severity={snackbarSeverity}
+          onClose={handleSnackbarClose}
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </Box>
   );
 };
