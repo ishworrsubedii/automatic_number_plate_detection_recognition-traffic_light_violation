@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import {  useState } from "react";
+import * as React from 'react'
 import {
   Box,
   Paper,
@@ -27,6 +28,41 @@ import axios from "axios";
 import { RememberMe } from "@mui/icons-material";
 import Cookies from "js-cookie";
 
+
+// login failed or sucess alert
+import Snackbar from '@mui/joy/Snackbar';
+import PlaylistAddCheckCircleRoundedIcon from '@mui/icons-material/PlaylistAddCheckCircleRounded';
+
+const SnackbarWithDecorators = ({ message }) => {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <React.Fragment>
+    
+      <Snackbar
+        variant="soft"
+        color="success"
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        startDecorator={<PlaylistAddCheckCircleRoundedIcon />}
+        endDecorator={
+          <Button
+            onClick={() => setOpen(false)}
+            size="sm"
+            variant="soft"
+            color="success"
+          >
+            Dismiss
+          </Button>
+        }
+      >
+        message
+      </Snackbar>
+    </React.Fragment>
+  );
+}
+
 const LoginPage = ({ login, isAuthenticated }) => {
   const theme = useTheme();
   const navigate = useNavigate();
@@ -48,7 +84,13 @@ const LoginPage = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    navigate("/dashboard");
+    navigate("/");
+    <SnackbarWithDecorators message={"Login Sucessfully"} />
+  }
+  else {
+    <SnackbarWithDecorators message={"Invalid email or password"} />
+
+
   }
 
   return (
@@ -85,7 +127,7 @@ const LoginPage = ({ login, isAuthenticated }) => {
           textAlign={"left"}
           marginTop={"100px"}
           marginLeft={"60px"}
-          // margin={'100px'}
+        // margin={'100px'}
         >
           Let us be protected by the
           <div style={{ color: colors.greenAccent[500] }}>third eye!</div>
@@ -99,7 +141,7 @@ const LoginPage = ({ login, isAuthenticated }) => {
           </Typography>
         </Typography>
 
-        <form onSubmit={onSubmit}>
+        <form onSubmit={(e) => onSubmit(e)}>
           <TextField
             name="email"
             label="Email"
@@ -192,6 +234,7 @@ const LoginPage = ({ login, isAuthenticated }) => {
               width: "50%",
               fontSize: "18px",
             }}
+           
           >
             <Typography style={{ fontWeight: "bold" }}>Login</Typography>
           </Button>

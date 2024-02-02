@@ -102,7 +102,7 @@ const SignupPage = ({ signup, isAuthenticated }) => {
             justifyContent: "center",
             width: "90%",
           }}
-          onSubmit= {onSubmit}
+          onSubmit={onSubmit}
         >
           <Grid
             container

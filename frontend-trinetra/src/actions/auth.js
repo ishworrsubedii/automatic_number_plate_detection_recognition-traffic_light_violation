@@ -25,7 +25,7 @@ export const checkAuthenticated = () => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        'Accept': "application/json",
       },
     };
     const body = JSON.stringify({ token: localStorage.getItem("access") });
@@ -63,8 +63,8 @@ export const load_user = () => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `JWT ${localStorage.getItem("access")}`,
-        Accept: "application/json",
+        'Authorization': `JWT ${localStorage.getItem("access")}`,
+        'Accept': "application/json",
       },
     };
     try {
@@ -152,7 +152,6 @@ export const signup =
       });
     }
   };
-
 // Function to verify user
 
 export const verify = (uid, token) => async (dispatch) => {
@@ -182,7 +181,7 @@ export const verify = (uid, token) => async (dispatch) => {
 };
 // Function to reset password
 
-export const reset_password = email => async (dispatch) => {
+export const reset_password = (email) => async (dispatch) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
