@@ -1,7 +1,6 @@
 // Import action types
 import {
-  ACTIVATION_FAIL,
-  ACTIVATION_SUCCESS,
+
   AUTHENTICATION_FAIL,
   AUTHENTICATION_SUCCESS,
   LOAD_USER_FAIL,
@@ -13,8 +12,11 @@ import {
   PASSWORD_RESET_CONFIRM_SUCCESS,
   PASSWORD_RESET_FAIL,
   PASSWORD_RESET_SUCCESS,
+
   SIGNUP_FAIL,
   SIGNUP_SUCCESS,
+  ACTIVATION_FAIL,
+  ACTIVATION_SUCCESS,
 } from "../actions/types";
 
 // Initial state
@@ -95,4 +97,4 @@ export default function auth(state = initialState, action) {
     default:
       return state
   }
-}
+};

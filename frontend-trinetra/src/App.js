@@ -32,13 +32,19 @@ import { Provider, connect } from "react-redux";
 import store from "./store";
 import { checkAuthenticated, load_user } from "./actions/auth";
 
-const App = ({  isAuthenticated,checkAuthenticated, load_user }) => {
+const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
   useEffect(() => {
+    // Check authentication status
     checkAuthenticated();
+  }, [checkAuthenticated]);
+  
+  useEffect(() => {
+    // Load user data
     load_user();
-  },);
+  }, [load_user]);
+  
 
   return (
     <Provider store={store}>
@@ -84,7 +90,7 @@ const App = ({  isAuthenticated,checkAuthenticated, load_user }) => {
                 element={<Forgotpasswordconfirm />}
               />
               <Route
-                path="/activation/:uid/:token"
+                path="/activate/:uid/:token"
                 element={<Accountactivation />}
               />
               <Route

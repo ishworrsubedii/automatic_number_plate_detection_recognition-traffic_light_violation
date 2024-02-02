@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { reset_password } from "../../../actions/auth";
 
-const ForgotPassword = ({ forgotPassword }) => {
+const ForgotPassword = ({ reset_password }) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
@@ -32,15 +32,16 @@ const ForgotPassword = ({ forgotPassword }) => {
 
   const { email } = formData;
 
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+
+  const onSubmit = e => {
     e.preventDefault();
 
     reset_password(email);
     setRequestSent(true);
   };
+
 
   if (requestSent) {
     navigate("/login");
@@ -94,7 +95,7 @@ const ForgotPassword = ({ forgotPassword }) => {
           </Typography>
         </Typography>
 
-        <form onSubmit={(e) => onSubmit(e)}>
+        <form onSubmit={e => onSubmit(e)}>
           <TextField
             label="Email"
             type="email"

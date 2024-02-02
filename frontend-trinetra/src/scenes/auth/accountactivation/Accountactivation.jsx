@@ -5,24 +5,27 @@ import { connect } from "react-redux";
 import { verify } from "../../../actions/auth";
 import { tokens } from "../../../theme";
 import trinetralogo from "../../../assets/trinetra.svg";
+import { useParams } from 'react-router-dom';
 
-const Accountactivation = (verify, match) => {
+
+const Accountactivation = ({ verify, match }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
+  const { uid, token } = useParams();
 
   const verify_account = (e) => {
-    const uid = match.params.uid;
-    const token = match.params.token;
-
     verify(uid, token);
     setVerified(true);
+   
+
+
   };
 
   if (verified) {
-    navigate("/");
+    navigate("/login");
   }
 
   return (
@@ -64,7 +67,7 @@ const Accountactivation = (verify, match) => {
         </Typography>
 
         <Button
-          type="submit"
+          type="button"
           variant="contained"
           style={{
             borderRadius: 50,
@@ -82,24 +85,7 @@ const Accountactivation = (verify, match) => {
     </Box>
   );
 
-  // return(
-  //     <div className='container'>
-  //     <div
-  //         className='d-flex flex-column justify-content-center align-items-center'
-  //         style={{ marginTop: '200px' }}
-  //     >
-  //         <h1>Verify your Account:</h1>
-  //         <button
-  //             onClick={verify_account}
-  //             style={{ marginTop: '50px' }}
-  //             type='button'
-  //             className='btn btn-primary'
-  //         >
-  //             Verify
-  //         </button>
-  //     </div>
-  // </div>
-  // );
+
 };
 
 export default connect(null, { verify })(Accountactivation);

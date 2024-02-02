@@ -16,10 +16,11 @@ import InputAdornment from "@mui/material/InputAdornment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import trinetralogo from "../../../assets/trinetra.svg";
 
-const ResetPasswordConfirm = (match,reset_password_confirm) => {
+import { useParams } from "react-router-dom";
+const ResetPasswordConfirm = (match, reset_password_confirm) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const[requestSent, setRequestSent] = useState(false);
+  const [requestSent, setRequestSent] = useState(false);
   const [formData, setFormData] = useState({
     new_password: "",
     re_new_password: "",
@@ -27,21 +28,19 @@ const ResetPasswordConfirm = (match,reset_password_confirm) => {
 
   const { new_password, re_new_password } = formData;
 
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const { uid, token } = useParams();
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
-    const uid = match.params.uid;
-    const token = match.params.token;
 
     reset_password_confirm(uid, token, new_password, re_new_password);
     setRequestSent(true);
   };
 
   if (requestSent) {
-    navigator("/");
+    navigator("/login");
   }
 
   return (
@@ -78,7 +77,7 @@ const ResetPasswordConfirm = (match,reset_password_confirm) => {
           textAlign={"left"}
           marginTop={"100px"}
           marginLeft={"60px"}
-          // margin={'100px'}
+        // margin={'100px'}
         >
           Let us be protected by the
           <div style={{ color: colors.greenAccent[500] }}>third eye!</div>
@@ -92,60 +91,61 @@ const ResetPasswordConfirm = (match,reset_password_confirm) => {
           </Typography>
         </Typography>
 
-        <form>
-            <TextField
-              label="New Password"
-              type="password"
-              variant="outlined"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <VpnKeyIcon
-                      style={{ fontSize: 20, color: colors.primary[100] }}
-                    />
-                  </InputAdornment>
-                ),
-              }}
-              style={{
-                borderRadius: 50,
-                width: "80%",
-                marginTop: "20px",
-                marginLeft: "60px",
-              }}
-              value={new_password}
-              onChange={(e) => onChange(e)}
-              name="new_password"
-              minLength="8"
-              required
-            />
+        <form onSubmit={e => onSubmit(e)}>
+          <TextField
+            label="New Password"
+            type="password"
+            variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <VpnKeyIcon
+                    style={{ fontSize: 20, color: colors.primary[100] }}
+                  />
+                </InputAdornment>
+              ),
+            }}
+            style={{
+              borderRadius: 50,
+              width: "80%",
+              marginTop: "20px",
+              marginLeft: "60px",
+            }}
+            name="new_password"
+            value={new_password}
+            onChange={e => onChange(e)}
+            minLength="8"
+            required
+          />
 
-            <TextField
-              label="ReType New Password"
-              type="password"
-              variant="outlined"
-              
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <VpnKeyIcon
-                      style={{ fontSize: 20, color: colors.primary[100] }}
-                    />
-                  </InputAdornment>
-                ),
-              }}
-              style={{
-                borderRadius: 50,
-                width: "80%",
-                marginTop: "20px",
-                marginLeft: "60px",
-              }}
-              value={re_new_password}
-              onChange={(e) => onChange(e)}
-              name="re_new_password"
-              minLength="8"
-              required
+          <TextField
+            label="ReType New Password"
+            type="password"
+            variant="outlined"
 
-            />
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <VpnKeyIcon
+                    style={{ fontSize: 20, color: colors.primary[100] }}
+                  />
+                </InputAdornment>
+              ),
+            }}
+            style={{
+              borderRadius: 50,
+              width: "80%",
+              marginTop: "20px",
+              marginLeft: "60px",
+            }}
+            name="re_new_password"
+
+            value={re_new_password}
+            onChange={e => onChange(e)}
+            minLength="8"
+            required
+
+          />
 
           <Button
             type="submit"
@@ -166,22 +166,11 @@ const ResetPasswordConfirm = (match,reset_password_confirm) => {
             </Typography>
           </Button>
 
-          <Box
-            display="flex"
-            alignItems="center"
-            width="80%"
-            margin="30px auto"
-          >
-            <Box
-              flexGrow={1}
-              borderBottom={1}
-              borderColor={colors.primary[200]}
-            />
-          </Box>
+
         </form>
       </Paper>
     </Box>
   );
 };
 
-export default connect(null,{reset_password_confirm}) (ResetPasswordConfirm);
+export default connect(null, { reset_password_confirm })(ResetPasswordConfirm);
