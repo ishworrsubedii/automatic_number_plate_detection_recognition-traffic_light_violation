@@ -1,10 +1,10 @@
 from ultralytics.models.yolo import YOLO
-from services.alpr.src.entity.service_config import ServiceConfig
+from services.alpr.src.entity.service_config import DetectionConfig
 import cv2
 
 
 class DetectionService:
-    def __init__(self, config: ServiceConfig):
+    def __init__(self, config: DetectionConfig):
         self.model_instance = YOLO(config.model_path)
 
     def detect_image(self, image_path, confidence_threshold: float, nms_threshold: float):
@@ -19,17 +19,18 @@ class DetectionService:
         img = cv2.imread(image_path)
         results = self.model_instance.predict(img, conf=confidence_threshold, iou=nms_threshold)
 
-        detections = []
-        for prediction in results:
-            bboxes = prediction.boxes.xyxy
-            try:
-                bbox = bboxes[0].int().tolist()
-                x1, y1, x2, y2 = bbox
-                cropped = img[y1:y2, x1:x2]
-                return prediction, cropped
-
-            except Exception as e:
-                print(e)
+        # for prediction in results:
+        #     bboxes = prediction.boxes.xyxy
+        #     try:
+        #         bbox = bboxes[0].int().tolist()
+        #         x1, y1, x2, y2 = bbox
+        #         cropped = img[y1:y2, x1:x2]
+        #
+        #         return prediction, cropped
+        #
+        #     except Exception as e:
+        #         print(e)
+        return results
 
     def detect_video(self, video_path: str, display: bool, confidence_threshold: float, nms_threshold: float):
         """
@@ -101,7 +102,7 @@ class DetectionService:
             if not ret:
                 print("Failed to read frame")
                 break
-            frame = cv2.resize(frame, (640, 480))  # Resize the frame
+            frame = cv2.resize(frame, (640, 480))
             results = self.model_instance(frame, conf=confidence_threshold, iou=nms_threshold)
             for prediction in results:
                 bboxes = prediction.boxes.xyxy
@@ -127,7 +128,7 @@ class DetectionService:
 
 
 if __name__ == '__main__':
-    config = ServiceConfig(model_path='services/alpr/resources/yolov8/nnpd.pt')
+    config = DetectionConfig(model_path='services/alpr/resources/yolov8/nnpd.pt')
     service = DetectionService(config)
 
     # Detect webcam
