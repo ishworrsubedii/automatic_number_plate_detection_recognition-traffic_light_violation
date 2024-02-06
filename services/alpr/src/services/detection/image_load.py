@@ -36,10 +36,12 @@ class ImageLoad:
 
     def stop_load_image(self):
         if self.thread_running:
-            print("Stopping the image loading thread...")
             self.thread_running = False
-            self.image_info_save.join()
+
             self.image_load.join()
+            print("Stopping the image loading thread...")
+
+            self.image_info_save.join()
             print("Image loading thread stopped.")
 
     def detected_information_save(self, results):
@@ -49,7 +51,7 @@ class ImageLoad:
                 bbox = bboxes[0].int().tolist()
                 x1, y1, x2, y2 = bbox
                 cropped = prediction.orig_img[y1:y2, x1:x2]
-                cv.imwrite(os.path.join(self.detected_image_save_dir, f'{self.filename}.jpg'), cropped)
+                cv.imwrite(os.path.join(self.detected_image_save_dir, f'{self.filename}'), cropped)
 
             except:
                 print('No plate detected')
@@ -59,6 +61,10 @@ class ImageLoad:
         while self.thread_running:
             files = sorted(os.listdir(self.image_path_img))
             for self.filename in files:
+                # Check stop flag before processing each image
+                if not self.thread_running:
+                    break
+
                 image_path = os.path.join(self.image_path_img, self.filename)
 
                 self.latest_image_path = image_path
@@ -76,8 +82,6 @@ class ImageLoad:
                     self.detected_information_save(results)
                 else:
                     print('Image Loading Failed .......')
-
-        cv.destroyAllWindows()
 
 
 if __name__ == '__main__':
