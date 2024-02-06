@@ -30,8 +30,9 @@ class CaptureMain:
     def stop_stream(self):
         if self.thread_running:
             self.thread_running = False
+            self.cap.release()
+
             self.frame_save_thread.join()
-        self.cap.release()
 
     def image_hashing(self, previous_frame, current_frame):
 
@@ -65,32 +66,32 @@ class CaptureMain:
             except Exception as e:
                 print(f"An error occurred while stopping the stream: {e}")
 
-
-if __name__ == '__main__':
-    try:
-        camera_source = "rtsp://ishwor:subedi@192.168.1.125:5555/h264_opus.sdp"
-        image_save_dir = 'services/alpr/resources/rtsp/'
-        frame_interval = 10
-        capture = CaptureMain(camera_source, image_save_dir, frame_interval)
-        try:
-            capture.start_stream()
-        except Exception as e:
-            print(f"An error occurred while starting the stream: {e}")
-            capture.stop_stream()
-            raise e
-
-        while capture.thread_running:
-            time.sleep(1)
-
-    except KeyboardInterrupt:
-        print("Interrupted, stopping the stream.")
-        capture.stop_stream()
-    except cv2.error as e:
-        print(f"OpenCV error occurred: {e}")
-        capture.stop_stream()
-    except OSError as e:
-        print(f"OS error occurred: {e}")
-        capture.stop_stream()
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        capture.stop_stream()
+#
+# if __name__ == '__main__':
+#     try:
+#         camera_source = "rtsp://ishwor:subedi@192.168.1.125:5555/h264_opus.sdp"
+#         image_save_dir = 'services/alpr/resources/rtsp/'
+#         frame_interval = 10
+#         capture = CaptureMain(camera_source, image_save_dir, frame_interval)
+#         try:
+#             capture.start_stream()
+#         except Exception as e:
+#             print(f"An error occurred while starting the stream: {e}")
+#             capture.stop_stream()
+#             raise e
+#
+#         while capture.thread_running:
+#             time.sleep(1)
+#
+#     except KeyboardInterrupt:
+#         print("Interrupted, stopping the stream.")
+#         capture.stop_stream()
+#     except cv2.error as e:
+#         print(f"OpenCV error occurred: {e}")
+#         capture.stop_stream()
+#     except OSError as e:
+#         print(f"OS error occurred: {e}")
+#         capture.stop_stream()
+#     except Exception as e:
+#         print(f"An unexpected error occurred: {e}")
+#         capture.stop_stream()
