@@ -4,8 +4,6 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 
-from services.alpr.usage.start import start_image_load
-from services.alpr.src.services.detection.image_load import ImageLoad
 from services.alpr.usage.start.start_image_load import StartImageLoadExample
 from services.alpr.usage.stop.stop_image_capture import StopImageCaptureExample
 from services.alpr.usage.start.start_image_capture import StartImageCaptureExample
