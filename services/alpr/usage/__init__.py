@@ -32,5 +32,8 @@ def image_capture_logger(log_dir='services/alpr/logs'):
     return configure_logger('image_cap_logger', 'image_cap_logger.log', log_dir)
 
 
-def image_load_logger(log_dir='logs'):
+def image_load_logger(log_dir='services/alpr/logs'):
     return configure_logger('image_load_logger', 'image_load_logger.log', log_dir)
+
+def alpr_logger(log_dir='services/alpr/logs'):
+    return configure_logger('alpr_logger', 'alpr_logger.log', log_dir)
