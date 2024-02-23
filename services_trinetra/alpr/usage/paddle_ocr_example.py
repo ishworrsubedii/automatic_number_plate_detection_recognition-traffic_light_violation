@@ -1,0 +1,35 @@
+"""
+Created By: ishwor subedi
+Date: 2024-02-05
+"""
+import os
+from datetime import datetime
+
+from PIL.Image import Image
+from paddleocr.tools.infer.utility import draw_ocr
+
+from services.alpr.src.services.recognition.paddleocr_service import PaddleocrService
+from services.alpr.src.entity.service_config import RecognitionConfig
+
+
+
+def service_example(det_model, recognition_model, rec_char_dict, img):
+    config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict,
+                               )
+    paddle_ocr = PaddleocrService(config)
+    boxes, txts, scores = paddle_ocr.detection_recognition_cls(img)
+
+    return boxes, txts, scores
+
+
+if __name__ == '__main__':
+    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    # recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
+    recognition_model = 'services_trinetra/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
+    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
+
+    img = 'services_trinetra/alpr/resources/plate_detected/0a.jpg.jpg'
+    output_path = 'services_trinetra/alpr/resources/images/paddleocr_rec_output/'
+    font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
+    boxes, txts, scores = service_example(det_model, recognition_model, rec_char_dict, img)
+    print(boxes, txts, scores)
