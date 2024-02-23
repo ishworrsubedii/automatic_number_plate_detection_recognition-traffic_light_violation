@@ -14,19 +14,19 @@ from .models import ImageCaptureDatabase, ImageLoadDatabase, ALPRDatabase, ALPRe
 
 class ALPRServices:
     def __init__(self):
-        self.CAPTURE_FLAG_PATH = "services/alpr/resources/flag_check/capture_status.txt"
-        self.LOAD_FLAG_PATH = "services/alpr/resources/flag_check/start_load_status.txt"
-        self.RECOGNITION_FLAG_PATH = "services/alpr/resources/flag_check/alpr_status.txt"
-        self.IMAGE_DIR = 'services/alpr/resources/rtsp/'
-        self.DET_MODEL = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-        self.RECOG_MODEL = 'services/alpr/resources/paddleocr/custom_recog/'
-        self.CHAR_DICT = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
-        self.OUTPUT_PATH = 'services/alpr/output/paddleocr_rec_output/'
-        self.FONT_PATH = 'services/alpr/resources/fonts/nepali.ttf'
+        self.CAPTURE_FLAG_PATH = "services_trinetra/alpr/resources/flag_check/capture_status.txt"
+        self.LOAD_FLAG_PATH = "services_trinetra/alpr/resources/flag_check/start_load_status.txt"
+        self.RECOGNITION_FLAG_PATH = "services_trinetra/alpr/resources/flag_check/alpr_status.txt"
+        self.IMAGE_DIR = 'services_trinetra/alpr/resources/rtsp/'
+        self.DET_MODEL = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+        self.RECOG_MODEL = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
+        self.CHAR_DICT = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
+        self.OUTPUT_PATH = 'services_trinetra/alpr/output/paddleocr_rec_output/'
+        self.FONT_PATH = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
         self.THRESHOLD = 5
         self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
-        self.MODEL_PATH = 'services/alpr/resources/yolov8/nnpd.pt'
-        self.IMAGE_SAVE_DIR = 'services/alpr/resources/plate_detected/'
+        self.MODEL_PATH = 'services_trinetra/alpr/resources/yolov8/nnpd.pt'
+        self.IMAGE_SAVE_DIR = 'services_trinetra/alpr/resources/plate_detected/'
 
     def start_image_capture(self):
         image_capture_service = StartImageCaptureExample(
