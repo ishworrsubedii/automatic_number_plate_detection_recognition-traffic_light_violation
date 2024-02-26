@@ -40,7 +40,8 @@ class ALPRDatabase(models.Model):
 
 class ALPRecognitionDatabase(models.Model):
     detection_id = models.CharField(max_length=100)
-    recognized_info = models.CharField(max_length=100)  # Removed comma
+    image_path = models.CharField(max_length=100)
+    recognized_info = models.CharField(max_length=100)
     accuracy = models.CharField(max_length=100)
     date = models.CharField(max_length=200)
     status = models.CharField(max_length=100)
@@ -50,3 +51,22 @@ class ALPRecognitionDatabase(models.Model):
 
     class Meta:
         db_table = 'alpr_recognition'
+
+
+class ALPRRecognizedImageDatabase(models.Model):
+    recognized_image_path = models.CharField(max_length=500)
+    def __str__(self):
+        return f"ALPR Recognition ID: {self.id}"
+
+    class Meta:
+        db_table = 'alpr_recognized_images_path_information'
+
+
+class ALPRNonRecognizedImageDatabase(models.Model):
+    non_recognized_image_path = models.CharField(max_length=500)
+
+    def __str__(self):
+        return f"ALPR Recognition ID: {self.id}"
+
+    class Meta:
+        db_table = 'alpr_non_recognized_images_path_information'

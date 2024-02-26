@@ -17,12 +17,20 @@ Including another URLconf
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from django.contrib import admin
-from . import views
+from .views import get_csrf_token, protected_serve
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
     path('admin/', admin.site.urls),
+    path('api/alpr/', include('alpr.urls')),
+    path('get-csrf-token/', get_csrf_token, name='get-csrf-token'),
 
 ]
 urlpatterns += [re_path('', TemplateView.as_view(template_name='index.html'))]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += [re_path(r'^static/(?P<path>.*)$', protected_serve)]
