@@ -13,6 +13,7 @@ from services.alpr.src.services.recognition.paddleocr_service import PaddleocrSe
 from services.alpr.usage import alpr_logger
 import threading
 import time
+from datetime import datetime
 
 ALPR_LOGGER = alpr_logger()
 
@@ -27,7 +28,7 @@ class StartAlprExample:
         self.alpr_start = False
         self.detected_img_dir = detected_img_dir
         self.rec_output_path = output_path
-        self.non_rec_output_path = 'services_trinetra/alpr/output/paddleocr_non_rec_output'
+        self.non_rec_output_path = 'services/alpr/output/paddleocr_non_rec_output'
         self.flag_path = flag_path
         self.running = False
 
@@ -59,8 +60,15 @@ class StartAlprExample:
             else:
                 img = Image.open(self.latest_image_path)
 
-                img = draw_ocr(img, boxes, txts, scores, font_path='services_trinetra/alpr/resources/fonts/nepali.ttf')
+                img = draw_ocr(img, boxes, txts, scores, font_path='services/alpr/resources/fonts/nepali.ttf')
                 img = Image.fromarray(img)
+
+                filename = os.path.basename(self.latest_image_path)
+
+                # new_output_path = os.path.join(output_path, filename)
+
+                with open('services/alpr/output/recognized_images_paths.txt', 'a') as file:
+                    file.write(f"Recognized_image_path:{output_path}\n")
 
                 img.save(output_path)
 
@@ -70,31 +78,45 @@ class StartAlprExample:
     def non_rec_save_image(self, output_path):
         try:
             img = Image.open(self.latest_image_path)
+            filename = os.path.basename(self.latest_image_path)
+
+            new_output_path = os.path.join(output_path, filename)
+
+            with open('services/alpr/output/non_recognized_images_paths.txt', 'a') as file:
+                file.write(f"Non_Recognized_image_path:{output_path}\n")
             img.save(output_path)
         except Exception as e:
             ALPR_LOGGER.error(f"Error saving image: {e}")
 
-    def main_alpr_service(self, img):
-
+    def main_alpr_service(self):
         while self.running:
-            list = sorted(os.listdir(img))
+            list = sorted(os.listdir(self.detected_img_dir))  # Moved this line inside the loop
 
             for image in list:
-                self.latest_image_path = os.path.join(img, image)
+                self.latest_image_path = os.path.join(self.detected_img_dir, image)
                 time.sleep(0.5)
                 try:
                     boxes, txts, scores = self.paddle_ocr.detection_recognition_cls(self.latest_image_path)
                     if len(txts or boxes) == 0:
                         output_path = os.path.join(self.non_rec_output_path, image)
                         self.non_rec_save_image(output_path)
+
                     else:
+                        current_datetime = datetime.now()
+                        formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+                        with open('services/alpr/output/result.txt', 'a') as file:
+                            average_score = sum(scores) / len(scores)
+                            merged_text = ' '.join(txts)
+
+                            file.write(
+                                f" Image_path:{self.latest_image_path},Text: {merged_text}, Score: {average_score},Date_recognized:{formatted_datetime}\n")
+
                         output_path = os.path.join(self.rec_output_path, image)
                         self.save_image_thread(output_path, boxes, txts, scores)
-                    yield boxes, txts, scores
 
                 except Exception as e:
                     ALPR_LOGGER.error(f"An error occurred: {e}")
-                    yield [], [], []
 
                 finally:
                     if os.path.exists(self.latest_image_path):
@@ -106,7 +128,6 @@ class StartAlprExample:
         try:
             with open(self.flag_path, 'r') as file:
                 flag = file.read().strip()
-                print(f"Read stop flag: {flag}")  # print the value of the stop flag read from the file
                 return flag == "True"
         except Exception as e:
             ALPR_LOGGER.error(f"Error checking stop flag: {e}")
@@ -149,7 +170,6 @@ class StartAlprExample:
         while self.running:
             time.sleep(1)
             stop_flag = self.check_stop_flag()
-            print(f"Stop flag: {stop_flag}")  # print the value of the stop flag
 
             if stop_flag:
                 print("Stopping the service...")  # print a message before stopping the service
@@ -162,18 +182,14 @@ class StartAlprExample:
 
 
 if __name__ == '__main__':
-    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-    recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
-    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
+    det_model = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
+    rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    img = 'services_trinetra/alpr/resources/plate_detected/'
-    output_path = 'services_trinetra/alpr/output/paddleocr_rec_output/'
-    font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
-    flag_path = 'services_trinetra/alpr/resources/flag_check/alpr_status.txt'
+    img = 'services/alpr/resources/plate_detected/'
+    output_path = 'services/alpr/output/paddleocr_rec_output/'
+    font_path = 'services/alpr/resources/fonts/nepali.ttf'
+    flag_path = 'services/alpr/resources/flag_check/alpr_status.txt'
     start_alpr = StartAlprExample(det_model, recognition_model, rec_char_dict, img, output_path, flag_path)
     start_alpr.create_stop_flag()
-    results_generator = start_alpr.main_alpr_service(img)
-    for boxes, txts, scores in results_generator:
-        print(f"Boxes: {boxes}")
-        print(f"Texts: {txts}")
-        print(f"Scores: {scores}")
+    results_generator = start_alpr.start_service()

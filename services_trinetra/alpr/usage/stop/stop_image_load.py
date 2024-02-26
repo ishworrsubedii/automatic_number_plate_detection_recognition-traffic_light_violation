@@ -17,5 +17,5 @@ def update_file(flag_path):
 
 
 if __name__ == '__main__':
-    file_path = 'services_trinetra/alpr/resources/flag_check/start_load_status.txt'
+    file_path = 'services/alpr/resources/flag_check/start_load_status.txt'
     update_file(file_path)

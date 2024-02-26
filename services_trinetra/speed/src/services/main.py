@@ -13,7 +13,7 @@ from services.speed.src.services.tracking.object_tracking import object_tracking
 from services.speed.src.services.detection.object_detection import ObjectDetectionService, PerspectiveTransformer
 
 TARGET_WIDTH = 10
-TARGET_HEIGHT = 50  # in meters
+TARGET_HEIGHT = 250  # in meters
 
 TARGET = np.array(
     [[0, 0],
@@ -110,7 +110,7 @@ class SpeedEstimationService(ObjectDetectionService):
 
 
 if __name__ == '__main__':
-    model_path = "services_trinetra/speed/resources/yolov8_vehicledetection/best.pt"
+    model_path = "/home/ishwor/anaconda3/envs/fyp/lib/python3.10/site-packages/services/speed/resources/yolov8_vehicledetection/best.pt"
     # source="rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp"
     source = "/home/ishwor/Desktop/dataset/vehicle/video/vehicle video/VID_20240207_135617.mp4"
     # source=0

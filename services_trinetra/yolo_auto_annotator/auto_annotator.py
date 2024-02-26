@@ -16,7 +16,7 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
     :param output_dir:  Path to the directory to save the annotated labels
     :return:
     """
-    vehicle_classes = [2, 3, 5, 7]  # Class IDs for 'bicycle', 'car', 'motorcycle', 'bus', 'truck'
+    vehicle_classes = [9]  # Class IDs for 'bicycle', 'car', 'motorcycle', 'bus', 'truck'
 
     det_model = YOLO(det_model)
 
@@ -49,5 +49,6 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
 
 
 if __name__ == '__main__':
-    auto_annotate(data='dataset/images/', det_model='services_trinetra/yolo_auto_annotator/models/yolov8n.pt',
-                  output_dir='dataset/labels/', device='cuda')
+    auto_annotate(data='/home/ishwor/Desktop/dataset/traffic_light/datasets/dataset/images/',
+                  det_model='services/yolo_auto_annotator/resources/yolov8n.pt',
+                  output_dir='/home/ishwor/Desktop/dataset/traffic_light/datasets/dataset/labels2/', device='cuda')

@@ -70,7 +70,7 @@ class CaptureMain:
 # if __name__ == '__main__':
 #     try:
 #         camera_source = "rtsp://ishwor:subedi@192.168.1.125:5555/h264_opus.sdp"
-#         image_save_dir = 'services_trinetra/alpr/resources/rtsp/'
+#         image_save_dir = 'services/alpr/resources/rtsp/'
 #         frame_interval = 10
 #         capture = CaptureMain(camera_source, image_save_dir, frame_interval)
 #         try:

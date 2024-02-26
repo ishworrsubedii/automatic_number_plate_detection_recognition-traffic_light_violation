@@ -17,7 +17,7 @@ class DetectionService:
         """
 
         img = cv2.imread(image_path)
-        results = self.model_instance.predict(img, conf=confidence_threshold, iou=nms_threshold)
+        results = self.model_instance.predict(img, conf=confidence_threshold, iou=nms_threshold,show=True)
 
         # for prediction in results:
         #     bboxes = prediction.boxes.xyxy
@@ -128,7 +128,7 @@ class DetectionService:
 
 
 if __name__ == '__main__':
-    config = DetectionConfig(model_path='services_trinetra/alpr/resources/yolov8/nnpd.pt')
+    config = DetectionConfig(model_path='services/alpr/resources/yolov8/nnpd.pt')
     service = DetectionService(config)
 
     # Detect webcam

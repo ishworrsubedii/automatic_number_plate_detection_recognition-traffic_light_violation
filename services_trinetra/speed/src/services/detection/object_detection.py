@@ -9,6 +9,7 @@ import supervision as sv
 import cv2
 
 
+
 class PerspectiveTransformer:
     def __init__(self, source, target):
         """
@@ -42,4 +43,5 @@ class ObjectDetectionService:
         :param source:  source
         """
         self.model = YOLO(model_path)
-        self.video_info = sv.VideoInfo.from_video_path(source)
+        self.\
+            video_info = sv.VideoInfo.from_video_path(video_path=source)

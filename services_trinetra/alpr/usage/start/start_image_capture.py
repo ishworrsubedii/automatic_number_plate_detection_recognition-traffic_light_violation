@@ -56,29 +56,29 @@ class StartImageCaptureExample:
                     self.running = False
                     stop_successful = start_capture.stop_stream()
                     if stop_successful:
-                        IMAGE_CAPTURE_LOGGER.info("Frame capturing services_trinetra successfully stopped.")
+                        IMAGE_CAPTURE_LOGGER.info("Frame capturing services successfully stopped.")
                     else:
-                        IMAGE_CAPTURE_LOGGER.error("Issue encountered while stopping frame capturing services_trinetra.")
+                        IMAGE_CAPTURE_LOGGER.error("Issue encountered while stopping frame capturing services.")
 
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.error(f"Error starting frame capturing services_trinetra: {e}")
+            IMAGE_CAPTURE_LOGGER.error(f"Error starting frame capturing services: {e}")
         finally:
             if 'start_capture' in locals():
                 stop_successful = start_capture.stop_stream()
                 if stop_successful:
-                    IMAGE_CAPTURE_LOGGER.info("Frame capturing services_trinetra successfully stopped in finally block.")
+                    IMAGE_CAPTURE_LOGGER.info("Frame capturing services successfully stopped in finally block.")
                 else:
                     IMAGE_CAPTURE_LOGGER.error(
-                        "Issue encountered while stopping frame capturing services_trinetra in finally block.")
+                        "Issue encountered while stopping frame capturing services in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")
 
 
 if __name__ == "__main__":
-    FLAG_PATH = "services_trinetra/alpr/resources/flag_check/capture_status.txt"
+    FLAG_PATH = "services/alpr/resources/flag_check/capture_status.txt"
     SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
-    IMAGE_PATH_TO_SAVE = "services_trinetra/alpr/resources/rtsp/"
+    IMAGE_PATH_TO_SAVE = "services/alpr/resources/rtsp/"
     IMAGE_HASH_THRESHOLD = 5
 
     image_capture_service = StartImageCaptureExample(FLAG_PATH, SOURCE, IMAGE_PATH_TO_SAVE, IMAGE_HASH_THRESHOLD)

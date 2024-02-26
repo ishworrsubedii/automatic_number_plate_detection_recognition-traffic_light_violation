@@ -45,23 +45,32 @@ class ImageLoad:
             print("Image loading thread stopped.")
 
     def detected_information_save(self, results):
-        for prediction in results:
-            bboxes = prediction.boxes.xyxy
-            try:
-                bbox = bboxes[0].int().tolist()
-                x1, y1, x2, y2 = bbox
-                cropped = prediction.orig_img[y1:y2, x1:x2]
-                cv.imwrite(os.path.join(self.detected_image_save_dir, f'{self.filename}'), cropped)
+        if results:
+            for prediction in results:
+                bboxes = prediction.boxes.xyxy
 
-            except:
-                print('No plate detected')
+                for i, bbox in enumerate(bboxes):
+                    multiple_plates = len(bboxes) > 1
+                    try:
+                        bbox = bbox.int().tolist()
+                        x1, y1, x2, y2 = bbox
+                        cropped = prediction.orig_img[y1:y2, x1:x2]
+
+                        if multiple_plates:
+                            filename = f'{self.filename}_plate_{i + 1}.jpg'
+                        else:
+                            filename = f'{self.filename}.jpg'
+
+                        cv.imwrite(os.path.join(self.detected_image_save_dir, filename), cropped)
+
+                    except:
+                        print('No plate detected')
 
     def image_list(self):
         time.sleep(2)
         while self.thread_running:
             files = sorted(os.listdir(self.image_path_img))
             for self.filename in files:
-                # Check stop flag before processing each image
                 if not self.thread_running:
                     break
 
@@ -85,8 +94,8 @@ class ImageLoad:
 
 
 if __name__ == '__main__':
-    image_dir = 'services_trinetra/alpr/resources/rtsp'
-    model_path = 'services_trinetra/alpr/resources/yolov8/nnpd.pt'
-    detected_image_save_dir = 'services_trinetra/alpr/resources/plate_detected/'
+    image_dir = 'services/alpr/resources/rtsp'
+    model_path = 'services/alpr/resources/yolov8/nnpd.pt'
+    detected_image_save_dir = 'services/alpr/resources/plate_detected/'
     image_load_start_stop = ImageLoad(image_dir, model_path, detected_image_save_dir)
     image_load_start_stop.start_load_image()

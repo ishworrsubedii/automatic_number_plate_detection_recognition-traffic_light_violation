@@ -23,13 +23,13 @@ def service_example(det_model, recognition_model, rec_char_dict, img):
 
 
 if __name__ == '__main__':
-    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-    # recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
-    recognition_model = 'services_trinetra/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
-    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
+    det_model = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    # recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
+    recognition_model = 'services/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
+    rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    img = 'services_trinetra/alpr/resources/plate_detected/0a.jpg.jpg'
-    output_path = 'services_trinetra/alpr/resources/images/paddleocr_rec_output/'
-    font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
+    img = 'services/alpr/resources/plate_detected/0a.jpg.jpg'
+    output_path = 'services/alpr/resources/images/paddleocr_rec_output/'
+    font_path = 'services/alpr/resources/fonts/nepali.ttf'
     boxes, txts, scores = service_example(det_model, recognition_model, rec_char_dict, img)
     print(boxes, txts, scores)
