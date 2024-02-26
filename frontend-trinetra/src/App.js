@@ -75,8 +75,9 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
                   <Route path="/account" element={<Account />} />
                   <Route path="/corporate" element={<Corporate />} />
                   <Route path="/blog" element={<Blog />} />
-                  <Route path="/camera-list" element={<CameraList />} />
+                  <Route path="/cameralist" element={<CameraList />} />
                   <Route path="/notification" element={<Notification />} />
+
                 </Routes>
               </main>
             </div>
@@ -97,6 +98,7 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
                 path="/termsandconditions"
                 element={<Termandconditions />}
               />
+
             </Routes>
           )}
         </ThemeProvider>

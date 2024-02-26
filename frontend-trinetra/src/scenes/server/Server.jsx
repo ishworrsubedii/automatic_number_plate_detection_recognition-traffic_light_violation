@@ -16,17 +16,34 @@ import {
 import ChartCard from '../../components/ChartCard';
 import Header from '../../components/Header';
 import { ColorModeContext, tokens } from '../../theme';
+import PinIcon from '@mui/icons-material/Pin';
+import { useDispatch } from 'react-redux';
+import { startCameraCapture, stopCameraCapture } from '../../actions/alprCaptureActions';
+import { startImageLoad, stopImageLoad } from '../../actions/alprLoadActions';
+import { startRecognition, stopRecognition, fetchRecognitionStatus as fetchStatus } from '../../actions/alprRecognitionActions';
 
-
-
-const Thread = ({ title, Icon }) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+const Thread = ({ title, Icon, id }) => {
     const [status, setStatus] = useState('Stopped');
     const [startTime, setStartTime] = useState(null);
     const [duration, setDuration] = useState('0s');
+    const dispatch = useDispatch();
 
     useEffect(() => {
+        const savedStatus = localStorage.getItem(`status-${id}`);
+        const savedStartTime = localStorage.getItem(`startTime-${id}`);
+        if (savedStatus && savedStartTime) {
+            setStatus(savedStatus);
+            setStartTime(Number(savedStartTime));
+        }
+
+        dispatch(fetchStatus()).then((action) => {
+            const { start_time, status } = action.payload;
+            if (status === 'in_progress') {
+                setStatus('Running');
+                setStartTime(new Date(start_time));
+            }
+        });
+
         let interval = null;
         if (status === 'Running') {
             interval = setInterval(() => {
@@ -37,22 +54,61 @@ const Thread = ({ title, Icon }) => {
                 const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
                 setDuration(`${hours}h ${minutes}m ${seconds}s`);
             }, 1000);
-        } else if (status === 'Stopped' && startTime !== null) {
+        } else if (status !== 'Running' && startTime !== null) {
             clearInterval(interval);
         }
         return () => clearInterval(interval);
-    }, [status, startTime]);
+    }, [dispatch, id, status, startTime]);
 
     const handleButtonClick = () => {
-        if (status === 'Stopped') {
-            setStatus('Running');
-            setStartTime(Date.now());
-        } else {
-            setStatus('Stopped');
-            setStartTime(null);
+        if (id === '1') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startCameraCapture());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                dispatch(stopCameraCapture());
+
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+            }
+        } else if (id === '2') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startImageLoad());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopImageLoad());
+            }
+        } else if (id === '3') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startRecognition());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopRecognition());
+            }
         }
     };
-
     return (
         <Grid container spacing={3} marginLeft={20}>
             <Grid item xs={3}>
@@ -62,14 +118,15 @@ const Thread = ({ title, Icon }) => {
                 </Box>
             </Grid>
             <Grid item xs={3}>
+
                 <Button
                     variant="contained"
                     color={status === 'Stopped' ? 'primary' : 'secondary'}
                     onClick={handleButtonClick}
-
                 >
                     {status === 'Stopped' ? 'Start' : 'Stop'}
                 </Button>
+
             </Grid>
             <Grid item xs={3}>
                 <Typography>{status}</Typography>
@@ -80,7 +137,6 @@ const Thread = ({ title, Icon }) => {
         </Grid>
     );
 };
-
 
 
 const ServerStatus = () => {
@@ -94,9 +150,7 @@ const ServerStatus = () => {
             </Box>
 
             <Box marginTop={3} />
-            <ChartCard size={{ width: '100%', height: '300px' }} >
-
-            </ChartCard>
+            <ChartCard size={{ width: '100%', height: '300px' }} />
 
             <Button
                 variant="contained"
@@ -106,8 +160,6 @@ const ServerStatus = () => {
                     backgroundColor: colors.whiteAccent[500],
                     color: colors.primary[400],
                     fontWeight: 'bold',
-
-
                 }}
             >
                 Start Server
@@ -123,32 +175,25 @@ const ServerStatus = () => {
                     border: '1px dotted',
                     borderRadius: '1%',
                     borderColor: colors.primary[400],
-
                 }}
-
             >
-                <Box>
-                </Box>
+                <Box></Box>
                 <Box
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
                     mr={'30%'}
-
-
-
                 >
                     <Typography variant="h3" style={{
                         fontWeight: 'bold',
                         marginTop: '2px'
                     }}>
-                        Threads Status
+                        ALPR THREAD STATUS
                     </Typography>
                 </Box>
-                <Thread title="Camera Thread" Icon={CameraAltIcon} />
-                <Thread title="ALPR Thread" Icon={AutorenewIcon} />
-                <Thread title="Speed Thread" Icon={SpeedIcon} />
-                <Thread title="Violation Thread" Icon={ReportProblemIcon} />
+                <Thread id='1' title="Camera Thread" Icon={CameraAltIcon} />
+                <Thread id='2' title="Number Plate Detection Thread" Icon={AutorenewIcon} />
+                <Thread id='3' title="ALPR Thread" Icon={PinIcon} />
             </Box>
         </Box>
     );
