@@ -18,6 +18,6 @@ class StopAlprExample:
 
 
 if __name__ == "__main__":
-    STOP_FLAG_PATH = "services/alpr/resources/flag_check/alpr_status.txt"
+    STOP_FLAG_PATH = "services_trinetra/alpr/resources/flag_check/alpr_status.txt"
     stop_service = StopAlprExample(STOP_FLAG_PATH)
     stop_service.stop_anpr_service()

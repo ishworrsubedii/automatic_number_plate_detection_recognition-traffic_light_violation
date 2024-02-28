@@ -4,7 +4,7 @@ Date: 2024-02-05
 """
 import time
 from paddleocr import PaddleOCR
-from services.alpr.src.entity.service_config import RecognitionConfig
+from services_trinetra.alpr.src.entity.service_config import RecognitionConfig
 from PIL import Image
 
 
@@ -45,10 +45,10 @@ class PaddleocrService:
 
 
 if __name__ == '__main__':
-    det_model = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-    recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
-    rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
+    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
+    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
     config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict)
     paddle_ocr = PaddleocrService(config=config)
     paddle_ocr.detection_recognition_cls(
-        img="/home/ishwor/anaconda3/envs/fyp/services/python3.10/site-packages/services/alpr/resources/plate_detected/23a.jpg")
+        img="/home/ishwor/anaconda3/envs/fyp/services_trinetra/python3.10/site-packages/services_trinetra/alpr/resources/plate_detected/23a.jpg")

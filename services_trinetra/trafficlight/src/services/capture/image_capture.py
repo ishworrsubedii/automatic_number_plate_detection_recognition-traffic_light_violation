@@ -6,7 +6,7 @@ from PIL import Image
 from datetime import datetime
 import time
 
-from services.alpr.src.utils.imageutils import get_frame_save_dir
+from services_trinetra.alpr.src.utils.imageutils import get_frame_save_dir
 
 from services_trinetra.trafficlight.src.utils.imgutils import resize_image
 

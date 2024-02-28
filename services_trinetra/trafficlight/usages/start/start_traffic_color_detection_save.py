@@ -64,20 +64,20 @@ class StartTrafficLightColorDetectionExample:
                     self.running = False
                     stop_successful = start_traffic_light_detector.stop()
                     if stop_successful:
-                        print("Traffic light detection services successfully stopped.")
+                        print("Traffic light detection services_trinetra successfully stopped.")
                     else:
-                        print("Issue encountered while stopping traffic light detection services.")
+                        print("Issue encountered while stopping traffic light detection services_trinetra.")
 
         except Exception as e:
-            print(f"Error starting traffic light detection services: {e}")
+            print(f"Error starting traffic light detection services_trinetra: {e}")
         finally:
             if 'start_traffic_light_detector' in locals():
                 stop_successful = start_traffic_light_detector.stop()
                 if stop_successful:
-                    print("Traffic light detection services successfully stopped in finally block.")
+                    print("Traffic light detection services_trinetra successfully stopped in finally block.")
                 else:
                     print(
-                        "Issue encountered while stopping traffic light detection services in finally block.")
+                        "Issue encountered while stopping traffic light detection services_trinetra in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")

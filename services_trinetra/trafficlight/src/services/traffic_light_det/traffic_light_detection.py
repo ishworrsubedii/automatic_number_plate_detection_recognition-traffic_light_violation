@@ -1,5 +1,5 @@
 from ultralytics.models.yolo import YOLO
-from services.alpr.src.entity.service_config import DetectionConfig
+from services_trinetra.alpr.src.entity.service_config import DetectionConfig
 import cv2
 
 

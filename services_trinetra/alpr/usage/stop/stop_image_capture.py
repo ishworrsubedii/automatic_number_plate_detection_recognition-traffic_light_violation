@@ -17,6 +17,6 @@ class StopImageCaptureExample:
 
 
 if __name__ == "__main__":
-    STOP_FLAG_PATH = "services/alpr/resources/flag_check/capture_status.txt"
+    STOP_FLAG_PATH = "services_trinetra/alpr/resources/flag_check/capture_status.txt"
     stop_service = StopImageCaptureExample(STOP_FLAG_PATH)
     stop_service.stop_image_capture_service()

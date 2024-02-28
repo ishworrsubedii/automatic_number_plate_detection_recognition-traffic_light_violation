@@ -8,9 +8,9 @@ import supervision as sv
 from ultralytics import YOLO
 
 from collections import defaultdict, deque
-from services.speed.src.services.speed.speed_estimation import speed_estimation
-from services.speed.src.services.tracking.object_tracking import object_tracking
-from services.speed.src.services.detection.object_detection import ObjectDetectionService, PerspectiveTransformer
+from services_trinetra.speed.src.services.speed.speed_estimation import speed_estimation
+from services_trinetra.speed.src.services.tracking.object_tracking import object_tracking
+from services_trinetra.speed.src.services.detection.object_detection import ObjectDetectionService, PerspectiveTransformer
 
 TARGET_WIDTH = 10
 TARGET_HEIGHT = 250  # in meters

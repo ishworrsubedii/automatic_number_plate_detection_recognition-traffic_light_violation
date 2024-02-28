@@ -28,5 +28,5 @@ def process_files(directory):
 
 
 if __name__ == '__main__':
-    directory_path = "dataset/traffic_light/datasets/dataset/labels2/"
+    directory_path = "dataset/traffic_light.txt/datasets/dataset/labels2/"
     process_files(directory_path)

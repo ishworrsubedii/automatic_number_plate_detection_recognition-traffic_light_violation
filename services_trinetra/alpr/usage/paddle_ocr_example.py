@@ -8,8 +8,8 @@ from datetime import datetime
 from PIL.Image import Image
 from paddleocr.tools.infer.utility import draw_ocr
 
-from services.alpr.src.services.recognition.paddleocr_service import PaddleocrService
-from services.alpr.src.entity.service_config import RecognitionConfig
+from services_trinetra.alpr.src.services.recognition.paddleocr_service import PaddleocrService
+from services_trinetra.alpr.src.entity.service_config import RecognitionConfig
 
 
 
@@ -23,13 +23,13 @@ def service_example(det_model, recognition_model, rec_char_dict, img):
 
 
 if __name__ == '__main__':
-    det_model = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-    # recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
-    recognition_model = 'services/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
-    rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
+    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    # recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
+    recognition_model = 'services_trinetra/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
+    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    img = 'services/alpr/resources/plate_detected/0a.jpg.jpg'
-    output_path = 'services/alpr/resources/images/paddleocr_rec_output/'
-    font_path = 'services/alpr/resources/fonts/nepali.ttf'
+    img = 'services_trinetra/alpr/resources/plate_detected/0a.jpg.jpg'
+    output_path = 'services_trinetra/alpr/resources/images/paddleocr_rec_output/'
+    font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
     boxes, txts, scores = service_example(det_model, recognition_model, rec_char_dict, img)
     print(boxes, txts, scores)

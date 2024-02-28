@@ -2,11 +2,11 @@
 Created By: ishwor subedi
 Date: 2024-02-07
 """
-from services.alpr.src.entity.service_config import DetectionConfig
-from services.alpr.src.services.detection.vehicle_number_plate_detection import DetectionService
+from services_trinetra.alpr.src.entity.service_config import DetectionConfig
+from services_trinetra.alpr.src.services.detection.vehicle_number_plate_detection import DetectionService
 
 if __name__ == '__main__':
-    config = DetectionConfig(model_path='services/trafficlight/resources/vehicle_detection/vd.pt')
+    config = DetectionConfig(model_path='services_trinetra/trafficlight/resources/vehicle_detection/vd.pt')
     service = DetectionService(config)
 
     # Detect webcam

@@ -8,7 +8,7 @@ import cv2
 from ultralytics import YOLO
 
 if __name__ == '__main__':
-    model_path = "services/yolo_auto_annotator/resources/traffic_light.pt"
+    model_path = "services_trinetra/yolo_auto_annotator/resources/traffic_light.txt.pt"
     image_path = "images/Screenshot from 2024-02-21 11-39-48.png"
 
     img = cv2.imread(image_path)

@@ -1,5 +1,5 @@
 from ultralytics.models.yolo import YOLO
-from services.alpr.src.entity.service_config import DetectionConfig
+from services_trinetra.alpr.src.entity.service_config import DetectionConfig
 import cv2
 
 
@@ -112,7 +112,7 @@ class DetectionService:
 
 
 if __name__ == '__main__':
-    config = DetectionConfig(model_path='services/alpr/resources/yolov8/nnpd.pt')
+    config = DetectionConfig(model_path='services_trinetra/alpr/resources/yolov8/nnpd.pt')
     service = DetectionService(config)
 
     # Detect webcam

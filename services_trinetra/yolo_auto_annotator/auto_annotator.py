@@ -49,6 +49,6 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
 
 
 if __name__ == '__main__':
-    auto_annotate(data='/home/ishwor/Desktop/dataset/traffic_light/datasets/dataset/images/',
-                  det_model='services/yolo_auto_annotator/resources/yolov8n.pt',
+    auto_annotate(data='/home/ishwor/Desktop/dataset/traffic_light.txt/datasets/dataset/images/',
+                  det_model='services_trinetra/yolo_auto_annotator/resources/yolov8n.pt',
                   output_dir='/home/ishwor/Desktop/dataset/traffic_light/datasets/dataset/labels2/', device='cuda')

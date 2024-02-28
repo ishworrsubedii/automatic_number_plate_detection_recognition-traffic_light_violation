@@ -6,7 +6,7 @@ from PIL import Image
 from datetime import datetime
 import time
 
-from services.alpr.src.utils.imageutils import get_frame_save_dir
+from services_trinetra.alpr.src.utils.imageutils import get_frame_save_dir
 
 
 class CaptureMain:
@@ -70,7 +70,7 @@ class CaptureMain:
 # if __name__ == '__main__':
 #     try:
 #         camera_source = "rtsp://ishwor:subedi@192.168.1.125:5555/h264_opus.sdp"
-#         image_save_dir = 'services/alpr/resources/rtsp/'
+#         image_save_dir = 'services_trinetra/alpr/resources/rtsp/'
 #         frame_interval = 10
 #         capture = CaptureMain(camera_source, image_save_dir, frame_interval)
 #         try:

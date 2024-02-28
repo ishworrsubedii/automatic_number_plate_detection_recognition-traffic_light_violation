@@ -77,12 +77,12 @@ class StartVehicleDetectionExample:
                     self.running = False
                     stop_successful = vehicle_detector.stop()
                     if stop_successful:
-                        print("Vehicle detection services successfully stopped.")
+                        print("Vehicle detection services_trinetra successfully stopped.")
                     else:
-                        print("Issue encountered while stopping vehicle detection services.")
+                        print("Issue encountered while stopping vehicle detection services_trinetra.")
 
         except Exception as e:
-            print(f"Error starting vehicle detection services: {e}")
+            print(f"Error starting vehicle detection services_trinetra: {e}")
         finally:
             if 'vehicle_detector_detector' in locals():
                 stop_successful = vehicle_detector.stop()
@@ -90,7 +90,7 @@ class StartVehicleDetectionExample:
                     print("Vehicle detection service successfully stopped in finally block.")
                 else:
                     print(
-                        "Issue encountered while stopping vehicle detection services in finally block.")
+                        "Issue encountered while stopping vehicle detection services_trinetra in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")

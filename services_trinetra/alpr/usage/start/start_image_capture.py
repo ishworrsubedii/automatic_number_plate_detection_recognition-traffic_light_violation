@@ -1,8 +1,8 @@
 import os
 import time
 
-from services.alpr.src.services.detection.image_capture import CaptureMain
-from services.alpr.usage import image_capture_logger
+from services_trinetra.alpr.src.services.detection.image_capture import CaptureMain
+from services_trinetra.alpr.usage import image_capture_logger
 
 
 
@@ -55,29 +55,29 @@ class StartImageCaptureExample:
                     self.running = False
                     stop_successful = start_capture.stop_stream()
                     if stop_successful:
-                        print("Frame capturing services successfully stopped.")
+                        print("Frame capturing services_trinetra successfully stopped.")
                     else:
-                        print("Issue encountered while stopping frame capturing services.")
+                        print("Issue encountered while stopping frame capturing services_trinetra.")
 
         except Exception as e:
-            print(f"Error starting frame capturing services: {e}")
+            print(f"Error starting frame capturing services_trinetra: {e}")
         finally:
             if 'start_capture' in locals():
                 stop_successful = start_capture.stop_stream()
                 if stop_successful:
-                    print("Frame capturing services successfully stopped in finally block.")
+                    print("Frame capturing services_trinetra successfully stopped in finally block.")
                 else:
                     print(
-                        "Issue encountered while stopping frame capturing services in finally block.")
+                        "Issue encountered while stopping frame capturing services_trinetra in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")
 
 
 if __name__ == "__main__":
-    FLAG_PATH = "services/alpr/resources/flag_check/capture_status.txt"
+    FLAG_PATH = "services_trinetra/alpr/resources/flag_check/capture_status.txt"
     SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
-    IMAGE_PATH_TO_SAVE = "services/alpr/resources/rtsp/"
+    IMAGE_PATH_TO_SAVE = "services_trinetra/alpr/resources/rtsp/"
     IMAGE_HASH_THRESHOLD = 5
 
     image_capture_service = StartImageCaptureExample(FLAG_PATH, SOURCE, IMAGE_PATH_TO_SAVE, IMAGE_HASH_THRESHOLD)

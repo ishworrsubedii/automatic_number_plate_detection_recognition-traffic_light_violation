@@ -60,20 +60,20 @@ class StartImageCaptureTrafficLight:
                     self.running = False
                     stop_successful = start_capture.stop_stream()
                     if stop_successful:
-                        print("Frame capturing services successfully stopped.")
+                        print("Frame capturing services_trinetra successfully stopped.")
                     else:
-                        print("Issue encountered while stopping frame capturing services.")
+                        print("Issue encountered while stopping frame capturing services_trinetra.")
 
         except Exception as e:
-            print(f"Error starting frame capturing services: {e}")
+            print(f"Error starting frame capturing services_trinetra: {e}")
         finally:
             if 'start_capture' in locals():
                 stop_successful = start_capture.stop_stream()
                 if stop_successful:
-                    print("Frame capturing services successfully stopped in finally block.")
+                    print("Frame capturing services_trinetra successfully stopped in finally block.")
                 else:
                     print(
-                        "Issue encountered while stopping frame capturing services in finally block.")
+                        "Issue encountered while stopping frame capturing services_trinetra in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")

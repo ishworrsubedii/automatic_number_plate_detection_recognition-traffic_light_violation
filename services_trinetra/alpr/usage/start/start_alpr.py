@@ -7,8 +7,8 @@ import os
 from PIL import Image
 from paddleocr.tools.infer.utility import draw_ocr
 
-from services.alpr.src.entity.service_config import RecognitionConfig
-from services.alpr.src.services.recognition.paddleocr_service import PaddleocrService
+from services_trinetra.alpr.src.entity.service_config import RecognitionConfig
+from services_trinetra.alpr.src.services.recognition.paddleocr_service import PaddleocrService
 
 import threading
 import time
@@ -186,19 +186,19 @@ class StartAlprExample:
 
 
 if __name__ == '__main__':
-    det_model = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-    recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
-    rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
+    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
+    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    images_directory = 'services/alpr/resources/plate_detected/'
-    output_path = 'services/alpr/output/paddleocr_rec_output/'
-    non_rec_output_path = 'services/alpr/output/paddleocr_non_rec_output'
-    flag_path = 'services/alpr/resources/flag_check/alpr_status.txt'
+    images_directory = 'services_trinetra/alpr/resources/plate_detected/'
+    output_path = 'services_trinetra/alpr/output/paddleocr_rec_output/'
+    non_rec_output_path = 'services_trinetra/alpr/output/paddleocr_non_rec_output'
+    flag_path = 'services_trinetra/alpr/resources/flag_check/alpr_status.txt'
 
-    result_save_path = "services/alpr/output/result.txt"
-    recognized_images_file_path = "services/alpr/output/recognized_images_paths.txt"
-    non_recognized_images_file_path = "services/alpr/output/non_recognized_images_paths.txt"
-    font_path = 'services/alpr/resources/fonts/nepali.ttf'
+    result_save_path = "services_trinetra/alpr/output/result.txt"
+    recognized_images_file_path = "services_trinetra/alpr/output/recognized_images_paths.txt"
+    non_recognized_images_file_path = "services_trinetra/alpr/output/non_recognized_images_paths.txt"
+    font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
 
     start_alpr = StartAlprExample(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict,
                                   detected_img_dir=images_directory, output_path=output_path,

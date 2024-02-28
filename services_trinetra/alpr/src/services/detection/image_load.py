@@ -3,8 +3,8 @@ import time
 import cv2 as cv
 import os
 import threading
-from services.alpr.src.services.detection.vehicle_number_plate_detection import DetectionService
-from services.alpr.src.entity.service_config import DetectionConfig
+from services_trinetra.alpr.src.services.detection.vehicle_number_plate_detection import DetectionService
+from services_trinetra.alpr.src.entity.service_config import DetectionConfig
 
 
 class ImageLoad:
@@ -94,8 +94,8 @@ class ImageLoad:
 
 
 if __name__ == '__main__':
-    image_dir = 'services/alpr/resources/rtsp'
-    model_path = 'services/alpr/resources/yolov8/nnpd.pt'
-    detected_image_save_dir = 'services/alpr/resources/plate_detected/'
+    image_dir = 'services_trinetra/alpr/resources/rtsp'
+    model_path = 'services_trinetra/alpr/resources/yolov8/nnpd.pt'
+    detected_image_save_dir = 'services_trinetra/alpr/resources/plate_detected/'
     image_load_start_stop = ImageLoad(image_dir, model_path, detected_image_save_dir)
     image_load_start_stop.start_load_image()

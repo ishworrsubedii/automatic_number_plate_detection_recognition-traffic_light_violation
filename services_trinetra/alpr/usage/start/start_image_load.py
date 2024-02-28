@@ -1,8 +1,8 @@
 import os
 import time
 
-from services.alpr.src.services.detection.image_load import ImageLoad
-from services.alpr.usage import image_load_logger
+from services_trinetra.alpr.src.services.detection.image_load import ImageLoad
+from services_trinetra.alpr.usage import image_load_logger
 
 
 
@@ -56,30 +56,30 @@ class StartImageLoadExample:
                     self.running = False
                     stop_successful = start_load.stop_load_image()
                     if stop_successful:
-                        print("Image loading services successfully stopped.")
+                        print("Image loading services_trinetra successfully stopped.")
                     else:
-                        print("Issue encountered while stopping image loading services.")
+                        print("Issue encountered while stopping image loading services_trinetra.")
 
         except Exception as e:
-            print(f"Error starting image loading services: {e}")
+            print(f"Error starting image loading services_trinetra: {e}")
         finally:
             if 'start_load' in locals():
                 stop_successful = start_load.stop_load_image()
                 if stop_successful:
-                    print("Image loading services successfully stopped in finally block.")
+                    print("Image loading services_trinetra successfully stopped in finally block.")
                 else:
                     print(
-                        "Issue encountered while stopping image loading services in finally block.")
+                        "Issue encountered while stopping image loading services_trinetra in finally block.")
 
     def stop_service(self):
         self.update_stop_flag("True")
 
 
 if __name__ == "__main__":
-    flag_path = "services/alpr/resources/flag_check/start_load_status.txt"
-    image_dir = 'services/alpr/resources/rtsp/'
-    model_path = 'services/alpr/resources/yolov8/nnpd.pt'
-    image_save_dir = 'services/alpr/resources/plate_detected/'
+    flag_path = "services_trinetra/alpr/resources/flag_check/start_load_status.txt"
+    image_dir = 'services_trinetra/alpr/resources/rtsp/'
+    model_path = 'services_trinetra/alpr/resources/yolov8/nnpd.pt'
+    image_save_dir = 'services_trinetra/alpr/resources/plate_detected/'
 
     image_load_service = StartImageLoadExample(flag_path, image_dir, model_path, image_save_dir)
     image_load_service.create_stop_flag()
