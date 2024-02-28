@@ -2,10 +2,6 @@
 Created By: ishwor subedi
 Date: 2024-02-05
 """
-import os
-from services.alpr.usage import image_capture_logger
-
-IMAGE_CAPTURE_LOGGER = image_capture_logger()
 
 
 class StopImageCaptureExample:
@@ -17,7 +13,7 @@ class StopImageCaptureExample:
             with open(self.stop_flag_path, 'w') as flag_file:
                 flag_file.write("True")
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.info(f"Error updating stop flag :{e}")
+            print(f"Error updating stop flag :{e}")
 
 
 if __name__ == "__main__":

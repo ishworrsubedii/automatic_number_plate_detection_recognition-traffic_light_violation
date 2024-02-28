@@ -4,7 +4,6 @@ import time
 from services.alpr.src.services.detection.image_load import ImageLoad
 from services.alpr.usage import image_load_logger
 
-IMAGE_LOAD_LOGGER = image_load_logger()
 
 
 class StartImageLoadExample:
@@ -21,7 +20,7 @@ class StartImageLoadExample:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write('False')
         except Exception as e:
-            IMAGE_LOAD_LOGGER.error(f"Error creating stop flag: {e}")
+            print(f"Error creating stop flag: {e}")
 
     def check_stop_flag(self):
         try:
@@ -32,7 +31,7 @@ class StartImageLoadExample:
             else:
                 return False
         except Exception as e:
-            IMAGE_LOAD_LOGGER.error(f"Error checking stop flag: {e}")
+            print(f"Error checking stop flag: {e}")
             return False
 
     def update_stop_flag(self, value):
@@ -40,14 +39,14 @@ class StartImageLoadExample:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write(str(value))
         except Exception as e:
-            IMAGE_LOAD_LOGGER.error(f"Error updating stop flag: {e}")
+            print(f"Error updating stop flag: {e}")
 
     def start_service(self):
         try:
             self.running = True
             start_load = ImageLoad(self.image_dir, self.model_path, self.image_save_dir)
             start_load.start_load_image()
-            IMAGE_LOAD_LOGGER.info("Image loading service successfully started")
+            print("Image loading service successfully started")
 
             while self.running:
                 time.sleep(1)
@@ -57,19 +56,19 @@ class StartImageLoadExample:
                     self.running = False
                     stop_successful = start_load.stop_load_image()
                     if stop_successful:
-                        IMAGE_LOAD_LOGGER.info("Image loading services successfully stopped.")
+                        print("Image loading services successfully stopped.")
                     else:
-                        IMAGE_LOAD_LOGGER.error("Issue encountered while stopping image loading services.")
+                        print("Issue encountered while stopping image loading services.")
 
         except Exception as e:
-            IMAGE_LOAD_LOGGER.error(f"Error starting image loading services: {e}")
+            print(f"Error starting image loading services: {e}")
         finally:
             if 'start_load' in locals():
                 stop_successful = start_load.stop_load_image()
                 if stop_successful:
-                    IMAGE_LOAD_LOGGER.info("Image loading services successfully stopped in finally block.")
+                    print("Image loading services successfully stopped in finally block.")
                 else:
-                    IMAGE_LOAD_LOGGER.error(
+                    print(
                         "Issue encountered while stopping image loading services in finally block.")
 
     def stop_service(self):

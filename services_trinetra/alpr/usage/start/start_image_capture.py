@@ -4,7 +4,6 @@ import time
 from services.alpr.src.services.detection.image_capture import CaptureMain
 from services.alpr.usage import image_capture_logger
 
-IMAGE_CAPTURE_LOGGER = image_capture_logger()
 
 
 class StartImageCaptureExample:
@@ -20,7 +19,7 @@ class StartImageCaptureExample:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write('False')
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.error(f"Error creating stop flag: {e}")
+            print(f"Error creating stop flag: {e}")
 
     def check_stop_flag(self):
         try:
@@ -31,7 +30,7 @@ class StartImageCaptureExample:
             else:
                 return False
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.error(f"Error checking stop flag: {e}")
+            print(f"Error checking stop flag: {e}")
             return False
 
     def update_stop_flag(self, value):
@@ -39,14 +38,14 @@ class StartImageCaptureExample:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write(str(value))
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.error(f"Error updating stop flag: {e}")
+            print(f"Error updating stop flag: {e}")
 
     def start_service(self):
         try:
             self.running = True
             start_capture = CaptureMain(self.source, self.image_path_to_save, self.image_hash_threshold)
             start_capture.start_stream()
-            IMAGE_CAPTURE_LOGGER.info("Image capturing service sucessfully started")
+            print("Image capturing service sucessfully started")
 
             while self.running:
                 time.sleep(1)
@@ -56,19 +55,19 @@ class StartImageCaptureExample:
                     self.running = False
                     stop_successful = start_capture.stop_stream()
                     if stop_successful:
-                        IMAGE_CAPTURE_LOGGER.info("Frame capturing services successfully stopped.")
+                        print("Frame capturing services successfully stopped.")
                     else:
-                        IMAGE_CAPTURE_LOGGER.error("Issue encountered while stopping frame capturing services.")
+                        print("Issue encountered while stopping frame capturing services.")
 
         except Exception as e:
-            IMAGE_CAPTURE_LOGGER.error(f"Error starting frame capturing services: {e}")
+            print(f"Error starting frame capturing services: {e}")
         finally:
             if 'start_capture' in locals():
                 stop_successful = start_capture.stop_stream()
                 if stop_successful:
-                    IMAGE_CAPTURE_LOGGER.info("Frame capturing services successfully stopped in finally block.")
+                    print("Frame capturing services successfully stopped in finally block.")
                 else:
-                    IMAGE_CAPTURE_LOGGER.error(
+                    print(
                         "Issue encountered while stopping frame capturing services in finally block.")
 
     def stop_service(self):

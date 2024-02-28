@@ -7,7 +7,7 @@ class DetectionService:
     def __init__(self, config: DetectionConfig):
         self.model_instance = YOLO(config.model_path)
 
-    def detect_image(self, image_path, confidence_threshold: float, nms_threshold: float):
+    def detect_image(self, image, confidence_threshold: float, nms_threshold: float, display: bool):
         """
         Detects vehicle number plate from an image
         :param image_path:  image path to be passed
@@ -16,8 +16,7 @@ class DetectionService:
         :return:  detected results
         """
 
-        img = cv2.imread(image_path)
-        results = self.model_instance.predict(img, conf=confidence_threshold, iou=nms_threshold,show=True)
+        results = self.model_instance.predict(image, conf=confidence_threshold, iou=nms_threshold, show=display)
 
         # for prediction in results:
         #     bboxes = prediction.boxes.xyxy
@@ -73,26 +72,11 @@ class DetectionService:
 
     def detect_webcam(self, display: bool, confidence_threshold: float, nms_threshold: float):
         """
-        Detects
-        vehicle
-        number
-        plate
-        from a webcam
-        :param
-        display: boolean
-        value
-        to
-        display
-        the
-        video
-        :param
-        confidence_threshold: confidence
-        threshold
-        :param
-        nms_threshold: nms
-        threshold
-        :return:  detected
-        results
+        Detects vehicle number plate from a webcam
+        :param display: boolean value to display the video
+        :param confidence_threshold: confidence threshold
+        :param nms_threshold: non-maximum suppression threshold
+        :return: detected results
         """
 
         cap = cv2.VideoCapture(0)

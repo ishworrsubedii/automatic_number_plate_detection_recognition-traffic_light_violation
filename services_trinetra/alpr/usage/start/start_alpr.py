@@ -15,11 +15,11 @@ import threading
 import time
 from datetime import datetime
 
-ALPR_LOGGER = alpr_logger()
-
 
 class StartAlprExample:
-    def __init__(self, det_model, recognition_model, rec_char_dict, detected_img_dir, output_path, flag_path):
+    def __init__(self, det_model, recognition_model, rec_char_dict, detected_img_dir, output_path, non_rec_output_path,
+                 flag_path,
+                 result_file, recognized_images_file_path, non_recognized_images_file_path):
         config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model,
                                    rec_char_dict=rec_char_dict)
         self.latest_image_path = None
@@ -28,9 +28,13 @@ class StartAlprExample:
         self.alpr_start = False
         self.detected_img_dir = detected_img_dir
         self.rec_output_path = output_path
-        self.non_rec_output_path = 'services/alpr/output/paddleocr_non_rec_output'
+        self.non_rec_output_path = non_rec_output_path
         self.flag_path = flag_path
         self.running = False
+
+        self.result = result_file  # recognized result file path
+        self.recognized_images_file_path = recognized_images_file_path  # recognized images file path
+        self.non_recognized_images_file_path = non_recognized_images_file_path  # non recognized images file path
 
     def start_alpr(self):
         self.start_alpr_service = threading.Thread(target=self.main_alpr_service)
@@ -73,7 +77,7 @@ class StartAlprExample:
                 img.save(output_path)
 
         except Exception as e:
-            ALPR_LOGGER.error(f"Error saving image: {e}")
+            print(f"Error saving image: {e}")
 
     def non_rec_save_image(self, output_path):
         try:
@@ -86,7 +90,7 @@ class StartAlprExample:
                 file.write(f"Non_Recognized_image_path:{output_path}\n")
             img.save(output_path)
         except Exception as e:
-            ALPR_LOGGER.error(f"Error saving image: {e}")
+            print(f"Error saving image: {e}")
 
     def main_alpr_service(self):
         while self.running:
@@ -116,7 +120,7 @@ class StartAlprExample:
                         self.save_image_thread(output_path, boxes, txts, scores)
 
                 except Exception as e:
-                    ALPR_LOGGER.error(f"An error occurred: {e}")
+                    print(f"An error occurred: {e}")
 
                 finally:
                     if os.path.exists(self.latest_image_path):
@@ -130,7 +134,7 @@ class StartAlprExample:
                 flag = file.read().strip()
                 return flag == "True"
         except Exception as e:
-            ALPR_LOGGER.error(f"Error checking stop flag: {e}")
+            print(f"Error checking stop flag: {e}")
             return False
 
     def create_stop_flag(self):
@@ -138,14 +142,14 @@ class StartAlprExample:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write('False')
         except Exception as e:
-            ALPR_LOGGER.error(f"Error creating stop flag: {e}")
+            print(f"Error creating stop flag: {e}")
 
     def update_stop_flag(self, value):
         try:
             with open(self.flag_path, 'w') as flag_file:
                 flag_file.write(str(value))
         except Exception as e:
-            ALPR_LOGGER.error(f"Error updating stop flag: {e}")
+            print(f"Error updating stop flag: {e}")
 
     def start_service(self):
         try:
@@ -161,10 +165,10 @@ class StartAlprExample:
                 if stop_flag:
                     self.running = False
                     self.stop_alpr()
-                    ALPR_LOGGER.info("ALPR service successfully stopped.")
+                    print("ALPR service successfully stopped.")
 
         except Exception as e:
-            ALPR_LOGGER.error(f"Error starting ALPR service: {e}")
+            print(f"Error starting ALPR service: {e}")
 
     def check_and_stop(self):
         while self.running:
@@ -175,7 +179,7 @@ class StartAlprExample:
                 print("Stopping the service...")  # print a message before stopping the service
                 self.running = False
                 self.stop_alpr()
-                ALPR_LOGGER.info("ALPR service successfully stopped.")
+                print("ALPR service successfully stopped.")
 
     def stop_service(self):
         self.update_stop_flag("True")
@@ -186,10 +190,19 @@ if __name__ == '__main__':
     recognition_model = 'services/alpr/resources/paddleocr/custom_recog/'
     rec_char_dict = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    img = 'services/alpr/resources/plate_detected/'
+    images_directory = 'services/alpr/resources/plate_detected/'
     output_path = 'services/alpr/output/paddleocr_rec_output/'
-    font_path = 'services/alpr/resources/fonts/nepali.ttf'
+    non_rec_output_path = 'services/alpr/output/paddleocr_non_rec_output'
     flag_path = 'services/alpr/resources/flag_check/alpr_status.txt'
-    start_alpr = StartAlprExample(det_model, recognition_model, rec_char_dict, img, output_path, flag_path)
+
+    result_save_path = "services/alpr/output/result.txt"
+    recognized_images_file_path = "services/alpr/output/recognized_images_paths.txt"
+    non_recognized_images_file_path = "services/alpr/output/non_recognized_images_paths.txt"
+
+    start_alpr = StartAlprExample(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict,
+                                  detected_img_dir=images_directory, output_path=output_path,
+                                  non_rec_output_path=non_rec_output_path, flag_path=flag_path,
+                                  result_file=result_save_path, recognized_images_file_path=recognized_images_file_path,
+                                  non_recognized_images_file_path=non_recognized_images_file_path)
     start_alpr.create_stop_flag()
     results_generator = start_alpr.start_service()

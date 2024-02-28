@@ -51,4 +51,4 @@ if __name__ == '__main__':
     config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict)
     paddle_ocr = PaddleocrService(config=config)
     paddle_ocr.detection_recognition_cls(
-        img="/home/ishwor/anaconda3/envs/fyp/lib/python3.10/site-packages/services/alpr/resources/plate_detected/23a.jpg")
+        img="/home/ishwor/anaconda3/envs/fyp/services/python3.10/site-packages/services/alpr/resources/plate_detected/23a.jpg")
