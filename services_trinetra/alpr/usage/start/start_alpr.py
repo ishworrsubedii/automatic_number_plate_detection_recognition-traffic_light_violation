@@ -10,7 +10,6 @@ from paddleocr.tools.infer.utility import draw_ocr
 from services.alpr.src.entity.service_config import RecognitionConfig
 from services.alpr.src.services.recognition.paddleocr_service import PaddleocrService
 
-from services.alpr.usage import alpr_logger
 import threading
 import time
 from datetime import datetime
@@ -19,7 +18,7 @@ from datetime import datetime
 class StartAlprExample:
     def __init__(self, det_model, recognition_model, rec_char_dict, detected_img_dir, output_path, non_rec_output_path,
                  flag_path,
-                 result_file, recognized_images_file_path, non_recognized_images_file_path):
+                 result_file, recognized_images_file_path, non_recognized_images_file_path, font_path):
         config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model,
                                    rec_char_dict=rec_char_dict)
         self.latest_image_path = None
@@ -35,6 +34,7 @@ class StartAlprExample:
         self.result = result_file  # recognized result file path
         self.recognized_images_file_path = recognized_images_file_path  # recognized images file path
         self.non_recognized_images_file_path = non_recognized_images_file_path  # non recognized images file path
+        self.font_path = font_path
 
     def start_alpr(self):
         self.start_alpr_service = threading.Thread(target=self.main_alpr_service)
@@ -53,7 +53,7 @@ class StartAlprExample:
         self.running = False
         if self.start_alpr_service.is_alive():
             self.start_alpr_service.join()
-        ALPR_LOGGER.info("ALPR service successfully stopped.")
+        print("ALPR service successfully stopped.")
 
     def rec_save_image(self, output_path, boxes, txts, scores):
         try:
@@ -64,14 +64,14 @@ class StartAlprExample:
             else:
                 img = Image.open(self.latest_image_path)
 
-                img = draw_ocr(img, boxes, txts, scores, font_path='services/alpr/resources/fonts/nepali.ttf')
+                img = draw_ocr(img, boxes, txts, scores, font_path=self.font_path)
                 img = Image.fromarray(img)
 
                 filename = os.path.basename(self.latest_image_path)
 
                 # new_output_path = os.path.join(output_path, filename)
 
-                with open('services/alpr/output/recognized_images_paths.txt', 'a') as file:
+                with open(self.recognized_images_file_path, 'a') as file:
                     file.write(f"Recognized_image_path:{output_path}\n")
 
                 img.save(output_path)
@@ -86,7 +86,7 @@ class StartAlprExample:
 
             new_output_path = os.path.join(output_path, filename)
 
-            with open('services/alpr/output/non_recognized_images_paths.txt', 'a') as file:
+            with open(self.non_rec_output_path, 'a') as file:
                 file.write(f"Non_Recognized_image_path:{output_path}\n")
             img.save(output_path)
         except Exception as e:
@@ -109,7 +109,7 @@ class StartAlprExample:
                         current_datetime = datetime.now()
                         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
-                        with open('services/alpr/output/result.txt', 'a') as file:
+                        with open(self.result, 'a') as file:
                             average_score = sum(scores) / len(scores)
                             merged_text = ' '.join(txts)
 
@@ -155,7 +155,7 @@ class StartAlprExample:
         try:
             self.running = True
             self.start_alpr()
-            ALPR_LOGGER.info("ALPR service successfully started")
+            print("ALPR service successfully started")
             stop_check_thread = threading.Thread(target=self.check_and_stop)
             stop_check_thread.start()
             while self.running:
@@ -198,11 +198,12 @@ if __name__ == '__main__':
     result_save_path = "services/alpr/output/result.txt"
     recognized_images_file_path = "services/alpr/output/recognized_images_paths.txt"
     non_recognized_images_file_path = "services/alpr/output/non_recognized_images_paths.txt"
+    font_path = 'services/alpr/resources/fonts/nepali.ttf'
 
     start_alpr = StartAlprExample(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict,
                                   detected_img_dir=images_directory, output_path=output_path,
                                   non_rec_output_path=non_rec_output_path, flag_path=flag_path,
                                   result_file=result_save_path, recognized_images_file_path=recognized_images_file_path,
-                                  non_recognized_images_file_path=non_recognized_images_file_path)
+                                  non_recognized_images_file_path=non_recognized_images_file_path, font_path=font_path)
     start_alpr.create_stop_flag()
     results_generator = start_alpr.start_service()
