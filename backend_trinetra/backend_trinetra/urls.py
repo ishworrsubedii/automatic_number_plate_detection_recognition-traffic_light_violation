@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/alpr/', include('alpr.urls')),
     path('get-csrf-token/', get_csrf_token, name='get-csrf-token'),
+    path('api/trafficlight/', include('trafficlight.urls')),
 
 ]
 urlpatterns += [re_path('', TemplateView.as_view(template_name='index.html'))]

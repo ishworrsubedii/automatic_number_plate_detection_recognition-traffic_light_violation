@@ -23,11 +23,16 @@ class ALPRServices:
         self.RECOG_MODEL = 'services/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer'
         self.CHAR_DICT = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
         self.OUTPUT_PATH = 'services/alpr/output/paddleocr_rec_output/'
-        self.THRESHOLD = 2
+        self.NON_REC_OUTPUT_PATH = 'services/alpr/output/paddleocr_non_rec_output/'
+        self.THRESHOLD = 3
         self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
         self.MODEL_PATH = 'services/alpr/resources/yolov8/nnpd.pt'
         self.CAPTURED_IMAGE_SAVE_DIR = 'services/alpr/resources/rtsp/'
         self.DETECTED_IMAGE_SAVE_DIR = 'services/alpr/resources/plate_detected/'
+        self.RESULT_SAVE_PATH = "services/alpr/output/result.txt"
+        self.RECOGNIZED_IMAGES_FILE_PATH = "services/alpr/output/recognized_images_paths.txt"
+        self.NON_RECOGNIZED_IMAGES_FILE_PATH = "services/alpr/output/non_recognized_images_paths.txt"
+        self.FONT_PATH = 'services/alpr/resources/fonts/nepali.ttf'
 
     def start_image_capture(self):
         image_capture_database = ImageCaptureDatabase(status='in_progress')
@@ -64,7 +69,7 @@ class ALPRServices:
 
     def save_recognized_image(self):
         while True:
-            with open('services/alpr/output/recognized_images_paths.txt', 'r+') as recognized_images_file:
+            with open(self.RECOGNIZED_IMAGES_FILE_PATH, 'r+') as recognized_images_file:
                 lines = recognized_images_file.readlines()
                 if lines:
                     line = lines[0]
@@ -87,7 +92,7 @@ class ALPRServices:
 
     def save_non_recognized_image(self):
         while True:
-            with open('services/alpr/output/non_recognized_images_paths.txt', 'r+') as non_recognized_images_file:
+            with open(self.NON_RECOGNIZED_IMAGES_FILE_PATH, 'r+') as non_recognized_images_file:
                 lines = non_recognized_images_file.readlines()
                 if lines:
                     line = lines[0]
@@ -111,7 +116,7 @@ class ALPRServices:
 
     def save_recognition_info(self):
         while True:
-            with open('services/alpr/output/result.txt', 'r+') as result_file:
+            with open(self.RESULT_SAVE_PATH, 'r+') as result_file:
                 lines = result_file.readlines()
                 if lines:
                     line = lines[0]
@@ -146,8 +151,14 @@ class ALPRServices:
         except Exception as e:
             print(f"Error saving ALPRDatabase: {e}")
         start_alpr = StartAlprExample(
-            self.DET_MODEL, self.RECOG_MODEL, self.CHAR_DICT, self.DETECTED_IMAGE_SAVE_DIR,
-            self.OUTPUT_PATH, self.RECOGNITION_FLAG_PATH
+            det_model=self.DET_MODEL, recognition_model=self.RECOG_MODEL, rec_char_dict=self.CHAR_DICT,
+            detected_img_dir=self.DETECTED_IMAGE_SAVE_DIR,
+            output_path=self.OUTPUT_PATH, non_rec_output_path=self.NON_REC_OUTPUT_PATH,
+            flag_path=self.RECOGNITION_FLAG_PATH, result_file=self.RESULT_SAVE_PATH,
+            recognized_images_file_path=self.RECOGNIZED_IMAGES_FILE_PATH,
+            non_recognized_images_file_path=self.NON_RECOGNIZED_IMAGES_FILE_PATH,
+
+            font_path=self.FONT_PATH
         )
         start_alpr.create_stop_flag()
         start_alpr.start_service()
