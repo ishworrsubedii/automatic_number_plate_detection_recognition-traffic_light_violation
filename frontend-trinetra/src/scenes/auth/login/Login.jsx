@@ -21,7 +21,7 @@ import trinetralogo from "../../../assets/trinetra.svg";
 
 import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import { login } from "../../../actions/auth";
+import { login } from "../../../actions/auth/auth";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 

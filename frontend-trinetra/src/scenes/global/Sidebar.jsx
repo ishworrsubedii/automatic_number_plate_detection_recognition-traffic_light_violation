@@ -47,7 +47,7 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import TimelineIcon from '@mui/icons-material/Timeline';
 
 import { connect } from "react-redux";
-import { logout } from "../../actions/auth";
+import { logout } from "../../actions/auth/auth";
 
 import MuiAlert from "@mui/material/Alert";
 

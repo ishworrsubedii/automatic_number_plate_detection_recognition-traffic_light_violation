@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import { reset_password } from "../../../actions/auth";
+import { reset_password } from "../../../actions/auth/auth";
 import { tokens } from "../../../theme";
 
 import InputAdornment from "@mui/material/InputAdornment";

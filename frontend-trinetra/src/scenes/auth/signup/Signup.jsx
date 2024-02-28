@@ -14,7 +14,7 @@ import { tokens } from "../../../theme";
 import trinetralogo from "../../../assets/trinetra.svg";
 
 import { connect } from "react-redux";
-import { signup } from "../../../actions/auth";
+import { signup } from "../../../actions/auth/auth";
 import { useNavigate, Link } from "react-router-dom";
 
 import Snackbar from "@mui/material/Snackbar";

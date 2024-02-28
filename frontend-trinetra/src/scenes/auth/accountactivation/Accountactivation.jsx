@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Paper, Typography, Button, useTheme } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import { connect } from "react-redux";
-import { verify } from "../../../actions/auth";
+import { verify } from "../../../actions/auth/auth";
 import { tokens } from "../../../theme";
 import trinetralogo from "../../../assets/trinetra.svg";
 

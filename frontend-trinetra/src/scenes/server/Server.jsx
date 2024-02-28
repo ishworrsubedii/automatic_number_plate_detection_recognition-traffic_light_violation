@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import {
     CameraAlt as CameraAltIcon,
-    Speed as SpeedIcon,
+    Speed,
     ReportProblem as ReportProblemIcon,
     Autorenew as AutorenewIcon,
 } from '@mui/icons-material';
@@ -18,9 +18,18 @@ import Header from '../../components/Header';
 import { ColorModeContext, tokens } from '../../theme';
 import PinIcon from '@mui/icons-material/Pin';
 import { useDispatch } from 'react-redux';
-import { startCameraCapture, stopCameraCapture } from '../../actions/alprCaptureActions';
-import { startImageLoad, stopImageLoad } from '../../actions/alprLoadActions';
-import { startRecognition, stopRecognition, fetchRecognitionStatus as fetchStatus } from '../../actions/alprRecognitionActions';
+import { startCameraCapture, stopCameraCapture } from '../../actions/alpr/alprCaptureActions';
+import { startImageLoad, stopImageLoad } from '../../actions/alpr/alprLoadActions';
+import { startRecognition, stopRecognition, fetchRecognitionStatus as fetchStatus } from '../../actions/alpr/alprRecognitionActions';
+import TrafficIcon from '@mui/icons-material/Traffic';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import SpeedIcon from '@mui/icons-material/Speed';
+
+import {startCaptureTrafficlight, stopCaptureTrafficlight} from '../../actions/trafficlight/trafficlightCaptureActions';
+import {startALPRTrafficLight, stopALPRTrafficLight} from '../../actions/trafficlight/trafficlightALPRActions';
+import {startVehicleDetectionTrafficlight, stopVehicleDetectionTrafficlight} from '../../actions/trafficlight/trafficlightVehicleDetectionActions';
+import {startTrafficlightNumberPlateDetection, stopTrafficlightNumberPlateDetection} from '../../actions/trafficlight/trafficlightNumberPlateDetectionActions';
+import {startTrafficlightDetectionColor, stopTrafficlightDetectionColor} from '../../actions/trafficlight/trafficlightDetectionColorActions';
 
 const Thread = ({ title, Icon, id }) => {
     const [status, setStatus] = useState('Stopped');
@@ -108,6 +117,88 @@ const Thread = ({ title, Icon, id }) => {
                 dispatch(stopRecognition());
             }
         }
+        else if (id === '11') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startCaptureTrafficlight());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopCaptureTrafficlight());
+            }
+        }
+        else if (id === '12') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startTrafficlightDetectionColor());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopTrafficlightDetectionColor());
+            }
+        }
+        else if (id === '13') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startVehicleDetectionTrafficlight());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopVehicleDetectionTrafficlight());
+            }
+        }
+        else if (id === '14') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startTrafficlightNumberPlateDetection());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopTrafficlightNumberPlateDetection());
+            }
+        }
+        else if (id === '15') {
+            if (status === 'Stopped') {
+                const newStartTime = Date.now();
+                setStatus('Running');
+                setStartTime(newStartTime);
+                localStorage.setItem(`status-${id}`, 'Running');
+                localStorage.setItem(`startTime-${id}`, newStartTime);
+                dispatch(startALPRTrafficLight());
+            } else if (status === 'Running') {
+                setStatus('Stopped');
+                setStartTime(null);
+                localStorage.setItem(`status-${id}`, 'Stopped');
+                localStorage.removeItem(`startTime-${id}`);
+                dispatch(stopALPRTrafficLight());
+            }
+        }
+        
+
     };
     return (
         <Grid container spacing={3} marginLeft={20}>
@@ -145,57 +236,130 @@ const ServerStatus = () => {
 
     return (
         <Box>
-            <Box margin="20px">
-                <Header title="SERVER STATUS" subtitle="" />
-            </Box>
+            <Box>
+                <Box margin="20px">
+                    <Header title="SERVER STATUS" subtitle="" />
+                </Box>
 
-            <Box marginTop={3} />
-            <ChartCard size={{ width: '100%', height: '300px' }} />
+                <Box marginTop={3} />
+                <ChartCard size={{ width: '100%', height: '300px' }} />
 
-            <Button
-                variant="contained"
-                style={{
-                    margin: '2rem auto',
-                    display: 'block',
-                    backgroundColor: colors.whiteAccent[500],
-                    color: colors.primary[400],
-                    fontWeight: 'bold',
-                }}
-            >
-                Start Server
-            </Button>
+                <Button
+                    variant="contained"
+                    style={{
+                        margin: '2rem auto',
+                        display: 'block',
+                        backgroundColor: colors.whiteAccent[500],
+                        color: colors.primary[400],
+                        fontWeight: 'bold',
+                    }}
+                >
+                    Start Server
+                </Button>
 
-            <Box
-                display="flex"
-                justifyContent="space-around"
-                flexWrap="wrap"
-                height={'500px'}
-                style={{
-                    margin: '200px',
-                    border: '1px dotted',
-                    borderRadius: '1%',
-                    borderColor: colors.primary[400],
-                }}
-            >
-                <Box></Box>
                 <Box
                     display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    mr={'30%'}
+                    justifyContent="space-around"
+                    flexWrap="wrap"
+                    height={'500px'}
+                    style={{
+                        margin: '200px',
+                        border: '1px dotted',
+                        borderRadius: '1%',
+                        borderColor: colors.primary[400],
+                    }}
                 >
-                    <Typography variant="h3" style={{
-                        fontWeight: 'bold',
-                        marginTop: '2px'
-                    }}>
-                        ALPR THREAD STATUS
-                    </Typography>
+                    <Box></Box>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        mr={'30%'}
+                    >
+                        <Typography variant="h3" style={{
+                            fontWeight: 'bold',
+                            marginTop: '2px'
+                        }}>
+                            ALPR THREAD STATUS
+                        </Typography>
+                    </Box>
+                    <Thread id='1' title="Camera Thread" Icon={CameraAltIcon} />
+                    <Thread id='2' title="Number Plate Detection Thread" Icon={AutorenewIcon} />
+                    <Thread id='3' title="ALPR Thread" Icon={PinIcon} />
                 </Box>
-                <Thread id='1' title="Camera Thread" Icon={CameraAltIcon} />
-                <Thread id='2' title="Number Plate Detection Thread" Icon={AutorenewIcon} />
-                <Thread id='3' title="ALPR Thread" Icon={PinIcon} />
+            </Box>
+
+
+
+            <Box>
+                <Box
+                    display="flex"
+                    justifyContent="space-around"
+                    flexWrap="wrap"
+                    height={'1000px'}
+                    style={{
+                        margin: '200px',
+                        border: '1px dotted',
+                        borderRadius: '1%',
+                        borderColor: colors.primary[400],
+                    }}
+                >
+                    <Box></Box>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        mr={'30%'}
+                    >
+                        <Typography variant="h3" style={{
+                            fontWeight: 'bold',
+                            marginTop: '2px'
+                        }}>
+                            Traffic Light Violation Detection Thread
+                        </Typography>
+                    </Box>
+                    <Thread id='11' title="Traffic Light Camera Thread" Icon={CameraAltIcon} />
+                    <Thread id='12' title="Traffic Light And Color Detection" Icon={TrafficIcon} />
+                    <Thread id='13' title="Vehicle Detection" Icon={DirectionsCarIcon} />
+                    <Thread id='14' title="Vehicle Number Plate Detection" Icon={AutorenewIcon} />
+                    <Thread id='15' title="ANPR" Icon={PinIcon} />
+                </Box>
+            </Box>
+            <Box>
+                <Box
+                    display="flex"
+                    justifyContent="space-around"
+                    flexWrap="wrap"
+                    height={'700px'}
+                    style={{
+                        margin: '200px',
+                        border: '1px dotted',
+                        borderRadius: '1%',
+                        borderColor: colors.primary[400],
+                    }}
+                >
+                    <Box></Box>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        mr={'30%'}
+                    >
+                        <Typography variant="h3" style={{
+                            fontWeight: 'bold',
+                            marginTop: '2px'
+                        }}>
+                            Speed Estimation
+                        </Typography>
+                    </Box>
+                    <Thread id='22' title="Speed Camera Thread" Icon={CameraAltIcon} />
+                    <Thread id='22' title="Vehicle Speed Estimation" Icon={SpeedIcon} />
+                    <Thread id='23' title="Vehicle Number Plate Detection" Icon={AutorenewIcon} />
+                    <Thread id='24' title="ANPR" Icon={PinIcon} />
+                </Box>
             </Box>
         </Box>
+
     );
 };
 

@@ -30,7 +30,7 @@ import Termandconditions from "./scenes/termsandconditions/Termandcondition";
 import { Provider, connect } from "react-redux";
 
 import store from "./store";
-import { checkAuthenticated, load_user } from "./actions/auth";
+import { checkAuthenticated, load_user } from "./actions/auth/auth";
 
 const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
   const [theme, colorMode] = useMode();
