@@ -1,18 +1,22 @@
-import os.path
-from concurrent.futures import ThreadPoolExecutor
+import multiprocessing
+import os
+import time
+import sys
+
 import cv2
+
 from services_trinetra.trafficlight.src.services.traffic_light_det.traffic_light_detection_template_matching import \
     TrafficLightDetector
 from services_trinetra.trafficlight.src.services.detection.color_detection import ColorFilter
-from services_trinetra.trafficlight.src.utils.imgutils import WriteText, resize_image
 
 
 class TrafficLightColorDetection:
+    def __init__(self, template_paths, image_directory, red_light_detected,
+                 display: bool):
+        self.red_light_detected_dir = red_light_detected
+        self.image_directory = image_directory
+        self.template_paths = template_paths
 
-    def __init__(self, template_paths
-                 , traffic_light_result_file_path, display: bool):
-        self.write_status = WriteText(file_path=traffic_light_result_file_path)
-        self.traffic_light_detection = TrafficLightDetector(template_paths)
         self.red_upper = 10, 255, 255
         self.red_lower = 0, 100, 100
         self.orange_upper = 25, 255, 255
@@ -20,25 +24,11 @@ class TrafficLightColorDetection:
         self.green_upper = 85, 255, 255
         self.green_lower = 35, 100, 100
         self.display = display
-        self.start_traffic_light_det = None
-        self.image = None
         self.latest_image_path = None
-
-        try:
-            self.color_detection_traffic_light_service = ColorFilter()
-        except Exception as e:
-            print(f"Error creating ColorFilter object: {e}")
-            self.color_detection_traffic_light_service = None
-
-        self.running = False
-
-    def read(self):
-        try:
-            image = cv2.imread(self.latest_image_path)
-            if image is not None:
-                self.image = image
-        except Exception as e:
-            print(f"Error reading image: {e}")
+        self.color_detection_traffic_light_service = ColorFilter()
+        self.thread_running = False
+        self.image = None
+        self.process = None
 
     def color_detection_service(self, cropped_image):
         try:
@@ -48,7 +38,6 @@ class TrafficLightColorDetection:
                                                                                        self.orange_upper)
             filtered_green = self.color_detection_traffic_light_service.filter_colors(self.green_lower,
                                                                                       self.green_upper)
-
             red_percentage, orange_percentage, green_percentage = self.color_detection_traffic_light_service.calculate_color_percentage(
                 filtered_red,
                 filtered_orange,
@@ -56,83 +45,87 @@ class TrafficLightColorDetection:
             print(f"Red: {int(red_percentage)}%, Orange: {int(orange_percentage)}%, Green: {int(green_percentage)}%")
 
             if red_percentage > 5:
-                self.write_status.write_data(f"Red Light")
                 cv2.putText(self.image, 'Red Light', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                new_image_path_without_extension = os.path.splitext(os.path.basename(self.latest_image_path))[0]
+                new_image_path = os.path.join(self.red_light_detected_dir, f"{new_image_path_without_extension}.jpg")
+                cv2.imwrite(new_image_path, self.image)
+
             elif orange_percentage > 60:
-                self.write_status.write_data(f"Orange Light")
                 cv2.putText(self.image, 'Orange Light', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 165, 255), 2)
             elif green_percentage > 60:
-                self.write_status.write_data(f"Green Light")
                 cv2.putText(self.image, 'Green Light', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             else:
-                self.write_status.write_data(f"No Light")
                 cv2.putText(self.image, 'No Light', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
         except Exception as e:
             print(f"Error in color detection service: {e}")
 
     def traffic_light_detection_service(self, image):
         try:
-            cropped_image = self.traffic_light_detection.detect_traffic_lights_image(image, display=False)
-            if cropped_image is None:
-                return None
+            traffic_light_detection = TrafficLightDetector(self.template_paths)
+
+            cropped_image = traffic_light_detection.detect_traffic_lights_image(image, display=False)
+            if cropped_image is not None:
+                self.color_detection_service(cropped_image)
             else:
-                return cropped_image
+                print("No any traffic light detected")
         except Exception as e:
             print(f"Error in traffic light detection service: {e}")
-            return None
-
-    def image_path_update(self, image_path):
-        self.latest_image_path = image_path
 
     def process_image(self):
-        if self.latest_image_path is not None:
-            image = cv2.imread(self.latest_image_path)
+        while self.thread_running:
+            image_list = sorted(os.listdir(self.image_directory))
+            for image_path in image_list:
 
-            with ThreadPoolExecutor(max_workers=10) as executor:
-                try:
-                    future = executor.submit(self.traffic_light_detection_service, image)
-                    cropped_image = future.result()
-                    if cropped_image is not None:
-                        future = executor.submit(self.color_detection_service, cropped_image)
-                        future.result()
+                self.latest_image_path = os.path.join(self.image_directory, image_path)
 
-                        print(f"Processing image {self.latest_image_path}")
-                        print("-----------------------------------------------------------------------\n")
-                        if self.display:
-                            cv2.namedWindow('Traffic Light Detection', cv2.WINDOW_NORMAL)
-                            cv2.imshow('Traffic Light Detection', image)
-                            if cv2.waitKey(1) & 0xFF == ord('q'):
-                                return
+                self.image = cv2.imread(self.latest_image_path)
+                if self.image is not None and self.thread_running:
+                    self.traffic_light_detection_service(self.image)
+                    print(f"Processing image {self.latest_image_path}")
+                    print("-----------------------------------------------------------------------\n")
+                    os.remove(self.latest_image_path)
+                    if self.display and self.thread_running:  # Add check here
+                        cv2.namedWindow('Traffic Light Detection', cv2.WINDOW_NORMAL)
+                        cv2.imshow('Traffic Light Detection', self.image)
+                        if cv2.waitKey(1) & 0xFF == ord('q'):
+                            return
+                else:
+                    print("Error reading image")
 
-                    else:
-                        print("**********************************************************************\n")
-                        print(f"No any traffic light detected")
-                except Exception as e:
-                    print(f"Error processing image {self.latest_image_path}: {e}")
+    def start(self):
+        self.thread_running = True
+        self.process = multiprocessing.Process(target=self.process_image)
+        self.process.start()
 
-        else:
-            print("Image Path None")
+    def stop(self):
+        print("Stopping the process...")
+        if self.thread_running:
+            if self.process.is_alive():
+                self.process.terminate()
+                self.process.join()
+
+        self.thread_running = False
+        print("Exiting the program...")
+        sys.exit()
 
 
 if __name__ == '__main__':
     template_paths = ['services_trinetra/trafficlight/resources/template_images/template1.png',
                       'services_trinetra/trafficlight/resources/template_images/template2.png',
                       'services_trinetra/trafficlight/resources/template_images/template3.png']
-    image_path = "services_trinetra/trafficlight/resources/rtsp/2024-02-27 22:29:24_6.jpg"
-    if os.path.exists(image_path):
-        print("Image exists")
-    else:
-        print("Image does not exist")
+    image_directory = "services_trinetra/trafficlight/resources/rtsp"
+    red_light_detected = "services_trinetra/trafficlight/resources/red_light_detected"
 
-    traffic_light_violated_vehicles_images_dir = "services_trinetra/trafficlight/resources/vehicle_detected"
+    if not os.path.exists(image_directory):
+        print("Image directory does not exist")
+        exit(10)
 
-    try:
-        traffic_light_detector = TrafficLightColorDetection(
-            template_paths,
-            traffic_light_result_file_path='services_trinetra/trafficlight/resources/flag_check/light_status',
-            display=True
-        )
-        traffic_light_detector.image_path_update(image_path)
-        traffic_light_detector.process_image()
-    except Exception as e:
-        print(f"Error in main: {e}")
+    traffic_light_detector = TrafficLightColorDetection(
+        template_paths=template_paths,
+        image_directory=image_directory,
+        red_light_detected=red_light_detected,
+        display=False
+    )
+    traffic_light_detector.start()
+    time.sleep(1)
+    traffic_light_detector.stop()

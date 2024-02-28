@@ -1,10 +1,6 @@
 """
 Created By: ishwor subedi
-Date: 2024-02-27
-"""
-"""
-Created By: ishwor subedi
-Date: 2024-02-05
+Date: 2024-02-28
 """
 
 
@@ -16,7 +12,6 @@ def update_file(flag_path):
         print(f"Error updating flag file: {e}")
 
 
-
 if __name__ == '__main__':
-    file_path = 'services_trinetra/trafficlight/resources/flag_check/traffic_light.txt'
+    file_path = 'services_trinetra/trafficlight/resources/flag_check/number_plate_status'
     update_file(file_path)

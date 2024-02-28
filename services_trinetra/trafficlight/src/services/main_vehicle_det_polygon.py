@@ -1,71 +1,129 @@
-import os
 import threading
+import os
+import sys
 import time
 
 import cv2
 import numpy as np
 from services_trinetra.trafficlight.src.services.detection.vehicle_detection import VehicleDetectionServices
+import warnings
+
+warnings.filterwarnings("ignore")
 
 
 class VehicleDetectionPolygon:
-    def __init__(self, polygon_points, model_path, output_folder, display: bool):
+    def __init__(self, polygon_points, model_path, output_folder, non_detected_images, red_light_detected,
+                 display: bool, red_light_vehicle_detected_path, red_light_vehicle_non_detected_path):
         self.polygon_points = polygon_points
-        self.image_path = None
         self.display = display
-        self.output_folder = output_folder
-        self.model_instance = VehicleDetectionServices(model_path)
-        self.running = False
-        self.vehicle_polygon_detection = None
+        self.detected_image_dir = output_folder
+        self.non_detected_images = non_detected_images
 
-    def image_path_update(self, image_path):
-        self.image_path = image_path
+        self.model_instance = VehicleDetectionServices(model_path)
+        self.thread_running = False
+        self.vehicle_polygon_detection = None
+        self.red_light_detected = red_light_detected
+
+        self.latest_image_path = None
+        self.process = None
+        self.red_light_vehicle_detected_path = red_light_vehicle_detected_path
+        self.red_light_vehicle_non_detected_path = red_light_vehicle_non_detected_path
+
+    def image_save(self, image, image_path):
+        cv2.imwrite(image_path, image)
 
     def polygon_detection(self):
-        image = cv2.imread(self.image_path)
-        if image is None:
-            print("Image not found")
-            return
+        while self.thread_running:
 
-        cv2.polylines(image, [self.polygon_points], True, (0, 255, 255), 2)
+            image_lists = os.listdir(self.red_light_detected)
+            for image_path in image_lists:
+                self.latest_image_path = os.path.join(self.red_light_detected, image_path)
 
-        results = self.model_instance.detect_vehicle_image(image_path=self.image_path, confidence_threshold=0.5,
-                                                           nms_threshold=0.5)
-        desired_classes = [0, 1, 2, 3, 4]
-        if results:
-            for prediction in results:
-                bboxes = prediction.boxes.xyxy
-                labels = prediction.boxes.cls
+                image = cv2.imread(self.latest_image_path)
 
-                for id, (bbox, label) in enumerate(zip(bboxes, labels)):
-                    if label in desired_classes:
-                        x1, y1, x2, y2 = bbox.int().tolist()
-                        start_point = (x1, y1)
-                        if cv2.pointPolygonTest(self.polygon_points, start_point, False) >= 0:
-                            cropped = image[y1:y2, x1:x2]
-                            cv2.rectangle(image, (x1, y1), (x2, y2), (0, 0, 255), 2)
-                            cv2.putText(image, f'Detected', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9,
-                                        (0, 0, 255), 1)
-                            base_name_without_ext = os.path.splitext(os.path.basename(self.image_path))[0]
-                            new_image_path = os.path.join(self.output_folder, f'{base_name_without_ext}_{id}.jpg')
-                            cv2.imwrite(new_image_path, cropped)
-                            print(f"Vehicle detected inside the polygon: {new_image_path}")
+                try:
+                    results = self.model_instance.detect_vehicle_image(image_path=self.latest_image_path,
+                                                                       confidence_threshold=0.5,
+                                                                       nms_threshold=0.5)
+                except FileNotFoundError:
+                    print(f"File not found: {self.latest_image_path}")
+                    continue
 
-                        if self.display:
-                            cv2.imshow('Polygon and Detected Vehicles', image)
-                            cv2.waitKey(0)
-                            cv2.destroyAllWindows()
+                desired_classes = [0, 1, 2, 3, 4]
+                detected = False
+                if results and self.thread_running:
+                    for prediction in results:
+                        bboxes = prediction.boxes.xyxy
+                        labels = prediction.boxes.cls
 
-            else:
-                print(f"Vehicle is not inside the polygon{image_path}")
+                        for id, (bbox, label) in enumerate(zip(bboxes, labels)):
+                            if label in desired_classes:
+                                x1, y1, x2, y2 = bbox.int().tolist()
+                                start_point = (x1, y1)
+                                if cv2.pointPolygonTest(self.polygon_points, start_point,
+                                                        False) >= 0 and self.thread_running:
+                                    cropped = image[y1:y2, x1:x2]
+
+                                    base_name_without_ext = os.path.splitext(os.path.basename(self.latest_image_path))[
+                                        0]
+                                    new_image_path = os.path.join(self.detected_image_dir,
+                                                                  f'{base_name_without_ext}_{id}.jpg')
+                                    self.image_save(cropped, new_image_path)
+                                    with open(self.red_light_vehicle_detected_path, 'a') as file:
+                                        file.write(f"Detected_image_path:{new_image_path}\n")
+                                    print(f"Vehicle detected inside the polygon: {new_image_path}")
+                                    detected = True
+
+                else:
+                    pass
+                    print("No vehicle detected")
+
+                if not detected and self.thread_running:
+                    base_name_without_ext = os.path.splitext(os.path.basename(self.latest_image_path))[0]
+                    new_image_path = os.path.join(self.non_detected_images, f'{base_name_without_ext}.jpg')
+                    with open(self.red_light_vehicle_non_detected_path, 'a') as file:
+                        file.write(f"Non_detected_image_path:{new_image_path}\n")
+                    if image is not None:
+                        cv2.imwrite(new_image_path, image)
+                    else:
+                        pass
+
+                os.remove(self.latest_image_path)
+        time.sleep(0.01)
+
+    def start(self):
+        self.thread_running = True
+        self.process = threading.Thread(target=self.polygon_detection)
+        self.process.start()
+
+    def stop(self):
+        print("Stopping the process...")
+        if self.thread_running:
+            self.thread_running = False
+            self.process.join()
+        else:
+            print("Thread is not running")
+
+        print("Exiting the program...")
+        sys.exit()
 
 
 if __name__ == '__main__':
     polygon_points = np.array([(615, 340), (909, 346), (1006, 437), (631, 461)])
     model_path = "services_trinetra/trafficlight/resources/vehicle_detection/yolov8n.pt"
-    image_path = "/home/ishwor/Desktop/alpr_speed_traffic/services_trinetra/trafficlight/resources/rtsp/2024-02-28 10:56:46_7.jpg"
-    output_folder = "services_trinetra/trafficlight/resources/vehicle_detected"
-    display = True
-    vehicle_detector = VehicleDetectionPolygon(polygon_points, model_path, output_folder=output_folder,
-                                               display=display)
-    vehicle_detector.image_path_update(image_path)
-    vehicle_detector.polygon_detection()
+    red_light_detected = "services_trinetra/trafficlight/resources/red_light_detected"
+    detected_images = "services_trinetra/trafficlight/output/vehicle_detection/detected"
+    non_detected_images = "services_trinetra/trafficlight/output/vehicle_detection/non_detected"
+    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path"
+    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path"
+
+    display = False
+    vehicle_detector = VehicleDetectionPolygon(polygon_points, model_path, output_folder=detected_images,
+                                               non_detected_images=non_detected_images,
+                                               red_light_detected=red_light_detected,
+                                               display=display,
+                                               red_light_vehicle_detected_path=red_light_detected_path,
+                                               red_light_vehicle_non_detected_path=red_light_non_detected_path)
+    vehicle_detector.start()
+    time.sleep(2)
+    vehicle_detector.stop()

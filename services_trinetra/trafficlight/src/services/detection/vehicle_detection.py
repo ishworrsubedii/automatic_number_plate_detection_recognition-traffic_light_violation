@@ -14,9 +14,12 @@ class VehicleDetectionServices:
         self.obj = DetectionService(config)
 
     def detect_vehicle_image(self, image_path, confidence_threshold: float, nms_threshold: float):
-        results = self.obj.detect_image(image_path, confidence_threshold, nms_threshold, display=False)
 
-        return results
+        results = self.obj.detect_image(image_path, confidence_threshold, nms_threshold, display=False)
+        if results is None:
+            return None
+        else:
+            return results
 
     def detect_vehicle_video(self, video_path: str, display: bool, confidence_threshold: float, nms_threshold: float):
         results = self.obj.detect_video(video_path, display, confidence_threshold, nms_threshold)

@@ -19,6 +19,6 @@ class StopImageCaptureTrafficLight:
 
 
 if __name__ == "__main__":
-    STOP_FLAG_PATH = "services_trinetra/trafficlight/resources/flag_check/traffic_light_capture_status.txt"
+    STOP_FLAG_PATH = "services_trinetra/trafficlight/resources/flag_check/capture.txt"
     stop_service = StopImageCaptureTrafficLight(STOP_FLAG_PATH)
     stop_service.stop_image_capture_service()

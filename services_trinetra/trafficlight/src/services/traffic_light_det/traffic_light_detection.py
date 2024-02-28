@@ -109,7 +109,7 @@ class TrafficDetectionService:
 
 if __name__ == '__main__':
     object_instance = TrafficDetectionService(
-        model_path='services_trinetra/trafficlight/resources/vehicle_detection/traffic_light.pt')
+        model_path='services_trinetra/trafficlight/resources/vehicle_detection/traffic_light.txt.pt')
 
     # Detect video
     # video_path = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103702.mp4'

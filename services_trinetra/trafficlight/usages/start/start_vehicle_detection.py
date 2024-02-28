@@ -2,48 +2,122 @@
 Created By: ishwor subedi
 Date: 2024-02-27
 """
-import os
 
-import cv2
+import os
+import time
+
 import numpy as np
 
-from services_trinetra.trafficlight.src.services.draw.draw_line import DrawService
+from services_trinetra.trafficlight.src.services.main_vehicle_det_polygon import VehicleDetectionPolygon
 
 
-def vehicle_detection_service(self, filename):
-    image_path = os.path.join(self.image_dir, filename)
-    image = cv2.imread(image_path)
-    mask = np.zeros_like(image)
-    cv2.fillPoly(mask, np.array([self.polygon_points], dtype=np.int32), 255)
+class StartVehicleDetectionExample:
+    def __init__(self,
+                 flag_path, polygon_points, model_path, detected_images, non_detected_images, red_light_detected,
+                 display, red_light_vehicle_detected_path, red_light_vehicle_non_detected_path):
 
-    masked_image = cv2.bitwise_and(image, mask)
+        self.flag_path = flag_path
+        self.polygon_points = polygon_points
+        self.model_path = model_path
+        self.detected_images = detected_images
+        self.non_detected_images = non_detected_images
 
-    image_with_polygon = self.draw_service(masked_image)
+        self.red_light_detected = red_light_detected
+        self.display = display
 
-    results = self.vehicle_detection.detect_image(image_with_polygon, confidence_threshold=0.5, nms_threshold=0.4)
-    if results:
-        for prediction in results:
-            bboxes = prediction.boxes.xyxy
+        self.running = False
+        self.red_light_vehicle_detected_path = red_light_vehicle_detected_path
+        self.red_light_vehicle_non_detected_path = red_light_vehicle_non_detected_path
 
-            for i, bbox in enumerate(bboxes):
-                multiple_plates = len(bboxes) > 1
-                try:
-                    bbox = bbox.int().tolist()
-                    x1, y1, x2, y2 = bbox
-                    cropped = prediction.orig_img[y1:y2, x1:x2]
+    def create_stop_flag(self):
+        try:
+            with open(self.flag_path, 'w') as flag_file:
+                flag_file.write('False')
+        except Exception as e:
+            print(f"Error creating stop flag: {e}")
 
-                    if multiple_plates:
-                        filename = f'{self.filename}_plate_{i + 1}.jpg'
+    def check_stop_flag(self):
+        try:
+            if os.path.exists(self.flag_path):
+                with open(self.flag_path, 'r') as flag_file:
+                    content = flag_file.read().strip()
+                    return content.lower() == "true"
+            else:
+                return False
+        except Exception as e:
+            print(f"Error checking stop flag: {e}")
+            return False
+
+    def update_stop_flag(self, value):
+        try:
+            with open(self.flag_path, 'w') as flag_file:
+                flag_file.write(str(value))
+        except Exception as e:
+            print(f"Error updating stop flag: {e}")
+
+    def start_service(self):
+        try:
+            self.running = True
+            vehicle_detector = VehicleDetectionPolygon(polygon_points=self.polygon_points, model_path=self.model_path,
+                                                       output_folder=self.detected_images,
+                                                       non_detected_images=self.non_detected_images,
+                                                       red_light_detected=self.red_light_detected,
+                                                       display=self.display,
+                                                       red_light_vehicle_non_detected_path=self.red_light_vehicle_non_detected_path,
+                                                       red_light_vehicle_detected_path=self.red_light_vehicle_detected_path
+                                                       )
+            vehicle_detector.start()
+            print("Vehicle detection service successfully started")
+
+            while self.running:
+                time.sleep(1)
+                stop_flag = self.check_stop_flag()
+
+                if stop_flag:
+                    self.running = False
+                    stop_successful = vehicle_detector.stop()
+                    if stop_successful:
+                        print("Vehicle detection services successfully stopped.")
                     else:
-                        filename = f'{self.filename}.jpg'
+                        print("Issue encountered while stopping vehicle detection services.")
 
-                    cv2.imwrite(os.path.join(self.traffic_light_violated_vehicles_images_dir, filename), cropped)
+        except Exception as e:
+            print(f"Error starting vehicle detection services: {e}")
+        finally:
+            if 'vehicle_detector_detector' in locals():
+                stop_successful = vehicle_detector.stop()
+                if stop_successful:
+                    print("Vehicle detection service successfully stopped in finally block.")
+                else:
+                    print(
+                        "Issue encountered while stopping vehicle detection services in finally block.")
 
-                except:
-                    print('No plate detected')
+    def stop_service(self):
+        self.update_stop_flag("True")
 
 
-def draw_service(self, image):
-    draw_service = DrawService(image)
-    draw_service.draw_polygon(self.polygon_points, color=(255, 0, 0), thickness=1)
-    return draw_service.image
+if __name__ == '__main__':
+    flag_path = "services_trinetra/trafficlight/resources/flag_check/vehicle_det.txt"
+    polygon_points = np.array([(615, 340), (909, 346), (1006, 437), (631, 461)])
+    model_path = "services_trinetra/trafficlight/resources/vehicle_detection/yolov8n.pt"
+    red_light_detected = "services_trinetra/trafficlight/resources/red_light_detected"
+    detected_images = "services_trinetra/trafficlight/output/vehicle_detection/detected"
+    non_detected_images = "services_trinetra/trafficlight/output/vehicle_detection/non_detected"
+    display = False
+    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path"
+    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path"
+
+    vehicle_detector_server = StartVehicleDetectionExample(
+        flag_path=flag_path,
+        polygon_points=polygon_points,
+        model_path=model_path,
+        detected_images=detected_images,
+        non_detected_images=non_detected_images,
+        red_light_detected=red_light_detected,
+        display=display,
+        red_light_vehicle_detected_path=red_light_detected_path,
+        red_light_vehicle_non_detected_path=red_light_non_detected_path
+
+    )
+    vehicle_detector_server.create_stop_flag()
+    vehicle_detector_server.start_service()
