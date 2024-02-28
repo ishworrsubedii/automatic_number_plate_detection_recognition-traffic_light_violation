@@ -7,7 +7,11 @@ from .views import (ImageCaptureStartView, ImageCaptureStopView,
                     TrafficLightColorDetectionStartView, TrafficLightColorDetectionStopView,
                     VehicleDetectionPolygonStartView, VehicleDetectionPolygonStopView,
                     NumberPlateDetectionStartView, NumberPlateDetectionStopView,
-                    AutomaticNumberPlateRecogniztionStartView, AutomaticNumberPlateRecogniztionStopView)
+                    AutomaticNumberPlateRecogniztionStartView, AutomaticNumberPlateRecogniztionStopView,
+                    CaptureStatusView, ColorDetectionStatusView, VehicleDetectionStatusView,
+                    NumberPlateDetectionStatusView, NumberPlateRecognitionStatusView, RedLightViolatedVehiclesListView,
+                    VehicleNotDetectedImageView, ALPRRecognitionResultView, ALPRRecognizedImageView,
+                    ALPRNonRecognizedImageView)
 
 urlpatterns = [
     path('image_capture/start/', ImageCaptureStartView.as_view(), name='image_capture_start'),
@@ -28,5 +32,22 @@ urlpatterns = [
          name='alpr_start'),
     path('alpr/stop/', AutomaticNumberPlateRecogniztionStopView.as_view(),
          name='alpr_stop'),
+
+    # get requests
+
+    path('capture-status/', CaptureStatusView.as_view(), name='capture-status'),
+    path('color-detection-status/', ColorDetectionStatusView.as_view(), name='color-detection-status'),
+    path('vehicle-detection-status/', VehicleDetectionStatusView.as_view(), name='vehicle-detection-status'),
+    path('number-plate-detection-status/', NumberPlateDetectionStatusView.as_view(),
+         name='number-plate-detection-status'),
+    path('number-plate-recognition-status/', NumberPlateRecognitionStatusView.as_view(),
+         name='number-plate-recognition-status'),
+    path('red-light-violated-vehicles-list/', RedLightViolatedVehiclesListView.as_view(),
+         name='red-light-violated-vehicles-list'),
+    path('vehicle-not-detected-image-list/', VehicleNotDetectedImageView.as_view(),
+         name='vehicle-not-detected-image-list'),
+    path('alpr-recognition-result/', ALPRRecognitionResultView.as_view(), name='alpr-recognition-result'),
+    path('alpr-recognized-images/', ALPRRecognizedImageView.as_view(), name='alpr-recognized-images'),
+    path('alpr-non-recognized-images/', ALPRNonRecognizedImageView.as_view(), name='alpr-non-recognized-images'),
 
 ]

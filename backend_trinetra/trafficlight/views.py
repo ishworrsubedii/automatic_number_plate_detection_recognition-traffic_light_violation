@@ -6,6 +6,30 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import SessionAuthentication
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from .trafficlightservices import TrafficLightViolationService
+from .serializers import (
+    ImageCaptureSerializer,
+    TrafficlightColorDetectionSerializer,
+    VehicleDetectionSerializer,
+    NumberPlateDetectionSerializer,
+    NumberPlateRecognitionSerializer,
+    RedLightViolatedVehiclesListSerializer,
+    VehicleNotDetectedImageListSerializer,
+    ALPRRecognitionResultSerializer,
+    ALPRRecognizedImageSerializer,
+    ALPRNonRecognizedImageSerializer,
+)
+from .models import (
+    ImageCaptureDatabaseTrafficLight,
+    TrafficlightColorDetectionTrafficlight,
+    VehicleDetectionTrafficLight,
+    NumberPlateDetectionTrafficLight,
+    NumberPlateRecognitionTrafficLight,
+    RedLightViolatedVehiclesListTrafficLight,
+    VehicleNotDetectedImageListDatabaseTrafficLight,
+    ALPRRecognitionResultDatabaseTrafficLight,
+    ALPRRecognizedImageDatabaseTrafficLight,
+    ALPRNonRecognizedImageDatabaseTrafficLight,
+)
 
 
 class CsrfExemptSessionAuthentication(SessionAuthentication):
@@ -144,3 +168,114 @@ class AutomaticNumberPlateRecogniztionStopView(APIView):
     def post(self, request, *args, **kwargs):
         traffic_light_services.stop_automatic_number_plate_recognition()
         return Response({"message": "Automatic number plate recognition stopped"}, status=status.HTTP_200_OK)
+
+
+# Get Request
+class CaptureStatusView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        captures = ImageCaptureDatabaseTrafficLight.objects.all()
+        serializer = ImageCaptureSerializer(captures, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ColorDetectionStatusView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        detections = TrafficlightColorDetectionTrafficlight.objects.all()
+        serializer = TrafficlightColorDetectionSerializer(detections, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class VehicleDetectionStatusView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        detections = VehicleDetectionTrafficLight.objects.all()
+        serializer = VehicleDetectionSerializer(detections, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class NumberPlateDetectionStatusView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        detections = NumberPlateDetectionTrafficLight.objects.all()
+        serializer = NumberPlateDetectionSerializer(detections, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class NumberPlateRecognitionStatusView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        recognitions = NumberPlateRecognitionTrafficLight.objects.all()
+        serializer = NumberPlateRecognitionSerializer(recognitions, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class RedLightViolatedVehiclesListView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        violations = RedLightViolatedVehiclesListTrafficLight.objects.all()
+        serializer = RedLightViolatedVehiclesListSerializer(violations, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class VehicleNotDetectedImageView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        images = VehicleNotDetectedImageListDatabaseTrafficLight.objects.all()
+        serializer = VehicleNotDetectedImageListSerializer(images, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ALPRRecognitionResultView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        results = ALPRRecognitionResultDatabaseTrafficLight.objects.all()
+        serializer = ALPRRecognitionResultSerializer(results, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ALPRRecognizedImageView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        images = ALPRRecognizedImageDatabaseTrafficLight.objects.all()
+        serializer = ALPRRecognizedImageSerializer(images, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ALPRNonRecognizedImageView(APIView):
+    authentication_classes = [JWTAuthentication, CsrfExemptSessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    @csrf_exempt
+    def get(self, request):
+        images = ALPRNonRecognizedImageDatabaseTrafficLight.objects.all()
+        serializer = ALPRNonRecognizedImageSerializer(images, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

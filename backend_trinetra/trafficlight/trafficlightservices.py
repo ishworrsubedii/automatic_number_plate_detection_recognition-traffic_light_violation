@@ -2,9 +2,11 @@
 Created By: ishwor subedi
 Date: 2024-02-28
 """
+import threading
 import time
 import re
-import os
+from datetime import datetime
+
 from django.utils import timezone
 import numpy as np
 from services.trafficlight.usages.start.start_image_capture_traffic_light import StartImageCaptureTrafficLight
@@ -20,6 +22,11 @@ from services.trafficlight.usages.stop.stop_traffic_color_light_detection import
 from services.trafficlight.usages.stop.stop_vehicle_detection import stop_vehicle_detection
 from services.trafficlight.usages.start.start_number_plate_det import StartImageLoadExample
 from services.trafficlight.usages.start.start_alpr import StartAlprExample
+
+from .models import ALPRRecognitionResultDatabaseTrafficLight, ALPRRecognizedImageDatabaseTrafficLight, \
+    ALPRNonRecognizedImageDatabaseTrafficLight, ImageCaptureDatabaseTrafficLight, NumberPlateRecognitionTrafficLight, \
+    NumberPlateDetectionTrafficLight, VehicleDetectionTrafficLight, RedLightViolatedVehiclesListTrafficLight, \
+    VehicleNotDetectedImageListDatabaseTrafficLight, TrafficlightColorDetectionTrafficlight
 
 
 class TrafficLightViolationService:
@@ -66,7 +73,16 @@ class TrafficLightViolationService:
         self.ANPR_RECOGNIZED_IMAGES_FILE_NAME_TXT = "services/trafficlight/output/paddleocr_output/recognized_images_paths.txt"
         self.ANPR_NON_RECOGNIZED_IMAGES_FILE_NAME_TXT = "services/trafficlight/output/paddleocr_output/non_recognized_images_paths.txt"
 
+        self.save_recognition_info_traffic_light = None
+        self.start_recognition_info_traffic_light = None
+        self.save_recognition_images_traffic_light = None
+        self.save_non_recognition_images_traffic_light = None
+        self.traffic_light_violated_image_save = None
+        self.vehicle_non_detected_inside_polygon_save = None
+
     def start_image_capture_traffic_light(self):
+        image_capture_database_traffic_violation = ImageCaptureDatabaseTrafficLight(status="in_progress")
+        image_capture_database_traffic_violation.save()
         image_capture_service = StartImageCaptureTrafficLight(self.CAPTURE_FLAG_PATH, self.SOURCE,
                                                               self.IMAGE_PATH_TO_SAVE,
                                                               self.IMAGE_HASH_THRESHOLD)
@@ -75,10 +91,16 @@ class TrafficLightViolationService:
         time.sleep(1)
 
     def stop_image_capture_traffic_light(self):
+        image_capture_database_traffic_violation = ImageCaptureDatabaseTrafficLight.objects.latest('id')
+        image_capture_database_traffic_violation.stopped_at = timezone.now()
+        image_capture_database_traffic_violation.status = "stopped"
+        image_capture_database_traffic_violation.save()
         stop_service = StopImageCaptureTrafficLight(self.CAPTURE_FLAG_PATH)
         stop_service.stop_image_capture_service()
 
     def start_traffic_light_color_detection(self):
+        color_traffic_light_detection_traffic_violation = TrafficlightColorDetectionTrafficlight(status="in_progress")
+        color_traffic_light_detection_traffic_violation.save()
         start_traffic_light_color_detection = StartTrafficLightColorDetectionExample(template_paths=self.TEMPLATE_PATHS,
                                                                                      image_directory=self.IMAGE_PATH_TO_SAVE,
                                                                                      display=self.TRAFFIC_LIGHT_DISPLAY,
@@ -89,9 +111,15 @@ class TrafficLightViolationService:
         start_traffic_light_color_detection.start_service()
 
     def stop_traffic_light_color_detection(self):
+        color_traffic_light_detection_traffic_violation = TrafficlightColorDetectionTrafficlight.objects.latest('id')
+        color_traffic_light_detection_traffic_violation.stopped_at = timezone.now()
+        color_traffic_light_detection_traffic_violation.status = "stopped"
+        color_traffic_light_detection_traffic_violation.save()
         stop_traffic_color_light_detection(self.TRAFFIC_LIGHT_FLAG_PATH)
 
     def start_vehicle_detection_polygon(self):
+        vehicle_detection_traffic_violation = VehicleDetectionTrafficLight(status="in_progress")
+        vehicle_detection_traffic_violation.save()
         vehicle_detector_server = StartVehicleDetectionExample(
             flag_path=self.VEHICLE_DETECTION_FLAG_PATH,
             polygon_points=self.POLYGON_POINTS,
@@ -108,9 +136,15 @@ class TrafficLightViolationService:
         vehicle_detector_server.start_service()
 
     def stop_vehicle_detection_polygon(self):
+        vehicle_detection_traffic_violation = VehicleDetectionTrafficLight.objects.latest('id')
+        vehicle_detection_traffic_violation.stopped_at = timezone.now()
+        vehicle_detection_traffic_violation.status = "stopped"
+        vehicle_detection_traffic_violation.save()
         stop_vehicle_detection(self.VEHICLE_DETECTION_FLAG_PATH)
 
     def start_number_plate_detection(self):
+        number_plate_detection_traffic_violation = NumberPlateDetectionTrafficLight(status="in_progress")
+        number_plate_detection_traffic_violation.save()
         image_load_service = StartImageLoadExample(flag_path=self.NUMBER_PLATE_DETECTION_FLAG,
                                                    image_dir=self.VEHICLE_DETECTED_IMAGE_DIR,
                                                    model_path=self.NUMBER_PLATE_DETECTION_MODEL_PATH,
@@ -120,9 +154,145 @@ class TrafficLightViolationService:
         time.sleep(1)
 
     def stop_number_plate_detection(self):
+        number_plate_detection_traffic_violation = NumberPlateDetectionTrafficLight.objects.latest('id')
+        number_plate_detection_traffic_violation.stopped_at = timezone.now()
+        number_plate_detection_traffic_violation.status = "stopped"
+        number_plate_detection_traffic_violation.save()
         stop_number_plate_detection(self.NUMBER_PLATE_DETECTION_FLAG)
 
+    def save_vehicle_detected_image(self):
+        while True:
+            with open(self.RED_LIGHT_DETECTED_IMAGE_FILE_TXT, 'r+') as recognized_images_file:
+                lines = recognized_images_file.readlines()
+                if lines:
+                    line = lines[0]
+                    detected_image_path_line = re.search(r'Detected_image_path:(.*)', line)
+                    if detected_image_path_line:
+                        red_light_violated_vehicles = detected_image_path_line.group(1).strip()
+                        traffic_light_violated_img = RedLightViolatedVehiclesListTrafficLight()
+                        traffic_light_violated_img.traffic_light_violated_images = red_light_violated_vehicles
+                        try:
+                            pass
+                            traffic_light_violated_img.save()
+                        except Exception as e:
+                            print(f"Error saving recognized image: {e}")
+
+                    del lines[0]
+                    time.sleep(2)
+                    recognized_images_file.seek(0)
+                    recognized_images_file.truncate()
+                    recognized_images_file.writelines(lines)
+
+    def save_vehicle_non_detected_image(self):
+        while True:
+            with open(self.RED_LIGHT_NON_DETECTED_IMAGE_FILE_TXT, 'r+') as non_recognized_images_file:
+                lines = non_recognized_images_file.readlines()
+                if lines:
+                    line = lines[0]
+                    non_detected_image_path_line = re.search(r'Non_detected_image_path:(.*)', line)
+
+                    if non_detected_image_path_line:
+                        non_recognized_image_path = non_detected_image_path_line.group(1).strip()
+                        non_detected_vehicle_images_list = VehicleNotDetectedImageListDatabaseTrafficLight()
+                        non_detected_vehicle_images_list.vehicle_not_detected_images = non_recognized_image_path
+                        try:
+                            non_detected_vehicle_images_list.save()
+                            pass
+                        except Exception as e:
+                            print(f"Error saving non recognized image: {e}")
+
+                    del lines[0]
+                    time.sleep(2)
+                    non_recognized_images_file.seek(0)
+                    non_recognized_images_file.truncate()
+                    non_recognized_images_file.writelines(lines)
+
+    def save_recognized_image(self):
+        while True:
+            with open(self.ANPR_RECOGNIZED_IMAGES_FILE_NAME_TXT, 'r+') as recognized_images_file:
+                lines = recognized_images_file.readlines()
+                if lines:
+                    line = lines[0]
+                    recognized_image_path_line = re.search(r'Recognized_image_path:(.*)', line)
+                    if recognized_image_path_line:
+                        recognized_image_path = recognized_image_path_line.group(1).strip()
+                        recognized_alpr_images_list = ALPRRecognizedImageDatabaseTrafficLight()
+                        recognized_alpr_images_list.recognized_image_path = recognized_image_path
+                        try:
+                            pass
+                            recognized_alpr_images_list.save()
+                        except Exception as e:
+                            print(f"Error saving recognized image: {e}")
+
+                    del lines[0]
+                    time.sleep(2)
+                    recognized_images_file.seek(0)
+                    recognized_images_file.truncate()
+                    recognized_images_file.writelines(lines)
+
+    def save_non_recognized_image(self):
+        while True:
+            with open(self.ANPR_NON_RECOGNIZED_IMAGES_FILE_NAME_TXT, 'r+') as non_recognized_images_file:
+                lines = non_recognized_images_file.readlines()
+                if lines:
+                    line = lines[0]
+                    non_recognized_image_path_line = re.search(r'Non_Recognized_image_path:(.*)', line)
+
+                    if non_recognized_image_path_line:
+                        non_recognized_image_path = non_recognized_image_path_line.group(1).strip()
+                        non_recognized_alpr_images_list = ALPRNonRecognizedImageDatabaseTrafficLight()
+                        non_recognized_alpr_images_list.non_recognized_image_path = non_recognized_image_path
+                        try:
+                            non_recognized_alpr_images_list.save()
+                            pass
+                        except Exception as e:
+                            print(f"Error saving non recognized image: {e}")
+
+                    del lines[0]
+                    time.sleep(2)
+                    non_recognized_images_file.seek(0)
+                    non_recognized_images_file.truncate()
+                    non_recognized_images_file.writelines(lines)
+
+    def save_recognition_info(self):
+        while True:
+            with open(self.ANPR_RESULT_PATH, 'r+') as result_file:
+                lines = result_file.readlines()
+                if lines:
+                    line = lines[0]
+                    image_path_match = re.search(r'Image_path:(.*?),', line)
+                    text_match = re.search(r'Text: (.*?),', line)
+                    score_match = re.search(r'Score: (.*?),', line)
+                    date_match = re.search(r'Date_recognized:(.*)$', line)
+                    if image_path_match and text_match and score_match and date_match:
+                        recognized_info_database = ALPRRecognitionResultDatabaseTrafficLight()
+                        current_day = datetime.now().strftime('%d')
+                        recognized_info_database.violation_id = 'TFF-ALPR' + date_match.group(1)[:4] + current_day
+                        recognized_info_database.image_path = image_path_match.group(1).strip()
+                        recognized_info_database.recognized_info = text_match.group(1).strip()
+                        recognized_info_database.accuracy = score_match.group(1).strip()
+                        recognized_info_database.date = date_match.group(1).strip()
+                        recognized_info_database.recognized_info = 'Traffic Light Violation'
+                        recognized_info_database.status = 'done'
+                        try:
+                            recognized_info_database.save()
+
+                        except Exception as e:
+                            print(f"Error saving recognition info: {e}")
+
+                    del lines[0]
+                    time.sleep(2)
+                    result_file.seek(0)
+                    result_file.truncate()
+                    result_file.writelines(lines)
+
     def start_automatic_number_plate_recognition(self):
+        try:
+            alpr_recognition_traffic_violation = NumberPlateRecognitionTrafficLight(status="in_progress")
+            alpr_recognition_traffic_violation.save()
+        except Exception as e:
+            print(f"Error saving alpr recognition status: {e}")
+
         start_alpr = StartAlprExample(det_model=self.ANPR_DET_MODEL_PATH, recognition_model=self.ANPR_REC_MODEL_PATH,
                                       rec_char_dict=self.REC_CHAR_DIR,
                                       detected_img_dir=self.NUMBER_PLATE_DETECTED_IMAGE_SAVE_DIR,
@@ -137,6 +307,44 @@ class TrafficLightViolationService:
         start_alpr.create_stop_flag()
         start_alpr.start_service()
 
+    def start_recognize_plate(self):
+        try:
+            self.save_recognition_info_traffic_light = threading.Thread(target=self.save_recognition_info)
+            self.start_recognition_info_traffic_light = threading.Thread(
+                target=self.start_automatic_number_plate_recognition)
+            self.save_recognition_images_traffic_light = threading.Thread(target=self.save_recognized_image)
+            self.save_non_recognition_images_traffic_light = threading.Thread(target=self.save_non_recognized_image)
+            self.traffic_light_violated_image_save = threading.Thread(target=self.save_vehicle_detected_image)
+            self.vehicle_non_detected_inside_polygon_save = threading.Thread(
+                target=self.save_vehicle_non_detected_image)
+
+            self.save_recognition_info_traffic_light.start()
+            self.start_recognition_info_traffic_light.start()
+            self.traffic_light_violated_image_save.start()
+            self.vehicle_non_detected_inside_polygon_save.start()
+            self.save_recognition_images_traffic_light.start()
+            self.save_non_recognition_images_traffic_light.start()
+        except Exception as e:
+            print(f"Error starting ALPR services: {e}")
+        finally:
+            self.save_recognition_info_traffic_light.join()
+            self.start_recognition_info_traffic_light.join()
+            self.traffic_light_violated_image_save.join()
+            self.vehicle_non_detected_inside_polygon_save.join()
+            self.save_recognition_images_traffic_light.join()
+            self.save_non_recognition_images_traffic_light.join()
+
     def stop_automatic_number_plate_recognition(self):
+        alpr_recognition_traffic_violation = NumberPlateRecognitionTrafficLight.objects.latest('id')
+        alpr_recognition_traffic_violation.stopped_at = timezone.now()
+        alpr_recognition_traffic_violation.status = "stopped"
+        alpr_recognition_traffic_violation.save()
         stop_service = StopAlprExample(self.ANPR_FLAG_PATH)
         stop_service.stop_anpr_service()
+
+        self.save_recognition_info_traffic_light.join()
+        self.start_recognition_info_traffic_light.join()
+        self.traffic_light_violated_image_save.join()
+        self.vehicle_non_detected_inside_polygon_save.join()
+        self.save_recognition_images_traffic_light.join()
+        self.save_non_recognition_images_traffic_light.join()
