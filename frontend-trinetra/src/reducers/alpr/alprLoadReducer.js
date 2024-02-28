@@ -1,4 +1,4 @@
-import { START_IMAGE_LOAD, STOP_IMAGE_LOAD } from '../actions/alprLoadActions';
+import { START_IMAGE_LOAD, STOP_IMAGE_LOAD } from '../../actions/alpr/alprLoadActions';
 
 const initialState = {
     isLoading: false,

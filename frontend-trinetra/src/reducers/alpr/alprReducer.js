@@ -1,4 +1,4 @@
-import { FETCH_ALPR_DATA_REQUEST, FETCH_ALPR_DATA_SUCCESS, FETCH_ALPR_DATA_FAILURE } from '../actions/alprActions';
+import { FETCH_ALPR_DATA_REQUEST, FETCH_ALPR_DATA_SUCCESS, FETCH_ALPR_DATA_FAILURE } from '../../actions/alpr/alprActions';
 
 const initialState = {
     alprData: [],

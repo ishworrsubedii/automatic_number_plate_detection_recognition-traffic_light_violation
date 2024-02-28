@@ -1,19 +1,18 @@
-import { START_CAMERA_CAPTURE, STOP_CAMERA_CAPTURE } from '../../actions/alpr/alprCaptureActions';
-
+import { START_ALPR_TRAFFIC_LIGHT,STOP_ALPR_TRAFFIC_LIGHT } from "../../actions/trafficlight/trafficlightALPRActions";
 const initialState = {
     isCapturing: false,
     captureData: null,
 };
 
-const alprCaptureReducer = (state = initialState, action) => {
+const trafficlightALPRReducer = (state = initialState, action) => {
     switch (action.type) {
-        case START_CAMERA_CAPTURE:
+        case START_ALPR_TRAFFIC_LIGHT:
             return { 
                 ...state, 
                 isCapturing: true, 
                 captureData: action.payload 
             };
-        case STOP_CAMERA_CAPTURE:
+        case STOP_ALPR_TRAFFIC_LIGHT:
             return { 
                 ...state, 
                 isCapturing: false, 
@@ -24,4 +23,4 @@ const alprCaptureReducer = (state = initialState, action) => {
     }
 };
 
-export default alprCaptureReducer;
+export default trafficlightALPRReducer;

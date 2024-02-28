@@ -2,7 +2,7 @@ import {
   START_ALPR_THREAD,
   STOP_ALPR_THREAD,
   FETCH_ALPR_STATUS,
-} from "../actions/alprRecognitionActions";
+} from "../../actions/alpr/alprRecognitionActions";
 
 const initialState = {
   isLoading: false,

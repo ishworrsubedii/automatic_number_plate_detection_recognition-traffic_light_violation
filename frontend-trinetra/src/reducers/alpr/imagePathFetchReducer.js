@@ -1,4 +1,4 @@
-import { FETCH_RECOGNIZED_PATH, FETCH_NON_RECOGNIZED_PATH } from "../actions/imagePathFetchActions";
+import { FETCH_RECOGNIZED_PATH, FETCH_NON_RECOGNIZED_PATH } from "../../actions/alpr/imagePathFetchActions";
 
 const initialState = {
     recognizedPaths: [],

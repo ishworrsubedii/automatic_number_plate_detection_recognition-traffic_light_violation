@@ -17,7 +17,7 @@ import {
   SIGNUP_SUCCESS,
   ACTIVATION_FAIL,
   ACTIVATION_SUCCESS,
-} from "../actions/types";
+} from "../../actions/auth/types";
 
 // Initial state
 const initialState = {
