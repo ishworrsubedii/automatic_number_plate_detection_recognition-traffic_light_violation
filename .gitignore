@@ -143,5 +143,6 @@ datasets/
 .github/workflows/
 resources/
 pipeline/
+output/
 
 
