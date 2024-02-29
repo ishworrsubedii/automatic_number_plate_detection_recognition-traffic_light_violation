@@ -89,8 +89,8 @@ class ALPRRecognitionResultDatabaseTrafficLight(models.Model):
     recognized_info = models.CharField(max_length=100)
     accuracy = models.CharField(max_length=100)
     date = models.CharField(max_length=200)
-    violation_type = models.CharField(max_length=100)
     status = models.CharField(max_length=100)
+    violation_type = models.CharField(max_length=100)
 
     def __str__(self):
         return f"ALPR Recognition ID: {self.id}"
@@ -117,3 +117,15 @@ class ALPRNonRecognizedImageDatabaseTrafficLight(models.Model):
 
     class Meta:
         db_table = 'traffic_light_alpr_non_recognized_images_path_information'
+
+
+class DeletedImage(models.Model):
+    original_image_id = models.IntegerField()
+    original_image_path = models.CharField(max_length=500)
+    deleted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"DeletedImage ID: {self.id}"
+
+    class Meta:
+        db_table = 'traffic_light_deleted_images'

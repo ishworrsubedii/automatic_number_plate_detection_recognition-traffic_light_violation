@@ -49,5 +49,6 @@ urlpatterns = [
     path('alpr-recognition-result/', ALPRRecognitionResultView.as_view(), name='alpr-recognition-result'),
     path('alpr-recognized-images/', ALPRRecognizedImageView.as_view(), name='alpr-recognized-images'),
     path('alpr-non-recognized-images/', ALPRNonRecognizedImageView.as_view(), name='alpr-non-recognized-images'),
+    # path('delete_image/<int:id>/<str:image_path>/', DeleteImageView.as_view(), name='delete_image'),
 
 ]

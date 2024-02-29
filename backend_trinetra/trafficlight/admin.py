@@ -8,7 +8,8 @@ from .models import (ImageCaptureDatabaseTrafficLight,
                      VehicleNotDetectedImageListDatabaseTrafficLight,
                      ALPRRecognitionResultDatabaseTrafficLight,
                      ALPRRecognizedImageDatabaseTrafficLight,
-                     ALPRNonRecognizedImageDatabaseTrafficLight)
+                     ALPRNonRecognizedImageDatabaseTrafficLight,
+                     DeletedImage)
 
 admin.site.register(ImageCaptureDatabaseTrafficLight)
 admin.site.register(TrafficlightColorDetectionTrafficlight)
@@ -20,3 +21,4 @@ admin.site.register(VehicleNotDetectedImageListDatabaseTrafficLight)
 admin.site.register(ALPRRecognitionResultDatabaseTrafficLight)
 admin.site.register(ALPRRecognizedImageDatabaseTrafficLight)
 admin.site.register(ALPRNonRecognizedImageDatabaseTrafficLight)
+admin.site.register(DeletedImage)
