@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard/Dashboard";
@@ -39,13 +39,11 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
     // Check authentication status
     checkAuthenticated();
   }, [checkAuthenticated]);
-  
+ 
   useEffect(() => {
     // Load user data
     load_user();
   }, [load_user]);
-  
-
   return (
     <Provider store={store}>
       <ColorModeContext.Provider value={colorMode}>

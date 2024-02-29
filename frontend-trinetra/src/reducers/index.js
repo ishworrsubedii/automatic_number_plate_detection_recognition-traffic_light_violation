@@ -11,6 +11,9 @@ import trafficlightDetectionColorReducer from "./trafficlight/trafficlightDetect
 import trafficlightVehicleDetectionReducer from "./trafficlight/trafficlightVehicleDetectionReducer"
 import trafficlightNumberPlateDetectionReducer from "./trafficlight/trafficlightNumberPlateDetectionReducer"
 import trafficlightALPRReducer from "./trafficlight/trafficlightALPRReducer"
+import imagePathFetchTrafficLightReducer from "./trafficlight/trafficlightFetchAlprDataReducer"
+import alprTrafficLightReducer from "./trafficlight/trafficlightAutomaticNumberPlateRecognitionReducer"
+import imagePathFetchDetectedNonDetectedTrafficLightReducer from "./trafficlight/trafficllightVehicleDetectedNonDetectedReducer"
 
 
 export default combineReducers({
@@ -27,7 +30,12 @@ export default combineReducers({
     trafficLightDetectionColor:  trafficlightDetectionColorReducer,
     trafficLightVehicleDetection: trafficlightVehicleDetectionReducer,
     trafficLightNumberPlateDetection: trafficlightNumberPlateDetectionReducer,
-    trafficLightALPR: trafficlightALPRReducer
+    trafficLightALPR: trafficlightALPRReducer,
+
+    //fetch
+    imagePathDetectedNonDetTrafficLight:imagePathFetchDetectedNonDetectedTrafficLightReducer,
+    fetchALPRResultTrafficLight:alprTrafficLightReducer,
+    fetchRecognizedImagesPathTrafficLight:imagePathFetchTrafficLightReducer,
 
 
 

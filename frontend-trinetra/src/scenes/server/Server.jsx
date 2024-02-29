@@ -9,27 +9,25 @@ import {
 } from '@mui/material';
 import {
     CameraAlt as CameraAltIcon,
-    Speed,
-    ReportProblem as ReportProblemIcon,
     Autorenew as AutorenewIcon,
 } from '@mui/icons-material';
 import ChartCard from '../../components/ChartCard';
 import Header from '../../components/Header';
-import { ColorModeContext, tokens } from '../../theme';
+import { tokens } from '../../theme';
 import PinIcon from '@mui/icons-material/Pin';
 import { useDispatch } from 'react-redux';
 import { startCameraCapture, stopCameraCapture } from '../../actions/alpr/alprCaptureActions';
 import { startImageLoad, stopImageLoad } from '../../actions/alpr/alprLoadActions';
-import { startRecognition, stopRecognition, fetchRecognitionStatus as fetchStatus } from '../../actions/alpr/alprRecognitionActions';
+import { startRecognition, stopRecognition } from '../../actions/alpr/alprRecognitionActions';
 import TrafficIcon from '@mui/icons-material/Traffic';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import SpeedIcon from '@mui/icons-material/Speed';
 
-import {startCaptureTrafficlight, stopCaptureTrafficlight} from '../../actions/trafficlight/trafficlightCaptureActions';
-import {startALPRTrafficLight, stopALPRTrafficLight} from '../../actions/trafficlight/trafficlightALPRActions';
-import {startVehicleDetectionTrafficlight, stopVehicleDetectionTrafficlight} from '../../actions/trafficlight/trafficlightVehicleDetectionActions';
-import {startTrafficlightNumberPlateDetection, stopTrafficlightNumberPlateDetection} from '../../actions/trafficlight/trafficlightNumberPlateDetectionActions';
-import {startTrafficlightDetectionColor, stopTrafficlightDetectionColor} from '../../actions/trafficlight/trafficlightDetectionColorActions';
+import { startCaptureTrafficlight, stopCaptureTrafficlight } from '../../actions/trafficlight/trafficlightCaptureActions';
+import { startALPRTrafficLight, stopALPRTrafficLight } from '../../actions/trafficlight/trafficlightALPRActions';
+import { startVehicleDetectionTrafficlight, stopVehicleDetectionTrafficlight } from '../../actions/trafficlight/trafficlightVehicleDetectionActions';
+import { startTrafficlightNumberPlateDetection, stopTrafficlightNumberPlateDetection } from '../../actions/trafficlight/trafficlightNumberPlateDetectionActions';
+import { startTrafficlightDetectionColor, stopTrafficlightDetectionColor } from '../../actions/trafficlight/trafficlightDetectionColorActions';
 
 const Thread = ({ title, Icon, id }) => {
     const [status, setStatus] = useState('Stopped');
@@ -45,13 +43,7 @@ const Thread = ({ title, Icon, id }) => {
             setStartTime(Number(savedStartTime));
         }
 
-        dispatch(fetchStatus()).then((action) => {
-            const { start_time, status } = action.payload;
-            if (status === 'in_progress') {
-                setStatus('Running');
-                setStartTime(new Date(start_time));
-            }
-        });
+
 
         let interval = null;
         if (status === 'Running') {
@@ -197,7 +189,7 @@ const Thread = ({ title, Icon, id }) => {
                 dispatch(stopALPRTrafficLight());
             }
         }
-        
+
 
     };
     return (

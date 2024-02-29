@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Button, useTheme, Grid, Card, CardMedia, CardActions, IconButton } from "@mui/material";
+import { Box, Button, useTheme, Grid, Card, CardActions, IconButton } from "@mui/material";
 import LiveIcon from "@mui/icons-material/LiveTv";
 import LibraryIcon from "@mui/icons-material/LibraryBooks";
 import DownloadIcon from '@mui/icons-material/Download';
@@ -9,11 +9,8 @@ import ChartCard from "../../components/ChartCard";
 import CameraInfo from "../../components/CameraInfo";
 import { fetchAlprData } from "../../actions/alpr/alprActions";
 import { fetchNonRecognizedImagesPath, fetchRecognizedImagesPath } from "../../actions/alpr/imagePathFetchActions";
-import ReactPaginate from 'react-paginate';
-import ImageGallery from 'react-image-gallery';
 import { saveAs } from 'file-saver';
 import ModalImage from 'react-modal-image';
-
 import {
     MaterialReactTable,
     useMaterialReactTable,
@@ -24,7 +21,6 @@ const AlprService = () => {
     const colors = tokens(theme.palette.mode);
     const dispatch = useDispatch();
     const alprData = useSelector((state) => state.alpr.alprData);
-    console.log(alprData);
 
     useEffect(() => {
         dispatch(fetchAlprData());

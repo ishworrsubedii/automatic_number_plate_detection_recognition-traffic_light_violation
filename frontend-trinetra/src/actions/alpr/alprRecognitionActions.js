@@ -24,15 +24,6 @@ const stopRecognition = () => async (dispatch) => {
   dispatch({ type: STOP_ALPR_THREAD, payload: data });
 };
 
-const fetchRecognitionStatus = () => async (dispatch) => {
-  const response = await fetch("http://127.0.0.1:8000/api/alpr/alpr_status/", {
-    method: "GET",
-    headers: {
-      Authorization: `JWT ${localStorage.getItem("access")}`,
-    },
-  });
-  const data = await response.json();
-  dispatch({ type: FETCH_ALPR_STATUS, payload: data });
-};
 
-export { startRecognition, stopRecognition, fetchRecognitionStatus };
+
+export { startRecognition, stopRecognition };

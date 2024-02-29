@@ -104,8 +104,8 @@ if __name__ == '__main__':
     detected_images = "services_trinetra/trafficlight/output/vehicle_detection/detected"
     non_detected_images = "services_trinetra/trafficlight/output/vehicle_detection/non_detected"
     display = False
-    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path"
-    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path"
+    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path.txt"
+    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path.txt"
 
     vehicle_detector_server = StartVehicleDetectionExample(
         flag_path=flag_path,

@@ -114,8 +114,8 @@ if __name__ == '__main__':
     red_light_detected = "services_trinetra/trafficlight/resources/red_light_detected"
     detected_images = "services_trinetra/trafficlight/output/vehicle_detection/detected"
     non_detected_images = "services_trinetra/trafficlight/output/vehicle_detection/non_detected"
-    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path"
-    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path"
+    red_light_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/detected_images_path.txt"
+    red_light_non_detected_path = "services_trinetra/trafficlight/output/vehicle_detection/non_detected_images_path.txt"
 
     display = False
     vehicle_detector = VehicleDetectionPolygon(polygon_points, model_path, output_folder=detected_images,
