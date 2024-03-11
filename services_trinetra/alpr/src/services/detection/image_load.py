@@ -5,6 +5,7 @@ import os
 import threading
 from services_trinetra.alpr.src.services.detection.vehicle_number_plate_detection import DetectionService
 from services_trinetra.alpr.src.entity.service_config import DetectionConfig
+from services_trinetra.alpr.src.utils.imageutils import otus_binarization
 
 
 class ImageLoad:
@@ -60,7 +61,7 @@ class ImageLoad:
                             filename = f'{self.filename}_plate_{i + 1}.jpg'
                         else:
                             filename = f'{self.filename}.jpg'
-
+                        cropped = otus_binarization(cropped, threshold_value=200)
                         cv.imwrite(os.path.join(self.detected_image_save_dir, filename), cropped)
 
                     except:

@@ -28,9 +28,21 @@ def image_binarization(image, threshold):
     return cv2.threshold(image, threshold, 255, cv2.THRESH_BINARY)[1]
 
 
+def otus_binarization(img, threshold_value=None):
+    """
+
+    :param img:
+    :param threshold_value:
+    :return:
+    """
+
+    img = cv2.imread(img, 0)
+    _, otsu_thresholded = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    return otsu_thresholded
+
+
 def get_frame_save_dir(path):
-
-
     frame_dir = os.path.join(path)
     if not os.path.exists(frame_dir):
         os.makedirs(frame_dir)

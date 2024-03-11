@@ -12,7 +12,6 @@ from services_trinetra.alpr.src.services.recognition.paddleocr_service import Pa
 from services_trinetra.alpr.src.entity.service_config import RecognitionConfig
 
 
-
 def service_example(det_model, recognition_model, rec_char_dict, img):
     config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict,
                                )
@@ -23,12 +22,13 @@ def service_example(det_model, recognition_model, rec_char_dict, img):
 
 
 if __name__ == '__main__':
-    det_model = 'services_trinetra/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
+    det_model = 'services_trinetra/alpr/resources/paddleocr/dett/Multilingual_PP-OCRv3_det_infer'
     # recognition_model = 'services_trinetra/alpr/resources/paddleocr/custom_recog/'
-    recognition_model = 'services_trinetra/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer/'
-    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/devanagari_dict.txt'
 
-    img = 'services_trinetra/alpr/resources/plate_detected/0a.jpg.jpg'
+    recognition_model = 'services_trinetra/alpr/resources/paddleocr/final_model_rec/'
+    rec_char_dict = 'services_trinetra/alpr/resources/paddleocr/en_dict.txt'
+
+    img = '/home/ishwor/Desktop/TreeLeaf/Vehicle Number Plate/Dataset/images/8a.jpg'
     output_path = 'services_trinetra/alpr/resources/images/paddleocr_rec_output/'
     font_path = 'services_trinetra/alpr/resources/fonts/nepali.ttf'
     boxes, txts, scores = service_example(det_model, recognition_model, rec_char_dict, img)

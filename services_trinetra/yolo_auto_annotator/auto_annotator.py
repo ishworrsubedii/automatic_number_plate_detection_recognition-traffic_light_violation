@@ -2,6 +2,7 @@
 Created By: ishwor subedi
 Date: 2024-02-06
 """
+import os
 from pathlib import Path
 
 from ultralytics import SAM, YOLO
@@ -16,7 +17,7 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
     :param output_dir:  Path to the directory to save the annotated labels
     :return:
     """
-    vehicle_classes = [9]  # Class IDs for 'bicycle', 'car', 'motorcycle', 'bus', 'truck'
+    vehicle_classes = [0, 1, 2, 3, 5, 7]  # Class IDs for 'bicycle', 'car', 'motorcycle', 'bus', 'truck'
 
     det_model = YOLO(det_model)
 
@@ -26,6 +27,7 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
     Path(output_dir).mkdir(exist_ok=True, parents=True)
 
     det_results = det_model(data, stream=True, device=device)
+
     for result in det_results:
         class_ids = result.boxes.cls.int().tolist()  # noqa
         vehicle_detections = [i for i, cls_id in enumerate(class_ids) if cls_id in vehicle_classes]
@@ -46,9 +48,12 @@ def auto_annotate(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", de
                     height = (y_max - y_min) / image_height
 
                     f.write(f"{class_ids[i]} {center_x} {center_y} {width} {height}\n")
+                    print(f"{class_ids[i]} {center_x} {center_y} {width} {height}")
+        else:
+            os.remove(result.path)
 
 
 if __name__ == '__main__':
-    auto_annotate(data='/home/ishwor/Desktop/dataset/traffic_light.txt/datasets/dataset/images/',
-                  det_model='services_trinetra/yolo_auto_annotator/resources/yolov8n.pt',
-                  output_dir='/home/ishwor/Desktop/dataset/traffic_light/datasets/dataset/labels2/', device='cuda')
+    auto_annotate(data='/home/ishwor/Desktop/dataset/vehicle_extracted',
+                  det_model='backend_trinetra/services/alpr/resources/yolov8/nnpd.pt',
+                  output_dir='/home/ishwor/Desktop/dataset/labels/vehicle/', device='cuda')
