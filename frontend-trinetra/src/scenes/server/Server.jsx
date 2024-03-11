@@ -7,6 +7,8 @@ import {
     useTheme,
     IconButton,
 } from '@mui/material';
+import { Card, CardContent } from '@mui/material';
+
 import {
     CameraAlt as CameraAltIcon,
     Autorenew as AutorenewIcon,
@@ -225,6 +227,12 @@ const Thread = ({ title, Icon, id }) => {
 const ServerStatus = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const rtspLinks = [
+        { location: 'Baneshwor', link: 'rtsp://baneshwor' },
+        { location: 'Koteshwor', link: 'rtsp://koteshwor' },
+        { location: 'Kausaltar', link: 'rtsp://kausaltar' },
+        { location: 'Teku', link: 'rtsp://teku' },
+    ];
 
     return (
         <Box>
@@ -234,7 +242,32 @@ const ServerStatus = () => {
                 </Box>
 
                 <Box marginTop={3} />
-                <ChartCard size={{ width: '100%', height: '300px' }} />
+                <Typography variant="h7" style={{  marginLeft: '50%' }}>
+                    RTSP Links
+                </Typography>
+                <ChartCard size={{ width: '100%', height: '300px' }}>
+                
+                    {rtspLinks.map((rtsp) => (
+                        <Card key={rtsp.location} sx={{
+                            width: '300px',
+                            margin: '10px',
+                            height: '100px',
+                            backgroundColor: colors.primary[500],
+                            color: colors.whiteAccent[100],
+                            borderRadius: '10px',
+
+                        }}>
+                            <CardContent>
+                                <Typography variant="h5" component="div">
+                                    {rtsp.location}
+                                </Typography>
+                                <Typography variant="body2">
+                                    {rtsp.link}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </ChartCard>
 
                 <Button
                     variant="contained"

@@ -8,6 +8,8 @@
     "@mui/icons-material": "^5.15.7",
     "@mui/joy": "^5.0.0-beta.25",
     "@mui/material": "^5.15.7",
+    "@mui/x-date-pickers": "^6.19.6",
+    "@nivo/core": "^0.84.0",
     "@nivo/pie": "^0.84.0",
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.1.0",
@@ -15,6 +17,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
+    "d3-interpolate": "^3.0.1",
     "echarts": "^5.4.3",
     "echarts-for-react": "^3.0.2",
     "file-saver": "^2.0.5",
@@ -33,6 +36,9 @@
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "serve": "^14.2.1",
+    "socket.io-client": "^4.7.4",
+    "video-react": "^0.16.0",
+    "video.js": "^7.21.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
