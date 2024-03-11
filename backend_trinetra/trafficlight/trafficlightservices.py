@@ -8,7 +8,6 @@ import re
 from django.utils import timezone
 import numpy as np
 from services.trafficlight.usages.start.start_image_capture_traffic_light import StartImageCaptureTrafficLight
-
 from services.trafficlight.usages.start.start_traffic_color_detection_save import \
     StartTrafficLightColorDetectionExample
 from services.trafficlight.usages.start.start_vehicle_detection import StartVehicleDetectionExample
@@ -59,8 +58,8 @@ class TrafficLightViolationService:
         self.NUMBER_PLATE_DETECTED_IMAGE_SAVE_DIR = 'services/trafficlight/resources/plate_detected'
         # Automatic number plate recognition
         self.ANPR_DET_MODEL_PATH = 'services/trafficlight/resources/paddleocr/Multilingual_PP-OCRv3_det_infer'
-        self.ANPR_REC_MODEL_PATH = 'services/trafficlight/resources/paddleocr/custom_rec'
-        self.REC_CHAR_DIR = 'services/trafficlight/resources/paddleocr/devanagari_dict.txt'
+        self.ANPR_REC_MODEL_PATH = 'services/alpr/resources/paddleocr/mar-8'
+        self.REC_CHAR_DIR = 'services/alpr/resources/paddleocr/mar-8/devanagari_dict.txt'
 
         self.RECOGNIZED_OUTPUT_DIR_PATH = 'services/trafficlight/output/paddleocr_output/paddleocr_rec_output'
         self.NON_RECOGNIZED_OUTPUT_DIR_PATH = "services/trafficlight/output/paddleocr_output/paddleocr_non_rec_output"
@@ -71,17 +70,19 @@ class TrafficLightViolationService:
         self.ANPR_RECOGNIZED_IMAGES_FILE_NAME_TXT = "services/trafficlight/output/paddleocr_output/recognized_images_paths.txt"
         self.ANPR_NON_RECOGNIZED_IMAGES_FILE_NAME_TXT = "services/trafficlight/output/paddleocr_output/non_recognized_images_paths.txt"
 
+        self.draw_polygon = True
+
         self.save_recognition_info_traffic_light = None
         self.start_recognition_info_traffic_light = None
         self.save_recognition_images_traffic_light = None
         self.save_non_recognition_images_traffic_light = None
         self.traffic_light_violated_image_save = None
         self.vehicle_non_detected_inside_polygon_save = None
-        self.vehicle_detection_polygon_services_thread=None
-
+        self.vehicle_detection_polygon_services_thread = None
 
         self.start_recognize_plate_thread_running = False
         self.vehicle_detection_polygon_image_path_save_thread = False
+
     def start_image_capture_traffic_light(self):
         image_capture_database_traffic_violation = ImageCaptureDatabaseTrafficLight(status="in_progress")
         image_capture_database_traffic_violation.save()
@@ -130,7 +131,8 @@ class TrafficLightViolationService:
             red_light_detected=self.RED_LIGHT_DETECTED,
             display=self.VEHICLE_DETECTION_DISPLAY,
             red_light_vehicle_detected_path=self.RED_LIGHT_DETECTED_IMAGE_FILE_TXT,
-            red_light_vehicle_non_detected_path=self.RED_LIGHT_NON_DETECTED_IMAGE_FILE_TXT
+            red_light_vehicle_non_detected_path=self.RED_LIGHT_NON_DETECTED_IMAGE_FILE_TXT,
+            draw_polygon=self.draw_polygon
 
         )
         vehicle_detector_server.create_stop_flag()
@@ -139,7 +141,7 @@ class TrafficLightViolationService:
     def start_vehicle_detection_polygon(self):
         try:
             self.vehicle_detection_polygon_image_path_save_thread = True
-            self.vehicle_detection_polygon_services_thread=threading.Thread(target=self.vehicle_detection_polygon)
+            self.vehicle_detection_polygon_services_thread = threading.Thread(target=self.vehicle_detection_polygon)
             self.traffic_light_violated_image_save = threading.Thread(target=self.save_vehicle_detected_image)
             self.vehicle_non_detected_inside_polygon_save = threading.Thread(
                 target=self.save_vehicle_non_detected_image)
@@ -302,7 +304,6 @@ class TrafficLightViolationService:
                     result_file.truncate()
                     result_file.writelines(lines)
 
-
     def automatic_number_plate_recognition(self):
         try:
             alpr_recognition_traffic_violation = NumberPlateRecognitionTrafficLight(status="in_progress")
@@ -360,4 +361,3 @@ class TrafficLightViolationService:
 
             self.save_recognition_images_traffic_light.join()
             self.save_non_recognition_images_traffic_light.join()
-

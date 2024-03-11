@@ -55,6 +55,7 @@ class ALPRecognitionDatabase(models.Model):
 
 class ALPRRecognizedImageDatabase(models.Model):
     recognized_image_path = models.CharField(max_length=500)
+
     def __str__(self):
         return f"ALPR Recognition ID: {self.id}"
 

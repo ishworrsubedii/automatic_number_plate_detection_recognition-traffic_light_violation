@@ -20,8 +20,8 @@ class ALPRServices:
         self.RECOGNITION_FLAG_PATH = "services/alpr/resources/flag_check/alpr_status.txt"
         self.IMAGE_DIR = 'services/alpr/resources/rtsp/'
         self.DET_MODEL = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-        self.RECOG_MODEL = 'services/alpr/resources/paddleocr/devanagari_PP-OCRv4_rec_infer'
-        self.CHAR_DICT = 'services/alpr/resources/paddleocr/devanagari_dict.txt'
+        self.RECOG_MODEL = 'services/alpr/resources/paddleocr/mar-8'
+        self.CHAR_DICT = 'services/alpr/resources/paddleocr/mar-8/devanagari_dict.txt'
         self.OUTPUT_PATH = 'services/alpr/output/paddleocr_rec_output/'
         self.NON_REC_OUTPUT_PATH = 'services/alpr/output/paddleocr_non_rec_output/'
         self.THRESHOLD = 3

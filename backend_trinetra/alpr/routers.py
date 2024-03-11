@@ -2,6 +2,8 @@
 Created By: ishwor subedi
 Date: 2024-02-22
 """
+
+
 class ImageCaptureRouter:
     def db_for_read(self, model, **hints):
         if model._meta.app_label == 'alpr' and model._meta.model_name == 'imagecapture':
