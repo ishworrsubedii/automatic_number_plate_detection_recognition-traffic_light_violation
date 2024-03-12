@@ -142,16 +142,16 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
                   alignItems="center"
                   ml="15px"
                 >
-                  <img
+                  {/* <img
                     alt="profile-user"
                     width="30px"
                     height="30px"
                     src={"../../logo/profile.png"}
                     style={{ cursor: "pointer", borderRadius: "50%", marginRight: "10px" }}
-                  />
+                  /> */}
                   <Divider />
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    Ishwor Subedi
+                    Trinetra
                   </Typography>
                   <IconButton style={{ marginLeft: "70px" }}>
                     <MenuOutlinedIcon />
@@ -162,7 +162,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
           </MenuItem>
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="Favorites"
+              title="Dashboard"
               icon={<GridViewRoundedIcon />}
               to="/"
               selected={selected}
@@ -170,7 +170,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               style={{ fontWeight: "bold" }}
             />
 
-            <Item
+            {/* <Item
               title={"Overview"}
               icon={<GrOverview />}
               variant="h6"
@@ -178,6 +178,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               selected={selected}
               setSelected={setSelected}
             />
+            */}
 
             <Item
               title={"Projects"}
@@ -185,7 +186,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               to="/projects"
               selected={selected}
               setSelected={setSelected}
-            />
+            /> 
 
             <Typography
               variant="h6"
@@ -209,15 +210,15 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Speed"
               to="/speedtest"
               icon={<SpeedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
-              title="Violation"
+              title="Traffic Light Violation"
               to="/violation"
               icon={<TrafficIcon />}
               selected={selected}
@@ -232,7 +233,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               Others
             </Typography>
 
-            <Item
+            {/* <Item
               title="User Profile"
               to="/userprofile"
               icon={<PersonOutlinedIcon />}
@@ -259,7 +260,7 @@ const CustomSidebar = ({ logout, isAuthenticated }) => {
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
               title="Camera List"
               to="/cameralist"

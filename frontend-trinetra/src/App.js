@@ -26,6 +26,7 @@ import Forgotpasswordconfirm from "./scenes/auth/resetpassword/Forgotpasswordcon
 import Accountactivation from "./scenes/auth/accountactivation/Accountactivation";
 
 import Termandconditions from "./scenes/termsandconditions/Termandcondition";
+import WeaponDetectionService from "./scenes/weapon/WeaponDetection";
 
 import { Provider, connect } from "react-redux";
 
@@ -75,6 +76,7 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/cameralist" element={<CameraList />} />
                   <Route path="/notification" element={<Notification />} />
+                  <Route path="/weapon-detection" element={<WeaponDetectionService />} />
 
                 </Routes>
               </main>
