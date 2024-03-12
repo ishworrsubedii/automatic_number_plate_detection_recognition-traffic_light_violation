@@ -2,8 +2,6 @@ import os
 import time
 
 from services_trinetra.alpr.src.services.detection.image_load import ImageLoad
-from services_trinetra.alpr.usage import image_load_logger
-
 
 
 class StartImageLoadExample:

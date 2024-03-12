@@ -47,7 +47,7 @@ class DetectionService:
             if not ret:
                 print("Failed to read frame")
                 break
-            frame = cv2.resize(frame, (640, 480))  # Resize the frame
+            frame = cv2.resize(frame, (640, 480))
             results = self.model_instance(frame, conf=confidence_threshold, iou=nms_threshold)
             for prediction in results:
                 bboxes = prediction.boxes.xyxy

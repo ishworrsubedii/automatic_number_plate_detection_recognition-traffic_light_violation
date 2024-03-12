@@ -20,8 +20,12 @@ class ImageLoad:
         self.detection_service = DetectionService(config)
         self.detected_image_save_dir = detected_image_save_dir
         self.filename = None
+        self.display = True
 
         self.image_info_save = None
+        self.original_image = None
+        self.bbox = None
+        self.image_display_thread = None
 
     def start_load_image(self):
         """
@@ -33,6 +37,7 @@ class ImageLoad:
         self.image_info_save = threading.Thread(target=self.detected_information_save)
 
         self.image_load.start()
+
         self.thread_running = True
 
     def stop_load_image(self):
@@ -42,9 +47,6 @@ class ImageLoad:
             self.image_load.join()
             print("Stopping the image loading thread...")
 
-            self.image_info_save.join()
-            print("Image loading thread stopped.")
-
     def detected_information_save(self, results):
         if results:
             for prediction in results:
@@ -53,15 +55,31 @@ class ImageLoad:
                 for i, bbox in enumerate(bboxes):
                     multiple_plates = len(bboxes) > 1
                     try:
+
+                        original_image = prediction.orig_img
                         bbox = bbox.int().tolist()
                         x1, y1, x2, y2 = bbox
+
+                        try:
+                            if self.display:
+                                cv.namedWindow('Licence Plate Detection', cv.WINDOW_NORMAL)
+                                cv.putText(original_image, 'number_plate', (x1, y1 - 10), cv.FONT_HERSHEY_SIMPLEX,
+                                           0.9,
+                                           (0, 0, 255), 2)
+                                cv.rectangle(original_image, (x1, y1), (x2, y2), (0, 0, 255), 2)
+                                cv.imshow('Licence Plate Detection', original_image)
+                                if cv.waitKey(1) & 0xFF == ord('q'):
+                                    return
+                        except:
+                            print("Error displaying images")
+
                         cropped = prediction.orig_img[y1:y2, x1:x2]
 
                         if multiple_plates:
                             filename = f'{self.filename}_plate_{i + 1}.jpg'
                         else:
                             filename = f'{self.filename}.jpg'
-                        cropped = otus_binarization(cropped, threshold_value=200)
+
                         cv.imwrite(os.path.join(self.detected_image_save_dir, filename), cropped)
 
                     except:
@@ -83,9 +101,9 @@ class ImageLoad:
                 rd = cv.imread(self.latest_image_path)
                 time.sleep(0.5)
                 if rd is not None:
-                    results = self.detection_service.detect_image(self.latest_image_path,
+                    results = self.detection_service.detect_image(image=self.latest_image_path,
                                                                   confidence_threshold=0.5,
-                                                                  nms_threshold=0.4)
+                                                                  nms_threshold=0.4, display=False)
                     cv.waitKey(3)
                     print('done')
                     os.remove(self.latest_image_path)

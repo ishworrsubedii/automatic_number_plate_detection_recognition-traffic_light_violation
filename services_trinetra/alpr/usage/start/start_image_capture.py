@@ -2,8 +2,6 @@ import os
 import time
 
 from services_trinetra.alpr.src.services.detection.image_capture import CaptureMain
-from services_trinetra.alpr.usage import image_capture_logger
-
 
 
 class StartImageCaptureExample:

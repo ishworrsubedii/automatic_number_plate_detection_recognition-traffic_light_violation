@@ -5,6 +5,7 @@ Date: 2024-03-08
 from pathlib import Path
 
 from ultralytics import YOLO
+import cv2
 
 
 def detection_save_img(data, det_model="yolo_auto_annotator/resources/yolov8x.pt", device="", output_dir=None):
@@ -26,9 +27,6 @@ def detection_save_img(data, det_model="yolo_auto_annotator/resources/yolov8x.pt
     Path(output_dir).mkdir(exist_ok=True, parents=True)
 
     det_results = det_model(data, stream=True, device=device)
-    import cv2
-
-    # ...
 
     for result in det_results:
         class_ids = result.boxes.cls.int().tolist()
