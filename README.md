@@ -1,6 +1,6 @@
 <div style="border: 2px solid #333; padding: 20px; display: flex; align-items: center; justify-content: center;">
     <div style="text-align: center;">
-        <img src="/alpr_speed_traffic/result_images/trinetra.png" width="100" height="100" style="margin-right: 20px;">
+        <img src="/result_images/trinetra.png" width="100" height="100" style="margin-right: 20px;">
         <h1 style="font-family: 'Roboto', sans-serif; font-size: 2.5em; color: #39FF14;">Trinetra</h1>
         <h6 style="font-family: 'Roboto', sans-serif; font-size: 0.8em; color: #e0e0e0;">- Let us be protected by the third eye!</h6>
         <h2 style="font-family: 'Roboto', sans-serif; font-size: 1.5em; color: #39FF14;">Automatic Number Plate Detection Recognition and Traffic Light Violation Detection</h2>
@@ -79,7 +79,7 @@ For the services, the following technologies are used:
     - Number Plate Detection
     - Number Plate Recognition
 
-    - [ALPR](/alpr_speed_traffic/services_trinetra/number_plate_detection/README.md)
+    - [ALPR](/services_trinetra/number_plate_detection/README.md)
 
 ### 2. Traffic Light Violation Detection
 
@@ -89,7 +89,7 @@ For the services, the following technologies are used:
     - Vehicle Detection
     - Traffic Light Violation Detection
 
-    - [Traffic light violation](/alpr_speed_traffic/traffic_light_violation/README.md)
+    - [Traffic light violation](/traffic_light_violation/README.md)
 
 </details>
 
