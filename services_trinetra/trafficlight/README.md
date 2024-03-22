@@ -49,7 +49,7 @@ For traffic light detection, I have used three different methods:
 ### Number plate Detection and Recognition
 
 You can refer to the alpr module for the number plate detection and recognition.
-[Automatic License Plate Recognition](alpr_speed_traffic/services_trinetra/alpr/README.md)
+[Automatic License Plate Recognition](/services_trinetra/alpr/README.md)
 
 ### Usage
 
