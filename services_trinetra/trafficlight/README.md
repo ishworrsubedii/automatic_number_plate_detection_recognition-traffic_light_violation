@@ -45,8 +45,6 @@ For traffic light detection, I have used three different methods:
 - Vehicle detection is done using the Yolo v8 model.with the Cusom dataset, which was collected from the YouTube videos.
   and custom-captured images
     - **Dataset link:** https://www.kaggle.com/datasets/ishworsubedii/vehicles-dataset-nepal
-        - Result of number plate detection using yolo v8
-          <img alt="Number plate detection" src="/alpr_speed_traffic/result_images/vehicle_detection_yolov8_result.png"/>
 
 ### Number plate Detection and Recognition
 
