@@ -11,8 +11,8 @@ from PIL import Image
 class PaddleocrService:
     def __init__(self, config: RecognitionConfig):
         """
-
-        :param config:
+        Initialize the paddleocr service
+        :param config:  RecognitionConfig
         """
         self.ocr = PaddleOCR(det_model_dir=config.det_model, rec_model_dir=config.recognition_model,
                              rec_char_dict_path=config.rec_char_dict,
@@ -20,8 +20,9 @@ class PaddleocrService:
 
     def detection_recognition_cls(self, img):
         """
-        :param img:
-        :return:
+        Detect and recognize the text from the image
+        :param img: str
+        :return:  bbox, txts, scores
         """
         try:
             result = self.ocr.ocr(img, cls=False)
@@ -51,4 +52,4 @@ if __name__ == '__main__':
     config = RecognitionConfig(det_model=det_model, recognition_model=recognition_model, rec_char_dict=rec_char_dict)
     paddle_ocr = PaddleocrService(config=config)
     paddle_ocr.detection_recognition_cls(
-        img="/home/ishwor/Desktop/alpr_nepali/images/binarized_image/otus (copy)/5a__1559101__5a.jpg")
+        img="/img.jpg")

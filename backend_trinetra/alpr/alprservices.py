@@ -15,17 +15,20 @@ from services.alpr.usage.stop.stop_alpr import StopAlprExample
 
 class ALPRServices:
     def __init__(self):
+        self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
+
         self.CAPTURE_FLAG_PATH = "services/alpr/resources/flag_check/capture_status.txt"
         self.LOAD_FLAG_PATH = "services/alpr/resources/flag_check/start_load_status.txt"
         self.RECOGNITION_FLAG_PATH = "services/alpr/resources/flag_check/alpr_status.txt"
         self.IMAGE_DIR = 'services/alpr/resources/rtsp/'
         self.DET_MODEL = 'services/alpr/resources/paddleocr/Multilingual_PP-OCRv3_det_infer/'
-        self.RECOG_MODEL = 'services/alpr/resources/paddleocr/mar-8'
+        self.RECOG_MODEL = 'services/alpr/resources/paddleocr/mar-18'
         self.CHAR_DICT = 'services/alpr/resources/paddleocr/mar-8/devanagari_dict.txt'
         self.OUTPUT_PATH = 'services/alpr/output/paddleocr_rec_output/'
         self.NON_REC_OUTPUT_PATH = 'services/alpr/output/paddleocr_non_rec_output/'
         self.THRESHOLD = 3
-        self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
+        # self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
+        # self.SOURCE = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103702.mp4'
         self.MODEL_PATH = 'services/alpr/resources/yolov8/nnpd.pt'
         self.CAPTURED_IMAGE_SAVE_DIR = 'services/alpr/resources/rtsp/'
         self.DETECTED_IMAGE_SAVE_DIR = 'services/alpr/resources/plate_detected/'
@@ -35,6 +38,10 @@ class ALPRServices:
         self.FONT_PATH = 'services/alpr/resources/fonts/nepali.ttf'
 
     def start_image_capture(self):
+        """
+        Start image capture service for capturing images from rtsp source
+        :return: None
+        """
         image_capture_database = ImageCaptureDatabase(status='in_progress')
         image_capture_database.save()
         image_capture_service = StartImageCaptureExample(
@@ -44,6 +51,10 @@ class ALPRServices:
         image_capture_service.start_service()
 
     def stop_image_capture(self):
+        """
+        Stop image capture service
+        :return:  None
+        """
         image_capture_database = ImageCaptureDatabase.objects.latest('id')
         image_capture_database.stopped_at = timezone.now()
         image_capture_database.status = 'stopped'
@@ -52,6 +63,10 @@ class ALPRServices:
         stop_service.stop_image_capture_service()
 
     def start_load_image(self):
+        """
+        Start image load service for loading images from the captured images
+        :return: None
+        """
         image_load_database = ImageLoadDatabase(status='in_progress')
         image_load_database.save()
         image_load_service = StartImageLoadExample(
@@ -61,6 +76,10 @@ class ALPRServices:
         image_load_service.start_service()
 
     def stop_load_image(self):
+        """
+        Stop image load service for loading images from the captured images
+        :return: None
+        """
         image_load_database = ImageLoadDatabase.objects.latest('id')
         image_load_database.stopped_at = timezone.now()
         image_load_database.status = 'stopped'
@@ -68,6 +87,10 @@ class ALPRServices:
         update_file(self.LOAD_FLAG_PATH)
 
     def save_recognized_image(self):
+        """
+        Save recognized image path to the database
+        :return:
+        """
         while True:
             with open(self.RECOGNIZED_IMAGES_FILE_PATH, 'r+') as recognized_images_file:
                 lines = recognized_images_file.readlines()
@@ -91,6 +114,10 @@ class ALPRServices:
                     recognized_images_file.writelines(lines)
 
     def save_non_recognized_image(self):
+        """
+        Save non recognized image path to the database
+        :return:
+        """
         while True:
             with open(self.NON_RECOGNIZED_IMAGES_FILE_PATH, 'r+') as non_recognized_images_file:
                 lines = non_recognized_images_file.readlines()
@@ -115,6 +142,10 @@ class ALPRServices:
                     non_recognized_images_file.writelines(lines)
 
     def save_recognition_info(self):
+        """
+        Save recognition info to the database
+        :return:
+        """
         while True:
             with open(self.RESULT_SAVE_PATH, 'r+') as result_file:
                 lines = result_file.readlines()
@@ -145,6 +176,10 @@ class ALPRServices:
                     result_file.writelines(lines)
 
     def start_recognize_plate_for_thread(self):
+        """
+        Start ALPR service for recognizing the plate
+        :return:
+        """
         try:
             alpr_database = ALPRDatabase(status='in_progress')
             alpr_database.save()
@@ -164,6 +199,10 @@ class ALPRServices:
         start_alpr.start_service()
 
     def start_recognize_plate(self):
+        """
+        Start ALPR service for recognizing
+        :return:
+        """
         try:
             self.database_save_thread = threading.Thread(target=self.save_recognition_info)
             self.alpr_service_thread = threading.Thread(target=self.start_recognize_plate_for_thread)
@@ -183,6 +222,10 @@ class ALPRServices:
             self.database_save_image_non_recognized_path.join()
 
     def stop_recognize_plate(self):
+        """
+        Stop ALPR service for recognizing the plate
+        :return:
+        """
         alpr_database = ALPRDatabase.objects.latest('id')
         alpr_database.stopped_at = timezone.now()
         alpr_database.status = 'stopped'

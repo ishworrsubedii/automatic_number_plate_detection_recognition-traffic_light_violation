@@ -5,7 +5,7 @@ setup(
     version='0.1',
     author='Ishwor Subedi',
     author_email='ishworr.subedi@gmail.com',
-    description='A brief description of your package',
+    description='This is a package for the services of trinetra project.',
     long_description=open('alpr/README.md').read(),
     url='https://github.com/ishworrsubedii/anpr_speed-estimation_violation-detection',
     packages=find_packages(),

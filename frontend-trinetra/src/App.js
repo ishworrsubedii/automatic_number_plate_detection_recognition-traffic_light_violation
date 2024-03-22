@@ -37,12 +37,10 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
   useEffect(() => {
-    // Check authentication status
     checkAuthenticated();
   }, [checkAuthenticated]);
- 
+
   useEffect(() => {
-    // Load user data
     load_user();
   }, [load_user]);
   return (
@@ -76,8 +74,10 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/cameralist" element={<CameraList />} />
                   <Route path="/notification" element={<Notification />} />
-                  <Route path="/weapon-detection" element={<WeaponDetectionService />} />
-
+                  <Route
+                    path="/weapon-detection"
+                    element={<WeaponDetectionService />}
+                  />
                 </Routes>
               </main>
             </div>
@@ -98,7 +98,6 @@ const App = ({ isAuthenticated, checkAuthenticated, load_user }) => {
                 path="/termsandconditions"
                 element={<Termandconditions />}
               />
-
             </Routes>
           )}
         </ThemeProvider>

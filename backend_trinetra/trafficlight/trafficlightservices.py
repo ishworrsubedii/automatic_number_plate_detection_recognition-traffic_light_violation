@@ -58,7 +58,7 @@ class TrafficLightViolationService:
         self.NUMBER_PLATE_DETECTED_IMAGE_SAVE_DIR = 'services/trafficlight/resources/plate_detected'
         # Automatic number plate recognition
         self.ANPR_DET_MODEL_PATH = 'services/trafficlight/resources/paddleocr/Multilingual_PP-OCRv3_det_infer'
-        self.ANPR_REC_MODEL_PATH = 'services/alpr/resources/paddleocr/mar-8'
+        self.ANPR_REC_MODEL_PATH = 'services/alpr/resources/paddleocr/mar-18'
         self.REC_CHAR_DIR = 'services/alpr/resources/paddleocr/mar-8/devanagari_dict.txt'
 
         self.RECOGNIZED_OUTPUT_DIR_PATH = 'services/trafficlight/output/paddleocr_output/paddleocr_rec_output'

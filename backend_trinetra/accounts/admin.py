@@ -6,6 +6,9 @@ from .models import UserAccount
 
 
 class UserAccountAdmin(UserAdmin):
+    """
+    This class is used to customize the UserAccount model in the admin panel.
+    """
     list_display = ('email', 'first_name', 'last_name', 'is_staff', 'is_active')
     list_filter = ('is_staff', 'is_active')
     fieldsets = (

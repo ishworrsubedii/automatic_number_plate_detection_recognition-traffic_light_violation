@@ -69,7 +69,7 @@ const Topbar = () => {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        <IconButton>
+        {/* <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
         <IconButton>
@@ -78,7 +78,7 @@ const Topbar = () => {
 
         <IconButton>
           <PersonOutlinedIcon />
-        </IconButton>
+        </IconButton> */}
 
       </Box>
 

@@ -219,7 +219,10 @@ const LoginPage = ({ login, isAuthenticated }) => {
             }}
             disabled={loading}
           >
-            <Typography style={{ fontWeight: "bold" }}>Login</Typography>
+            <Typography style={{ fontWeight: "bold" }}
+
+            >Login</Typography>
+
           </Button>
 
           <Box

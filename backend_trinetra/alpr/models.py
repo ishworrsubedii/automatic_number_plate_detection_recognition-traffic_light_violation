@@ -3,6 +3,9 @@ from datetime import datetime
 
 
 class ImageCaptureDatabase(models.Model):
+    """
+    This model is used to store the information of the image capture process.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -15,6 +18,9 @@ class ImageCaptureDatabase(models.Model):
 
 
 class ImageLoadDatabase(models.Model):
+    """
+    This model is used to store the information of the image load process.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -27,6 +33,9 @@ class ImageLoadDatabase(models.Model):
 
 
 class ALPRDatabase(models.Model):
+    """
+    This model is used to store the information of the ALPR process.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -39,6 +48,9 @@ class ALPRDatabase(models.Model):
 
 
 class ALPRecognitionDatabase(models.Model):
+    """
+    This model is used to store the information of the ALPR recognition process.
+    """
     detection_id = models.CharField(max_length=100)
     image_path = models.CharField(max_length=100)
     recognized_info = models.CharField(max_length=100)
@@ -54,6 +66,9 @@ class ALPRecognitionDatabase(models.Model):
 
 
 class ALPRRecognizedImageDatabase(models.Model):
+    """
+    This model is used to store the information of the ALPR recognized images.
+    """
     recognized_image_path = models.CharField(max_length=500)
 
     def __str__(self):
@@ -64,6 +79,9 @@ class ALPRRecognizedImageDatabase(models.Model):
 
 
 class ALPRNonRecognizedImageDatabase(models.Model):
+    """
+    This model is used to store the information of the ALPR non-recognized images.
+    """
     non_recognized_image_path = models.CharField(max_length=500)
 
     def __str__(self):

@@ -3,6 +3,9 @@ from django.db import models
 
 # Databse for storing status of services
 class ImageCaptureDatabaseTrafficLight(models.Model):
+    """
+    This model is used to store the status of the image capture service.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -15,6 +18,9 @@ class ImageCaptureDatabaseTrafficLight(models.Model):
 
 
 class TrafficlightColorDetectionTrafficlight(models.Model):
+    """
+    This model is used to store the status of the traffic light color detection service.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -27,6 +33,9 @@ class TrafficlightColorDetectionTrafficlight(models.Model):
 
 
 class VehicleDetectionTrafficLight(models.Model):
+    """
+    This model is used to store the status of the vehicle detection service.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -39,6 +48,9 @@ class VehicleDetectionTrafficLight(models.Model):
 
 
 class NumberPlateDetectionTrafficLight(models.Model):
+    """
+    This model is used to store the status of the number plate detection service.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -51,6 +63,9 @@ class NumberPlateDetectionTrafficLight(models.Model):
 
 
 class NumberPlateRecognitionTrafficLight(models.Model):
+    """
+    This model is used to store the status of the number plate recognition service.
+    """
     started_at = models.DateTimeField(auto_now_add=True)
     stopped_at = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=20, default="in_progress")
@@ -63,6 +78,9 @@ class NumberPlateRecognitionTrafficLight(models.Model):
 
 
 class RedLightViolatedVehiclesListTrafficLight(models.Model):
+    """
+    This model is used to store the list of vehicles that violated the red light.
+    """
     traffic_light_violated_images = models.CharField(max_length=500)
 
     def __str__(self):
@@ -73,6 +91,9 @@ class RedLightViolatedVehiclesListTrafficLight(models.Model):
 
 
 class VehicleNotDetectedImageListDatabaseTrafficLight(models.Model):
+    """
+    This model is used to store the list of images where the vehicle is not detected.
+    """
     vehicle_not_detected_images = models.CharField(max_length=500)
 
     def __str__(self):
@@ -84,6 +105,9 @@ class VehicleNotDetectedImageListDatabaseTrafficLight(models.Model):
 
 # Database for storing recognized result
 class ALPRRecognitionResultDatabaseTrafficLight(models.Model):
+    """
+    This model is used to store the result of the ALPR recognition service.
+    """
     violation_id = models.CharField(max_length=100)
     image_path = models.CharField(max_length=100)
     recognized_info = models.CharField(max_length=100)
@@ -100,6 +124,9 @@ class ALPRRecognitionResultDatabaseTrafficLight(models.Model):
 
 
 class ALPRRecognizedImageDatabaseTrafficLight(models.Model):
+    """
+    This model is used to store the information of the recognized image by the OCR.
+    """
     recognized_image_path = models.CharField(max_length=500)
 
     def __str__(self):
@@ -110,6 +137,9 @@ class ALPRRecognizedImageDatabaseTrafficLight(models.Model):
 
 
 class ALPRNonRecognizedImageDatabaseTrafficLight(models.Model):
+    """
+    This model is used to store the information of the non-recognized image by the OCR.
+    """
     non_recognized_image_path = models.CharField(max_length=500)
 
     def __str__(self):
@@ -120,6 +150,9 @@ class ALPRNonRecognizedImageDatabaseTrafficLight(models.Model):
 
 
 class DeletedImage(models.Model):
+    """
+    This model is used to store the deleted images.
+    """
     original_image_id = models.IntegerField()
     original_image_path = models.CharField(max_length=500)
     deleted_at = models.DateTimeField(auto_now_add=True)

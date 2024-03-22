@@ -48,27 +48,22 @@ const Dashboard = () => {
           justifyContent="space-around"
         >
           <DashboardCard
-            title="Total Vehicles Detected"
-            value="721k"
-            percentage="+11.01%"
-            icon={<TrendingUpIcon />}
-          />
-          <DashboardCard
             title="Number Plate Recognized"
             value="367k"
             percentage="-0.01%"
             icon={<TrendingDownIcon />}
           />
           <DashboardCard
-            title="Over Speed"
-            value="1,156"
-            percentage="+15.03%"
+            title="Total Vehicles Detected"
+            value="721k"
+            percentage="+11.01%"
             icon={<TrendingUpIcon />}
           />
+
           <DashboardCard
-            title="Total Vehicles Detected"
-            value="239k"
-            percentage="+6.08%"
+            title="Traffic Light Violation"
+            value="1,156"
+            percentage="+15.03%"
             icon={<TrendingUpIcon />}
           />
         </Box>
@@ -80,8 +75,8 @@ const Dashboard = () => {
           <Linechart />
 
         </ChartCard>
-        <ChartCard title="Traffic by Location" subtitle="Location info" size={{ width: '600px', height: '400px' }}>
-        <BarchartTrafficRuleViolation />
+        <ChartCard title="Traffic Rule Violation" subtitle="Violation charts" size={{ width: '600px', height: '400px' }}>
+          <BarchartTrafficRuleViolation />
 
 
         </ChartCard>

@@ -15,6 +15,9 @@ can contact me
 at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; font-weight: bold;">Linkedin</a> or <a href="mailto:ishworr.subedi@gmail.com" style="color: #39FF14; font-weight: bold;">Email</a>
 </p>
 
+## Video Demonstration
+
+[![Trinetra](https://img.youtube.com/vi/1Q1Q1Q1Q1Q1/0.jpg)](https://www.youtube.com/watch?v=1Q1Q1Q1Q1Q1)
 ## Overview
 
 This is the repository for the Trinetra project. Trinetra is a project that aims to provide a solution for traffic
@@ -66,6 +69,8 @@ For the services, the following technologies are used:
 - YOLO
 - OCR
 - OOPs Concept
+- Different Machine Learning Libraries
+- CNN
 
 ## Services for Trinetra
 
@@ -79,7 +84,7 @@ For the services, the following technologies are used:
     - Number Plate Detection
     - Number Plate Recognition
 
-    - [ALPR](/services_trinetra/number_plate_detection/README.md)
+    - [ALPR](services_trinetra/alpr/README.md)
 
 ### 2. Traffic Light Violation Detection
 
@@ -89,7 +94,7 @@ For the services, the following technologies are used:
     - Vehicle Detection
     - Traffic Light Violation Detection
 
-    - [Traffic light violation](/traffic_light_violation/README.md)
+    - [Traffic light violation](services_trinetra/trafficlight/README.md)
 
 </details>
 

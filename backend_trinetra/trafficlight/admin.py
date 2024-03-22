@@ -1,3 +1,6 @@
+"""
+This code is used to register the models in the Django admin panel.
+"""
 from django.contrib import admin
 from .models import (ImageCaptureDatabaseTrafficLight,
                      TrafficlightColorDetectionTrafficlight,
