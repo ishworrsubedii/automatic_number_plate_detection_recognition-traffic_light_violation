@@ -1,7 +1,7 @@
 # Traffic Light Violation Detection
 
-<img src="/result_images/traffic_light_demo.jpg">
-<img src="/result_images/traffic_light2.png">
+<img src="/results/traffic_light_demo.jpg">
+<img src="/results/traffic_light2.png">
 
 The main goal of this module is to develop an automatic traffic light violation detection system that can detect traffic
 light violation If they violate the traffic light and cross the road while at a red light, then the system will capture

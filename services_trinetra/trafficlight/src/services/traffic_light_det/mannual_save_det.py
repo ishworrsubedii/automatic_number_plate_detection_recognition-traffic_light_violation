@@ -50,7 +50,7 @@ class TrafficDetectionService:
 
         cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
-            print("Error: Could not open video file.")
+            print("Error: Could not open videos file.")
             return
 
         while True:
@@ -76,6 +76,6 @@ if __name__ == '__main__':
     # detect image
     #     object_instance = TrafficDetectionService(detection_point=(50, 50, 100, 100))
     #     object_instance.detect_image(img_path='path/to/image', display=True)
-    # detect video
+    # detect videos
     object_instance = TrafficDetectionService(detection_point=(50, 50, 100, 100))
-    object_instance.detect_video(video_path='path/to/video', display=True)
+    object_instance.detect_video(video_path='path/to/videos', display=True)

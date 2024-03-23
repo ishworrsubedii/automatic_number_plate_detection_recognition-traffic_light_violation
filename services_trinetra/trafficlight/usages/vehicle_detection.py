@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # service.detect_image('/home/ishwor/Pictures/Screenshots/Screenshot from 2024-02-03 20-41-34.png',
     #                      confidence_threshold=0.5, nms_threshold=0.4)
 
-    # Detect video
+    # Detect videos
     service.detect_video(
-        '/home/ishwor/Desktop/dataset/video/videoplayback.mp4',
+        '/home/ishwor/Desktop/dataset/videos/videoplayback.mp4',
         display=True, confidence_threshold=0.5, nms_threshold=0.4)

@@ -30,7 +30,7 @@ class TrafficLightViolationService:
     def __init__(self):
         # image capture
         self.CAPTURE_FLAG_PATH = "services/trafficlight/resources/flag_check/capture.txt"
-        self.SOURCE = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103234.mp4'
+        self.SOURCE = '/home/ishwor/Desktop/dataset/vehicle/videos/traffic/VID20240222103234.mp4'
         self.IMAGE_PATH_TO_SAVE = "services/trafficlight/resources/rtsp/"
         self.IMAGE_HASH_THRESHOLD = 0
 

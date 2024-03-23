@@ -95,12 +95,12 @@ other applications where license plate recognition is required.
 
 ### Results
 
-<img alt="Image 1" src="/result_images/paddleocr_demo/2024-03-22_1.jpg"/>
-<img alt="Image 2" src="/result_images/paddleocr_demo/2024-03-22_213.jpg"/>
-<img alt="Image 3" src="/result_images/paddleocr_demo/2024-03-22_211.jpg"/>
-<img alt="Image 4" src="/result_images/paddleocr_demo/2024-03-22_21.jpg"/>
-<img alt="Image 5" src="/result_images/paddleocr_demo/2024-03-22_144.jpg"/>
-<img alt="Image 6" src="/result_images/paddleocr_demo/2024-03-22_205.jpg"/>
-<img alt="Image 7" src="/result_images/paddleocr_demo/2024-03-22_130.jpg"/>
-<img alt="Image 8" src="/result_images/paddleocr_demo/2024-03-22_105.jpg"/>
-<img alt="Image 9" src="/result_images/paddleocr_demo/2024-03-22_99.jpg"/>
+<img alt="Image 1" src="/results/paddleocr_demo/2024-03-22_1.jpg"/>
+<img alt="Image 2" src="/results/paddleocr_demo/2024-03-22_213.jpg"/>
+<img alt="Image 3" src="/results/paddleocr_demo/2024-03-22_211.jpg"/>
+<img alt="Image 4" src="/results/paddleocr_demo/2024-03-22_21.jpg"/>
+<img alt="Image 5" src="/results/paddleocr_demo/2024-03-22_144.jpg"/>
+<img alt="Image 6" src="/results/paddleocr_demo/2024-03-22_205.jpg"/>
+<img alt="Image 7" src="/results/paddleocr_demo/2024-03-22_130.jpg"/>
+<img alt="Image 8" src="/results/paddleocr_demo/2024-03-22_105.jpg"/>
+<img alt="Image 9" src="/results/paddleocr_demo/2024-03-22_99.jpg"/>

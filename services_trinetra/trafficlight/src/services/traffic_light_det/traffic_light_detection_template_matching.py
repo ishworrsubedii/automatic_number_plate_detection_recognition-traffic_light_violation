@@ -93,6 +93,6 @@ if __name__ == '__main__':
     result = detector.detect_traffic_lights_image(image_path, display=True)
 
     # video_detection
-    # video_path = "/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103234.mp4"
+    # video_path = "/home/ishwor/Desktop/dataset/vehicle/videos/traffic/VID20240222103234.mp4"
     # result = detector.detect_traffic_lights_video(display=True, video_path=video_path)
     print(result)

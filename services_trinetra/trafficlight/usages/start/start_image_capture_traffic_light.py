@@ -81,7 +81,7 @@ class StartImageCaptureTrafficLight:
 
 if __name__ == "__main__":
     FLAG_PATH = "services_trinetra/trafficlight/resources/flag_check/capture.txt"
-    SOURCE = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103234.mp4'
+    SOURCE = '/home/ishwor/Desktop/dataset/vehicle/videos/traffic/VID20240222103234.mp4'
     IMAGE_PATH_TO_SAVE = "services_trinetra/trafficlight/resources/rtsp/"
     IMAGE_HASH_THRESHOLD = 0
 

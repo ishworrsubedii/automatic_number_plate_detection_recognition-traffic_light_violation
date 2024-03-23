@@ -22,9 +22,9 @@ class TrafficDetectionService:
 
     def detect_video(self, video_path: str, display: bool, confidence_threshold: float, nms_threshold: float):
         """
-          Detects vehicle number plate from a video
-        :param video_path:  video path to be passed
-        :param display:  boolean value to display the video
+          Detects vehicle number plate from a videos
+        :param video_path:  videos path to be passed
+        :param display:  boolean value to display the videos
         :param confidence_threshold:  confidence threshold
         :param nms_threshold: nms threshold
         :param class_id: class id of the object to be detected
@@ -70,7 +70,7 @@ class TrafficDetectionService:
     def detect_webcam(self, display: bool, confidence_threshold: float, nms_threshold: float):
         """
         Detects vehicle number plate from a webcam
-        :param display: boolean value to display the video
+        :param display: boolean value to display the videos
         :param confidence_threshold: confidence threshold
         :param nms_threshold: nms threshold
         :return: detected results
@@ -111,8 +111,8 @@ if __name__ == '__main__':
     object_instance = TrafficDetectionService(
         model_path='services_trinetra/trafficlight/resources/vehicle_detection/traffic_light.txt.pt')
 
-    # Detect video
-    # video_path = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103702.mp4'
+    # Detect videos
+    # video_path = '/home/ishwor/Desktop/dataset/vehicle/videos/traffic/VID20240222103702.mp4'
     # object_instance.detect_video(video_path, display=True, confidence_threshold=0.5, nms_threshold=0.4)
 
     # Detect webcam

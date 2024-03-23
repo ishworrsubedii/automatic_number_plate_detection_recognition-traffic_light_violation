@@ -28,7 +28,7 @@ class ALPRServices:
         self.NON_REC_OUTPUT_PATH = 'services/alpr/output/paddleocr_non_rec_output/'
         self.THRESHOLD = 3
         # self.SOURCE = 'rtsp://ishwor:subedi@192.168.1.106:5555/h264_opus.sdp'
-        # self.SOURCE = '/home/ishwor/Desktop/dataset/vehicle/video/traffic/VID20240222103702.mp4'
+        # self.SOURCE = '/home/ishwor/Desktop/dataset/vehicle/videos/traffic/VID20240222103702.mp4'
         self.MODEL_PATH = 'services/alpr/resources/yolov8/nnpd.pt'
         self.CAPTURED_IMAGE_SAVE_DIR = 'services/alpr/resources/rtsp/'
         self.DETECTED_IMAGE_SAVE_DIR = 'services/alpr/resources/plate_detected/'

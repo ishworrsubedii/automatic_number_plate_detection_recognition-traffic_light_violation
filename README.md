@@ -1,6 +1,6 @@
 <div style="border: 2px solid #333; padding: 20px; display: flex; align-items: center; justify-content: center;">
     <div style="text-align: center;">
-        <img src="/result_images/trinetra.png" width="100" height="100" style="margin-right: 20px;">
+        <img src="/results/trinetra.png" width="100" height="100" style="margin-right: 20px;">
         <h1 style="font-family: 'Roboto', sans-serif; font-size: 2.5em; color: #39FF14;">Trinetra</h1>
         <h6 style="font-family: 'Roboto', sans-serif; font-size: 0.8em; color: #e0e0e0;">- Let us be protected by the third eye!</h6>
         <h2 style="font-family: 'Roboto', sans-serif; font-size: 1.5em; color: #39FF14;">Automatic Number Plate Detection Recognition and Traffic Light Violation Detection</h2>
@@ -10,14 +10,21 @@
 
 
 <p style="color: white; font-weight: bold;">
-Here I have not provided the model that I have trained so that nobody can misuse the model. If you want the model you
+Here, I have not provided the model that I have trained so that nobody can misuse it. If you want the model,
 can contact me
-at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; font-weight: bold;">Linkedin</a> or <a href="mailto:ishworr.subedi@gmail.com" style="color: #39FF14; font-weight: bold;">Email</a>
+at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; font-weight: bold;">LinkedIn</a> or <a href="mailto:ishworr.subedi@gmail.com" style="color: #39FF14; font-weight: bold;">Email</a>
 </p>
 
 ## Video Demonstration
 
-[![Trinetra](https://img.youtube.com/vi/1Q1Q1Q1Q1Q1/0.jpg)](https://www.youtube.com/watch?v=1Q1Q1Q1Q1Q1)
+**Automatic Number Plate Recognition**
+
+[![Trinetra](https://i.ytimg.com/an_webp/Xz8ykJ1enbc/mqdefault_6s.webp?du=3000&sqp=CMSS-q8G&rs=AOn4CLCcr6HnWfnnb0eiodJKp8IHTomsiQ)](https://youtu.be/Xz8ykJ1enbc)
+
+**Traffic Light Violation**
+
+[![Traffic Light](https://i.ytimg.com/an_webp/QriQzJunH4U/mqdefault_6s.webp?du=3000&sqp=CMCa-q8G&rs=AOn4CLBVUCwnzjvG6i_yA9VekVGFjwMxug)](https://www.youtube.com/watch?v=QriQzJunH4U)
+
 ## Overview
 
 This is the repository for the Trinetra project. Trinetra is a project that aims to provide a solution for traffic
@@ -28,9 +35,9 @@ responsible for the machine learning models that are used to detect vehicles, nu
 
 ## Objectives
 
-- To Automate the process of number plate detection and recognition
-- To Automate the process of traffic light violation detection
-- To Monitor the recognition of the number plate and traffic light violation detection in real time and store the data
+- To Automate the process of number plate detection and recognition.
+- To Automate the process of traffic light violation detection.
+- To Monitor the recognition of the number plate and traffic light violation detection in real time and store the data.
   in the database for future reference and further analysis.
 - To provide a user-friendly interface for the user to interact with the system.
 - To monitor the images of number plate recognitions and traffic light violations in real time.
@@ -40,9 +47,9 @@ responsible for the machine learning models that are used to detect vehicles, nu
 - Number Plate Detection and Recognition
 - Traffic Light Violation Detection
 - Real-time monitoring of number plate recognition and traffic light violation detection
-- User-friendly interface for the user to interact with the system
-- Search and filter the number plate recognition and traffic light violation detection data
-- Monitor the images of number plate recognitions and traffic light violations in real time
+- user-friendly interface for the user to interact with the system.
+- Search and filter the number plate recognition and traffic light violation detection data.
+- Monitor the images of number plate recognitions and traffic light violations in real time.
 
 ## Technologies Used
 
@@ -106,7 +113,7 @@ For the services, the following technologies are used:
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ishworrsubedii/automatic_number_plate_detection_recognition.git
+git clone https://github.com/ishworrsubedii/automatic_number_plate_detection_recognition-traffic_light_violation.git
 ````
 
 #### 2. Create Environment
@@ -123,12 +130,12 @@ pip install -r requirement
 
 ### Backend
 
-For backend open the suitable ide ie. Pycharm and setup the conda environment
+For the backend, open the suitable IDE, i.e., Pycharm, and set up the Conda environment.
 
 ### Frontend
 
-For frontend, open the suitable ide ie. vs code and open the frontend-trinetra directory
-Requirements for the frontend are:
+For frontend, open the suitable idea, i.e., vs. code, and open the frontend-trinetra directory.The requirements for the
+frontend are:
 
 - Node package manager needs to be installed in the system
 
@@ -161,6 +168,14 @@ setup.py install
 ```
 
 Copy the package of the` anaconda/trinetra/dist/lib` and add it into the site-packages of the python environment
+
+For alpr
+
+Change the IP of ipcam inside backend_trinetra/alpr/alprservices.py to your IP.
+
+For traffic lights
+
+Change the IP of the ipcam inside backend_trinetra/trafficlight/trafficlightservices.py.
 
 </details>
 

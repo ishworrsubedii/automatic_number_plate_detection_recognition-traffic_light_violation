@@ -33,9 +33,9 @@ class DetectionService:
 
     def detect_video(self, video_path: str, display: bool, confidence_threshold: float, nms_threshold: float):
         """
-          Detects vehicle number plate from a video
-        :param video_path:  video path to be passed
-        :param display:  boolean value to display the video
+          Detects vehicle number plate from a videos
+        :param video_path:  videos path to be passed
+        :param display:  boolean value to display the videos
         :param confidence_threshold:  confidence threshold
         :param nms_threshold: nms threshold
         :return:  detected results
@@ -73,7 +73,7 @@ class DetectionService:
     def detect_webcam(self, display: bool, confidence_threshold: float, nms_threshold: float):
         """
         Detects vehicle number plate from a webcam
-        :param display: boolean value to display the video
+        :param display: boolean value to display the videos
         :param confidence_threshold: confidence threshold
         :param nms_threshold: non-maximum suppression threshold
         :return: detected results
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     # service.detect_image('/home/ishwor/Pictures/Screenshots/Screenshot from 2024-02-03 20-41-34.png',
     #                      confidence_threshold=0.5, nms_threshold=0.4)
 
-    # Detect video
+    # Detect videos
     # service.detect_video(
     #     '/home/ishwor/Desktop/TreeLeaf/Vehicle Number Plate/Dataset/cam_back_2022_09_02/videos/ipcam__1.mp4',
     #     display=True, confidence_threshold=0.5, nms_threshold=0.4)
