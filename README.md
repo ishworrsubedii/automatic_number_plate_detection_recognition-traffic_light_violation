@@ -17,13 +17,15 @@ at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; 
 
 ## Video Demonstration(Youtube)
 
+
 **Automatic Number Plate Recognition**
 
-[![Trinetra](https://i.ytimg.com/an_webp/Xz8ykJ1enbc/mqdefault_6s.webp?du=3000&sqp=CMSS-q8G&rs=AOn4CLCcr6HnWfnnb0eiodJKp8IHTomsiQ)](https://youtu.be/Xz8ykJ1enbc)
+[![Trinetra](https://i.ytimg.com/an_webp/Xz8ykJ1enbc/mqdefault_6s.webp?du=3000&sqp=CIi0hrAG&rs=AOn4CLCPhFUmM4pMji0WRcp4KBqPN2R5QQ)](https://youtu.be/Xz8ykJ1enbc)
 
 **Traffic Light Violation**
 
-[![Traffic Light](https://i.ytimg.com/an_webp/QriQzJunH4U/mqdefault_6s.webp?du=3000&sqp=CMCa-q8G&rs=AOn4CLBVUCwnzjvG6i_yA9VekVGFjwMxug)](https://www.youtube.com/watch?v=QriQzJunH4U)
+[![Traffic Light](https://i.ytimg.com/an_webp/QriQzJunH4U/mqdefault_6s.webp?du=3000&sqp=CNy7hrAG&rs=AOn4CLBgxV5sOHiLQAXMumF6QA0aShEfhQ)](https://www.youtube.com/watch?v=QriQzJunH4U)
+
 
 ## Overview
 
