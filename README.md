@@ -29,8 +29,7 @@ at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; 
 
 ## Overview
 
-This is the repository for the Trinetra project. Trinetra is a project that aims to provide a solution for traffic
-automatic number plate recognition and the traffic light violation for the nepali number plates. The project is divided
+This is the repository for the Trinetra project. Trinetra is a project that aims to provide a solution for automatic number plate recognition and the traffic light violation for the nepali number plates. The project is divided
 into three parts: the backend, the frontend, and the services. The backend is
 responsible for the database and the API. The frontend is responsible for the user interface. The services are
 responsible for the machine learning models that are used to detect vehicles, number plates, speed, and traffic lights.
@@ -169,7 +168,7 @@ cd services_trinetra
 setup.py install
 ```
 
-Copy the package of the` anaconda/trinetra/dist/lib` and add it into the site-packages of the python environment
+Copy the package of the`lib` and add it into the site-packages of the python environment
 
 For alpr
 
