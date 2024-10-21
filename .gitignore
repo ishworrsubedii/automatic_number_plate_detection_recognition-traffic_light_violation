@@ -11,8 +11,6 @@
 .env
 
 # Ignore secrets and sensitive information
-**/local_settings.py
-**/settings.py
 
 # Ignore Python bytecode files
 *.pyc
@@ -140,9 +138,6 @@ datasets/
 #.tar
 #.gz
 
-.github/workflows/
-resources/
 pipeline/
-output/
 
 

@@ -1,0 +1,141 @@
+Architecture:
+  Backbone:
+    last_conv_stride:
+    - 1
+    - 2
+    last_pool_kernel_size:
+    - 2
+    - 2
+    last_pool_type: avg
+    name: MobileNetV1Enhance
+    scale: 0.5
+  Head:
+    head_list:
+    - CTCHead:
+        Head:
+          fc_decay: 1.0e-05
+        Neck:
+          depth: 2
+          dims: 64
+          hidden_dims: 120
+          name: svtr
+          use_guide: true
+    - SARHead:
+        enc_dim: 512
+        max_text_length: 25
+    name: MultiHead
+  Transform: null
+  algorithm: SVTR_LCNet
+  model_type: rec
+Eval:
+  dataset:
+    data_dir: /content/drive/MyDrive/paddle/data/datasets/test/images/
+    label_file_list:
+    - /content/drive/MyDrive/paddle/data/datasets/test/test_labels.txt
+    name: SimpleDataSet
+    transforms:
+    - DecodeImage:
+        channel_first: false
+        img_mode: BGR
+    - MultiLabelEncode: null
+    - RecResizeImg:
+        image_shape:
+        - 3
+        - 48
+        - 320
+    - KeepKeys:
+        keep_keys:
+        - image
+        - label_ctc
+        - label_sar
+        - length
+        - valid_ratio
+  loader:
+    batch_size_per_card: 128
+    drop_last: false
+    num_workers: 4
+    shuffle: false
+Global:
+  cal_metric_during_train: true
+  calc_metric_during_train: true
+  character_dict_path: /home/ishwor/Desktop/TreeLeaf/PaddleOCR/ppocr/utils/dict/devanagari_dict.txt
+  checkpoints: null
+  debug: false
+  distributed: true
+  epoch_num: 30
+  eval_batch_step:
+  - 0
+  - 50
+  infer_img: doc/imgs_words/ch/word_1.jpg
+  infer_mode: false
+  log_smooth_window: 20
+  max_text_length: 25
+  pretrained_model: null
+  print_batch_step: 10
+  save_epoch_step: 3
+  save_inference_dir: /content/drive/MyDrive/paddle/paddle/inf
+  save_model_dir: ./output/v3_devanagari_mobile_nepali
+  save_res_path: ./output/rec/predicts_ppocrv3_devanagari.txt
+  use_gpu: true
+  use_space_char: true
+  use_visualdl: false
+Loss:
+  loss_config_list:
+  - CTCLoss: null
+  - SARLoss: null
+  name: MultiLoss
+Metric:
+  ignore_space: false
+  main_indicator: acc
+  name: RecMetric
+Optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  lr:
+    learning_rate: 0.001
+    name: Cosine
+    warmup_epoch: 5
+  name: Adam
+  regularizer:
+    factor: 3.0e-05
+    name: L2
+PostProcess:
+  name: CTCLabelDecode
+Train:
+  dataset:
+    data_dir: /content/drive/MyDrive/paddle/data/datasets/train/images/
+    ext_op_transform_idx: 1
+    label_file_list:
+    - /content/drive/MyDrive/paddle/data/datasets/train/train_labels.txt
+    name: SimpleDataSet
+    transforms:
+    - DecodeImage:
+        channel_first: false
+        img_mode: BGR
+    - RecConAug:
+        ext_data_num: 2
+        image_shape:
+        - 48
+        - 320
+        - 3
+        prob: 0.5
+    - RecAug: null
+    - MultiLabelEncode: null
+    - RecResizeImg:
+        image_shape:
+        - 3
+        - 48
+        - 320
+    - KeepKeys:
+        keep_keys:
+        - image
+        - label_ctc
+        - label_sar
+        - length
+        - valid_ratio
+  loader:
+    batch_size_per_card: 128
+    drop_last: true
+    num_workers: 4
+    shuffle: true
+profiler_options: null
