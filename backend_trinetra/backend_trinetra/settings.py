@@ -94,8 +94,8 @@ WSGI_APPLICATION = 'backend_trinetra.wsgi.application'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "ishworr.subedii1@gmail.com"
-EMAIL_HOST_PASSWORD = "brxqabwehgjnvvub"
+EMAIL_HOST_USER = "your-email@gmail.com"
+EMAIL_HOST_PASSWORD = "YOUR-EMAIL-HOST-PASSWORD"
 EMAIL_USE_TLS = True
 
 DATABASES = {
