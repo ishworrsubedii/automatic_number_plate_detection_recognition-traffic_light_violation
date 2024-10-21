@@ -20,11 +20,11 @@ at <a href="https://www.linkedin.com/in/ishworrsubedii/" style="color: #39FF14; 
 
 **Automatic Number Plate Recognition**
 
-[![Trinetra](https://i.ytimg.com/an_webp/Xz8ykJ1enbc/mqdefault_6s.webp?du=3000&sqp=CIi0hrAG&rs=AOn4CLCPhFUmM4pMji0WRcp4KBqPN2R5QQ)](https://youtu.be/Xz8ykJ1enbc)
+https://github.com/user-attachments/assets/9455c326-ccef-45a9-a9bf-260ee34e0269
 
 **Traffic Light Violation**
 
-[![Traffic Light](https://i.ytimg.com/an_webp/QriQzJunH4U/mqdefault_6s.webp?du=3000&sqp=CNy7hrAG&rs=AOn4CLBgxV5sOHiLQAXMumF6QA0aShEfhQ)](https://www.youtube.com/watch?v=QriQzJunH4U)
+https://github.com/user-attachments/assets/523501a2-eb04-4e11-80ad-55b1ab34b1fb
 
 
 ## Overview
